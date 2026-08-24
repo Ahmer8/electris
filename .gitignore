@@ -1,0 +1,52 @@
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+vendor/
+
+# Build and cache output
+dist/
+build/
+.cache/
+.parcel-cache/
+.vite/
+coverage/
+
+# Local temporary files
+.tmp-responsive/
+.tmp/
+.tmp-*/
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor and IDE state
+.idea/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Runtime/package artifacts
+*.pid
+*.seed
+*.pid.lock
+*.tgz

@@ -1,0 +1,2 @@
+/* Only the copied browser/MacBook toolbar is removed. The Figma page layout remains untouched. */
+body > div > div > div > div:first-child { display: none !important; }
