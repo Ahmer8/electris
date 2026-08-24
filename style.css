@@ -510,6 +510,99 @@ header {
   font-weight: 700;
 }
 
+.gtb-export-shell {
+  position: relative;
+}
+
+.gtb-export-shell.export-png-crop {
+  overflow: hidden;
+}
+
+.gtb-export-shell.export-png-crop > img:first-child {
+  margin-bottom: -3.44vw;
+  transform: translateY(-3.44vw);
+}
+
+.export-nav-hotspots {
+  position: absolute;
+  top: clamp(28px, 5.29vw, 80px);
+  left: 0;
+  z-index: 5;
+  width: 100%;
+  height: clamp(48px, 3.18vw, 52px);
+  pointer-events: none;
+}
+
+.export-nav-hotspots.export-nav-cropped {
+  top: clamp(28px, 1.85vw, 32px);
+}
+
+.export-nav-hotspots a {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  pointer-events: auto;
+  color: transparent;
+  font-size: 0;
+  text-indent: -9999px;
+}
+
+.export-nav-hotspots .hotspot-logo {
+  left: 2.1%;
+  width: 15.2%;
+}
+
+.export-nav-hotspots .hotspot-home {
+  left: 24.3%;
+  width: 7.5%;
+}
+
+.export-nav-hotspots .hotspot-tech {
+  left: 33.4%;
+  width: 8.7%;
+}
+
+.export-nav-hotspots .hotspot-solutions {
+  left: 42.1%;
+  width: 7.2%;
+}
+
+.export-nav-hotspots .hotspot-sectors {
+  left: 50.1%;
+  width: 6.5%;
+}
+
+.export-nav-hotspots .hotspot-finance {
+  left: 58.2%;
+  width: 8.8%;
+}
+
+.export-nav-hotspots .hotspot-team {
+  left: 67%;
+  width: 5%;
+}
+
+.export-nav-hotspots .hotspot-news {
+  left: 73.3%;
+  width: 7%;
+}
+
+.export-nav-hotspots .hotspot-contact {
+  left: 82.7%;
+  width: 10.9%;
+}
+
+.export-nav-hotspots .hotspot-lang {
+  left: 94.4%;
+  width: 3.6%;
+}
+
+@media (max-width: 767px) {
+  .export-nav-hotspots {
+    display: none;
+  }
+}
+
 .hero {
   height: 630px;
   background: var(--pale);

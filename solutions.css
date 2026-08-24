@@ -2,6 +2,22 @@
   background: var(--pale);
 }
 
+.solutions-page header {
+  position: sticky;
+  top: 0;
+  z-index: 2000;
+  pointer-events: auto;
+}
+
+.solutions-page .navbar,
+.solutions-page .navbar-collapse,
+.solutions-page .navbar a,
+.solutions-page .navbar button {
+  position: relative;
+  z-index: 2001;
+  pointer-events: auto;
+}
+
 .solutions-page .navbar .nav-link[href="#top"]::before {
   content: "";
   position: absolute;
