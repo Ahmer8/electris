@@ -627,9 +627,39 @@
           padding-inline: 16px !important;
         }
       }
+
+      body.gtb-export-page {
+        margin: 0;
+        background: #ffffff;
+      }
+
+      body.gtb-export-page > *:not(.gtb-export-shell) {
+        display: none !important;
+      }
+
+      .gtb-export-shell {
+        width: 100%;
+        overflow-x: hidden;
+        background: #ffffff;
+      }
+
+      .gtb-export-shell img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
     </style>
   </head>
-  <body class="wasteheat-page">
+  <body class="wasteheat-page gtb-export-page">
+    <main
+      class="gtb-export-shell"
+      aria-label="Waste heat recovery solutions"
+    >
+      <img
+        src="assets/images/solutions-page/waste-heat-recovery-solutions-full.svg"
+        alt="Waste heat recovery solutions"
+      />
+    </main>
     <header class="sticky-top">
       <nav class="navbar navbar-expand-xl py-0">
         <div class="container-fluid px-4 px-lg-5">

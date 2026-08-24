@@ -153,9 +153,36 @@
         font-size: 17px !important;
       }
     }
+
+    body.gtb-export-page {
+      margin: 0;
+      background: #ffffff;
+    }
+
+    body.gtb-export-page > *:not(.gtb-export-shell) {
+      display: none !important;
+    }
+
+    .gtb-export-shell {
+      width: 100%;
+      overflow-x: hidden;
+      background: #ffffff;
+    }
+
+    .gtb-export-shell img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
   </style>
   </head>
-  <body>
+  <body class="gtb-export-page">
+    <main class="gtb-export-shell" aria-label="Electris landing page">
+      <img
+        src="assets/images/landing/landing-page-full.svg"
+        alt="Electris landing page"
+      />
+    </main>
     <div class="site-frame" id="top">
       <header class="sticky-top">
         <nav class="navbar navbar-expand-xl py-0">
