@@ -153,6 +153,24 @@
         font-size: 17px !important;
       }
     }
+
+    .landing-audit-cta {
+      background: #fff;
+      padding: 0 0 84px;
+    }
+
+    .landing-audit-cta img {
+      display: block;
+      width: min(100%, 1512px);
+      height: auto;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 767px) {
+      .landing-audit-cta {
+        padding-bottom: 56px;
+      }
+    }
   </style>
   </head>
   <body>
@@ -470,14 +488,11 @@
           </div>
         </section>
 
-        <section class="cta-wrap pale">
-          <div class="container-fluid px-3 px-lg-4">
-            <div class="cta mx-auto text-center">
-              <h2>Pr&ecirc;t &agrave; D&eacute;carboner Votre B&acirc;timent ?</h2>
-              <p>Obtenez un audit &eacute;nerg&eacute;tique gratuit sous 48h, d&eacute;couvrez les opportunit&eacute;s de r&eacute;cup&eacute;ration de chaleur perdue et commencez &agrave; &eacute;conomiser &mdash; sans investissement initial gr&acirc;ce &agrave; nos Contrats de Performance &Eacute;nerg&eacute;tique.</p>
-              <a class="btn btn-primary rounded-pill px-4 py-3" href="mailto:contact@electris.fr">Demander un Audit Gratuit <span aria-hidden="true">&rarr;</span></a>
-            </div>
-          </div>
+        <section class="landing-audit-cta" aria-label="Demander un audit gratuit">
+          <img
+            src="assets/images/landing/decarboner-audit-cta.svg"
+            alt="Pr&ecirc;t &agrave; D&eacute;carboner Votre B&acirc;timent ? Demander un Audit Gratuit"
+          />
         </section>
         <section id="sectors" style="align-self: stretch; display: flex; flex-direction: column; background: #FFFFFF; padding-top: 127px; padding-bottom: 127px; gap: 64px; font-family: system-ui;">
           <div style="align-self: stretch; display: flex; flex-direction: column; align-items: center; gap: 16px;">
