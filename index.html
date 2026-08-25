@@ -16,7 +16,7 @@
     />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Exact desktop spacing from references/test.html. Kept inline so it cannot be replaced by responsive exports. */
+    /* Exact desktop spacing for the homepage process section. */
     #process > div:not(:first-child) {
       width: auto !important;
       max-width: none !important;
@@ -153,48 +153,9 @@
         font-size: 17px !important;
       }
     }
-
-    body.gtb-export-page {
-      margin: 0;
-      background: #ffffff;
-    }
-
-    body.gtb-export-page > *:not(.gtb-export-shell) {
-      display: none !important;
-    }
-
-    .gtb-export-shell {
-      width: 100%;
-      overflow-x: hidden;
-      background: #ffffff;
-    }
-
-    .gtb-export-shell img {
-      display: block;
-      width: 100%;
-      height: auto;
-    }
   </style>
   </head>
-  <body class="gtb-export-page">
-    <main class="gtb-export-shell" aria-label="Electris landing page">
-      <img
-        src="assets/images/landing/landing-page-full.svg"
-        alt="Electris landing page"
-      />
-      <nav class="export-nav-hotspots export-nav-cropped" aria-label="Navigation principale">
-        <a class="hotspot-logo" href="index.html">Accueil</a>
-        <a class="hotspot-home" href="index.html">Bienvenue</a>
-        <a class="hotspot-tech" href="index.html#tech">Technologies</a>
-        <a class="hotspot-solutions" href="solutions.html">Solutions</a>
-        <a class="hotspot-sectors" href="index.html#sectors">Secteurs</a>
-        <a class="hotspot-finance" href="index.html#process">Financement</a>
-        <a class="hotspot-team" href="index.html#impact">Equipe</a>
-        <a class="hotspot-news" href="index.html#news">Actualites</a>
-        <a class="hotspot-contact" href="mailto:contact@electris.fr">Contactez-nous</a>
-        <a class="hotspot-lang" href="index.html">Fr.</a>
-      </nav>
-    </main>
+  <body>
     <div class="site-frame" id="top">
       <header class="sticky-top">
         <nav class="navbar navbar-expand-xl py-0">
@@ -233,12 +194,23 @@
       </header>
 
       <main>
-        <section id="hero" style="background: #F1F5F9; font-family: system-ui;">
-          <img
-            src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/nsu6vbpi_expires_30_days.png"
-            style="border-radius: 12px; height: 700px; width: 100%; display: block; object-fit: fill;"
-            alt="100% &eacute;lectrique, 0% fossile"
-          />
+        <section class="hero position-relative d-flex align-items-start justify-content-center" id="hero">
+          <div class="container-fluid px-4 px-lg-5">
+            <div class="hero-photo position-relative">
+              <div class="hero-copy position-absolute text-white">
+                <h1>100% &Eacute;LECTRIQUE<br />0% FOSSILE</h1>
+                <p>Startup dans la performance &eacute;nerg&eacute;tique et<br />l'&eacute;lectrification des b&acirc;timents</p>
+              </div>
+            </div>
+            <div class="hero-actions d-flex align-items-center justify-content-end gap-4">
+              <a class="btn btn-primary rounded-pill" href="mailto:contact@electris.fr">
+                Diagnostic gratuit sous <span aria-hidden="true">&rarr;</span>
+              </a>
+              <a class="btn btn-light rounded-pill" href="Technologie.html">
+                Voir nos technologies <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
         </section>
 
         <section class="stats pale">
@@ -327,18 +299,7 @@
         </section>
 
         <section class="brands" aria-label="Ils nous font confiance">
-          <div class="brand-track">
-            <span class="brand best">Best Western</span>
-            <span class="brand barriere">BARRIÈRE</span>
-            <span class="brand inter">Intermarché</span>
-            <span class="brand carrefour">Carrefour</span>
-            <span class="brand orpi">Orpi</span>
-            <span class="brand leclerc">E.Leclerc</span>
-            <span class="brand superu">SUPER U</span>
-            <span class="brand franprix">franprix</span>
-            <span class="brand mercure">Mercure</span>
-            <span class="brand ibis">ibis Styles</span>
-          </div>
+          <img class="brand-strip" src="assets/images/brands/client-logo-strip.svg" alt="" />
         </section>
 
         <section class="tech pale" id="tech">
@@ -381,7 +342,6 @@
             <div class="solution-cards d-flex gap-4 overflow-auto">
               <figure><img src="assets/images/solutions/sol-1.png" alt="Installation industrielle" /></figure>
               <figure
-                class="expanded"
                 role="link"
                 tabindex="0"
                 onclick="window.location.href='cascade.html'"
