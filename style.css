@@ -3602,7 +3602,7 @@ h3 {
 
 /* The desktop artwork becomes the stacked audit card shown in the phone design. */
 .mobile-audit-cta { display: none; }
-@media (max-width: 575px) {
+@media (max-width: 767px) {
   .landing-audit-cta {
     padding: 48px 16px 56px !important;
     background: #fff;
@@ -3668,8 +3668,9 @@ h3 {
     /* The source SVG contains desktop card + photo: this crop keeps only the photo. */
     background-image: url("assets/images/landing/decarboner-audit-cta.svg");
     background-repeat: no-repeat;
-    background-size: auto 620px !important;
-    background-position: 100% center !important;
+    /* Align the embedded photo panel (x:772–1364, y:96–579) to this card. */
+    background-size: auto 566px !important;
+    background-position: -716px -80px !important;
     -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 358 405' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M42 0h274c23 0 42 19 42 42v285c0 23-19 42-42 42H238c-18 0-32 16-32 36H42c-23 0-42-19-42-42V42C0 19 19 0 42 0Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 358 405' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M42 0h274c23 0 42 19 42 42v285c0 23-19 42-42 42H238c-18 0-32 16-32 36H42c-23 0-42-19-42-42V42C0 19 19 0 42 0Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
   }
