@@ -52,13 +52,8 @@
         backdrop-filter: blur(10px);
         box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
       }
-      /* The three client assets are complete Figma cards (photo + metrics). */
+      /* Client result photos stay as images; metrics remain real HTML text. */
       .client-results div:has(> .client-result-photo) {
-        aspect-ratio: 1450 / 922;
-        height: auto !important;
-        padding: 0 !important;
-        background: transparent !important;
-        border: 0 !important;
         overflow: hidden;
       }
       .client-results .client-result-photo {
@@ -67,10 +62,7 @@
         width: 100% !important;
         height: 100% !important;
         border-radius: 32px;
-        object-fit: contain !important;
-      }
-      .client-result-photo + div {
-        display: none !important;
+        object-fit: cover !important;
       }
       span[style*="font-size: 48px"][style*="font-weight: bold"],
       .reference-section-title {
@@ -641,6 +633,11 @@
         display: block !important;
       }
 
+      body:not(.gtb-export-page) > .gtb-export-shell,
+      body:not(.gtb-export-page) > .export-live-footer {
+        display: none !important;
+      }
+
       .gtb-export-shell {
         width: 100%;
         overflow-x: hidden;
@@ -659,7 +656,7 @@
       }
     </style>
   </head>
-  <body class="wasteheat-page gtb-export-page">
+  <body class="wasteheat-page">
     <main
       class="gtb-export-shell export-png-crop"
       aria-label="Waste heat recovery solutions"
@@ -2204,7 +2201,7 @@
               >
                 <img
                   class="client-result-photo"
-                  src="assets/images/solutions-page/client-airport-final1.png"
+                  src="assets/images/solutions-page/client-airport-final.png"
                   alt="Installation Electris sur un site aéroportuaire"
                   style="
 	                    border-radius: 33px;
@@ -2586,7 +2583,7 @@
                 >
                   <img
                     class="client-result-photo"
-                    src="assets/images/solutions-page/client-leclerc-final1.png"
+                    src="assets/images/solutions-page/client-leclerc-final.png"
                     alt="Façade du magasin E.Leclerc"
                     style="
 	                      border-radius: 32px;
@@ -2777,7 +2774,7 @@
               >
 	                <img
 	                  class="client-result-photo"
-	                  src="assets/images/solutions-page/client-hotel-final1.png"
+	                  src="assets/images/solutions-page/client-hotel-final.png"
 	                  alt="Entrée de l'Hôtel Splendid Étoile"
 	                  style="
 	                    position: absolute;
