@@ -3265,3 +3265,151 @@ h3 {
     font-size: 17px;
   }
 }
+
+/* Keep late desktop artboard rules from overriding the real phone layout. */
+@media (max-width: 991px) {
+  header::after { display: none !important; }
+  .navbar-toggler {
+    width: 44px;
+    height: 44px;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0 !important;
+    box-shadow: none !important;
+  }
+  .navbar-toggler-icon {
+    width: 24px;
+    height: 2px;
+    background-color: #111 !important;
+    background-image: none !important;
+    background-size: auto !important;
+    box-shadow: 0 7px 0 #111, 0 -7px 0 #111;
+  }
+
+  #impact {
+    width: 100%;
+    padding: 64px 24px !important;
+    gap: 40px !important;
+    overflow: hidden;
+  }
+  #impact > div:first-child {
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+  }
+  #impact > div:first-child > div {
+    width: 100%;
+    min-width: 0;
+    display: flex !important;
+    flex-direction: column;
+    gap: 16px;
+  }
+  #impact > div:first-child > div > span:first-child,
+  #impact > div:first-child > div > span:last-child {
+    width: 100% !important;
+    max-width: 100%;
+    margin-top: 0 !important;
+  }
+  #impact > div:first-child > div > span:first-child {
+    font-size: clamp(36px, 10vw, 48px) !important;
+    line-height: 1.04 !important;
+  }
+  .impact-art-row {
+    width: 100%;
+    min-width: 0;
+    display: flex !important;
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 24px !important;
+    margin: 0;
+  }
+  .impact-art-row > div,
+  .impact-art-row > img {
+    flex: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 480px !important;
+    margin: 0 !important;
+    border-radius: 28px !important;
+  }
+  .impact-art-row > img {
+    aspect-ratio: 1 / 1.16;
+    min-height: 0 !important;
+    object-fit: cover !important;
+  }
+  .impact-art-row > div:first-child,
+  .impact-art-row > div:last-child {
+    padding: 32px 28px !important;
+  }
+  .impact-art-row span[style*="width: 302px"],
+  .impact-art-row span[style*="width: 270px"] {
+    width: 100% !important;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  #impact {
+    align-self: flex-start !important;
+    width: 100vw !important;
+    max-width: 100vw !important;
+    padding: 56px 16px !important;
+    gap: 26px !important;
+    background: #f1f5f9 !important;
+  }
+  #impact > div:first-child > span:first-child { font-size: 14px !important; }
+  #impact > div:first-child {
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+    gap: 24px !important;
+  }
+  #impact > div:first-child > div { gap: 18px !important; }
+  #impact > div:first-child > div > span:first-child {
+    font-size: 36px !important;
+    line-height: 1.12 !important;
+    letter-spacing: -0.035em;
+  }
+  #impact > div:first-child > div > span:last-child {
+    color: #526077 !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 1.45 !important;
+  }
+  .impact-art-row {
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+    gap: 32px !important;
+  }
+  .impact-art-row > div,
+  .impact-art-row > img {
+    flex-basis: calc(100vw - 32px) !important;
+    width: calc(100vw - 32px) !important;
+    max-width: calc(100vw - 32px) !important;
+    height: 480px !important;
+    min-height: 480px !important;
+  }
+  .impact-art-row > img { min-height: 0 !important; }
+  .impact-art-row > div:first-child,
+  .impact-art-row > div:last-child { padding: 28px 24px !important; }
+  .impact-art-row > div *,
+  .impact-art-row > div > div { min-width: 0; max-width: 100%; }
+  .impact-art-row span { overflow-wrap: anywhere; }
+  .impact-art-row span[style*="font-size: 80px"] {
+    width: 100% !important;
+    font-size: 72px !important;
+    line-height: .95 !important;
+  }
+  .impact-art-row span[style*="font-size: 24px"] {
+    width: 100% !important;
+    font-size: 22px !important;
+    line-height: 1.16 !important;
+  }
+  .impact-art-row span[style*="font-size: 16px"] {
+    width: 100% !important;
+    font-size: 16px !important;
+    line-height: 1.45 !important;
+  }
+}
