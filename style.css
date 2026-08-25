@@ -956,6 +956,11 @@ header {
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='854 259 510 380' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1293.2 299.819C1293.2 319.372 1309.05 335.222 1328.6 335.222C1348.15 335.222 1364 351.072 1364 370.624V596C1364 619.748 1344.75 639 1321 639H1021.17C997.417 639 978.165 619.748 978.165 596V573.499C978.165 549.751 958.913 530.499 935.165 530.499H897C873.252 530.499 854 511.247 854 487.499V302C854 278.252 873.252 259 897 259H1255.08C1276.13 259 1293.2 276.063 1293.2 297.111V299.819Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
 }
 
+/* Match the lighter, softer colour grading of the Figma café visual. */
+.reason-row:nth-of-type(2) .reason-img {
+  filter: brightness(1.08) contrast(0.88) saturate(0.88);
+}
+
 .reason-row:nth-of-type(2) .reason-img,
 .reason-row:nth-of-type(4) .reason-img {
   justify-self: end;
