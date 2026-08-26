@@ -4042,6 +4042,7 @@ h3 {
 /* The navbar collapses at Bootstrap's XL boundary, so suppress the legacy
    decorative hamburger across that same full range. */
 @media (max-width: 1199.98px) {
+  header::before,
   header::after,
   .mobile-menu-mark {
     content: none !important;
@@ -4585,18 +4586,8 @@ h3 {
   }
 
   header::before {
-    content: "";
-    position: fixed;
-    top: 31px;
-    right: 28px;
-    z-index: 30;
-    display: block !important;
-    width: 16px;
-    height: 2px;
-    border-radius: 999px;
-    background: #262626;
-    box-shadow: 0 -7px 0 #262626, 0 7px 0 #262626;
-    pointer-events: none;
+    content: none !important;
+    display: none !important;
   }
 
   .navbar {
