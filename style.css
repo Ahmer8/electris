@@ -4678,6 +4678,51 @@ h3 {
   }
 }
 
+/* Mobile technologies — swipeable, snap-aligned card rail. */
+@media (max-width: 767px) {
+  #tech {
+    overflow: hidden;
+  }
+
+  #tech .tech-cards {
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    padding: 0 52px 34px;
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    justify-content: flex-start;
+    gap: 16px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 52px;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    touch-action: pan-x pan-y;
+  }
+
+  #tech .tech-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  #tech .tech-cards > * {
+    width: 286px !important;
+    max-width: 286px !important;
+    min-width: 286px !important;
+    flex: 0 0 286px !important;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+
+  #tech .tech-cards article {
+    width: 100%;
+    min-height: 170px;
+    padding: 24px;
+  }
+}
+
 /* Homepage solutions — client-supplied mobile gallery. */
 @media (max-width: 767px) {
   #solutions.solutions {
