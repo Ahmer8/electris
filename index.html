@@ -16,144 +16,6 @@
     />
     <link rel="stylesheet" href="style.css" />
     <style>
-      /* Exact desktop spacing for the homepage process section. */
-      #process > div:not(:first-child) {
-        width: auto !important;
-        max-width: none !important;
-        margin-left: 148px !important;
-        margin-right: 148px !important;
-        align-self: stretch !important;
-      }
-
-      /* Preserve the Figma-exported pill artwork and dimensions. */
-      #process > div:not(:first-child) > div:first-child {
-        border-radius: 37px !important;
-        padding: 48px 45px !important;
-        background-size: cover !important;
-        background-position: center !important;
-        overflow: hidden !important;
-        isolation: isolate;
-      }
-
-      #process > div:not(:first-child) > span {
-        top: -29px !important;
-        left: 97px !important;
-      }
-
-      @media (max-width: 1199px) {
-        #process > div:first-child {
-          margin-left: 48px !important;
-          margin-right: 48px !important;
-        }
-
-        #process > div:not(:first-child) {
-          margin-left: 48px !important;
-          margin-right: 48px !important;
-        }
-      }
-
-      @media (max-width: 767px) {
-        #process {
-          padding-top: 72px !important;
-          padding-bottom: 72px !important;
-        }
-
-        #process > div:first-child,
-        #process > div:not(:first-child) {
-          margin-left: 24px !important;
-          margin-right: 24px !important;
-        }
-
-        #process > div:first-child > div:first-child {
-          padding-right: 0 !important;
-        }
-
-        #process > div:first-child > div:last-child,
-        #process > div:not(:first-child) > div:first-child > div {
-          flex-direction: column !important;
-          align-items: flex-start !important;
-        }
-
-        #process > div:first-child > div:last-child {
-          gap: 18px !important;
-        }
-
-        #process > div:first-child > div:last-child > span:first-child {
-          font-size: 42px !important;
-          line-height: 1.08;
-        }
-
-        #process > div:first-child > div:last-child > span:last-child {
-          width: auto !important;
-          margin-right: 0 !important;
-          font-size: 18px !important;
-          line-height: 1.45;
-        }
-
-        #process > div:not(:first-child) > div:first-child {
-          border-radius: 30px !important;
-          padding: 42px 24px 28px !important;
-          background-size: cover !important;
-        }
-
-        #process > div:not(:first-child) > div:first-child > div {
-          gap: 20px !important;
-        }
-
-        #process > div:not(:first-child) > div:first-child > div > span {
-          width: auto !important;
-          flex: none !important;
-          font-size: 18px !important;
-          line-height: 1.4;
-        }
-
-        #process > div:not(:first-child) > span {
-          top: -24px !important;
-          left: 72px !important;
-          padding: 5px 28px !important;
-        }
-
-        #process > div:not(:first-child) > span > span {
-          font-size: 20px !important;
-        }
-      }
-
-      @media (max-width: 480px) {
-        #process {
-          padding-top: 56px !important;
-          padding-bottom: 56px !important;
-        }
-
-        #process > div:first-child,
-        #process > div:not(:first-child) {
-          margin-left: 16px !important;
-          margin-right: 16px !important;
-        }
-
-        #process > div:first-child > div:last-child > span:first-child {
-          font-size: 34px !important;
-        }
-
-        #process > div:first-child > div:last-child > span:last-child {
-          font-size: 16px !important;
-        }
-
-        #process > div:not(:first-child) > div:first-child {
-          border-radius: 26px !important;
-          padding: 38px 18px 24px !important;
-        }
-
-        #process > div:not(:first-child) > span {
-          top: -20px !important;
-          left: 30px !important;
-          padding: 4px 22px !important;
-        }
-
-        #process > div:not(:first-child) > span > span {
-          font-size: 17px !important;
-        }
-      }
-
       @media (max-width: 767px) {
         .landing-audit-cta {
           padding-bottom: 56px;
@@ -592,17 +454,109 @@
           </div>
         </section>
 
-        <section
-          id="process"
-          style="
-            overflow: hidden;
-            align-self: stretch;
-            background: #f1f5f9;
-            padding-top: 136px;
-            padding-bottom: 136px;
-            font-family: system-ui;
-          "
-        >
+        <section id="process" class="process-section">
+          <header class="process-intro">
+            <p class="process-eyebrow">
+              <span aria-hidden="true"></span>
+              UN PROCESSUS SIMPLE &Eacute;TAPE PAR &Eacute;TAPE
+            </p>
+            <div class="process-heading-row">
+              <h2>Comment &Ccedil;a Marche</h2>
+              <p>
+                La transition vers une &eacute;nergie propre est
+                simplifi&eacute;e, sans risque et enti&egrave;rement
+                g&eacute;r&eacute;e par nos &eacute;quipes d'ing&eacute;nierie du
+                d&eacute;but &agrave; la fin.
+              </p>
+            </div>
+          </header>
+
+          <ol class="process-list">
+            <li class="process-card process-card--active">
+              <span class="process-card__step" data-mobile-label="Étape 1">&Eacute;tape 1</span>
+              <div class="process-card__content">
+                <div class="process-card__heading">
+                  <span class="process-card__icon" data-mobile-icon="A" aria-hidden="true">F</span>
+                  <h3>Audit &Eacute;nerg&eacute;tique Gratuit</h3>
+                </div>
+                <p>
+                  R&eacute;ponse sous 48h. Nous &eacute;valuons vos
+                  syst&egrave;mes actuels et cartographions le potentiel de
+                  r&eacute;cup&eacute;ration.
+                </p>
+              </div>
+            </li>
+            <li class="process-card">
+              <span class="process-card__step" data-mobile-label="Étape 2">&Eacute;tape 2</span>
+              <div class="process-card__content">
+                <div class="process-card__heading">
+                  <span class="process-card__icon" data-mobile-icon="A" aria-hidden="true">S</span>
+                  <h3>Analyse du Site</h3>
+                </div>
+                <p>
+                  Nos ing&eacute;nieurs analysent les charges thermiques, les
+                  sources de chaleur perdue et les cycles de flux.
+                </p>
+              </div>
+            </li>
+            <li class="process-card">
+              <span class="process-card__step" data-mobile-label="Étape 3">&Eacute;tape 3</span>
+              <div class="process-card__content">
+                <div class="process-card__heading">
+                  <span class="process-card__icon" data-mobile-icon="S" aria-hidden="true">E</span>
+                  <h3>Solution d'Ing&eacute;nierie</h3>
+                </div>
+                <p>
+                  Nous concevons un ensemble sur mesure, z&eacute;ro
+                  &eacute;mission, adapt&eacute; exactement &agrave; votre
+                  installation.
+                </p>
+              </div>
+            </li>
+            <li class="process-card">
+              <span class="process-card__step" data-mobile-label="Étape 4">&Eacute;tape 4</span>
+              <div class="process-card__content">
+                <div class="process-card__heading">
+                  <span class="process-card__icon" data-mobile-icon="P" aria-hidden="true">F</span>
+                  <h3>Plan de Financement</h3>
+                </div>
+                <p>
+                  &euro;0 d'investissement initial. Z&eacute;ro risque en
+                  capital. Garantie d'&eacute;conomies mesurables d&egrave;s
+                  le premier jour.
+                </p>
+              </div>
+            </li>
+            <li class="process-card">
+              <span class="process-card__step" data-mobile-label="Étape 5">Phase 4</span>
+              <div class="process-card__content">
+                <div class="process-card__heading">
+                  <span class="process-card__icon" data-mobile-icon="I" aria-hidden="true">A</span>
+                  <h3>Installation</h3>
+                </div>
+                <p>
+                  D&eacute;ploiement s&ucirc;r et rapide par des experts
+                  certifi&eacute;s en &eacute;nergie industrielle.
+                </p>
+              </div>
+            </li>
+            <li class="process-card">
+              <span class="process-card__step" data-mobile-label="Étape 6">Phase 5</span>
+              <div class="process-card__content">
+                <div class="process-card__heading">
+                  <span class="process-card__icon" data-mobile-icon="S" aria-hidden="true">M</span>
+                  <h3>Suivi &amp; Optimisation</h3>
+                </div>
+                <p>
+                  Optimisation continue en temps r&eacute;el pour garantir des
+                  performances maximales.
+                </p>
+              </div>
+            </li>
+          </ol>
+        </section>
+        <!-- Legacy Figma process markup retained below is removed. -->
+        <!--
           <div
             style="
               align-self: stretch;
@@ -1140,6 +1094,7 @@
             >
           </div>
         </section>
+        -->
 
         <section
           class="landing-audit-cta"

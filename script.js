@@ -37,6 +37,32 @@ function makeSelectable(selector) {
 makeSelectable(".tech-cards article");
 makeSelectable(".solution-cards figure");
 
+const processCards = [...document.querySelectorAll(".process-card")];
+
+function selectProcessCard(selectedCard) {
+  processCards.forEach((card) => {
+    const isSelected = card === selectedCard;
+    card.classList.toggle("process-card--active", isSelected);
+    card.setAttribute("aria-pressed", String(isSelected));
+  });
+}
+
+processCards.forEach((card) => {
+  card.tabIndex = 0;
+  card.setAttribute("role", "button");
+  card.setAttribute(
+    "aria-pressed",
+    String(card.classList.contains("process-card--active")),
+  );
+
+  card.addEventListener("click", () => selectProcessCard(card));
+  card.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    selectProcessCard(card);
+  });
+});
+
 const navLinks = [...document.querySelectorAll(".navbar .nav-link")];
 const sectionsByNav = navLinks
   .map((link) => {
