@@ -6655,3 +6655,36 @@ h3 {
     white-space: nowrap !important;
   }
 }
+
+/* Keep the mobile menu icon centered on the same line as the logo. */
+@media (max-width: 1199.98px) {
+  header,
+  header .navbar,
+  header .navbar > .container-fluid {
+    min-height: 64px !important;
+  }
+
+  header .navbar > .container-fluid {
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  header .navbar-brand,
+  header .navbar-toggler {
+    align-self: center !important;
+  }
+
+  header .navbar-toggler {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    width: 44px !important;
+    height: 44px !important;
+    margin: 0 0 0 auto !important;
+    transform: none !important;
+  }
+
+  header .navbar-toggler-icon {
+    width: 18px !important;
+  }
+}
