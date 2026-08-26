@@ -350,11 +350,30 @@
             >
             <small class="sub">(diagnostic sous 48h)</small>
             <div class="solution-cards d-flex gap-4 overflow-auto">
-              <figure>
+              <figure
+                role="link"
+                tabindex="0"
+                onclick="window.location.href = 'WasteHeatRecoverySolutions.html'"
+                onkeydown="
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    window.location.href = 'WasteHeatRecoverySolutions.html';
+                  }
+                "
+              >
                 <img
                   src="assets/images/solutions/sol-1.png"
                   alt="Installation industrielle"
                 />
+                <span class="sol-badge" aria-hidden="true">&rarr;</span>
+                <figcaption>
+                  <strong>R&eacute;cup&eacute;ration de chaleur fatale</strong>
+                  <small
+                    >Votre groupe froid produit d&eacute;j&agrave; votre chaleur.<br />On
+                    la r&eacute;cup&egrave;re et on supprime la
+                    chaudi&egrave;re.</small
+                  >
+                </figcaption>
               </figure>
               <figure
                 role="link"
