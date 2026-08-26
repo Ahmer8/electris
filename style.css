@@ -5,6 +5,189 @@
   --green: #2fa36b;
 }
 
+/* Homepage process — clean desktop implementation of the Figma artwork. */
+.process-section {
+  overflow: hidden;
+  width: 100%;
+  padding: 136px 0;
+  background: #f1f5f9;
+  font-family: system-ui, sans-serif;
+}
+
+.process-intro {
+  width: min(1280px, calc(100% - 232px));
+  margin: 0 auto 64px;
+}
+
+.process-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 17px;
+  color: #000;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.process-eyebrow > span {
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+  background: url("https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/j8va3b74_expires_30_days.png") center / contain no-repeat;
+}
+
+.process-heading-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+.process-heading-row h2 {
+  margin: 0;
+  color: #000;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.process-heading-row p {
+  width: 550px;
+  margin: 0 22px 0 0;
+  color: #000;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.process-list {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  width: min(1216px, calc(100% - 296px));
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.process-card {
+  position: relative;
+  min-height: 158px;
+  padding: 48px 45px;
+  color: #0f0f0f;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+}
+
+.process-card::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background: #fff;
+  transition: background-color 180ms ease, filter 180ms ease;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='148 322 1216 158' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1364 443C1364 463.435 1347.43 480 1327 480H185C164.565 480 148 463.435 148 443V359C148 338.565 164.565 322 185 322H209.771C229.905 322 249.366 345 269.5 345H389.5C409.634 345 429.095 322 449.229 322H1327C1347.43 322 1364 338.565 1364 359V443Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='148 322 1216 158' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1364 443C1364 463.435 1347.43 480 1327 480H185C164.565 480 148 463.435 148 443V359C148 338.565 164.565 322 185 322H209.771C229.905 322 249.366 345 269.5 345H389.5C409.634 345 429.095 322 449.229 322H1327C1347.43 322 1364 338.565 1364 359V443Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+}
+
+.process-card:hover::before {
+  filter: brightness(0.985);
+}
+
+.process-card:focus-visible::before {
+  filter: drop-shadow(0 0 0.2rem rgba(18, 18, 255, 0.75));
+}
+
+.process-card--active::before {
+  background: #2e9d68;
+}
+
+.process-card--active { color: #fff; }
+
+.process-card__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 416px minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+}
+
+.process-card__heading {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  min-width: 0;
+}
+
+.process-card__icon {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  flex: 0 0 60px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #585858;
+  font-size: 31px;
+  line-height: 1;
+}
+
+.process-card--active .process-card__icon {
+  color: #2e9d68;
+  background: linear-gradient(180deg, #fff, #999);
+}
+
+.process-card__heading h3,
+.process-card__content > p {
+  margin: 0;
+  font-family: Manrope, Arial, sans-serif;
+  font-weight: 500;
+}
+
+.process-card__heading h3 {
+  font-size: 24px;
+  line-height: 1.2;
+}
+
+.process-card__content > p {
+  color: #373737;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+.process-card--active .process-card__content > p {
+  color: #fff;
+}
+
+.process-card__step {
+  position: absolute;
+  z-index: 1;
+  top: -29px;
+  left: 97px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 169px;
+  height: 48px;
+  padding: 5px 41px;
+  border-radius: 999px;
+  background: #fff;
+  color: #000;
+  font-family: Manrope, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.process-card--active .process-card__step {
+  padding-inline: 43px;
+  background: #2e9d68;
+  color: #fff;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -4952,5 +5135,339 @@ h3 {
 
   #process > div:nth-child(2) > span > span {
     color: #fff !important;
+  }
+}
+
+/* Homepage process — client-supplied mobile composition. */
+@media (max-width: 767px) {
+  #process.process-section {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 50px 16px 56px !important;
+    scroll-margin-top: 72px;
+    overflow: hidden !important;
+    background: #f1f5f9 !important;
+  }
+
+  .process-intro {
+    width: min(358px, calc(100vw - 32px));
+    margin: 0 auto 46px;
+  }
+
+  .process-eyebrow {
+    gap: 8px;
+    margin-bottom: 27px;
+    color: #c96f16;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+
+  .process-eyebrow > span {
+    width: 10px;
+    height: 10px;
+    flex-basis: 10px;
+    border-radius: 50%;
+    background: #c96f16;
+  }
+
+  .process-heading-row {
+    display: block;
+  }
+
+  .process-heading-row h2 {
+    max-width: 320px;
+    margin-bottom: 17px;
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+  }
+
+  .process-heading-row p {
+    width: 100%;
+    margin: 0;
+    color: #526077;
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.45;
+  }
+
+  .process-list {
+    width: min(358px, calc(100vw - 32px));
+    margin-right: auto;
+    margin-left: auto;
+    gap: 37px;
+  }
+
+  .process-card {
+    min-height: 168px;
+    padding: 30px 16px 20px;
+  }
+
+  .process-card::before {
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 358 168' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M358 126C358 149 339 168 316 168H42C19 168 0 149 0 126V42C0 19 19 0 42 0H52C64 0 73 13 86 13H111C124 13 134 0 147 0H316C339 0 358 19 358 42V126Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 358 168' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M358 126C358 149 339 168 316 168H42C19 168 0 149 0 126V42C0 19 19 0 42 0H52C64 0 73 13 86 13H111C124 13 134 0 147 0H316C339 0 358 19 358 42V126Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  }
+
+  .process-card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .process-card__heading {
+    gap: 16px;
+  }
+
+  .process-card__icon {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+    font-size: 0;
+  }
+
+  .process-card__icon::after {
+    content: attr(data-mobile-icon);
+    font-size: 21px;
+    line-height: 1;
+  }
+
+  .process-card__heading h3 {
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    line-height: 1.2 !important;
+  }
+
+  .process-card__content > p {
+    color: #526077;
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.55 !important;
+  }
+
+  .process-card--active .process-card__content > p {
+    color: #fff;
+  }
+
+  .process-card__step {
+    top: -25px;
+    left: 37px;
+    min-width: 70px;
+    height: 36px;
+    padding: 0 12px;
+    font-size: 0;
+  }
+
+  .process-card--active .process-card__step {
+    min-width: 70px;
+    padding: 0 12px;
+  }
+
+  .process-card__step::after {
+    content: attr(data-mobile-label);
+    font-size: 14px;
+    line-height: 1;
+  }
+}
+
+/* Mobile technologies — swipeable, snap-aligned card rail. */
+@media (max-width: 767px) {
+  #tech {
+    overflow: hidden;
+  }
+
+  #tech .tech-cards {
+    width: 100vw;
+    margin-right: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    padding: 0 52px 34px;
+    display: flex !important;
+    flex-flow: row nowrap !important;
+    justify-content: flex-start;
+    gap: 16px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 52px;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    touch-action: pan-x pan-y;
+  }
+
+  #tech .tech-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  #tech .tech-cards > * {
+    width: 286px !important;
+    max-width: 286px !important;
+    min-width: 286px !important;
+    flex: 0 0 286px !important;
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+
+  #tech .tech-cards article {
+    width: 100%;
+    min-height: 170px;
+    padding: 24px;
+  }
+}
+
+/* Homepage solutions — client-supplied mobile gallery. */
+@media (max-width: 767px) {
+  #solutions.solutions {
+    padding: 52px 14px 64px !important;
+    overflow: hidden;
+    background: #f8fafc !important;
+  }
+
+  #solutions .container {
+    width: min(358px, 100%);
+    max-width: 358px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  #solutions h2 {
+    max-width: 350px;
+    margin: 0 auto;
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    white-space: normal;
+  }
+
+  #solutions > .container > p {
+    max-width: 350px;
+    margin: 17px auto 15px;
+    color: #526077;
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  #solutions .btn {
+    width: 100%;
+    min-width: 0;
+    min-height: 48px;
+    gap: 20px;
+    padding: 10px 22px !important;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  #solutions .sub {
+    margin: 9px 0 24px;
+    color: #526077;
+    font-size: 14px;
+    line-height: 1.25;
+  }
+
+  #solutions .solution-cards {
+    display: flex !important;
+    width: 100%;
+    margin: 0;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px !important;
+    overflow: visible !important;
+  }
+
+  #solutions .solution-cards figure,
+  #solutions .solution-cards figure.expanded,
+  #solutions .solution-cards figure.card-selected {
+    width: min(302px, 100%) !important;
+    height: 564px;
+    flex: 0 0 564px !important;
+    border-radius: 24px;
+  }
+
+  #solutions .solution-cards figure:nth-child(1),
+  #solutions .solution-cards figure:nth-child(1).expanded,
+  #solutions .solution-cards figure:nth-child(1).card-selected {
+    width: min(302px, 100%) !important;
+    flex-basis: 564px !important;
+  }
+
+  #solutions .solution-cards figure:nth-child(2),
+  #solutions .solution-cards figure:nth-child(2).expanded,
+  #solutions .solution-cards figure:nth-child(2).card-selected {
+    width: min(302px, 100%) !important;
+    flex-basis: 564px !important;
+  }
+
+  #solutions .solution-cards figure:nth-child(7),
+  #solutions .solution-cards figure:nth-child(7).expanded,
+  #solutions .solution-cards figure:nth-child(7).card-selected {
+    width: min(302px, 100%) !important;
+    flex-basis: 564px !important;
+  }
+
+  #solutions .solution-cards img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #solutions .solution-cards figure:nth-child(1) img {
+    object-position: 50% 50%;
+    filter: sepia(0.48) saturate(1.15) hue-rotate(338deg) brightness(0.78);
+  }
+
+  #solutions .solution-cards figure:nth-child(2) img {
+    object-position: 55% 50%;
+  }
+
+  #solutions .solution-cards figure:nth-child(7) img {
+    object-position: 50% 50%;
+  }
+
+  #solutions .solution-cards figure:first-child figcaption {
+    right: 14px;
+    bottom: 30px;
+    left: 14px;
+    display: none !important;
+    padding: 15px 20px;
+    border: 1px solid rgba(46, 157, 104, 0.9);
+    border-radius: 14px;
+    background: rgba(10, 10, 10, 0.78);
+  }
+
+  #solutions .solution-cards figure:first-child figcaption strong {
+    margin-bottom: 7px;
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.3;
+  }
+
+  #solutions .solution-cards figure:first-child figcaption small {
+    font-family: "DM Sans", Arial, sans-serif;
+    font-size: 11px;
+    line-height: 1.45;
+  }
+
+  #solutions .solution-cards figure:first-child .sol-badge {
+    top: 24px;
+    right: 24px;
+    display: none !important;
+    width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+}
+
   }
 }

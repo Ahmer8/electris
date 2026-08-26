@@ -37,6 +37,65 @@ function makeSelectable(selector) {
 makeSelectable(".tech-cards article");
 makeSelectable(".solution-cards figure");
 
+const technologyRail = document.querySelector(".tech-cards");
+const mobileTechnologyQuery = window.matchMedia("(max-width: 767px)");
+
+function centerTechnologyCard(card, behavior = "smooth") {
+  if (!technologyRail || !mobileTechnologyQuery.matches) return;
+  const column = card.closest(".col");
+  if (!column) return;
+
+  technologyRail.scrollTo({
+    left: column.offsetLeft - (technologyRail.clientWidth - column.offsetWidth) / 2,
+    behavior,
+  });
+}
+
+technologyRail?.querySelectorAll("article").forEach((card) => {
+  card.addEventListener("click", () => centerTechnologyCard(card));
+  card.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      centerTechnologyCard(card);
+    }
+  });
+});
+
+function centerSelectedTechnology() {
+  const selected = technologyRail?.querySelector(
+    "article.selected, article.card-selected",
+  );
+  if (selected) centerTechnologyCard(selected, "auto");
+}
+
+requestAnimationFrame(centerSelectedTechnology);
+mobileTechnologyQuery.addEventListener?.("change", centerSelectedTechnology);
+
+const processCards = [...document.querySelectorAll(".process-card")];
+
+function selectProcessCard(selectedCard) {
+  processCards.forEach((card) => {
+    const isSelected = card === selectedCard;
+    card.classList.toggle("process-card--active", isSelected);
+    card.setAttribute("aria-pressed", String(isSelected));
+  });
+}
+
+processCards.forEach((card) => {
+  card.tabIndex = 0;
+  card.setAttribute("role", "button");
+  card.setAttribute(
+    "aria-pressed",
+    String(card.classList.contains("process-card--active")),
+  );
+
+  card.addEventListener("click", () => selectProcessCard(card));
+  card.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    selectProcessCard(card);
+  });
+});
+
 const navLinks = [...document.querySelectorAll(".navbar .nav-link")];
 const sectionsByNav = navLinks
   .map((link) => {
