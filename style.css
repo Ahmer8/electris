@@ -4680,7 +4680,7 @@ h3 {
 
   .hero {
     height: auto !important;
-    padding: 12px 0 24px !important;
+    padding: 12px 0 36px !important;
     background: #f8fafc !important;
   }
 
@@ -4690,19 +4690,21 @@ h3 {
   }
 
   .hero-photo {
-    width: calc(100vw - 24px) !important;
-    height: 562px !important;
+    width: min(368px, calc(100vw - 24px)) !important;
+    height: auto !important;
+    aspect-ratio: 736 / 1125;
     margin: 0 auto !important;
-    border-radius: 36px 36px 42px 42px !important;
-    background-position: 47% center !important;
-    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 368 562' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M368 501C368 521 352 537 332 537H197C176 537 160 562 136 562H36C16 562 0 546 0 526V36C0 16 16 0 36 0H332C352 0 368 16 368 36V501Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
-    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 368 562' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M368 501C368 521 352 537 332 537H197C176 537 160 562 136 562H36C16 562 0 546 0 526V36C0 16 16 0 36 0H332C352 0 368 16 368 36V501Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
+    border-radius: 0 !important;
+    background-image: url("assets/images/hero/figma-hero-mobile.png") !important;
+    background-position: center !important;
+    background-size: 100% 100% !important;
+    background-repeat: no-repeat !important;
+    -webkit-mask: none !important;
+    mask: none !important;
   }
 
   .hero-copy {
-    right: 22px !important;
-    bottom: 60px !important;
-    left: 22px !important;
+    display: none !important;
   }
 
   .hero h1 {
@@ -4715,27 +4717,27 @@ h3 {
   .hero p {
     max-width: 310px;
     font-size: 16px !important;
-    font-weight: 600 !important;
-    line-height: 1.35 !important;
+    font-weight: 500 !important;
+    line-height: 1.45 !important;
   }
 
   .hero-actions {
     position: static !important;
-    width: calc(100vw - 32px) !important;
+    width: min(368px, calc(100vw - 24px)) !important;
     flex-direction: column !important;
     gap: 12px !important;
-    margin: 28px auto 0 !important;
+    margin: 24px auto 0 !important;
     transform: none !important;
   }
 
   .hero-actions .btn,
   .hero-actions .btn:first-child {
     width: 100% !important;
-    height: 58px !important;
-    min-height: 58px !important;
+    height: 64px !important;
+    min-height: 64px !important;
     border-radius: 999px !important;
-    font-size: 16px !important;
-    font-weight: 700 !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
   }
 
   .stats {
