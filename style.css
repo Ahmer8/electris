@@ -6761,3 +6761,49 @@ h3 {
     color: #2e9d68 !important;
   }
 }
+
+/* Exact mobile spacing for the metrics and audit CTA artboards. */
+@media (max-width: 575px) {
+  .stats {
+    padding: 32px 0 34px !important;
+  }
+
+  .stats .row {
+    row-gap: 24px !important;
+  }
+
+  .stats .col-6:not(:last-child)::after {
+    margin-top: 24px !important;
+  }
+
+  .stat-card span {
+    width: auto !important;
+    max-width: 310px !important;
+  }
+
+  .landing-audit-cta {
+    width: 100vw !important;
+    padding: 48px 0 56px !important;
+  }
+
+  .mobile-audit-cta {
+    width: min(358px, calc(100vw - 32px)) !important;
+    max-width: 358px !important;
+    margin: 0 auto !important;
+  }
+
+  .mobile-audit-copy {
+    width: 100% !important;
+    max-width: 358px !important;
+    min-height: 410px !important;
+    padding: 34px 18px 28px !important;
+  }
+
+  .mobile-audit-plant {
+    width: 100% !important;
+    max-width: 358px !important;
+    height: 405px !important;
+    aspect-ratio: auto !important;
+    margin-top: 32px !important;
+  }
+}
