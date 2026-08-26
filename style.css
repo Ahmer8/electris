@@ -4850,8 +4850,15 @@ h3 {
   }
 
   .reason-row > :last-child {
-    order: -1;
+    order: -1 !important;
     margin-bottom: 36px !important;
+  }
+
+  .reason-row picture {
+    display: block;
+    width: 100%;
+    height: 266px;
+    line-height: 0;
   }
 
   .reason-img,
