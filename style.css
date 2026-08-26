@@ -6688,3 +6688,67 @@ h3 {
     width: 18px !important;
   }
 }
+
+/* Process cards: exact 390px mobile artboard proportions. */
+@media (max-width: 575px) {
+  #process .process-intro,
+  #process .process-list {
+    width: min(358px, calc(100vw - 32px)) !important;
+    max-width: 358px !important;
+  }
+
+  #process .process-intro {
+    margin-bottom: 47px !important;
+  }
+
+  #process .process-list {
+    gap: 37px !important;
+  }
+
+  #process .process-card {
+    width: 100% !important;
+    max-width: 358px !important;
+    min-height: 168px !important;
+    padding: 31px 16px 22px !important;
+  }
+
+  #process .process-card__content {
+    gap: 17px !important;
+  }
+
+  #process .process-card__heading {
+    gap: 16px !important;
+  }
+
+  #process .process-card__icon {
+    position: relative !important;
+    width: 40px !important;
+    min-width: 40px !important;
+    max-width: 40px !important;
+    height: 40px !important;
+    min-height: 40px !important;
+    flex: 0 0 40px !important;
+    aspect-ratio: 1 / 1 !important;
+    border-radius: 50% !important;
+    background: #f1f5f9 !important;
+    color: #585858 !important;
+    box-sizing: border-box !important;
+  }
+
+  #process .process-card__icon::after {
+    position: absolute !important;
+    inset: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    line-height: 1 !important;
+    transform: translateY(-0.5px);
+  }
+
+  #process .process-card--active .process-card__icon {
+    background: linear-gradient(180deg, #fff 0%, #b8b8b8 100%) !important;
+    color: #2e9d68 !important;
+  }
+}
