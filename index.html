@@ -154,18 +154,6 @@
         }
       }
 
-      .landing-audit-cta {
-        background: #fff;
-        padding: 0 0 84px;
-      }
-
-      .landing-audit-cta img {
-        display: block;
-        width: min(100%, 1512px);
-        height: auto;
-        margin: 0 auto;
-      }
-
       @media (max-width: 767px) {
         .landing-audit-cta {
           padding-bottom: 56px;
@@ -388,11 +376,18 @@
         </section>
 
         <section class="brands" aria-label="Ils nous font confiance">
-          <img
-            class="brand-strip"
-            src="assets/images/brands/client-logo-strip.svg"
-            alt=""
-          />
+          <div class="brand-track" aria-hidden="true">
+            <img
+              class="brand-strip"
+              src="assets/images/brands/client-logo-strip.svg"
+              alt=""
+            />
+            <img
+              class="brand-strip"
+              src="assets/images/brands/client-logo-strip.svg"
+              alt=""
+            />
+          </div>
         </section>
 
         <section class="tech pale" id="tech">
@@ -1150,10 +1145,29 @@
           class="landing-audit-cta"
           aria-label="Demander un audit gratuit"
         >
-          <img
-            src="assets/images/landing/decarboner-audit-cta.svg"
-            alt="Pr&ecirc;t &agrave; D&eacute;carboner Votre B&acirc;timent ? Demander un Audit Gratuit"
-          />
+          <div class="audit-cta-desktop">
+            <div class="audit-copy-card">
+              <img
+                class="audit-copy-mark"
+                src="assets/images/landing/image0_2349_24079.png"
+                alt=""
+              />
+              <h2>
+                Your building needs<br />Pr&ecirc;t &agrave; D&eacute;carboner<br />Votre B&acirc;timent&nbsp;?
+              </h2>
+              <p>Free, no obligation, within 48 hours.</p>
+              <p>Request a free diagnosis</p>
+              <a href="mailto:contact@electris.fr">
+                Demander un Audit Gratuit <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+            <div class="audit-image-card" aria-hidden="true">
+              <img
+                src="assets/images/landing/image2_2349_24079.png"
+                alt=""
+              />
+            </div>
+          </div>
           <div class="mobile-audit-cta">
             <div class="mobile-audit-copy">
               <h2>
@@ -1168,15 +1182,7 @@
               >
             </div>
             <div class="mobile-audit-plant" aria-hidden="true">
-              <svg
-                viewBox="0 0 1504 2000"
-                preserveAspectRatio="xMidYMid slice"
-                focusable="false"
-              >
-                <use
-                  href="assets/images/landing/decarboner-audit-cta.svg#image2_2153_16564"
-                ></use>
-              </svg>
+              <img src="assets/images/landing/image2_2349_24079.png" alt="" />
             </div>
           </div>
         </section>
@@ -1380,246 +1386,79 @@
               gap: 11px;
             "
           >
-            <span style="color: #c97a2b; font-size: 16px; font-weight: bold"
-              >L'IMPACT ELECTRIS</span
-            >
-            <div
-              style="
-                align-self: stretch;
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-start;
-              "
-            >
-              <span
-                style="
-                  color: #000000;
-                  font-size: 48px;
-                  font-weight: bold;
-                  width: 717px;
-                "
-                >La transition &eacute;nerg&eacute;tique en action et en
-                chiffres</span
-              >
-              <span
-                style="
-                  color: #737373;
-                  font-size: 16px;
-                  font-weight: bold;
-                  margin-top: 34px;
-                  width: 400px;
-                "
-                >Nous d&eacute;ployons les meilleures technologies mondiales
-                pour d&eacute;carboner et &eacute;lectrifier intelligemment vos
-                b&acirc;timents.</span
-              >
+            <span>L'IMPACT ELECTRIS</span>
+            <div>
+              <span>La transition &eacute;nerg&eacute;tique en action et en chiffres</span>
+              <span>Nous d&eacute;ployons les meilleures technologies mondiales pour d&eacute;carboner et &eacute;lectrifier intelligemment vos b&acirc;timents.</span>
             </div>
           </div>
           <div
             class="impact-art-row"
             style="align-self: stretch; display: flex; align-items: stretch"
           >
-            <div
-              style="
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                background: linear-gradient(180deg, #04347b, #1212ff);
-                border-radius: 32px;
-                padding: 40px;
-                margin-right: 32px;
-                position: relative;
-                min-height: 480px;
-                min-width: 0;
-                overflow: hidden;
-              "
-            >
-              <div
-                style="
-                  align-self: stretch;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: flex-start;
-                  position: relative;
-                  z-index: 1;
-                "
-              >
-                <div
-                  style="
-                    display: flex;
-                    align-items: center;
-                    margin-bottom: 126px;
-                    gap: 12px;
-                  "
-                >
-                  <img
-                    src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/nftn8o36_expires_30_days.png"
-                    style="
-                      border-radius: 100px;
-                      width: 40px;
-                      height: 40px;
-                      object-fit: fill;
-                    "
-                    alt=""
-                  />
-                  <span
-                    style="color: #ffffff; font-size: 14px; font-weight: bold"
-                    >Exp&eacute;rience confirm&eacute;e</span
-                  >
-                </div>
-                <div
-                  style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    gap: 16px;
-                  "
-                >
-                  <span
-                    style="color: #ffffff; font-size: 80px; font-weight: bold"
-                    >5 ans</span
-                  >
-                  <span
-                    style="
-                      color: #ffffff;
-                      font-size: 24px;
-                      font-weight: bold;
-                      width: 302px;
-                    "
-                    >d'expertise et d'ing&eacute;nierie dans
-                    l'&eacute;lectrification</span
-                  >
-                  <span
-                    style="color: #e2e8f0; font-size: 16px; font-weight: bold"
-                    >Une &eacute;quipe pionni&egrave;re d&eacute;di&eacute;e
-                    &agrave; la conception de syst&egrave;mes de performance
-                    &eacute;nerg&eacute;tique sur-mesure.</span
-                  >
-                </div>
-              </div>
+            <div class="impact-card impact-card-blue">
               <img
-                src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/n5s4kruc_expires_30_days.png"
-                style="
-                  position: absolute;
-                  top: 0px;
-                  right: 0px;
-                  border-radius: 32px;
-                  width: 258px;
-                  height: 346px;
-                  object-fit: fill;
-                "
+                class="impact-card-mark impact-card-mark-blue"
+                src="assets/images/impact/impact-blue-mark.svg"
                 alt=""
               />
+              <div class="impact-card-label">
+                <span class="impact-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="9.25" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M12 8v4l2.25 2.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span>Exp&eacute;rience confirm&eacute;e</span>
+              </div>
+              <div class="impact-card-copy">
+                <strong class="impact-card-number">5 ans</strong>
+                <strong class="impact-card-title">d'expertise et d'ing&eacute;nierie dans l'&eacute;lectrification</strong>
+                <p>Une &eacute;quipe pionni&egrave;re d&eacute;di&eacute;e &agrave; la conception de syst&egrave;mes de performance &eacute;nerg&eacute;tique sur-mesure.</p>
+              </div>
             </div>
-            <img
-              src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/gotuu6g7_expires_30_days.png"
-              style="
-                border-radius: 32px;
-                height: auto;
-                align-self: stretch;
-                flex: 1;
-                margin-right: 31px;
-                object-fit: cover;
-                min-width: 0;
-              "
-              alt="Collectif d'experts"
-            />
-            <div
-              style="
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                background: #2e9d68;
-                border-radius: 32px;
-                padding-top: 24px;
-                padding-bottom: 24px;
-                min-height: 480px;
-                min-width: 0;
-                overflow: hidden;
-              "
-            >
-              <div
-                style="
-                  display: flex;
-                  align-items: center;
-                  margin-bottom: 38px;
-                  margin-left: 24px;
-                  gap: 12px;
-                "
-              >
-                <img
-                  src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/wh60yj9h_expires_30_days.png"
-                  style="
-                    border-radius: 100px;
-                    width: 40px;
-                    height: 40px;
-                    object-fit: fill;
-                  "
-                  alt=""
-                />
-                <span style="color: #ffffff; font-size: 14px; font-weight: bold"
-                  >R&eacute;alisations durables</span
-                >
-              </div>
+            <div class="impact-card impact-card-team">
               <img
-                src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/662e9h1o_expires_30_days.png"
-                style="
-                  border-radius: 32px;
-                  width: 386px;
-                  height: 80px;
-                  margin-bottom: 39px;
-                  margin-left: 10px;
-                  object-fit: fill;
-                  max-width: calc(100% - 20px);
-                "
+                class="impact-team-bg"
+                src="assets/images/impact/image1_2349_6035.png"
                 alt=""
               />
-              <div
-                style="
-                  align-self: stretch;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: flex-start;
-                  margin-left: 24px;
-                  margin-right: 24px;
-                  position: relative;
-                "
-              >
-                <div
-                  style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    gap: 16px;
-                    position: relative;
-                    z-index: 1;
-                  "
-                >
-                  <span
-                    style="color: #ffffff; font-size: 80px; font-weight: bold"
-                    >200+</span
-                  >
-                  <span
-                    style="
-                      color: #ffffff;
-                      font-size: 24px;
-                      font-weight: bold;
-                      width: 270px;
-                    "
-                    >b&acirc;timents &eacute;lectrifi&eacute;s et
-                    modernis&eacute;s</span
-                  >
-                  <span
-                    style="color: #ffffff; font-size: 16px; font-weight: bold"
-                    >Des gains massifs de performance &eacute;nerg&eacute;tique
-                    et de r&eacute;duction de CO2 mesur&eacute;s en temps
-                    r&eacute;el chaque jour.</span
-                  >
-                </div>
+              <div class="impact-card-label">
+                <span class="impact-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M16 18.5c0-1.9-1.8-3.5-4-3.5s-4 1.6-4 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    <circle cx="12" cy="9" r="3" stroke="currentColor" stroke-width="1.5" />
+                    <path d="M4.5 17.5c.25-1.55 1.65-2.8 3.35-3.15M16.15 14.35c1.7.35 3.1 1.6 3.35 3.15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+                    <circle cx="6.5" cy="10.5" r="2" stroke="currentColor" stroke-width="1.5" />
+                    <circle cx="17.5" cy="10.5" r="2" stroke="currentColor" stroke-width="1.5" />
+                  </svg>
+                </span>
+                <span>Collectif d'experts</span>
+              </div>
+              <div class="impact-card-copy">
+                <strong class="impact-card-number">+50</strong>
+                <strong class="impact-card-title">professionnels de l'&eacute;nergie &agrave; votre &eacute;coute</strong>
+                <p>Des ing&eacute;nieurs, techniciens et chefs de projets hautement qualifi&eacute;s &agrave; chaque &eacute;tape de votre transition.</p>
+              </div>
+            </div>
+            <div class="impact-card impact-card-green">
+              <div class="impact-card-label">
+                <span class="impact-card-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M13 2 5.5 13h5L9 22l8-12h-5L13 2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <span>R&eacute;alisations durables</span>
+              </div>
+              <img
+                class="impact-card-mark impact-card-mark-green"
+                src="assets/images/impact/image2_2349_6035.png"
+                alt=""
+              />
+              <div class="impact-card-copy impact-card-copy-green">
+                <strong class="impact-card-number">200+</strong>
+                <strong class="impact-card-title">b&acirc;timents &eacute;lectrifi&eacute;s et modernis&eacute;s</strong>
+                <p>Des gains massifs de performance &eacute;nerg&eacute;tique et de r&eacute;duction de CO<sub>2</sub> mesur&eacute;s en temps r&eacute;el chaque jour.</p>
               </div>
             </div>
           </div>
