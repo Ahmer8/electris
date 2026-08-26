@@ -5370,7 +5370,7 @@ h3 {
 
   #process .process-intro {
     min-height: 0 !important;
-    margin-bottom: 44px !important;
+    margin-bottom: 48px !important;
   }
 
   #process .process-eyebrow {
@@ -6486,7 +6486,7 @@ h3 {
 
   #process .process-intro {
     min-height: 0 !important;
-    margin-bottom: 44px !important;
+    margin-bottom: 58px !important;
   }
 
   #process .process-eyebrow {
@@ -6538,7 +6538,7 @@ h3 {
     gap: 37px !important;
     list-style: none !important;
     margin-top: 0 !important;
-    padding-top: 195px !important;
+    padding-top: 0 !important;
     transform: none !important;
   }
 
