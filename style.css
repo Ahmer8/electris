@@ -4546,12 +4546,13 @@ h3 {
     width: 100% !important;
     max-width: none !important;
     padding: 50px 16px 56px !important;
+    scroll-margin-top: 72px;
     overflow: hidden !important;
     background: #f1f5f9 !important;
   }
 
   .process-intro {
-    width: min(358px, 100%);
+    width: min(358px, calc(100vw - 32px));
     margin: 0 auto 46px;
   }
 
@@ -4597,7 +4598,7 @@ h3 {
   }
 
   .process-list {
-    width: min(358px, 100%);
+    width: min(358px, calc(100vw - 32px));
     margin-right: auto;
     margin-left: auto;
     gap: 37px;
@@ -4639,17 +4640,17 @@ h3 {
 
   .process-card__heading h3 {
     font-family: "DM Sans", Arial, sans-serif;
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.2;
+    font-size: 20px !important;
+    font-weight: 400 !important;
+    line-height: 1.2 !important;
   }
 
   .process-card__content > p {
     color: #526077;
     font-family: "DM Sans", Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1.55;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    line-height: 1.55 !important;
   }
 
   .process-card--active .process-card__content > p {
@@ -4734,41 +4735,41 @@ h3 {
     display: flex !important;
     width: 100%;
     margin: 0;
-    flex-wrap: wrap;
-    align-items: stretch;
+    flex-flow: column nowrap;
+    align-items: center;
     justify-content: flex-start;
-    gap: 20px 10px !important;
+    gap: 20px !important;
     overflow: visible !important;
   }
 
   #solutions .solution-cards figure,
   #solutions .solution-cards figure.expanded,
   #solutions .solution-cards figure.card-selected {
-    width: calc(50% - 5px) !important;
-    height: 476px;
-    flex: 0 0 calc(50% - 5px) !important;
+    width: min(302px, 100%) !important;
+    height: 564px;
+    flex: 0 0 564px !important;
     border-radius: 24px;
   }
 
   #solutions .solution-cards figure:nth-child(1),
   #solutions .solution-cards figure:nth-child(1).expanded,
   #solutions .solution-cards figure:nth-child(1).card-selected {
-    width: calc(100% - 34px) !important;
-    flex-basis: calc(100% - 34px) !important;
+    width: min(302px, 100%) !important;
+    flex-basis: 564px !important;
   }
 
   #solutions .solution-cards figure:nth-child(2),
   #solutions .solution-cards figure:nth-child(2).expanded,
   #solutions .solution-cards figure:nth-child(2).card-selected {
-    width: 24px !important;
-    flex-basis: 24px !important;
+    width: min(302px, 100%) !important;
+    flex-basis: 564px !important;
   }
 
   #solutions .solution-cards figure:nth-child(7),
   #solutions .solution-cards figure:nth-child(7).expanded,
   #solutions .solution-cards figure:nth-child(7).card-selected {
-    width: 100% !important;
-    flex-basis: 100% !important;
+    width: min(302px, 100%) !important;
+    flex-basis: 564px !important;
   }
 
   #solutions .solution-cards img {
@@ -4794,7 +4795,7 @@ h3 {
     right: 14px;
     bottom: 30px;
     left: 14px;
-    display: block !important;
+    display: none !important;
     padding: 15px 20px;
     border: 1px solid rgba(46, 157, 104, 0.9);
     border-radius: 14px;
@@ -4818,7 +4819,7 @@ h3 {
   #solutions .solution-cards figure:first-child .sol-badge {
     top: 24px;
     right: 24px;
-    display: grid !important;
+    display: none !important;
     width: 48px;
     height: 48px;
     font-size: 20px;
