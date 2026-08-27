@@ -8005,6 +8005,39 @@ h3 {
   }
 }
 
+/* Tablet tech map: same clean artwork (no baked-in CTAs) but sized to actually fill the
+   wider tablet container instead of the phone-sized cap, so it doesn't look small and
+   leave empty space in the section. Buttons keep the same phone-style layout as before. */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #tech .world {
+    width: min(100%, 640px) !important;
+    max-width: none !important;
+    aspect-ratio: 358 / 96 !important;
+    height: auto !important;
+    margin: 56px auto 32px !important;
+    background-image: url("assets/icons/world-map-mobile.svg") !important;
+    background-position: center center !important;
+    background-size: 100% 100% !important;
+    overflow: hidden !important;
+  }
+
+  #tech .world .pin {
+    display: none !important;
+  }
+
+  #tech .tech-actions {
+    align-items: center !important;
+    gap: 24px !important;
+  }
+
+  #tech .tech-actions .btn,
+  #tech .tech-actions .btn:first-child,
+  #tech .tech-actions .btn:last-child {
+    width: auto !important;
+    white-space: nowrap !important;
+  }
+}
+
 /* Desktop fluid fix: the solution cards row (7 fixed 162.286px cards) doesn't
    shrink, so it overflows the viewport on smaller desktop/laptop widths
    (~1200-1280px) between the tablet breakpoint and where the fixed row fits.
