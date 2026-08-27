@@ -7383,3 +7383,587 @@ h3 {
     grid-column: span 2;
   }
 }
+
+/* Tablet fluid pass: keep Figma-sized sections responsive on every tablet shape. */
+@media (min-width: 576px) and (max-width: 1199.98px) {
+  :root {
+    --tablet-gutter: max(24px, env(safe-area-inset-left), env(safe-area-inset-right));
+  }
+
+  html,
+  body,
+  .site-frame {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: clip;
+  }
+
+  body {
+    padding-right: env(safe-area-inset-right);
+    padding-left: env(safe-area-inset-left);
+  }
+
+  section,
+  header,
+  footer,
+  main,
+  .container,
+  .container-fluid {
+    max-width: 100%;
+  }
+
+  img,
+  video,
+  canvas,
+  svg,
+  picture {
+    max-width: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  span,
+  a,
+  strong,
+  small {
+    overflow-wrap: break-word;
+  }
+
+  .container,
+  .container-fluid {
+    padding-right: var(--tablet-gutter) !important;
+    padding-left: var(--tablet-gutter) !important;
+  }
+
+  .navbar > .container-fluid {
+    padding-top: max(0px, env(safe-area-inset-top));
+  }
+
+  .navbar-collapse.show {
+    max-height: calc(100svh - 78px);
+    overflow-y: auto;
+  }
+
+  .hero-photo,
+  .reason-img,
+  .machine,
+  .audit-copy-card,
+  .audit-image-card,
+  .contact-card,
+  .contact-image {
+    max-width: 100%;
+  }
+
+  .hero-photo {
+    height: clamp(460px, 54svh, 650px);
+    min-height: 0;
+    border-radius: clamp(28px, 4vw, 48px);
+  }
+
+  .hero-copy {
+    max-width: calc(100% - 48px);
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 6.1vw, 64px);
+  }
+
+  .hero-actions {
+    right: auto;
+    left: auto;
+    max-width: 100%;
+  }
+
+  .hero-actions .btn {
+    white-space: normal;
+  }
+
+  .stats .row {
+    row-gap: 24px;
+  }
+
+  .stat-card {
+    height: auto;
+  }
+
+  .why,
+  .tech,
+  .solutions,
+  .process-section,
+  .landing-audit-cta,
+  .contact-section,
+  #sectors,
+  #impact {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .why {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: clamp(56px, 8vw, 84px) 0 !important;
+  }
+
+  .why::before {
+    display: block !important;
+  }
+
+  .why .container,
+  .solutions .container,
+  .process-intro,
+  .process-list,
+  .audit-cta-desktop,
+  .contact-layout,
+  .footer-panel {
+    width: min(100% - (var(--tablet-gutter) * 2), 960px) !important;
+    max-width: 960px !important;
+  }
+
+  .why .container {
+    position: relative !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+
+  .why .heading {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+    gap: 22px !important;
+    margin-bottom: clamp(42px, 6vw, 64px) !important;
+    padding-bottom: 28px !important;
+  }
+
+  .why .heading > * {
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .heading,
+  .process-heading-row,
+  .contact-layout,
+  .footer-top,
+  .footer-bottom {
+    min-width: 0;
+  }
+
+  .reason-row {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 42%) !important;
+    align-items: center !important;
+    gap: clamp(24px, 4vw, 40px) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    margin: 0 0 clamp(42px, 6vw, 64px) !important;
+    padding: 0 0 clamp(42px, 6vw, 64px) !important;
+    border-bottom: 1px solid #e4ebf1;
+  }
+
+  .reason-row:last-of-type {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    border-bottom: 0;
+  }
+
+  .reason-row > :first-child,
+  .reason-row > :last-child,
+  .reason-row:nth-of-type(2) > :first-child,
+  .reason-row:nth-of-type(2) > :last-child,
+  .reason-row:nth-of-type(3) > :last-child,
+  .reason-row:nth-of-type(4) > :last-child {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .reason-row strong,
+  .reason-row p,
+  .process-heading-row p,
+  .solutions p,
+  .sub {
+    max-width: 100%;
+  }
+
+  .reason-row:nth-of-type(2) .reason-img,
+  .reason-row:nth-of-type(3) .reason-img,
+  .reason-row:nth-of-type(4) .reason-img {
+    width: 100% !important;
+    height: clamp(280px, 36vw, 390px) !important;
+    object-fit: cover !important;
+    border-radius: 28px !important;
+    -webkit-mask: none !important;
+    mask: none !important;
+  }
+
+  .tech-cards,
+  .solution-cards,
+  .impact-art-row,
+  .sectors-art-row {
+    max-width: 100%;
+  }
+
+  .tech-cards {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .tech-cards > * {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+  }
+
+  .solution-cards {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .process-card,
+  .process-card__content,
+  .process-card__heading {
+    min-width: 0;
+  }
+
+  .process-card::before {
+    border-radius: 30px;
+    -webkit-mask: none !important;
+    mask: none !important;
+  }
+
+  .audit-cta-desktop,
+  .contact-layout {
+    gap: clamp(20px, 3vw, 32px);
+  }
+
+  .audit-copy-card,
+  .audit-image-card {
+    min-height: 0 !important;
+  }
+
+  #sectors > div:first-of-type,
+  #sectors > div:last-child,
+  #impact > div:first-child,
+  .impact-art-row {
+    width: min(100% - (var(--tablet-gutter) * 2), 960px) !important;
+    max-width: 960px !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  .impact-art-row {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .impact-art-row > div,
+  .impact-art-row > img {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+  }
+
+  .impact-art-row span[style*="width"],
+  .impact-art-row img[style*="width"] {
+    max-width: 100% !important;
+  }
+
+  .footer-panel {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .reason-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .reason-row.flex-lg-row-reverse > :first-child,
+  .reason-row.flex-lg-row-reverse > :last-child {
+    grid-column: auto !important;
+    grid-row: auto !important;
+  }
+
+  .tech-cards,
+  .impact-art-row,
+  .sectors-art-row {
+    grid-template-columns: 1fr;
+  }
+
+  .sectors-art-row {
+    display: grid !important;
+  }
+
+  .sectors-art-row img {
+    width: 100% !important;
+    height: clamp(240px, 50vw, 360px) !important;
+    flex: none !important;
+  }
+
+  .impact-art-row > div,
+  .impact-art-row > img {
+    height: auto !important;
+    min-height: 360px !important;
+  }
+}
+
+/* Process cards: tablet/mobile match the supplied notched Figma SVG. */
+@media (min-width: 576px) and (max-width: 1199.98px) {
+  #process .process-list {
+    gap: clamp(24px, 3.4vw, 36px) !important;
+  }
+
+  #process .process-card {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-height: clamp(152px, 22.37vw, 187px) !important;
+    padding: clamp(74px, 10.77vw, 90px) clamp(26px, 5.38vw, 45px) clamp(22px, 4.43vw, 37px) !important;
+    overflow: visible !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+  }
+
+  #process .process-card--active {
+    color: #fff !important;
+  }
+
+  #process .process-card::before {
+    content: "" !important;
+    position: absolute !important;
+    z-index: 0 !important;
+    inset: 0 !important;
+    display: block !important;
+    background: #fff !important;
+    border-radius: 0 !important;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 836 187' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M836 150C836 170.435 819.435 187 799 187H37C16.5655 187 0 170.435 0 150V63.0415C0 44.2409 15.2409 29 34.0415 29C52.5653 29 69.436 49.4058 87.8042 51.8014C88.8086 51.9324 89.8329 52 90.873 52H214.072C234.206 52 253.668 29 273.801 29H799C819.434 29 836 45.5655 836 66V150Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 836 187' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M836 150C836 170.435 819.435 187 799 187H37C16.5655 187 0 170.435 0 150V63.0415C0 44.2409 15.2409 29 34.0415 29C52.5653 29 69.436 49.4058 87.8042 51.8014C88.8086 51.9324 89.8329 52 90.873 52H214.072C234.206 52 253.668 29 273.801 29H799C819.434 29 836 45.5655 836 66V150Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
+  }
+
+  #process .process-card--active::before {
+    background: #2e9d68 !important;
+  }
+
+  #process .process-card__step,
+  #process .process-card--active .process-card__step {
+    position: absolute !important;
+    z-index: 2 !important;
+    top: 0 !important;
+    left: 8.014% !important;
+    width: 19.856% !important;
+    min-width: clamp(116px, 19.856%, 166px) !important;
+    height: clamp(36px, 5.5vw, 46px) !important;
+    margin: 0 !important;
+    padding: 0 clamp(14px, 2vw, 22px) !important;
+    border-radius: 999px !important;
+    box-shadow: none !important;
+    background: #fff !important;
+    color: #0f172a !important;
+    font-size: clamp(12px, 1.65vw, 16px) !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  #process .process-card--active .process-card__step {
+    background: #2e9d68 !important;
+    color: #fff !important;
+    outline: 2px solid #fff;
+  }
+
+  #process .process-card__step::after {
+    content: none !important;
+  }
+
+  #process .process-card__content {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.45fr) !important;
+    align-items: center !important;
+    gap: clamp(18px, 4.42vw, 37px) !important;
+  }
+
+  #process .process-card__heading {
+    gap: 16px !important;
+  }
+
+  #process .process-card__icon {
+    width: clamp(44px, 7.18vw, 60px) !important;
+    height: clamp(44px, 7.18vw, 60px) !important;
+    flex: 0 0 clamp(44px, 7.18vw, 60px) !important;
+  }
+
+  #process .process-card__heading h3 {
+    font-size: clamp(17px, 2vw, 22px) !important;
+  }
+
+  #process .process-card__content > p {
+    font-size: clamp(14px, 1.65vw, 18px) !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #process .process-card__step,
+  #process .process-card--active .process-card__step {
+    left: 8.014% !important;
+    width: auto !important;
+    min-width: 92px !important;
+    height: 32px !important;
+  }
+
+  #process .process-card__content {
+    grid-template-columns: 1fr !important;
+    align-items: stretch !important;
+  }
+
+  #process .process-card {
+    padding-top: 56px !important;
+  }
+}
+
+/* Hero: fluid tablet composition for portrait, landscape, and notched tablets. */
+@media (min-width: 576px) and (max-width: 1199.98px) {
+  #hero.hero {
+    display: block !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: clamp(16px, 2.4vw, 28px) 0 clamp(36px, 5vw, 56px) !important;
+    background: var(--pale) !important;
+  }
+
+  #hero > .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-right: max(24px, env(safe-area-inset-right)) !important;
+    padding-left: max(24px, env(safe-area-inset-left)) !important;
+  }
+
+  #hero .hero-photo {
+    width: 100% !important;
+    max-width: 1448px !important;
+    height: clamp(420px, min(62vw, calc(100svh - 170px)), 650px) !important;
+    min-height: 0 !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    border-radius: 0 !important;
+  }
+
+  #hero .hero-copy {
+    left: clamp(28px, 5vw, 54px) !important;
+    right: clamp(24px, 5vw, 54px) !important;
+    bottom: clamp(28px, 5vw, 52px) !important;
+    width: auto !important;
+    max-width: min(640px, calc(100% - 48px)) !important;
+  }
+
+  #hero .hero h1,
+  #hero h1 {
+    margin-bottom: clamp(10px, 1.6vw, 16px) !important;
+    font-size: clamp(34px, 5.5vw, 58px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: 0 !important;
+    overflow-wrap: normal !important;
+  }
+
+  #hero p {
+    max-width: 100% !important;
+    font-size: clamp(15px, 2.05vw, 21px) !important;
+    line-height: 1.4 !important;
+  }
+
+  #hero .hero-actions {
+    position: static !important;
+    left: auto !important;
+    top: auto !important;
+    width: min(100%, 920px) !important;
+    max-width: 100% !important;
+    margin: clamp(16px, 2.4vw, 24px) auto 0 !important;
+    transform: none !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: clamp(12px, 2vw, 18px) !important;
+  }
+
+  #hero .hero-actions .btn,
+  #hero .hero-actions .btn:first-child {
+    flex: 1 1 min(100%, 320px) !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: 420px !important;
+    height: clamp(56px, 7vw, 64px) !important;
+    padding: 0 clamp(22px, 3.6vw, 38px) !important;
+    font-size: clamp(17px, 2.2vw, 21px) !important;
+    line-height: 1.15 !important;
+    white-space: normal !important;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #hero.hero {
+    padding-top: 12px !important;
+  }
+
+  #hero > .container-fluid {
+    padding-right: max(16px, env(safe-area-inset-right)) !important;
+    padding-left: max(16px, env(safe-area-inset-left)) !important;
+  }
+
+  #hero .hero-photo {
+    height: clamp(390px, 68vw, 470px) !important;
+  }
+
+  #hero .hero-copy {
+    left: 24px !important;
+    right: 24px !important;
+    bottom: 34px !important;
+    max-width: calc(100% - 48px) !important;
+  }
+
+  #hero h1 {
+    font-size: clamp(31px, 6vw, 40px) !important;
+  }
+
+  #hero p {
+    font-size: clamp(14px, 2.7vw, 17px) !important;
+  }
+
+  #hero .hero-actions {
+    width: min(100%, 560px) !important;
+  }
+
+  #hero .hero-actions .btn,
+  #hero .hero-actions .btn:first-child {
+    flex-basis: 100% !important;
+    max-width: 560px !important;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199.98px) and (orientation: landscape) {
+  #hero .hero-photo {
+    height: clamp(460px, min(48vw, calc(100svh - 230px)), 560px) !important;
+  }
+
+  #hero .hero-copy {
+    bottom: clamp(28px, 4vw, 46px) !important;
+  }
+
+  #hero h1 {
+    font-size: clamp(42px, 4.8vw, 56px) !important;
+  }
+
+  #hero .hero-actions {
+    margin-top: 18px !important;
+  }
+}
