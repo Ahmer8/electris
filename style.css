@@ -7973,46 +7973,16 @@ h3 {
   #tech .world {
     width: 100vw !important;
     max-width: none !important;
-    height: clamp(150px, 30vw, 190px) !important;
+    height: clamp(96px, 26.8vw, 132px) !important;
     margin: 42px calc(50% - 50vw) 26px !important;
-    background-image: url("assets/icons/world-map-dots.svg") !important;
+    background-image: url("assets/icons/world-map-mobile.svg") !important;
     background-position: center center !important;
-    background-size: calc(100vw - 28px) auto !important;
+    background-size: min(100vw - 28px, 520px) auto !important;
     overflow: hidden !important;
   }
 
   #tech .world .pin {
-    display: block !important;
-    width: 18px !important;
-    height: 18px !important;
-    box-shadow: 5px 5px 0 rgba(212, 122, 31, 0.2) !important;
-  }
-
-  #tech .world .pin::before {
-    left: 5px !important;
-    top: 5px !important;
-    width: 8px !important;
-    height: 8px !important;
-  }
-
-  #tech .world .pin-1 {
-    left: 15% !important;
-    top: 36% !important;
-  }
-
-  #tech .world .pin-2 {
-    left: 46% !important;
-    top: 44% !important;
-  }
-
-  #tech .world .pin-3 {
-    left: 55% !important;
-    top: 55% !important;
-  }
-
-  #tech .world .pin-4 {
-    left: 80% !important;
-    top: 40% !important;
+    display: none !important;
   }
 
   #tech .tech-actions {
