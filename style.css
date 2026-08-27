@@ -8004,3 +8004,17 @@ h3 {
     white-space: normal !important;
   }
 }
+
+/* Desktop fluid fix: the solution cards row (7 fixed 162.286px cards) doesn't
+   shrink, so it overflows the viewport on smaller desktop/laptop widths
+   (~1200-1280px) between the tablet breakpoint and where the fixed row fits.
+   min() keeps the exact original 162.286px size once there's room (>=1280px
+   of container width) and shrinks fluidly below that so it never overflows. */
+@media (min-width: 1200px) {
+  .solution-cards figure,
+  .solution-cards figure.expanded,
+  .solution-cards figure.card-selected {
+    flex-basis: min(162.286px, calc((100% - 144px) / 7));
+    width: min(162.286px, calc((100% - 144px) / 7));
+  }
+}
