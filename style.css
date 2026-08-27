@@ -7685,6 +7685,104 @@ h3 {
   }
 }
 
+/* Tablet footer: proportional to the supplied 1440px footer SVG. */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  .footer-panel {
+    height: clamp(310px, 36.5vw, 438px) !important;
+    min-height: 0 !important;
+    padding: clamp(57px, 7.64vw, 92px) clamp(30px, 4.03vw, 48px) clamp(28px, 3.82vw, 46px) !important;
+    border-radius: 0 !important;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1392 530' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1392 482C1392 508.51 1370.51 530 1344 530H48C21.4904 530 0 508.51 0 482V111C0 84.4903 21.4903 63 48 63H852.655C877.921 63 900.517 51.573 915.559 33.6052C929.836 16.5509 948.145 0 970.386 0H1344C1370.51 0 1392 21.4903 1392 48V482Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1392 530' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1392 482C1392 508.51 1370.51 530 1344 530H48C21.4904 530 0 508.51 0 482V111C0 84.4903 21.4903 63 48 63H852.655C877.921 63 900.517 51.573 915.559 33.6052C929.836 16.5509 948.145 0 970.386 0H1344C1370.51 0 1392 21.4903 1392 48V482Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
+  }
+
+  .footer-inner {
+    height: 100% !important;
+  }
+
+  .footer-top {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: clamp(70px, 9.44vw, 113px) !important;
+  }
+
+  .footer-logo {
+    flex: 0 0 clamp(118px, 15.9vw, 191px) !important;
+    padding-top: 0 !important;
+  }
+
+  .footer-logo img {
+    width: clamp(118px, 15.9vw, 191px) !important;
+    height: auto !important;
+  }
+
+  .footer-cols {
+    width: auto !important;
+    grid-template-columns: clamp(74px, 10vw, 120px) clamp(143px, 19.25vw, 231px) clamp(94px, 12.7vw, 152px) !important;
+    gap: clamp(18px, 3vw, 36px) !important;
+  }
+
+  .footer-col,
+  .footer-col:last-child {
+    grid-column: auto !important;
+  }
+
+  .footer-col h5 {
+    margin-bottom: clamp(10px, 1.74vw, 21px) !important;
+    font-size: clamp(8px, 1.04vw, 12px) !important;
+    line-height: 1.2 !important;
+  }
+
+  .footer-col ul {
+    gap: clamp(6px, 1.18vw, 14px) !important;
+  }
+
+  .footer-col li {
+    gap: clamp(6px, 1.18vw, 14px) !important;
+    font-size: clamp(8px, 1.11vw, 13px) !important;
+    line-height: 1.35 !important;
+  }
+
+  .footer-col a {
+    font-size: clamp(8px, 1.11vw, 13px) !important;
+    line-height: 1.35 !important;
+    white-space: normal !important;
+  }
+
+  .footer-divider {
+    margin-top: clamp(16px, 2.08vw, 25px) !important;
+  }
+
+  .footer-bottom {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: clamp(12px, 1.67vw, 20px) !important;
+    padding-top: clamp(16px, 2.15vw, 26px) !important;
+  }
+
+  .footer-bottom p {
+    font-size: clamp(7px, 0.97vw, 12px) !important;
+    line-height: 1.25 !important;
+    white-space: nowrap !important;
+  }
+
+  .footer-bottom p span,
+  .footer-bottom p small {
+    display: inline !important;
+  }
+
+  .footer-social {
+    flex: 0 0 auto !important;
+    gap: clamp(13px, 1.81vw, 22px) !important;
+  }
+
+  .footer-social a,
+  .footer-social svg {
+    width: clamp(11px, 1.53vw, 18px) !important;
+    height: clamp(11px, 1.53vw, 18px) !important;
+  }
+}
+
 @media (min-width: 576px) and (max-width: 767.98px) {
   .reason-row {
     grid-template-columns: 1fr !important;
