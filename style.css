@@ -8018,3 +8018,18 @@ h3 {
     width: min(162.286px, calc((100% - 144px) / 7));
   }
 }
+
+/* Desktop anchor-scroll fix: nav links jump straight to a section's own top
+   (no offset), so the 104px sticky header hides/overlaps the first bit of
+   content - worst on #tech, where the heading lands 8px behind the header.
+   scroll-margin-top reserves that space so a clicked section always clears
+   the header on desktop. */
+@media (min-width: 1200px) {
+  #tech,
+  #solutions,
+  #process,
+  #sectors,
+  #impact {
+    scroll-margin-top: 128px;
+  }
+}
