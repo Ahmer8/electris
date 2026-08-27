@@ -8422,4 +8422,31 @@ h3 {
   #hero h1 {
     font-size: clamp(48px, 4vw, 58px) !important;
   }
+
+  .why .heading {
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    column-gap: clamp(72px, 6vw, 96px) !important;
+  }
+
+  .why .heading > :last-child {
+    justify-self: end;
+  }
+
+  .why .heading h2 {
+    font-size: clamp(36px, 2.8vw, 44px) !important;
+  }
+
+  .why .heading p {
+    font-size: clamp(19px, 1.587vw, 24px) !important;
+  }
+
+  .why .heading .btn {
+    width: clamp(354px, 29.3vw, 443px) !important;
+    min-width: clamp(354px, 29.3vw, 443px) !important;
+    height: clamp(52px, 4.23vw, 64px) !important;
+    min-height: clamp(52px, 4.23vw, 64px) !important;
+    padding-inline: clamp(22px, 1.984vw, 30px) !important;
+    font-size: clamp(18px, 1.455vw, 22px) !important;
+    white-space: nowrap !important;
+  }
 }
