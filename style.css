@@ -8206,13 +8206,15 @@ h3 {
   /* Accordion-style preview: keep the row width stable while the card under
      the pointer opens. Click/keyboard navigation remains handled by the card. */
   .solution-cards:has(figure:hover) figure,
-  .solution-cards:has(figure:focus-visible) figure {
+  .solution-cards:has(figure:focus-visible) figure,
+  .solution-cards:has(figure.card-selected) figure {
     flex-basis: calc((100% - 628px) / 6);
     width: calc((100% - 628px) / 6);
   }
 
   .solution-cards:has(figure:hover) figure:hover,
-  .solution-cards:has(figure:focus-visible) figure:focus-visible {
+  .solution-cards:has(figure:focus-visible) figure:focus-visible,
+  .solution-cards:has(figure.card-selected) figure.card-selected {
     flex-basis: 484px;
     width: 484px;
   }
@@ -8275,6 +8277,89 @@ h3 {
   .solution-cards figure:focus-visible figcaption small {
     font-size: 15px;
     line-height: 1.7;
+  }
+}
+
+/* Selected/tapped state is shared by every screen size, including large
+   touchscreens and hybrid devices. */
+.solution-cards figure.card-selected figcaption,
+.solution-cards figure.card-selected .sol-badge {
+  display: block !important;
+  z-index: 2;
+}
+
+.solution-cards figure.card-selected .sol-badge {
+  display: grid !important;
+}
+
+.solution-cards figure.card-selected figcaption {
+  right: 24px;
+  bottom: 35px;
+  left: 24px;
+  padding: 18px 22px 16px;
+  border-color: transparent;
+  background: rgba(8, 8, 8, 0.78);
+  box-shadow: none;
+}
+
+.solution-cards figure.card-selected::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(5, 12, 16, 0.34);
+  content: "";
+  pointer-events: none;
+}
+
+/* Tablet: use the same slow accordion preview inside the horizontal rail. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .solution-cards figure.expanded,
+  .solution-cards figure.card-selected,
+  .solution-cards figure:hover,
+  .solution-cards figure:focus-visible {
+    flex-basis: min(484px, 72vw) !important;
+    width: min(484px, 72vw) !important;
+  }
+}
+
+/* Touch layouts: the first tap selects a card and reveals its complete design. */
+@media (max-width: 1199px) {
+  .solution-cards figure:hover figcaption,
+  .solution-cards figure:hover .sol-badge,
+  .solution-cards figure:focus-visible figcaption,
+  .solution-cards figure:focus-visible .sol-badge,
+  .solution-cards figure.card-selected figcaption,
+  .solution-cards figure.card-selected .sol-badge {
+    display: block !important;
+  }
+
+  .solution-cards figure:hover .sol-badge,
+  .solution-cards figure:focus-visible .sol-badge,
+  .solution-cards figure.card-selected .sol-badge {
+    display: grid !important;
+    z-index: 2;
+  }
+
+  .solution-cards figure:hover figcaption,
+  .solution-cards figure:focus-visible figcaption,
+  .solution-cards figure.card-selected figcaption {
+    right: 24px;
+    bottom: 35px;
+    left: 24px;
+    padding: 18px 22px 16px;
+    border-color: transparent;
+    background: rgba(8, 8, 8, 0.78);
+    box-shadow: none;
+    z-index: 2;
+  }
+
+  .solution-cards figure.card-selected::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(5, 12, 16, 0.34);
+    content: "";
+    pointer-events: none;
   }
 }
 

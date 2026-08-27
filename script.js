@@ -37,6 +37,31 @@ function makeSelectable(selector) {
 makeSelectable(".tech-cards article");
 makeSelectable(".solution-cards figure");
 
+const solutionCards = document.querySelector(".solution-cards");
+const touchSolutionQuery = window.matchMedia("(hover: none), (pointer: coarse)");
+
+/* On touch screens the first tap opens the preview. A second tap keeps the
+   original inline click/navigation behavior. Capture phase is intentional so
+   the preview can open before an inline redirect runs. */
+solutionCards?.addEventListener(
+  "click",
+  (event) => {
+    if (!touchSolutionQuery.matches) return;
+    const card = event.target.closest("figure");
+    if (!card || card.classList.contains("card-selected")) return;
+
+    event.preventDefault();
+    event.stopPropagation();
+    solutionCards.querySelectorAll("figure").forEach((item) => {
+      item.classList.remove("selected", "card-selected", "expanded");
+      item.setAttribute("aria-pressed", "false");
+    });
+    card.classList.add("card-selected", "expanded");
+    card.setAttribute("aria-pressed", "true");
+  },
+  true,
+);
+
 const technologyRail = document.querySelector(".tech-cards");
 const mobileTechnologyQuery = window.matchMedia("(max-width: 767px)");
 
