@@ -1589,7 +1589,11 @@ header {
   background: #111;
   isolation: isolate;
   cursor: pointer;
-  transition: box-shadow 0.24s ease, filter 0.24s ease;
+  transition:
+    flex-basis 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.24s ease,
+    filter 0.24s ease;
 }
 
 .solution-cards figure.expanded,
@@ -8197,6 +8201,80 @@ h3 {
   .solution-cards figure.card-selected {
     flex-basis: min(162.286px, calc((100% - 144px) / 7));
     width: min(162.286px, calc((100% - 144px) / 7));
+  }
+
+  /* Accordion-style preview: keep the row width stable while the card under
+     the pointer opens. Click/keyboard navigation remains handled by the card. */
+  .solution-cards:has(figure:hover) figure,
+  .solution-cards:has(figure:focus-visible) figure {
+    flex-basis: calc((100% - 628px) / 6);
+    width: calc((100% - 628px) / 6);
+  }
+
+  .solution-cards:has(figure:hover) figure:hover,
+  .solution-cards:has(figure:focus-visible) figure:focus-visible {
+    flex-basis: 484px;
+    width: 484px;
+  }
+
+  .solution-cards figure:hover figcaption,
+  .solution-cards figure:hover .sol-badge,
+  .solution-cards figure:focus-visible figcaption,
+  .solution-cards figure:focus-visible .sol-badge {
+    display: block !important;
+  }
+
+  .solution-cards figure:hover .sol-badge,
+  .solution-cards figure:focus-visible .sol-badge {
+    display: grid !important;
+  }
+
+  .solution-cards figure:hover figcaption,
+  .solution-cards figure:focus-visible figcaption {
+    right: 24px;
+    bottom: 35px;
+    left: 24px;
+    padding: 18px 22px 16px;
+    border-color: transparent;
+    border-radius: 15px;
+    background: rgba(8, 8, 8, 0.78);
+    box-shadow: none;
+    z-index: 2;
+  }
+
+  .solution-cards figure::after {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(5, 12, 16, 0.34);
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.8s ease;
+  }
+
+  .solution-cards figure:hover::after,
+  .solution-cards figure:focus-visible::after {
+    opacity: 1;
+  }
+
+  .solution-cards figure:hover .sol-badge,
+  .solution-cards figure:focus-visible .sol-badge {
+    z-index: 2;
+  }
+
+  .solution-cards figure:hover figcaption strong,
+  .solution-cards figure:focus-visible figcaption strong {
+    margin-bottom: 9px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.25;
+  }
+
+  .solution-cards figure:hover figcaption small,
+  .solution-cards figure:focus-visible figcaption small {
+    font-size: 15px;
+    line-height: 1.7;
   }
 }
 
