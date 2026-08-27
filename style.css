@@ -6795,15 +6795,21 @@ h3 {
   .mobile-audit-copy {
     width: 100% !important;
     max-width: 358px !important;
+    height: 410px !important;
     min-height: 410px !important;
     padding: 34px 18px 28px !important;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 358 410' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M358 329.201C358 352.949 338.748 372.201 315 372.201H192.947C178.588 372.201 166.948 383.841 166.947 398.2C166.947 404.295 162.006 409.236 155.911 409.236H43C19.2518 409.236 0 389.985 0 366.236V43C0 19.2518 19.2518 0 43 0H315C338.748 0 358 19.2518 358 43V329.201Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 358 410' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M358 329.201C358 352.949 338.748 372.201 315 372.201H192.947C178.588 372.201 166.948 383.841 166.947 398.2C166.947 404.295 162.006 409.236 155.911 409.236H43C19.2518 409.236 0 389.985 0 366.236V43C0 19.2518 19.2518 0 43 0H315C338.748 0 358 19.2518 358 43V329.201Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
   }
 
   .mobile-audit-plant {
     width: 100% !important;
     max-width: 358px !important;
-    height: 405px !important;
+    height: 406px !important;
+    min-height: 406px !important;
     aspect-ratio: auto !important;
     margin-top: 32px !important;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 358 406' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M358 362.047C358 385.795 338.748 405.047 315 405.047H204.83C194.441 405.047 186.02 396.625 186.02 386.236C186.019 371.877 174.379 360.237 160.02 360.237H43C19.2518 360.237 0 340.986 0 317.237V43C0 19.2518 19.2518 0 43 0H315C338.748 0 358 19.2518 358 43V362.047Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 358 406' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M358 362.047C358 385.795 338.748 405.047 315 405.047H204.83C194.441 405.047 186.02 396.625 186.02 386.236C186.019 371.877 174.379 360.237 160.02 360.237H43C19.2518 360.237 0 340.986 0 317.237V43C0 19.2518 19.2518 0 43 0H315C338.748 0 358 19.2518 358 43V362.047Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
   }
 }
