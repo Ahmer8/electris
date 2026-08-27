@@ -8386,3 +8386,40 @@ h3 {
     line-height: 1.45 !important;
   }
 }
+
+/* Fluid desktop hero: scale the original 1448 x 700 Figma composition as one
+   unit, so its mask notch, copy and CTAs stay aligned on 1200-1440px screens. */
+@media (min-width: 1200px) {
+  #hero.hero {
+    height: min(796px, calc(48.3425vw + 65.06px)) !important;
+  }
+
+  #hero .hero-photo {
+    height: min(700px, calc(48.3425vw - 30.94px)) !important;
+  }
+
+  #hero .hero-actions {
+    top: min(624px, calc(43.0939vw - 27.58px)) !important;
+    gap: min(16px, 1.105vw) !important;
+  }
+
+  #hero .hero-actions .btn,
+  #hero .hero-actions .btn:first-child {
+    flex-basis: min(304.33px, calc(21.0186vw - 13.45px)) !important;
+    width: min(304.33px, calc(21.0186vw - 13.45px)) !important;
+    min-width: min(304.33px, calc(21.0186vw - 13.45px)) !important;
+    height: min(64px, calc(4.4199vw - 2.83px)) !important;
+    padding-inline: clamp(22px, 1.934vw, 28px) !important;
+    font-size: clamp(18px, 1.45vw, 21px) !important;
+  }
+
+  #hero .hero-actions .btn:first-child {
+    flex-basis: min(386px, calc(26.6575vw - 17.06px)) !important;
+    width: min(386px, calc(26.6575vw - 17.06px)) !important;
+    min-width: min(386px, calc(26.6575vw - 17.06px)) !important;
+  }
+
+  #hero h1 {
+    font-size: clamp(48px, 4vw, 58px) !important;
+  }
+}
