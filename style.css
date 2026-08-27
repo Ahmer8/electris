@@ -7685,15 +7685,15 @@ h3 {
   }
 }
 
-/* Tablet footer: proportional to the supplied 1440px footer SVG. */
+/* Tablet footer: match the supplied 900px tablet SVG. */
 @media (min-width: 768px) and (max-width: 1199.98px) {
   .footer-panel {
-    height: clamp(310px, 36.5vw, 438px) !important;
+    height: clamp(507px, 66vw, 676px) !important;
     min-height: 0 !important;
-    padding: clamp(57px, 7.64vw, 92px) clamp(30px, 4.03vw, 48px) clamp(28px, 3.82vw, 46px) !important;
+    padding: clamp(72px, 9.33vw, 95px) clamp(49px, 6.44vw, 62px) clamp(42px, 5.33vw, 54px) !important;
     border-radius: 0 !important;
-    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1392 530' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1392 482C1392 508.51 1370.51 530 1344 530H48C21.4904 530 0 508.51 0 482V111C0 84.4903 21.4903 63 48 63H852.655C877.921 63 900.517 51.573 915.559 33.6052C929.836 16.5509 948.145 0 970.386 0H1344C1370.51 0 1392 21.4903 1392 48V482Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
-    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1392 530' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1392 482C1392 508.51 1370.51 530 1344 530H48C21.4904 530 0 508.51 0 482V111C0 84.4903 21.4903 63 48 63H852.655C877.921 63 900.517 51.573 915.559 33.6052C929.836 16.5509 948.145 0 970.386 0H1344C1370.51 0 1392 21.4903 1392 48V482Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 852 600' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M852 595.465C852 621.974 830.51 643.465 804 643.465H48C21.4903 643.465 0 621.974 0 595.465V91.2139C0 64.7043 21.4903 43.2139 48 43.2139H490.073C511.036 43.2139 530.161 35.348 544.658 22.4068C557.838 10.6421 573.357 0 591.023 0H804C830.51 0 852 21.4903 852 48V595.465Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 852 600' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M852 595.465C852 621.974 830.51 643.465 804 643.465H48C21.4903 643.465 0 621.974 0 595.465V91.2139C0 64.7043 21.4903 43.2139 48 43.2139H490.073C511.036 43.2139 530.161 35.348 544.658 22.4068C557.838 10.6421 573.357 0 591.023 0H804C830.51 0 852 21.4903 852 48V595.465Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
   }
 
   .footer-inner {
@@ -7701,25 +7701,26 @@ h3 {
   }
 
   .footer-top {
-    flex-direction: row !important;
+    flex-direction: column !important;
     align-items: flex-start !important;
-    gap: clamp(70px, 9.44vw, 113px) !important;
+    gap: clamp(48px, 7.11vw, 64px) !important;
   }
 
   .footer-logo {
-    flex: 0 0 clamp(118px, 15.9vw, 191px) !important;
+    flex: 0 0 auto !important;
     padding-top: 0 !important;
   }
 
   .footer-logo img {
-    width: clamp(118px, 15.9vw, 191px) !important;
+    width: clamp(194px, 25.43vw, 229px) !important;
     height: auto !important;
   }
 
   .footer-cols {
-    width: auto !important;
-    grid-template-columns: clamp(74px, 10vw, 120px) clamp(143px, 19.25vw, 231px) clamp(94px, 12.7vw, 152px) !important;
-    gap: clamp(18px, 3vw, 36px) !important;
+    width: 100% !important;
+    grid-template-columns: clamp(116px, 14.9vw, 134px) clamp(224px, 28.2vw, 254px) clamp(184px, 24.4vw, 220px) !important;
+    justify-content: space-between !important;
+    gap: clamp(24px, 5vw, 68px) !important;
   }
 
   .footer-col,
@@ -7728,40 +7729,40 @@ h3 {
   }
 
   .footer-col h5 {
-    margin-bottom: clamp(10px, 1.74vw, 21px) !important;
-    font-size: clamp(8px, 1.04vw, 12px) !important;
+    margin-bottom: clamp(18px, 2.22vw, 20px) !important;
+    font-size: clamp(13px, 1.67vw, 15px) !important;
     line-height: 1.2 !important;
   }
 
   .footer-col ul {
-    gap: clamp(6px, 1.18vw, 14px) !important;
+    gap: clamp(13px, 2vw, 18px) !important;
   }
 
   .footer-col li {
-    gap: clamp(6px, 1.18vw, 14px) !important;
-    font-size: clamp(8px, 1.11vw, 13px) !important;
-    line-height: 1.35 !important;
+    gap: clamp(12px, 1.89vw, 17px) !important;
+    font-size: clamp(14px, 1.78vw, 16px) !important;
+    line-height: 1.45 !important;
   }
 
   .footer-col a {
-    font-size: clamp(8px, 1.11vw, 13px) !important;
-    line-height: 1.35 !important;
+    font-size: clamp(14px, 1.78vw, 16px) !important;
+    line-height: 1.45 !important;
     white-space: normal !important;
   }
 
   .footer-divider {
-    margin-top: clamp(16px, 2.08vw, 25px) !important;
+    margin-top: clamp(24px, 3vw, 27px) !important;
   }
 
   .footer-bottom {
     flex-direction: row !important;
     align-items: center !important;
-    gap: clamp(12px, 1.67vw, 20px) !important;
-    padding-top: clamp(16px, 2.15vw, 26px) !important;
+    gap: clamp(20px, 4vw, 36px) !important;
+    padding-top: clamp(34px, 4.67vw, 42px) !important;
   }
 
   .footer-bottom p {
-    font-size: clamp(7px, 0.97vw, 12px) !important;
+    font-size: clamp(12px, 1.56vw, 14px) !important;
     line-height: 1.25 !important;
     white-space: nowrap !important;
   }
@@ -7773,13 +7774,13 @@ h3 {
 
   .footer-social {
     flex: 0 0 auto !important;
-    gap: clamp(13px, 1.81vw, 22px) !important;
+    gap: clamp(24px, 3.1vw, 28px) !important;
   }
 
   .footer-social a,
   .footer-social svg {
-    width: clamp(11px, 1.53vw, 18px) !important;
-    height: clamp(11px, 1.53vw, 18px) !important;
+    width: clamp(18px, 2.22vw, 20px) !important;
+    height: clamp(18px, 2.22vw, 20px) !important;
   }
 }
 
