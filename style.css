@@ -8165,3 +8165,175 @@ h3 {
     scroll-margin-top: 128px;
   }
 }
+
+/* Desktop/laptop restore: keep the 1440x900 composition on the original
+   desktop geometry after the mobile/tablet responsive overrides above. */
+@media (min-width: 1200px) {
+  #hero.hero {
+    display: block !important;
+    height: 796px !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    background: var(--pale) !important;
+  }
+
+  #hero > .container-fluid {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-right: 32px !important;
+    padding-left: 32px !important;
+  }
+
+  #hero .hero-photo {
+    width: min(1448px, calc(100vw - 64px)) !important;
+    max-width: none !important;
+    height: 700px !important;
+    min-height: 0 !important;
+    margin: 0 auto !important;
+    border-radius: 0 !important;
+    background-image: url("assets/images/hero/figma-hero-bg.png") !important;
+    background-position: center center !important;
+    background-size: cover !important;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg width='1448' height='700' viewBox='0 0 1448 700' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1448 547C1448 582.346 1419.35 611 1384 611H796C757.925 611 723.992 628.733 702.009 656.391C683.968 679.09 659.87 700 630.875 700H64C28.654 700 0 671.346 0 636V64C0 28.654 28.654 0 64 0H1384C1419.35 0 1448 28.654 1448 64V547Z' fill='black'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
+    mask: url("data:image/svg+xml,%3Csvg width='1448' height='700' viewBox='0 0 1448 700' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1448 547C1448 582.346 1419.35 611 1384 611H796C757.925 611 723.992 628.733 702.009 656.391C683.968 679.09 659.87 700 630.875 700H64C28.654 700 0 671.346 0 636V64C0 28.654 28.654 0 64 0H1384C1419.35 0 1448 28.654 1448 64V547Z' fill='black'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
+  }
+
+  #hero .hero-copy {
+    left: 54px !important;
+    right: auto !important;
+    bottom: 34px !important;
+    width: min(641px, calc(100% - 108px)) !important;
+    max-width: none !important;
+  }
+
+  #hero h1 {
+    margin-bottom: 15px !important;
+    font-size: 58px !important;
+    line-height: 1.18 !important;
+    letter-spacing: 0 !important;
+  }
+
+  #hero p {
+    max-width: 641px !important;
+    font-size: 21px !important;
+    line-height: 1.48 !important;
+  }
+
+  #hero .hero-actions {
+    position: absolute !important;
+    top: 624px !important;
+    left: 50% !important;
+    width: min(1448px, calc(100vw - 64px)) !important;
+    max-width: none !important;
+    margin: 0 !important;
+    transform: translateX(-50%) !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-end !important;
+    gap: 16px !important;
+  }
+
+  #hero .hero-actions .btn,
+  #hero .hero-actions .btn:first-child {
+    flex: 0 0 304.33px !important;
+    width: 304.33px !important;
+    min-width: 304.33px !important;
+    max-width: none !important;
+    height: 64px !important;
+    padding: 0 28px !important;
+    font-size: 21px !important;
+    line-height: 1.15 !important;
+    white-space: nowrap !important;
+  }
+
+  #hero .hero-actions .btn:first-child {
+    flex-basis: 386px !important;
+    width: 386px !important;
+    min-width: 386px !important;
+  }
+
+  #process.process-section {
+    padding: 136px 0 !important;
+  }
+
+  #process .process-intro {
+    width: min(1280px, calc(100% - 160px)) !important;
+    max-width: none !important;
+    margin: 0 auto 64px !important;
+  }
+
+  #process .process-list {
+    width: min(1216px, calc(100% - 224px)) !important;
+    max-width: none !important;
+    margin: 0 auto !important;
+    gap: 56px !important;
+  }
+
+  #process .process-card {
+    min-height: 158px !important;
+    padding: 48px 45px !important;
+    overflow: visible !important;
+    color: var(--ink) !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  #process .process-card::before {
+    inset: 0 !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg width='1216' height='158' viewBox='0 0 1216 158' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1216 121C1216 141.435 1199.43 158 1179 158H37C16.565 158 0 141.435 0 121V37C0 16.565 16.565 0 37 0H61.771C81.905 0 101.366 23 121.5 23H241.5C261.634 23 281.095 0 301.229 0H1179C1199.43 0 1216 16.565 1216 37V121Z' fill='black'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
+    mask: url("data:image/svg+xml,%3Csvg width='1216' height='158' viewBox='0 0 1216 158' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1216 121C1216 141.435 1199.43 158 1179 158H37C16.565 158 0 141.435 0 121V37C0 16.565 16.565 0 37 0H61.771C81.905 0 101.366 23 121.5 23H241.5C261.634 23 281.095 0 301.229 0H1179C1199.43 0 1216 16.565 1216 37V121Z' fill='black'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
+  }
+
+  #process .process-card--active {
+    color: #fff !important;
+  }
+
+  #process .process-card--active::before {
+    background: #2e9d68 !important;
+  }
+
+  #process .process-card__content {
+    display: grid !important;
+    grid-template-columns: 416px minmax(0, 1fr) !important;
+    align-items: center !important;
+    gap: 32px !important;
+  }
+
+  #process .process-card__heading {
+    display: flex !important;
+    align-items: center !important;
+    gap: 24px !important;
+  }
+
+  #process .process-card__icon {
+    width: 60px !important;
+    height: 60px !important;
+    flex: 0 0 60px !important;
+    font-size: 31px !important;
+  }
+
+  #process .process-card__heading h3 {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+  }
+
+  #process .process-card__content > p {
+    font-size: 20px !important;
+    line-height: 1.4 !important;
+  }
+
+  #process .process-card__step,
+  #process .process-card--active .process-card__step {
+    top: -29px !important;
+    left: 97px !important;
+    min-width: 169px !important;
+    height: 48px !important;
+    padding: 5px 41px !important;
+    border-radius: 999px !important;
+    font-size: 24px !important;
+    line-height: 1.45 !important;
+  }
+}
