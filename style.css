@@ -2153,7 +2153,10 @@ figcaption small {
 .footer-panel {
   width: calc(100% - 48px);
   max-width: none;
-  height: 530px;
+  /* Keep the SVG mask at (roughly) its designed aspect ratio on wide desktops.
+     A fixed 530px height stretches the mask horizontally, making its curves
+     look flattened/squeezed on large screens. */
+  height: clamp(530px, 36.2vw, 760px);
   min-height: 530px;
   margin: 0 auto 16px;
   padding: 110px 58px 55px;
@@ -2162,8 +2165,8 @@ figcaption small {
   overflow: hidden;
   background: #000;
   color: #e5e5e5;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1464 530' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1464 482C1464 508.51 1442.51 530 1416 530H48C21.49 530 0 508.51 0 482V111C0 84.49 21.49 63 48 63H901C926.266 63 948.862 51.573 963.904 33.605C978.18 16.551 996.49 0 1018.73 0H1416C1442.51 0 1464 21.49 1464 48V482Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1464 530' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1464 482C1464 508.51 1442.51 530 1416 530H48C21.49 530 0 508.51 0 482V111C0 84.49 21.49 63 48 63H901C926.266 63 948.862 51.573 963.904 33.605C978.18 16.551 996.49 0 1018.73 0H1416C1442.51 0 1464 21.49 1464 48V482Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1464 530' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1464 482C1464 508.51 1442.51 530 1416 530H48C21.49 530 0 508.51 0 482V111C0 84.49 21.49 63 48 63H802C860 63 891 43 924 20C947 5 969 0 1005 0H1416C1442.51 0 1464 21.49 1464 48V482Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1464 530' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1464 482C1464 508.51 1442.51 530 1416 530H48C21.49 530 0 508.51 0 482V111C0 84.49 21.49 63 48 63H802C860 63 891 43 924 20C947 5 969 0 1005 0H1416C1442.51 0 1464 21.49 1464 48V482Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
 }
 
 .footer-panel::after {
@@ -7280,31 +7283,33 @@ h3 {
     flex: 0 0 calc((100% - (clamp(12px, 1.6vw, 24px) * 2)) / 3) !important;
     width: calc((100% - (clamp(12px, 1.6vw, 24px) * 2)) / 3) !important;
     max-width: none;
-    height: clamp(330px, 38vw, 480px) !important;
+    height: clamp(405px, 43vw, 480px) !important;
     min-height: 0 !important;
   }
 
   .impact-card {
-    padding: clamp(18px, 2.5vw, 32px) !important;
+    padding: clamp(28px, 3.4vw, 36px) !important;
   }
 
   .impact-card-number {
-    font-size: clamp(34px, 4.6vw, 64px) !important;
+    /* Keep the statistics legible when three cards remain side by side. */
+    font-size: clamp(50px, 5.5vw, 64px) !important;
   }
 
   .impact-card-title {
-    font-size: clamp(14px, 1.55vw, 21px) !important;
-    line-height: 1.12 !important;
+    /* Fixed on tablets so headings do not shrink between viewport widths. */
+    font-size: 22px !important;
+    line-height: 1.15 !important;
   }
 
   .impact-card-copy p {
-    font-size: clamp(11px, 1.2vw, 15px) !important;
-    line-height: 1.28 !important;
+    font-size: clamp(15px, 1.65vw, 16px) !important;
+    line-height: 1.4 !important;
   }
 
   .impact-card-label {
     gap: 8px !important;
-    font-size: clamp(8px, 1vw, 12px) !important;
+    font-size: clamp(12px, 1.25vw, 14px) !important;
   }
 
   .contact-section {
@@ -7320,18 +7325,23 @@ h3 {
     width: calc(100% - 48px);
     height: auto;
     min-height: 0;
-    padding: 52px 42px 42px;
-    border-radius: 32px;
-    -webkit-mask: none;
-    mask: none;
+    /* Match the desktop composition: a dedicated logo area, then the links. */
+    padding: 52px 58px 42px;
+    border-radius: 0;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1464 530' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1464 482C1464 508.51 1442.51 530 1416 530H48C21.49 530 0 508.51 0 482V111C0 84.49 21.49 63 48 63H802C860 63 891 43 924 20C947 5 969 0 1005 0H1416C1442.51 0 1464 21.49 1464 48V482Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1464 530' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1464 482C1464 508.51 1442.51 530 1416 530H48C21.49 530 0 508.51 0 482V111C0 84.49 21.49 63 48 63H802C860 63 891 43 924 20C947 5 969 0 1005 0H1416C1442.51 0 1464 21.49 1464 48V482Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
   }
 
   .footer-top {
-    gap: 36px;
+    gap: 136px;
+  }
+
+  .footer-logo {
+    flex: 0 0 230px;
   }
 
   .footer-logo img {
-    width: 210px;
+    width: 228.896px;
     height: auto;
   }
 
