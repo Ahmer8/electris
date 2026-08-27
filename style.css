@@ -8104,16 +8104,42 @@ h3 {
   }
 }
 
-/* Tablet tech map: same clean artwork (no baked-in CTAs) but sized to actually fill the
-   wider tablet container instead of the phone-sized cap, so it doesn't look small and
-   leave empty space in the section. Buttons keep the same phone-style layout as before. */
-@media (min-width: 768px) and (max-width: 991.98px) {
+/* Tablet technologies: the Figma desktop SVG also contains the CTA artwork. Use the
+   clean map-only asset here and keep the cards/map/real buttons as separate elements. */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+  #tech .tech-cards {
+    display: flex !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 0 10px !important;
+    flex-flow: row nowrap !important;
+    gap: 16px !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  #tech .tech-cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  #tech .tech-cards > * {
+    width: clamp(270px, calc((100% - 32px) / 3), 310px) !important;
+    min-width: clamp(270px, calc((100% - 32px) / 3), 310px) !important;
+    max-width: 310px !important;
+    flex: 0 0 clamp(270px, calc((100% - 32px) / 3), 310px) !important;
+    scroll-snap-align: start;
+  }
+
   #tech .world {
-    width: min(100%, 640px) !important;
+    width: min(100%, 900px) !important;
     max-width: none !important;
     aspect-ratio: 358 / 96 !important;
     height: auto !important;
-    margin: 56px auto 32px !important;
+    margin: 88px auto 96px !important;
     background-image: url("assets/icons/world-map-mobile.svg") !important;
     background-position: center center !important;
     background-size: 100% 100% !important;
@@ -8125,15 +8151,24 @@ h3 {
   }
 
   #tech .tech-actions {
+    flex-direction: column !important;
     align-items: center !important;
-    gap: 24px !important;
+    gap: 12px !important;
   }
 
   #tech .tech-actions .btn,
   #tech .tech-actions .btn:first-child,
   #tech .tech-actions .btn:last-child {
-    width: auto !important;
+    min-width: 0 !important;
     white-space: nowrap !important;
+  }
+
+  #tech .tech-actions .btn:first-child {
+    width: min(100%, 430px) !important;
+  }
+
+  #tech .tech-actions .btn:last-child {
+    width: min(100%, 585px) !important;
   }
 }
 
