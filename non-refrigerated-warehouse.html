@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>WasteHeatRecoverySolutions</title>
+    <title>Entrepot logistique - Electris</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -654,6 +654,573 @@
         width: 100%;
         height: auto;
       }
+
+      body.wasteheat-page > .warehouse-main + .footer-panel + div {
+        display: none !important;
+      }
+
+      .warehouse-main {
+        overflow: hidden;
+        background: #f1f5f9;
+        color: #0f172a;
+        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      }
+
+      body.wasteheat-page > header .navbar-brand img {
+        width: 158px;
+        height: auto;
+      }
+
+      body.wasteheat-page > header .navbar-nav {
+        gap: 10px;
+      }
+
+      body.wasteheat-page > header .nav-link {
+        white-space: nowrap;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      body.wasteheat-page > header .btn-primary {
+        white-space: nowrap;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .warehouse-main a {
+        text-decoration: none;
+      }
+
+      .warehouse-hero {
+        display: grid;
+        grid-template-columns: minmax(0, 690px) minmax(520px, 1fr);
+        gap: 42px;
+        align-items: center;
+        padding: 76px clamp(24px, 4.25vw, 64px) 80px;
+      }
+
+      .warehouse-hero h1,
+      .warehouse-section-title {
+        margin: 0;
+        color: #05070c;
+        font-weight: 800;
+        letter-spacing: 0;
+        line-height: 1.08;
+      }
+
+      .warehouse-hero h1 {
+        max-width: 690px;
+        font-size: clamp(39px, 2.78vw, 42px);
+        line-height: 1.16;
+      }
+
+      .warehouse-hero h1 span {
+        color: #1212ff;
+      }
+
+      .warehouse-hero p {
+        max-width: 640px;
+        margin: 22px 0 0;
+        color: #111827;
+        font-size: 18px;
+        line-height: 1.55;
+      }
+
+      .warehouse-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 24px;
+        margin-top: 52px;
+      }
+
+      .warehouse-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        min-height: 58px;
+        padding: 0 28px;
+        border-radius: 999px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 800;
+      }
+
+      .warehouse-btn--blue {
+        background: #1212ff;
+        box-shadow: 0 12px 26px rgba(18, 18, 255, 0.22);
+      }
+
+      .warehouse-btn--dark {
+        background: #050505;
+      }
+
+      .warehouse-visual {
+        position: relative;
+        min-height: 452px;
+        padding-top: 0;
+      }
+
+      .warehouse-visual img {
+        width: 100%;
+        height: 398px;
+        border-radius: 34px;
+        object-fit: cover;
+      }
+
+      .warehouse-metric {
+        position: absolute;
+        width: 220px;
+        padding: 14px 16px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.72);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 16px 32px rgba(15, 23, 42, 0.14);
+      }
+
+      .warehouse-metric small {
+        display: block;
+        color: #64748b;
+        font-size: 12px;
+        line-height: 1.25;
+      }
+
+      .warehouse-metric strong {
+        display: block;
+        margin-top: 8px;
+        color: #0f172a;
+        font-size: 24px;
+      }
+
+      .warehouse-metric--top {
+        top: -28px;
+        left: 0;
+      }
+
+      .warehouse-metric--right {
+        top: 32px;
+        right: -10px;
+      }
+
+      .warehouse-metric--bottom {
+        bottom: 0;
+        left: 26px;
+      }
+
+      .warehouse-section {
+        padding: 88px clamp(24px, 7vw, 116px);
+      }
+
+      .warehouse-kicker {
+        display: block;
+        margin-bottom: 8px;
+        color: #64748b;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+      }
+
+      .warehouse-section-title {
+        font-size: clamp(34px, 3.4vw, 52px);
+        text-align: center;
+      }
+
+      .warehouse-ops {
+        background: #f1f5f9;
+      }
+
+      .warehouse-op-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 24px;
+        max-width: 1220px;
+        margin: 48px auto 0;
+      }
+
+      .warehouse-op-grid img {
+        width: 100%;
+        height: 360px;
+        border-radius: 18px;
+        object-fit: cover;
+      }
+
+      .warehouse-tech {
+        position: relative;
+        background: #eef3f8;
+      }
+
+      .warehouse-tech::before {
+        content: "";
+        position: absolute;
+        left: -80px;
+        top: 12px;
+        width: 360px;
+        height: 360px;
+        background: url("assets/images/secteurs/electris-watermark.svg") center / contain no-repeat;
+        opacity: 0.28;
+      }
+
+      .warehouse-tech .warehouse-section-title {
+        position: relative;
+        max-width: 1220px;
+        margin: 0 auto 44px;
+        text-align: left;
+      }
+
+      .warehouse-tech-grid {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+        max-width: 1220px;
+        margin: 0 auto;
+      }
+
+      .warehouse-tech-card {
+        display: grid;
+        grid-template-columns: 46px 1fr auto;
+        gap: 18px;
+        align-items: center;
+        padding: 26px 28px;
+        border-radius: 14px;
+        background: #fff;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+      }
+
+      .warehouse-tech-icon {
+        display: grid;
+        place-items: center;
+        width: 46px;
+        height: 46px;
+        border-radius: 10px;
+        background: #f0edff;
+        color: #1212ff;
+        font-weight: 900;
+      }
+
+      .warehouse-tech-card h3 {
+        margin: 0 0 6px;
+        color: #334155;
+        font-size: 18px;
+        font-weight: 800;
+      }
+
+      .warehouse-tech-card p {
+        margin: 0;
+        color: #64748b;
+        font-size: 13px;
+      }
+
+      .warehouse-pill {
+        padding: 8px 12px;
+        border-radius: 8px;
+        background: #ddfbea;
+        color: #10b981;
+        font-size: 12px;
+        font-weight: 900;
+        white-space: nowrap;
+      }
+
+      .warehouse-tech-actions {
+        position: relative;
+        display: grid;
+        justify-items: center;
+        gap: 14px;
+        margin-top: 44px;
+      }
+
+      .warehouse-tech-actions small {
+        color: #0f172a;
+        font-weight: 700;
+      }
+
+      .warehouse-results {
+        background:
+          linear-gradient(rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
+          linear-gradient(90deg, rgba(15, 23, 42, 0.06) 1px, transparent 1px),
+          linear-gradient(rgba(15, 23, 42, 0.06) 1px, transparent 1px);
+        background-size: auto, 64px 64px, 64px 64px;
+      }
+
+      .warehouse-mark {
+        display: block;
+        width: 42px;
+        height: 42px;
+        margin: 0 auto 18px;
+        border-radius: 999px;
+        background: #1212ff;
+        object-fit: cover;
+        object-position: left center;
+      }
+
+      .warehouse-result-grid {
+        display: grid;
+        grid-template-columns: 0.82fr 1.18fr;
+        gap: 64px;
+        max-width: 1220px;
+        margin: 62px auto 0;
+        align-items: center;
+      }
+
+      .warehouse-result-grid + .warehouse-result-grid {
+        grid-template-columns: 1.18fr 0.82fr;
+        margin-top: 74px;
+      }
+
+      .warehouse-result-card {
+        padding: 44px;
+        border-radius: 28px;
+        background: #f1f5f9;
+      }
+
+      .warehouse-result-card h3 {
+        margin: 0 0 10px;
+        color: #272522;
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 1.12;
+      }
+
+      .warehouse-result-card p {
+        margin: 0 0 24px;
+        color: #475569;
+      }
+
+      .warehouse-checks {
+        display: grid;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+        font-weight: 700;
+      }
+
+      .warehouse-checks li::before {
+        content: "\2713";
+        margin-right: 8px;
+        color: #ef4444;
+      }
+
+      .warehouse-result-photo {
+        position: relative;
+        overflow: hidden;
+        min-height: 392px;
+        border-radius: 20px;
+        background: #9ee7c3;
+      }
+
+      .warehouse-result-photo img {
+        width: 100%;
+        height: 392px;
+        object-fit: cover;
+      }
+
+      .warehouse-badge {
+        position: absolute;
+        right: 28px;
+        display: inline-flex;
+        flex-direction: column;
+        min-width: 230px;
+        padding: 15px 20px;
+        border-radius: 999px;
+        color: #fff;
+        box-shadow: 0 10px 18px rgba(15, 23, 42, 0.18);
+      }
+
+      .warehouse-badge strong {
+        font-size: 18px;
+      }
+
+      .warehouse-badge small {
+        font-size: 12px;
+      }
+
+      .warehouse-badge--orange {
+        top: 64px;
+        background: #f97316;
+      }
+
+      .warehouse-badge--cyan {
+        top: 165px;
+        background: #06b6d4;
+      }
+
+      .warehouse-badge--violet {
+        top: 266px;
+        background: #8b5cf6;
+      }
+
+      .warehouse-labels {
+        position: absolute;
+        left: 42px;
+        top: 42px;
+        display: grid;
+        gap: 18px;
+      }
+
+      .warehouse-label {
+        width: max-content;
+        max-width: 360px;
+        padding: 18px 24px;
+        border-radius: 18px;
+        color: #fff;
+        box-shadow: 0 10px 18px rgba(15, 23, 42, 0.2);
+      }
+
+      .warehouse-label strong,
+      .warehouse-label small {
+        display: block;
+      }
+
+      .warehouse-label--blue {
+        background: #3b82f6;
+      }
+
+      .warehouse-label--green {
+        background: #22c55e;
+      }
+
+      .warehouse-label--violet {
+        background: #8b5cf6;
+      }
+
+      .warehouse-contact {
+        display: grid;
+        grid-template-columns: minmax(0, 0.9fr) minmax(380px, 1fr);
+        gap: 34px;
+        align-items: start;
+        background: #f1f5f9;
+      }
+
+      .warehouse-form {
+        padding: 44px;
+        border-radius: 28px;
+        background: #fff;
+      }
+
+      .warehouse-form h2 {
+        margin: 0;
+        color: #1f2937;
+        font-size: 32px;
+        font-weight: 900;
+      }
+
+      .warehouse-form p {
+        margin: 6px 0 28px;
+        color: #64748b;
+      }
+
+      .warehouse-form label {
+        display: block;
+        margin: 15px 0 7px;
+        color: #334155;
+        font-size: 13px;
+        font-weight: 800;
+      }
+
+      .warehouse-form input,
+      .warehouse-form textarea {
+        width: 100%;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 14px 16px;
+        color: #0f172a;
+        font: inherit;
+      }
+
+      .warehouse-form textarea {
+        min-height: 118px;
+        resize: vertical;
+      }
+
+      .warehouse-form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+      }
+
+      .warehouse-submit {
+        width: 100%;
+        margin-top: 24px;
+        border: 0;
+        background: #2faa72;
+      }
+
+      .warehouse-contact-photo img {
+        width: 100%;
+        height: 640px;
+        border-radius: 28px 28px 0 28px;
+        object-fit: cover;
+      }
+
+      @media (max-width: 1100px) {
+        .warehouse-hero,
+        .warehouse-contact {
+          grid-template-columns: 1fr;
+        }
+
+        .warehouse-op-grid,
+        .warehouse-tech-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .warehouse-result-grid,
+        .warehouse-result-grid + .warehouse-result-grid {
+          grid-template-columns: 1fr;
+          gap: 28px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .warehouse-hero,
+        .warehouse-section {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        .warehouse-op-grid,
+        .warehouse-tech-grid,
+        .warehouse-form-row {
+          grid-template-columns: 1fr;
+        }
+
+        .warehouse-op-grid img {
+          height: 260px;
+        }
+
+        .warehouse-tech-card {
+          grid-template-columns: 42px 1fr;
+        }
+
+        .warehouse-pill {
+          grid-column: 1 / -1;
+          justify-self: start;
+        }
+
+        .warehouse-metric {
+          position: static;
+          width: auto;
+          margin-top: 14px;
+        }
+
+        .warehouse-visual,
+        .warehouse-visual img,
+        .warehouse-contact-photo img {
+          min-height: 0;
+          height: auto;
+        }
+
+        .warehouse-badge,
+        .warehouse-labels {
+          position: static;
+          margin: 12px;
+        }
+
+        .warehouse-label {
+          max-width: 100%;
+        }
+      }
     </style>
   </head>
   <body class="wasteheat-page">
@@ -785,6 +1352,226 @@
         </div>
       </nav>
     </header>
+    <main class="warehouse-main">
+      <section class="warehouse-hero">
+        <div>
+          <h1>
+            Vous chauffez &agrave; dix m&egrave;tres de haut, mais la
+            <span>chaleur reste au plafond. Nous y mettons fin.</span>
+          </h1>
+          <p>
+            Dans un entrep&ocirc;t, l'air chaud monte et stagne sous la toiture tandis que le sol reste froid.
+            Nous le ramenons l&agrave; o&ugrave; les gens travaillent, pilotons le chauffage et, quand c'est possible,
+            l'&eacute;lectrifions. Vous chauffez moins pour un meilleur confort. Durablement.
+          </p>
+          <div class="warehouse-actions">
+            <a class="warehouse-btn warehouse-btn--blue" href="mailto:contact@electris.fr">Auditer mon entrep&ocirc;t <span>&rarr;</span></a>
+            <a class="warehouse-btn warehouse-btn--dark" href="#results">Voir un cas r&eacute;el <span>&rarr;</span></a>
+          </div>
+        </div>
+        <div class="warehouse-visual">
+          <img src="assets/images/non-refrigerated-warehouse/figma-extract/02_image1_2497_5363_1536x672.png" alt="Entrepot logistique Electris" />
+          <div class="warehouse-metric warehouse-metric--top">
+            <small>Consommation gaz chauffage plage typique</small>
+            <strong>-15 &agrave; -30%</strong>
+          </div>
+          <div class="warehouse-metric warehouse-metric--right">
+            <small>ROI moyen sur nos installations</small>
+            <strong>18-30 mois</strong>
+          </div>
+          <div class="warehouse-metric warehouse-metric--bottom">
+            <small>Investissement client (CPE)</small>
+            <strong>0 &euro;</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="warehouse-section warehouse-ops">
+        <span class="warehouse-kicker">Op&eacute;rations disponibles</span>
+        <h2 class="warehouse-section-title">Op&eacute;rations possibles.</h2>
+        <div class="warehouse-op-grid">
+          <img src="assets/images/non-refrigerated-warehouse/figma-extract/03_image2_2497_5363_1024x1024.png" alt="Charpente d'entrepot" />
+          <img src="assets/images/non-refrigerated-warehouse/figma-extract/04_image3_2497_5363_1024x1024.png" alt="Pilotage GTB" />
+          <img src="assets/images/non-refrigerated-warehouse/figma-extract/05_image4_2497_5363_1024x1024.png" alt="Equipements en toiture" />
+          <img src="assets/images/non-refrigerated-warehouse/figma-extract/06_image5_2497_5363_1024x1024.png" alt="Batiment tertiaire" />
+        </div>
+      </section>
+
+      <section class="warehouse-section warehouse-tech">
+        <h2 class="warehouse-section-title">Technologies disponibles</h2>
+        <div class="warehouse-tech-grid">
+          <article class="warehouse-tech-card">
+            <span class="warehouse-tech-icon">*</span>
+            <div>
+              <h3>D&eacute;stratification</h3>
+              <p>Chaleur sous le plafond ramen&eacute;e au niveau du sol</p>
+            </div>
+            <span class="warehouse-pill">-15 &agrave; 25%</span>
+          </article>
+          <article class="warehouse-tech-card">
+            <span class="warehouse-tech-icon">+</span>
+            <div>
+              <h3>GTB IA</h3>
+              <p>Pilotage du chauffage zone par zone</p>
+            </div>
+            <span class="warehouse-pill">-20 &agrave; 40%</span>
+          </article>
+          <article class="warehouse-tech-card">
+            <span class="warehouse-tech-icon">&#9673;</span>
+            <div>
+              <h3>Cascade thermodynamique</h3>
+              <p>D&eacute;carbonation du chauffage</p>
+            </div>
+            <span class="warehouse-pill">Elev&eacute;</span>
+          </article>
+          <article class="warehouse-tech-card">
+            <span class="warehouse-tech-icon">&#9638;</span>
+            <div>
+              <h3>Free cooling</h3>
+              <p>Free cooling quand n&eacute;cessaire</p>
+            </div>
+            <span class="warehouse-pill">-30 &agrave; 50%</span>
+          </article>
+        </div>
+        <div class="warehouse-tech-actions">
+          <a class="warehouse-btn warehouse-btn--blue" href="Technologie.html">D&eacute;couvrir toutes nos technologies <span>&rarr;</span></a>
+          <small>Diagnostic gratuit en 48 heures</small>
+        </div>
+      </section>
+
+      <section id="results" class="warehouse-section warehouse-results">
+        <img class="warehouse-mark" src="assets/images/non-refrigerated-warehouse/figma-extract/01_image0_2497_5363_639x134.png" alt="" />
+        <h2 class="warehouse-section-title">R&eacute;sultats obtenus pour nos clients.</h2>
+        <div class="warehouse-result-grid">
+          <div>
+            <article class="warehouse-result-card">
+              <h3>ENTREP&Ocirc;T LOGISTIQUE - grand volume</h3>
+              <p>-15 &agrave; -30 % &middot; facture de chauffage (plage typique)</p>
+              <ul class="warehouse-checks">
+                <li>18-30 mois - ROI</li>
+                <li>50 / 50 - partage des gains sur 5 ans</li>
+              </ul>
+            </article>
+            <a class="warehouse-btn warehouse-btn--blue" style="margin-top:22px;background:#94e2bb;color:#0f172a" href="mailto:contact@electris.fr">Je veux le m&ecirc;me r&eacute;sultat <span>&rarr;</span></a>
+          </div>
+          <div class="warehouse-result-photo">
+            <img src="assets/images/non-refrigerated-warehouse/figma-extract/08_image7_2497_5363_1024x1024.png" alt="Entrepot logistique" />
+            <span class="warehouse-badge warehouse-badge--orange"><strong>-15 &agrave; -30%</strong><small>Facture de chauffage (plage typique)</small></span>
+            <span class="warehouse-badge warehouse-badge--cyan"><strong>18-30 mois</strong><small>ROI</small></span>
+            <span class="warehouse-badge warehouse-badge--violet"><strong>50 / 50</strong><small>Partage des gains sur 5 ans</small></span>
+          </div>
+        </div>
+        <div class="warehouse-result-grid">
+          <div class="warehouse-result-photo">
+            <img src="assets/images/non-refrigerated-warehouse/figma-extract/09_image8_2497_5363_1024x1024.png" alt="Interieur d'entrepot" />
+            <div class="warehouse-labels">
+              <span class="warehouse-label warehouse-label--blue"><strong>ENTREP&Ocirc;T LOGISTIQUE</strong><small>Plan ELECTRIS</small></span>
+              <span class="warehouse-label warehouse-label--green"><strong>Pack ELECTRIS</strong><small>D&eacute;stratification - GTB - d&eacute;carbonation</small></span>
+              <span class="warehouse-label warehouse-label--violet"><strong>Investissement</strong><small>financ&eacute; par ELECTRIS (CPE)</small></span>
+            </div>
+          </div>
+          <div>
+            <article class="warehouse-result-card">
+              <h3>ENTREP&Ocirc;T LOGISTIQUE - Pack ELECTRIS</h3>
+              <ul class="warehouse-checks">
+                <li>Pack ELECTRIS - d&eacute;stratification, GTB, d&eacute;carbonation</li>
+                <li>Investissement - financ&eacute; par ELECTRIS (CPE)</li>
+              </ul>
+            </article>
+            <a class="warehouse-btn warehouse-btn--blue" style="margin-top:22px;background:#a7acef;color:#0f172a" href="mailto:contact@electris.fr">Je veux le m&ecirc;me r&eacute;sultat <span>&rarr;</span></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="warehouse-section warehouse-contact">
+        <form class="warehouse-form" action="mailto:contact@electris.fr" method="post" enctype="text/plain">
+          <h2>Formulaire de contact</h2>
+          <p>Remplissez les informations ci-dessous pour nous envoyer votre demande.</p>
+          <label for="structure">Nom de la structure</label>
+          <input id="structure" name="structure" placeholder="Ex: Soci&eacute;t&eacute; Immobili&egrave;re du Nord" />
+          <div class="warehouse-form-row">
+            <div>
+              <label for="name">Nom</label>
+              <input id="name" name="nom" placeholder="Ex: Dupont" />
+            </div>
+            <div>
+              <label for="first-name">Pr&eacute;nom</label>
+              <input id="first-name" name="prenom" placeholder="Ex: Jean" />
+            </div>
+          </div>
+          <label for="role">Poste au sein de la structure</label>
+          <input id="role" name="poste" placeholder="Ex: Directeur G&eacute;n&eacute;ral" />
+          <div class="warehouse-form-row">
+            <div>
+              <label for="email">Mail</label>
+              <input id="email" name="email" type="email" placeholder="Ex: jean.dupont@entreprise.fr" />
+            </div>
+            <div>
+              <label for="phone">Num&eacute;ro de t&eacute;l&eacute;phone professionnel</label>
+              <input id="phone" name="telephone" placeholder="Ex: +33 1 23 45 67 89" />
+            </div>
+          </div>
+          <label for="address">Adresse des travaux envisag&eacute;s</label>
+          <textarea id="address" name="adresse" placeholder="Ex: 32 Rue de la R&eacute;publique, 75011 Paris"></textarea>
+          <button class="warehouse-btn warehouse-submit" type="submit">Envoyer ma demande <span>&rarr;</span></button>
+        </form>
+        <div class="warehouse-contact-photo">
+          <img src="assets/images/non-refrigerated-warehouse/figma-extract/10_image9_2497_5363_1024x1024.png" alt="Allees de stockage logistique" />
+        </div>
+      </section>
+    </main>
+    <footer id="contact" class="footer-panel">
+      <div class="footer-inner d-flex flex-column">
+        <div class="footer-top d-flex align-items-start">
+          <a class="footer-logo d-flex align-items-center text-decoration-none" href="index.html">
+            <img src="assets/images/logo/electris-logo.png" alt="Electris" />
+          </a>
+          <div class="footer-cols d-grid flex-grow-1">
+            <section class="footer-col">
+              <h5>TECHNOLOGIES</h5>
+              <ul class="list-unstyled d-flex flex-column">
+                <li><span class="chevron">&#8250;</span><a href="Technologie.html">D&eacute;couvrir</a></li>
+                <li><span class="chevron">&#8250;</span><a href="index.html#process">Financement</a></li>
+                <li><span class="chevron">&#8250;</span><a href="index.html#impact">&Eacute;quipe</a></li>
+                <li><span class="chevron">&#8250;</span><a href="mailto:contact@electris.fr">Contact</a></li>
+              </ul>
+            </section>
+            <section class="footer-col">
+              <h5>SOLUTIONS</h5>
+              <ul class="list-unstyled d-flex flex-column">
+                <li><span class="chevron">&#8250;</span><a href="WasteHeatRecoverySolutions.html">R&eacute;cup&eacute;ration de chaleur fatale</a></li>
+                <li><span class="chevron">&#8250;</span><a href="solution-gtb.html">Gestion technique du b&acirc;timent (GTB)</a></li>
+                <li><span class="chevron">&#8250;</span><a href="solutions.html">Classe A</a></li>
+                <li><span class="chevron">&#8250;</span><a href="cascade.html">D&eacute;carbonation thermique</a></li>
+                <li><span class="chevron">&#8250;</span><a href="cpe.html">Contrat de performance (CP)</a></li>
+              </ul>
+            </section>
+            <section class="footer-col">
+              <h5>SECTEURS</h5>
+              <ul class="list-unstyled d-flex flex-column">
+                <li><span class="chevron">&#8250;</span><a href="sectrus.html">Grande distribution</a></li>
+                <li><span class="chevron">&#8250;</span><a href="sectrus.html">Industrie</a></li>
+                <li><span class="chevron">&#8250;</span><a href="sectrus.html">H&ocirc;tellerie</a></li>
+                <li><span class="chevron">&#8250;</span><a href="sectrus.html">Tertiaire &amp; Bureaux</a></li>
+                <li><span class="chevron">&#8250;</span><a href="sectrus.html">Centres de donn&eacute;es</a></li>
+                <li><span class="chevron">&#8250;</span><a href="sectrus.html">DOM-TOM</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom d-flex align-items-center justify-content-between">
+          <p>Mentions l&eacute;gales Confidentialit&eacute; (c) 2026 ELECTRIS</p>
+          <div class="footer-social d-flex align-items-center" aria-label="R&eacute;seaux sociaux">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.5 9.9v-7H8v-3h2.5V9.5A3.5 3.5 0 0 1 14.2 6c1 0 2 .2 2 .2v2.2h-1.1c-1.1 0-1.4.7-1.4 1.4V12H16l-.4 3h-2.1v7A10 10 0 0 0 22 12z" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none"/><circle cx="12" cy="12" r="4" fill="none"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M22 8s-.2-1.4-.8-2c-.7-.8-1.5-.8-1.9-.9C16.7 5 12 5 12 5s-4.7 0-7.3.1c-.4.1-1.2.1-1.9.9C2.2 6.6 2 8 2 8S1.8 9.7 1.8 11.3v1.3C1.8 14.3 2 16 2 16s.2 1.4.8 2c.7.8 1.6.8 2 .9 1.5.1 6.2.2 6.2.2s4.7 0 7.3-.1c.4-.1 1.2-.1 1.9-.9.6-.6.8-2 .8-2s.2-1.7.2-3.3v-1.3C22.2 9.7 22 8 22 8zM9.9 14.6V8.9l5.4 2.9-5.4 2.8z" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M18 2h4l-9.5 10.5L23 22h-6.5l-5-6.6L5.5 22H2l10-11L2 2h6.6l4.6 6z" fill="currentColor" stroke="none"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="2" y="9" width="4" height="12" fill="currentColor" stroke="none"/><circle cx="4" cy="4" r="2" fill="currentColor" stroke="none"/><path d="M10 9h4v2s1.5-2 4-2c3 0 4 2 4 5v7h-4v-6c0-1.5-.5-2.5-2-2.5s-2.5 1-2.5 2.5v6H10V9z" fill="currentColor" stroke="none"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </footer>
     <div style="display: flex; flex-direction: column; background: #ffffff">
       <div
         style="
