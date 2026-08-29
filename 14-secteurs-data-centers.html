@@ -1171,6 +1171,17 @@
 			align-items: flex-start;
 			padding: 3px 7px;
 		}
+		/* Reference-design corrections: keep the intentional empty sixth slot. */
+		.column7 .column10 > .row-view13:last-child > .row-view14:last-child,
+		.column16 .column18 > .row-view17:nth-child(3) {
+			display: none;
+		}
+		.operations-kicker {
+			color: #64748B;
+			font-size: 16px;
+			margin-bottom: -36px;
+		}
+		.hero-accent { color: #1212FF; }
 	</style>
 </head>
 <body>
@@ -1297,7 +1308,7 @@
 					<div class="column4">
 						<div class="column5">
 							<span class="text6" >
-								Votre centre de données génère de la chaleur 8 760 heures par an. Nous arrêtons de gaspiller cette chaleur.
+								Votre centre de données génère de la chaleur 8 760 heures par an. <span class="hero-accent">Nous arrêtons de gaspiller cette chaleur.</span>
 							</span>
 							<span class="text7" >
 								Le refroidissement est continu et constitue votre premier poste énergétique après l&#39;IT. Nous le réduisons avec le free cooling — air extérieur ou eau quand il fait suffisamment froid — et récupérons la chaleur fatale. Le compresseur s&#39;arrête une grande partie de l&#39;année. Durablement.
@@ -1378,8 +1389,9 @@
 			</div>
 			<div class="view4">
 				<div class="column6">
+					<span class="operations-kicker">Available operations</span>
 					<span class="text6" >
-						Opérations possibles
+						Possible operations.
 					</span>
 					<div class="row-view13">
 						<div class="view5">
@@ -1428,7 +1440,7 @@
 									/>
 									<div class="column11">
 										<span class="text14" >
-											ORC machine
+											Free cooling
 										</span>
 										<span class="text15" >
 											Free cooling using outdoor air / water
@@ -1490,7 +1502,7 @@
 									/>
 									<div class="column11">
 										<span class="text14" >
-											Free cooling
+											ORC machine
 										</span>
 										<span class="text15" >
 											Conversion de la chaleur en électricité
@@ -1574,7 +1586,7 @@
 							class="image14"
 						/>
 						<span class="text6" >
-							Résultats obtenus pour nos clients<br/>.
+							Résultats obtenus pour nos clients.
 						</span>
 					</div>
 					<div class="row-view16">

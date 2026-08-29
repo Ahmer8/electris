@@ -1171,6 +1171,17 @@
 			align-items: flex-start;
 			padding: 3px 7px;
 		}
+		/* Reference-design corrections: keep the intentional empty sixth slot. */
+		.column7 .column10 > .row-view13:last-child > .row-view14:last-child,
+		.column16 .column18 > .row-view17:nth-child(3) {
+			display: none;
+		}
+		.operations-kicker {
+			color: #64748B;
+			font-size: 16px;
+			margin-bottom: -36px;
+		}
+		.hero-accent { color: #1212FF; }
 	</style>
 </head>
 <body>
@@ -1297,7 +1308,7 @@
 					<div class="column4">
 						<div class="column5">
 							<span class="text6" >
-								Vos bureaux consomment de l&#39;énergie même quand personne n&#39;est là. Nous y mettons fin.
+								Vos bureaux consomment de l&#39;énergie même quand personne n&#39;est là. <span class="hero-accent">Nous y mettons fin.</span>
 							</span>
 							<span class="text7" >
 								Nous décarbonons le chauffage, pilotons le bâtiment au plus juste — et vous mettons en conformité avec le décret tertiaire et le décret BACS (GTB obligatoire au-dessus de 70 kW). La consommation baisse, la conformité suit. Durablement.
@@ -1378,8 +1389,9 @@
 			</div>
 			<div class="view4">
 				<div class="column6">
+					<span class="operations-kicker">Available operations</span>
 					<span class="text6" >
-						Opérations possibles
+						Possible operations.
 					</span>
 					<div class="row-view13">
 						<div class="view5">
@@ -1470,7 +1482,7 @@
 									/>
 									<div class="column11">
 										<span class="text14" >
-											MCP
+											Free cooling
 										</span>
 										<span class="text15" >
 											Free cooling at night / in winter
@@ -1490,7 +1502,7 @@
 									/>
 									<div class="column11">
 										<span class="text14" >
-											Free cooling
+											MCP
 										</span>
 										<span class="text15" >
 											Lissage des pointes et effacement
@@ -1574,7 +1586,7 @@
 							class="image14"
 						/>
 						<span class="text6" >
-							Résultats obtenus pour nos clients<br/>.
+							Résultats obtenus pour nos clients.
 						</span>
 					</div>
 					<div class="row-view16">
