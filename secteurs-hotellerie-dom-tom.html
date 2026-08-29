@@ -2216,6 +2216,243 @@
           background: #f1f5f9;
         }
       }
+
+      /* Responsive hardening for sector detail pages. */
+      .warehouse-main,
+      .warehouse-main * {
+        box-sizing: border-box;
+      }
+
+      .warehouse-main {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      .warehouse-main img {
+        max-width: 100%;
+      }
+
+      @media (max-width: 1024px) {
+        .warehouse-hero {
+          grid-template-columns: 1fr !important;
+          gap: 36px !important;
+          padding: 52px 32px 64px !important;
+        }
+
+        .warehouse-hero > div:first-child {
+          width: 100% !important;
+          max-width: 720px !important;
+        }
+
+        .warehouse-hero h1 {
+          max-width: 100% !important;
+          font-size: clamp(30px, 5.4vw, 44px) !important;
+          line-height: 1.18 !important;
+        }
+
+        .warehouse-hero h1 .warehouse-title-line {
+          white-space: normal !important;
+        }
+
+        .warehouse-hero p {
+          max-width: 680px !important;
+          font-size: 16px !important;
+        }
+
+        .warehouse-visual {
+          width: min(680px, 100%) !important;
+          min-height: 0 !important;
+          margin: 0 auto !important;
+        }
+
+        .warehouse-visual > img {
+          width: 100% !important;
+          height: auto !important;
+          aspect-ratio: 662 / 476;
+          object-fit: cover !important;
+        }
+
+        .warehouse-ops.warehouse-section,
+        .warehouse-tech.warehouse-section,
+        .warehouse-results,
+        .warehouse-contact {
+          padding-left: 32px !important;
+          padding-right: 32px !important;
+        }
+
+        .warehouse-op-grid {
+          grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+          width: 100% !important;
+          max-width: 820px !important;
+          gap: 16px !important;
+        }
+
+        .warehouse-op-grid img {
+          height: auto !important;
+          aspect-ratio: 286 / 564;
+          object-fit: cover !important;
+        }
+
+        .warehouse-tech-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+          width: 100% !important;
+          max-width: 820px !important;
+        }
+
+        .warehouse-result-grid,
+        .warehouse-result-grid + .warehouse-result-grid {
+          grid-template-columns: 1fr !important;
+          width: 100% !important;
+          max-width: 820px !important;
+          gap: 28px !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+
+        .warehouse-result-photo {
+          width: 100% !important;
+        }
+
+        .warehouse-contact {
+          grid-template-columns: minmax(0, 624px) !important;
+          justify-content: center !important;
+          gap: 30px !important;
+        }
+
+        .warehouse-form,
+        .warehouse-contact-photo {
+          width: 100% !important;
+          max-width: 624px !important;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .warehouse-hero {
+          padding: 38px 18px 48px !important;
+        }
+
+        .warehouse-hero h1 {
+          font-size: clamp(28px, 8vw, 36px) !important;
+        }
+
+        .warehouse-actions,
+        .warehouse-tech-actions {
+          width: 100% !important;
+        }
+
+        .warehouse-btn,
+        .warehouse-tech-actions .warehouse-btn,
+        .warehouse-result-cta,
+        .warehouse-submit {
+          width: 100% !important;
+          min-width: 0 !important;
+          justify-content: center !important;
+        }
+
+        .warehouse-visual {
+          width: 100% !important;
+        }
+
+        .warehouse-metric {
+          width: min(190px, 52vw) !important;
+          padding: 12px 14px !important;
+        }
+
+        .warehouse-metric strong {
+          font-size: 20px !important;
+        }
+
+        .warehouse-op-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+          gap: 12px !important;
+        }
+
+        .warehouse-section-title,
+        .warehouse-ops .warehouse-section-title,
+        .warehouse-tech .warehouse-section-title,
+        .warehouse-results .warehouse-section-title {
+          font-size: clamp(28px, 8vw, 38px) !important;
+          white-space: normal !important;
+        }
+
+        .warehouse-tech-card {
+          grid-template-columns: 48px minmax(0, 1fr) !important;
+          gap: 12px !important;
+        }
+
+        .warehouse-pill {
+          grid-column: 2;
+          justify-self: start;
+        }
+
+        .warehouse-result-card {
+          min-height: 0 !important;
+          padding: 28px 24px !important;
+        }
+
+        .warehouse-result-card h3 {
+          font-size: clamp(22px, 6.6vw, 30px) !important;
+        }
+
+        .warehouse-badge,
+        .warehouse-label {
+          max-width: calc(100% - 24px) !important;
+          min-width: 0 !important;
+        }
+
+        .warehouse-labels {
+          width: 100% !important;
+          padding: 14px !important;
+        }
+
+        .warehouse-form {
+          padding: 30px 22px !important;
+        }
+
+        .warehouse-contact-photo,
+        .warehouse-contact-photo img {
+          height: clamp(360px, 110vw, 520px) !important;
+        }
+      }
+
+      @media (max-width: 420px) {
+        .warehouse-hero,
+        .warehouse-section,
+        .warehouse-ops.warehouse-section,
+        .warehouse-tech.warehouse-section,
+        .warehouse-results,
+        .warehouse-contact {
+          padding-left: 14px !important;
+          padding-right: 14px !important;
+        }
+
+        .warehouse-metric {
+          transform: scale(0.78) !important;
+        }
+
+        .warehouse-metric--top {
+          left: 0 !important;
+        }
+
+        .warehouse-metric--right {
+          right: 0 !important;
+        }
+
+        .warehouse-metric--bottom {
+          left: 12px !important;
+        }
+
+        .warehouse-op-grid {
+          grid-template-columns: 1fr 1fr !important;
+        }
+
+        .warehouse-result-photo,
+        .warehouse-result-photo img {
+          min-height: 320px !important;
+          height: 320px !important;
+        }
+      }
     </style>
   </head>
   <body class="wasteheat-page">
