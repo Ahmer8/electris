@@ -1,0 +1,2070 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>_10SecteursGrandeDistribution</title>
+	<style>
+		body {
+			font-family: system-ui;
+		}
+		.absolute-box {
+			position: absolute;
+			bottom: 0px;
+			right: 0px;
+			left: 0px;
+			height: 185px;
+			box-sizing: border-box;
+			align-self: stretch;
+			background: #00000000;
+			border-radius: 515px;
+			border: 151px solid #1212FF;
+			filter: blur(384.13714599609375px);
+		}
+		.absolute-button {
+			position: absolute;
+			top: 70px;
+			right: 10px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #F97316;
+			border-radius: 999px;
+			border: none;
+			padding: 15px 16px;
+			box-shadow: 0px 2px 6px #0F172A12;
+			text-align: left;
+		}
+		.absolute-column {
+			position: absolute;
+			top: 27px;
+			right: 45px;
+			width: 252px;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF57;
+			border-radius: 13px;
+			padding: 13px 15px;
+		}
+		.absolute-column2 {
+			position: absolute;
+			bottom: 90px;
+			right: 469px;
+			width: 257px;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF57;
+			border-radius: 13px;
+			padding: 13px 15px;
+		}
+		.absolute-column3 {
+			position: absolute;
+			top: 16px;
+			right: 497px;
+			width: 257px;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF57;
+			border-radius: 13px;
+			padding: 13px 15px;
+			gap: 7px;
+		}
+		.absolute-column4 {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			left: 0px;
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-top: 96px;
+			background-image: url('https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/tgt5t7v0_expires_30_days.png');
+			background-size: 100% 100%;
+		}
+		.absolute-column5 {
+			position: absolute;
+			bottom: 43px;
+			right: 38px;
+			width: 368px;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 126px;
+		}
+		.absolute-column6 {
+			position: absolute;
+			top: 46px;
+			left: 18px;
+			width: 368px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.absolute-view {
+			position: absolute;
+			bottom: 17px;
+			left: -115px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 73px;
+			padding-left: 116px;
+			padding-right: 60px;
+			background-image: url('https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/eokixifz_expires_30_days.png');
+			background-size: 100% 100%;
+		}
+		.box {
+			flex: 1;
+			align-self: stretch;
+		}
+		.box2 {
+			height: 1px;
+			align-self: stretch;
+			background: #E2E8F0;
+			margin-bottom: 6px;
+		}
+		.box3 {
+			height: 1px;
+			align-self: stretch;
+			background: #E2E8F0;
+			margin-bottom: 7px;
+		}
+		.box4 {
+			height: 1px;
+			align-self: stretch;
+			background: #E2E8F0;
+		}
+		.button {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #1212FF;
+			border-radius: 24px;
+			border: none;
+			padding: 12px 20px;
+			box-shadow: 0px 1px 2px #1018280D;
+			text-align: left;
+		}
+		.button2 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 24px;
+			border: none;
+			padding: 12px 18px;
+			box-shadow: 0px 1px 2px #1018280D;
+			text-align: left;
+		}
+		.button3 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #10B98112;
+			border-radius: 8px;
+			border: 1px solid #10B9812E;
+			padding: 10px 16px;
+			text-align: left;
+		}
+		.button4 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: linear-gradient(180deg, #B2FFDA, #88D2AF);
+			border-radius: 77px;
+			border: 2px solid #F4F4F4;
+			padding-top: 24px;
+			padding-bottom: 24px;
+			text-align: left;
+		}
+		.button5 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: linear-gradient(180deg, #9BADD0, #A0A1FC);
+			border-radius: 77px;
+			border: 2px solid #F4F4F4;
+			padding-top: 24px;
+			padding-bottom: 24px;
+			text-align: left;
+		}
+		.button6 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 12px;
+			border: 1px solid #E2E8F0;
+			padding-top: 18px;
+			padding-bottom: 18px;
+			text-align: left;
+		}
+		.button-row-view {
+			align-self: stretch;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: #2E9D68;
+			border-radius: 32px;
+			border: none;
+			padding-top: 16px;
+			padding-bottom: 16px;
+			gap: 15px;
+			text-align: left;
+		}
+		.column {
+			overflow: hidden;
+			align-self: stretch;
+			background: #F1F5F9;
+			border-radius: 12px;
+		}
+		.column2 {
+			align-self: stretch;
+			border-bottom-right-radius: 50px;
+			border-bottom-left-radius: 50px;
+		}
+		.column3 {
+			align-self: stretch;
+			align-items: flex-start;
+			padding-top: 64px;
+			padding-left: 64px;
+			padding-right: 64px;
+			position: relative;
+		}
+		.column4 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 64px;
+		}
+		.column5 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 13px;
+		}
+		.column6 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 48px;
+		}
+		.column7 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			background: #F1F5F9;
+			padding-top: 181px;
+		}
+		.column8 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-bottom: 48px;
+			margin-left: 116px;
+			margin-right: 116px;
+			position: relative;
+		}
+		.column9 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			gap: 31px;
+		}
+		.column10 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			gap: 24px;
+		}
+		.column11 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			margin-right: 24px;
+			gap: 8px;
+		}
+		.column12 {
+			width: 433px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-bottom: 96px;
+			gap: 16px;
+		}
+		.column13 {
+			align-self: stretch;
+			background: #FFFFFF;
+			padding-top: 838px;
+			position: relative;
+		}
+		.column14 {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			padding-left: 57px;
+			padding-right: 57px;
+			margin-bottom: 84px;
+			gap: 12px;
+		}
+		.column15 {
+			width: 490px;
+			display: flex;
+			flex-direction: column;
+			margin-right: 66px;
+			gap: 25px;
+		}
+		.column16 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			background: #F1F5F9;
+			border-radius: 33px;
+			padding: 42px 42px 97px 42px;
+			gap: 27px;
+		}
+		.column17 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 8px;
+		}
+		.column18 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+		}
+		.column19 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: linear-gradient(180deg, #B2FFDA, #88D2AF);
+			border-radius: 33px;
+			border: 8px solid #FFFFFF;
+			position: relative;
+		}
+		.column20 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 2px;
+		}
+		.column21 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 3px;
+		}
+		.column22 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			background: linear-gradient(180deg, #9BADD0, #A0A1FC);
+			border-radius: 33px;
+			border: 8px solid #FFFFFF;
+			padding-top: 4px;
+			padding-bottom: 4px;
+			padding-right: 5px;
+			position: relative;
+		}
+		.column23 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 2px;
+		}
+		.column24 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 3px;
+		}
+		.column25 {
+			width: 489px;
+			display: flex;
+			flex-direction: column;
+			gap: 25px;
+		}
+		.column26 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			background: #F1F5F9;
+			border-radius: 33px;
+			padding: 43px 42px 116px 42px;
+			gap: 26px;
+		}
+		.column27 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 12px;
+		}
+		.column28 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+			border-radius: 43px;
+			border: 1px solid #E2E8F0;
+			padding: 48px;
+			gap: 32px;
+		}
+		.column29 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 7px;
+		}
+		.column30 {
+			width: 252px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 7px;
+		}
+		.column31 {
+			align-self: stretch;
+			margin-bottom: 16px;
+			margin-left: 24px;
+			margin-right: 24px;
+			position: relative;
+		}
+		.column32 {
+			width: 241px;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 19px;
+		}
+		.column33 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 19px;
+		}
+		.column34 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+		}
+		.column35 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			padding-bottom: 40px;
+			gap: 16px;
+		}
+		.contain {
+			display: flex;
+			flex-direction: column;
+			background: #FFFFFF;
+		}
+		.image {
+			width: 52px;
+			height: 12px;
+			margin-right: 15px;
+			object-fit: fill;
+		}
+		.image2 {
+			border-radius: 6px;
+			width: 33px;
+			height: 28px;
+			margin-right: 9px;
+			object-fit: fill;
+		}
+		.image3 {
+			width: 64px;
+			height: 28px;
+			object-fit: fill;
+		}
+		.image4 {
+			border-radius: 6px;
+			width: 32px;
+			height: 28px;
+			margin-right: 9px;
+			object-fit: fill;
+		}
+		.image5 {
+			width: 16px;
+			height: 16px;
+			object-fit: fill;
+		}
+		.image6 {
+			border-radius: 6px;
+			width: 16px;
+			height: 16px;
+			margin-right: 5px;
+			object-fit: fill;
+		}
+		.image7 {
+			border-radius: 6px;
+			width: 32px;
+			height: 28px;
+			object-fit: fill;
+		}
+		.image8 {
+			width: 228px;
+			height: 48px;
+			object-fit: fill;
+		}
+		.image9 {
+			border-radius: 32px;
+			width: 24px;
+			height: 24px;
+			object-fit: fill;
+		}
+		.image10 {
+			border-radius: 41px;
+			width: 661px;
+			height: 475px;
+			object-fit: fill;
+		}
+		.image11 {
+			width: 21px;
+			height: 21px;
+			object-fit: fill;
+		}
+		.image12 {
+			border-radius: 24px;
+			width: 286px;
+			height: 564px;
+			object-fit: fill;
+		}
+		.image13 {
+			border-radius: 12px;
+			width: 64px;
+			height: 64px;
+			margin-right: 23px;
+			object-fit: fill;
+		}
+		.image14 {
+			width: 58px;
+			height: 64px;
+			object-fit: fill;
+		}
+		.image15 {
+			width: 20px;
+			height: 20px;
+			object-fit: fill;
+		}
+		.image16 {
+			border-radius: 32px;
+			width: 20px;
+			height: 20px;
+			object-fit: fill;
+		}
+		.image17 {
+			border-radius: 33px;
+			width: 444px;
+			height: 461px;
+			object-fit: fill;
+		}
+		.image18 {
+			border-radius: 999px;
+			width: 44px;
+			height: 44px;
+			margin-left: 16px;
+			margin-right: 11px;
+			object-fit: fill;
+		}
+		.image19 {
+			border-radius: 999px;
+			width: 44px;
+			height: 44px;
+			object-fit: fill;
+		}
+		.image20 {
+			border-radius: 33px;
+			width: 444px;
+			height: 450px;
+			object-fit: fill;
+		}
+		.image21 {
+			border-radius: 999px;
+			width: 46px;
+			height: 46px;
+			object-fit: fill;
+		}
+		.image22 {
+			border-radius: 1044px;
+			width: 46px;
+			height: 46px;
+			object-fit: fill;
+		}
+		.image23 {
+			border-radius: 999px;
+			width: 49px;
+			height: 49px;
+			object-fit: fill;
+		}
+		.image24 {
+			border-radius: 43px;
+			height: 860px;
+			flex: 1;
+			object-fit: fill;
+		}
+		.image25 {
+			width: 306px;
+			height: 48px;
+			object-fit: fill;
+		}
+		.input {
+			color: #94A3B8;
+			font-size: 16px;
+			align-self: stretch;
+			background: #FFFFFF;
+			border-radius: 12px;
+			border: 1px solid #E2E8F0;
+			padding: 18px 16px;
+		}
+		.row-view {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			background: #191C1F;
+			border-top-left-radius: 12px;
+			border-top-right-radius: 12px;
+			padding: 12px 20px;
+		}
+		.row-view2 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF1A;
+			border-radius: 6px;
+			padding-top: 6px;
+			padding-bottom: 6px;
+		}
+		.row-view3 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			margin-left: 101px;
+			margin-right: 123px;
+			gap: 6px;
+		}
+		.row-view4 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		.row-view5 {
+			align-self: stretch;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 28px 32px;
+			box-shadow: 0px 4px 25px #0000001C;
+		}
+		.row-view6 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+		}
+		.row-view7 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+		}
+		.row-view8 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			margin-bottom: 96px;
+			gap: 48px;
+		}
+		.row-view9 {
+			display: flex;
+			align-items: center;
+			gap: 24px;
+		}
+		.row-view10 {
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			background: #1212FF;
+			border-radius: 32px;
+			padding: 16px 24px;
+			gap: 10px;
+			box-shadow: 0px 1.3333333730697632px 2px #1018280D;
+		}
+		.row-view11 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			margin-bottom: 8px;
+			gap: 8px;
+		}
+		.row-view12 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			gap: 9px;
+		}
+		.row-view13 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			gap: 24px;
+		}
+		.row-view14 {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 24px;
+			border: 1px solid #E2E8F0;
+			padding: 31px 32px;
+			box-shadow: 0px 4px 16px #0F172A03;
+		}
+		.row-view15 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			background: #1212FF;
+			border-radius: 32px;
+			padding: 16px 24px;
+			gap: 11px;
+			box-shadow: 0px 1.3333333730697632px 2px #1018280D;
+		}
+		.row-view16 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			margin-bottom: 388px;
+			margin-left: 115px;
+			margin-right: 115px;
+		}
+		.row-view17 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		.row-view18 {
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 32px;
+			padding: 8px 15px;
+			gap: 10px;
+			box-shadow: 0px 1.3333333730697632px 2px #1018280D;
+		}
+		.row-view19 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			background: #06B6D4;
+			border-radius: 999px;
+			padding-top: 16px;
+			padding-bottom: 16px;
+			margin-bottom: 48px;
+			margin-left: 48px;
+			margin-right: 48px;
+			box-shadow: 0px 2px 6px #0F172A12;
+		}
+		.row-view20 {
+			display: flex;
+			align-items: center;
+			background: #8B5CF6;
+			border-radius: 999px;
+			padding: 16px;
+			margin-bottom: 19px;
+			gap: 11px;
+			box-shadow: 0px 2px 6px #0F172A12;
+		}
+		.row-view21 {
+			display: flex;
+			align-items: center;
+			gap: 11px;
+		}
+		.row-view22 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			margin-bottom: 96px;
+			gap: 55px;
+		}
+		.row-view23 {
+			display: flex;
+			align-items: center;
+			background: #2E75F5;
+			border-radius: 999px;
+			padding: 16px;
+			margin-bottom: 48px;
+			margin-left: 28px;
+			gap: 11px;
+			box-shadow: 0px 2px 6px #0F172A12;
+		}
+		.row-view24 {
+			display: flex;
+			align-items: center;
+			background: #16A34A;
+			border-radius: 999px;
+			padding: 16px;
+			margin-bottom: 47px;
+			margin-left: 48px;
+			gap: 11px;
+			box-shadow: 0px 2px 6px #0F172A12;
+		}
+		.row-view25 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			background: #9E78DC;
+			border-radius: 999px;
+			padding: 16px;
+			gap: 11px;
+			box-shadow: 0px 2px 6px #0F172A12;
+		}
+		.row-view26 {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			gap: 8px;
+		}
+		.row-view27 {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+		}
+		.row-view28 {
+			display: flex;
+			align-items: center;
+			background: #FFFFFF;
+			border-radius: 32px;
+			padding: 8px 16px;
+			gap: 10px;
+			box-shadow: 0px 1.3333333730697632px 2px #1018280D;
+		}
+		.row-view29 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			padding: 96px 116px;
+			gap: 32px;
+		}
+		.row-view30 {
+			align-self: stretch;
+			display: flex;
+			align-items: flex-start;
+			padding-bottom: 124px;
+			margin-bottom: 29px;
+			gap: 59px;
+		}
+		.row-view31 {
+			flex: 1;
+			display: flex;
+			align-items: flex-start;
+			gap: 32px;
+		}
+		.row-view32 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+		.row-view33 {
+			align-self: stretch;
+			display: flex;
+			align-items: center;
+			gap: 12px;
+		}
+		.text {
+			color: #FFFFFF;
+			font-size: 13px;
+		}
+		.text2 {
+			color: #000080;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text3 {
+			color: #262626;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text4 {
+			color: #FFFFFF;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text5 {
+			color: #0B1D33;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text6 {
+			color: #000000;
+			font-size: 48px;
+			font-weight: bold;
+		}
+		.text7 {
+			color: #000000;
+			font-size: 20px;
+			width: 653px;
+		}
+		.text8 {
+			color: #FFFFFF;
+			font-size: 21px;
+			font-weight: bold;
+		}
+		.text9 {
+			color: #0F172A;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text10 {
+			color: #475466;
+			font-size: 15px;
+			flex: 1;
+		}
+		.text11 {
+			color: #0F1728;
+			font-size: 28px;
+			font-weight: bold;
+		}
+		.text12 {
+			color: #475466;
+			font-size: 15px;
+		}
+		.text13 {
+			color: #0F172A;
+			font-size: 48px;
+			font-weight: bold;
+			margin-bottom: 529px;
+		}
+		.text14 {
+			color: #0F172A;
+			font-size: 24px;
+			font-weight: bold;
+		}
+		.text15 {
+			color: #475569;
+			font-size: 15px;
+		}
+		.text16 {
+			color: #059669;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.text17 {
+			color: #272522;
+			font-size: 32px;
+			font-weight: bold;
+		}
+		.text18 {
+			color: #272522;
+			font-size: 16px;
+		}
+		.text19 {
+			color: #000000;
+			font-size: 14px;
+		}
+		.text20 {
+			color: #000000;
+			font-size: 16px;
+			font-weight: bold;
+		}
+		.text21 {
+			color: #FFFFFF;
+			font-size: 20px;
+		}
+		.text22 {
+			color: #FFFFFF;
+			font-size: 14px;
+			margin-right: 58px;
+		}
+		.text23 {
+			color: #FFFFFF;
+			font-size: 20px;
+			margin-right: 108px;
+		}
+		.text24 {
+			color: #FFFFFF;
+			font-size: 14px;
+		}
+		.text25 {
+			color: #FFFFFF;
+			font-size: 20px;
+			margin-right: 190px;
+		}
+		.text26 {
+			color: #FFFFFF;
+			font-size: 14px;
+			margin-right: 143px;
+		}
+		.text27 {
+			color: #000000;
+			font-size: 14px;
+			flex: 1;
+		}
+		.text28 {
+			color: #161616;
+			font-size: 32px;
+			font-weight: bold;
+		}
+		.text29 {
+			color: #64748B;
+			font-size: 16px;
+			width: 472px;
+		}
+		.text30 {
+			color: #161616;
+			font-size: 14px;
+			font-weight: bold;
+		}
+		.text31 {
+			color: #94A3B8;
+			font-size: 16px;
+		}
+		.text32 {
+			color: #94A3B8;
+			font-size: 16px;
+			margin-bottom: 84px;
+		}
+		.text33 {
+			color: #FFFFFF;
+			font-size: 18px;
+			font-weight: bold;
+		}
+		.text34 {
+			color: #FFFFFF;
+			font-size: 15px;
+			font-weight: bold;
+		}
+		.text35 {
+			color: #FFFFFF;
+			font-size: 16px;
+		}
+		.text36 {
+			color: #E5E5E5;
+			font-size: 16px;
+		}
+		.view {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 11px 16px;
+		}
+		.view2 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 3px;
+			padding-right: 3px;
+		}
+		.view3 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 5px;
+			padding-bottom: 5px;
+		}
+		.view4 {
+			align-self: stretch;
+			background: #FFFFFF;
+			padding: 48px 148px;
+		}
+		.view5 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			border-radius: 24px;
+		}
+		.view6 {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.view7 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+		.view8 {
+			align-self: stretch;
+			padding-top: 15px;
+			padding-left: 115px;
+			padding-right: 115px;
+			background-image: url('https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/1o7niexu_expires_30_days.png');
+			background-size: 100% 100%;
+		}
+		.view9 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+		}
+		.view10 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-left: 2px;
+			padding-right: 2px;
+		}
+		.view11 {
+			align-self: stretch;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			background: #FFFFFF;
+			border-radius: 12px;
+			border: 1px solid #E2E8F0;
+			padding-top: 16px;
+			padding-left: 16px;
+		}
+		.view12 {
+			align-self: stretch;
+			border-radius: 48px;
+			padding-top: 109px;
+			padding-left: 57px;
+			padding-right: 57px;
+			background-image: url('https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/8mxp6ywo_expires_30_days.png');
+			background-size: 100% 100%;
+		}
+		.view13 {
+			flex-shrink: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 3px 7px;
+		}
+	</style>
+</head>
+<body>
+		<div class="contain">
+		<div class="column">
+			<div class="column2">
+				<div class="row-view">
+					<img
+						src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/99vvn7ap_expires_30_days.png" 
+						class="image"
+					/>
+					<img
+						src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/z7191ny9_expires_30_days.png" 
+						class="image2"
+					/>
+					<img
+						src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/by4tufia_expires_30_days.png" 
+						class="image3"
+					/>
+					<div class="box">
+					</div>
+					<img
+						src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/iyld0mq1_expires_30_days.png" 
+						class="image4"
+					/>
+					<div class="row-view2">
+						<div class="row-view3">
+							<img
+								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/4lfaj023_expires_30_days.png" 
+								class="image5"
+							/>
+							<span class="text" >
+								https://electris.cloud-glory-creation.com/
+							</span>
+						</div>
+						<img
+							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/6okb5ueh_expires_30_days.png" 
+							class="image6"
+						/>
+					</div>
+					<div class="box">
+					</div>
+					<div class="row-view4">
+						<img
+							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/icthldwe_expires_30_days.png" 
+							class="image7"
+						/>
+						<img
+							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/9bgcwzns_expires_30_days.png" 
+							class="image7"
+						/>
+						<img
+							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/wqetkm5b_expires_30_days.png" 
+							class="image7"
+						/>
+						<img
+							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/f8lgbu2v_expires_30_days.png" 
+							class="image7"
+						/>
+					</div>
+				</div>
+				<div class="row-view5">
+					<img
+						src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/drosbh3a_expires_30_days.png" 
+						class="image8"
+					/>
+					<div class="row-view6">
+						<div class="view">
+							<span class="text2" >
+								Bienvenue
+							</span>
+						</div>
+						<div class="view">
+							<span class="text3" >
+								Technologies
+							</span>
+						</div>
+						<div class="view">
+							<span class="text3" >
+								Solutions
+							</span>
+						</div>
+						<div class="view">
+							<span class="text3" >
+								Secteurs
+							</span>
+						</div>
+						<div class="view">
+							<span class="text3" >
+								Financement
+							</span>
+						</div>
+						<div class="view">
+							<span class="text3" >
+								Équipe
+							</span>
+						</div>
+						<div class="view">
+							<span class="text3" >
+								Actualités
+							</span>
+						</div>
+					</div>
+					<div class="row-view7">
+						<button class="button"
+							onclick="alert('Pressed!')"}>
+							<span class="text4" >
+								Contactez-nous.
+							</span>
+						</button>
+						<button class="button2"
+							onclick="alert('Pressed!')"}>
+							<span class="text5" >
+								Fr.
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="column3">
+				<div class="row-view8">
+					<div class="column4">
+						<div class="column5">
+							<span class="text6" >
+								Vos systèmes frigorifiques chauffent l&#39;air. Vous payez du gaz pour chauffer vos bâtiments. Nous y mettons fin.
+							</span>
+							<span class="text7" >
+								Un supermarché moyen rejette 300 à 800 kW de chaleur par la toiture — plus que la puissance de sa chaudière. La cascade thermodynamique capte cette chaleur et l&#39;injecte dans le chauffage, l&#39;ECS et le dégivrage. Votre chaudière gaz s&#39;éteint. Durablement.
+							</span>
+						</div>
+						<div class="row-view9">
+							<div class="row-view10">
+								<div class="view2">
+									<span class="text8" >
+										Demander un audit gratuit
+									</span>
+								</div>
+								<img
+									src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/ny6ljdmh_expires_30_days.png" 
+									class="image9"
+								/>
+							</div>
+							<span class="text9" >
+								Diagnostic en 48 heures
+							</span>
+						</div>
+					</div>
+					<div class="view3">
+						<img
+							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/kuyhz9tk_expires_30_days.png" 
+							class="image10"
+						/>
+					</div>
+				</div>
+				<div class="absolute-column">
+					<div class="row-view11">
+						<img
+							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/2vcpdc8i_expires_30_days.png" 
+							class="image11"
+						/>
+						<span class="text10" >
+							ROI moyen sur nos installations
+						</span>
+					</div>
+					<div class="box2">
+					</div>
+					<span class="text11" >
+						12 mois
+					</span>
+				</div>
+				<div class="absolute-column2">
+					<div class="row-view11">
+						<img
+							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/kvloy66v_expires_30_days.png" 
+							class="image11"
+						/>
+						<span class="text12" >
+							Investissement client (CPE)
+						</span>
+					</div>
+					<div class="box3">
+					</div>
+					<span class="text11" >
+						0 €
+					</span>
+				</div>
+				<div class="absolute-column3">
+					<div class="row-view12">
+						<img
+							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/nw9chn30_expires_30_days.png" 
+							class="image11"
+						/>
+						<span class="text10" >
+							Consommation de gaz éliminée
+						</span>
+					</div>
+					<div class="box4">
+					</div>
+					<span class="text11" >
+						−58%
+					</span>
+				</div>
+			</div>
+			<div class="view4">
+				<div class="column6">
+					<span class="text6" >
+						Opérations possibles
+					</span>
+					<div class="row-view13">
+						<div class="view5">
+							<img
+								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/7gf1mh21_expires_30_days.png" 
+								class="image12"
+							/>
+						</div>
+						<div class="view5">
+							<img
+								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/narfpbo7_expires_30_days.png" 
+								class="image12"
+							/>
+						</div>
+						<div class="view5">
+							<img
+								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/uyyd5y1p_expires_30_days.png" 
+								class="image12"
+							/>
+						</div>
+						<div class="view5">
+							<img
+								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/eik0w3yr_expires_30_days.png" 
+								class="image12"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="column7">
+				<div class="column8">
+					<div class="absolute-view">
+						<span class="text13" >
+							Technologies disponibles
+						</span>
+					</div>
+					<div class="column9">
+						<div class="box4">
+						</div>
+						<div class="column10">
+							<div class="row-view13">
+								<div class="row-view14">
+									<img
+										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/2npmu1mb_expires_30_days.png" 
+										class="image13"
+									/>
+									<div class="column11">
+										<span class="text14" >
+											Cascade thermodynamique
+										</span>
+										<span class="text15" >
+											Récupération chaleur frigorifique → chauffage + ECS + dégivrage
+										</span>
+									</div>
+									<button class="button3"
+										onclick="alert('Pressed!')"}>
+										<span class="text16" >
+											−58%
+										</span>
+									</button>
+								</div>
+								<div class="row-view14">
+									<img
+										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/r2zs12mx_expires_30_days.png" 
+										class="image13"
+									/>
+									<div class="column11">
+										<span class="text14" >
+											MCP
+										</span>
+										<span class="text15" >
+											Récupération chaleur frigorifique → chauffage + ECS + dégivrage
+										</span>
+									</div>
+									<button class="button3"
+										onclick="alert('Pressed!')"}>
+										<span class="text16" >
+											−58%
+										</span>
+									</button>
+								</div>
+							</div>
+							<div class="row-view13">
+								<div class="row-view14">
+									<img
+										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/jxh87u2o_expires_30_days.png" 
+										class="image13"
+									/>
+									<div class="column11">
+										<span class="text14" >
+											GTB IA
+										</span>
+										<span class="text15" >
+											Récupération chaleur frigorifique → chauffage + ECS + dégivrage
+										</span>
+									</div>
+									<button class="button3"
+										onclick="alert('Pressed!')"}>
+										<span class="text16" >
+											−58%
+										</span>
+									</button>
+								</div>
+								<div class="row-view14">
+									<img
+										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/24dks9c3_expires_30_days.png" 
+										class="image13"
+									/>
+									<div class="column11">
+										<span class="text14" >
+											Free cooling
+										</span>
+										<span class="text15" >
+											Récupération chaleur frigorifique → chauffage + ECS + dégivrage
+										</span>
+									</div>
+									<button class="button3"
+										onclick="alert('Pressed!')"}>
+										<span class="text16" >
+											−58%
+										</span>
+									</button>
+								</div>
+							</div>
+							<div class="row-view13">
+								<div class="row-view14">
+									<img
+										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/9v4h9fy5_expires_30_days.png" 
+										class="image13"
+									/>
+									<div class="column11">
+										<span class="text14" >
+											HP/BP flottante
+										</span>
+										<span class="text15" >
+											Récupération chaleur frigorifique → chauffage + ECS + dégivrage
+										</span>
+									</div>
+									<button class="button3"
+										onclick="alert('Pressed!')"}>
+										<span class="text16" >
+											−58%
+										</span>
+									</button>
+								</div>
+								<div class="row-view14">
+									<img
+										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/6drm8sl8_expires_30_days.png" 
+										class="image13"
+									/>
+									<div class="column11">
+										<span class="text14" >
+											Détratification
+										</span>
+										<span class="text15" >
+											Récupération chaleur frigorifique → chauffage + ECS + dégivrage
+										</span>
+									</div>
+									<button class="button3"
+										onclick="alert('Pressed!')"}>
+										<span class="text16" >
+											−58%
+										</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="column12">
+					<div class="row-view15">
+						<div class="view6">
+							<span class="text8" >
+								Découvrir toutes nos technologies
+							</span>
+						</div>
+						<img
+							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/91lrx65w_expires_30_days.png" 
+							class="image9"
+						/>
+					</div>
+					<span class="text9" >
+						Diagnostic gratuit en 48 heures
+					</span>
+				</div>
+			</div>
+			<div class="column13">
+				<div class="absolute-column4">
+					<div class="column14">
+						<img
+							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/vs4bzi04_expires_30_days.png" 
+							class="image14"
+						/>
+						<span class="text6" >
+							Résultats obtenus pour nos clients<br/>.
+						</span>
+					</div>
+					<div class="row-view16">
+						<div class="column15">
+							<div class="column16">
+								<div class="column17">
+									<div class="view7">
+										<span class="text17" >
+											SUPERMARCHÉ 1 500 m²
+										</span>
+									</div>
+									<span class="text18" >
+										55 000 € · économies annuelles
+									</span>
+								</div>
+								<div class="column18">
+									<div class="row-view17">
+										<img
+											src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/8hs31vx8_expires_30_days.png" 
+											class="image15"
+										/>
+										<span class="text19" >
+											+ 8 000 € · potentiel de réponse à la demande annuel
+										</span>
+									</div>
+									<div class="row-view17">
+										<img
+											src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/1w383slc_expires_30_days.png" 
+											class="image15"
+										/>
+										<span class="text19" >
+											12 mois · ROI
+										</span>
+									</div>
+									<div class="row-view17">
+										<img
+											src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/bgr81tqc_expires_30_days.png" 
+											class="image15"
+										/>
+										<span class="text19" >
+											50 / 50 · partage des gains sur 5 ans
+										</span>
+									</div>
+								</div>
+							</div>
+							<button class="button4"
+								onclick="alert('Pressed!')"}>
+								<div class="row-view18">
+									<div class="view2">
+										<span class="text20" >
+											Je veux ce résultat pour mon site
+										</span>
+									</div>
+									<img
+										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/b4n88m4s_expires_30_days.png" 
+										class="image16"
+									/>
+								</div>
+							</button>
+						</div>
+						<div class="column19">
+							<img
+								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/cnmqlz5f_expires_30_days.png" 
+								class="image17"
+							/>
+							<div class="absolute-column5">
+								<div class="row-view19">
+									<img
+										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/rr0twsf6_expires_30_days.png" 
+										class="image18"
+									/>
+									<div class="column20">
+										<span class="text21" >
+											12 mois ·
+										</span>
+										<span class="text22" >
+											ROI
+										</span>
+									</div>
+								</div>
+								<div class="row-view20">
+									<img
+										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/bkz5myqt_expires_30_days.png" 
+										class="image19"
+									/>
+									<div class="column21">
+										<span class="text23" >
+											50 / 50 ·
+										</span>
+										<span class="text24" >
+											Partage des gains sur 5 ans
+										</span>
+									</div>
+								</div>
+							</div>
+							<button class="absolute-button"
+								onclick="alert('Pressed!')"}>
+								<div class="row-view21">
+									<img
+										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/te7p9l1g_expires_30_days.png" 
+										class="image19"
+									/>
+									<div class="column20">
+										<span class="text25" >
+											+ 8 000 € ·
+										</span>
+										<span class="text24" >
+											Potentiel de réponse à la demande annuel
+										</span>
+									</div>
+								</div>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="view8">
+					<div class="row-view22">
+						<div class="column22">
+							<img
+								src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/20406n2s_expires_30_days.png" 
+								class="image20"
+							/>
+							<div class="absolute-column6">
+								<div class="row-view23">
+									<img
+										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/uxh1avbh_expires_30_days.png" 
+										class="image21"
+									/>
+									<div class="column20">
+										<span class="text21" >
+											SUPERMARCHÉ 1 500 m² -
+										</span>
+										<span class="text26" >
+											Pack ELECTRIS
+										</span>
+									</div>
+								</div>
+								<div class="row-view24">
+									<img
+										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/niz8rmvr_expires_30_days.png" 
+										class="image22"
+									/>
+									<div class="column23">
+										<span class="text21" >
+											200 000 € ·
+										</span>
+										<span class="text24" >
+											Pack ELECTRIS
+										</span>
+									</div>
+								</div>
+								<div class="row-view25">
+									<img
+										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/3pa86kt8_expires_30_days.png" 
+										class="image23"
+									/>
+									<div class="column24">
+										<span class="text21" >
+											Investissement : 65 000 € ·
+										</span>
+										<span class="text24" >
+											Financé par ELECTRIS
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="column25">
+							<div class="column26">
+								<div class="view9">
+									<span class="text17" >
+										SUPERMARCHÉ 1 500 m² - Pack ELECTRIS
+									</span>
+								</div>
+								<div class="column27">
+									<div class="row-view26">
+										<img
+											src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/kwf8b0sv_expires_30_days.png" 
+											class="image15"
+										/>
+										<span class="text27" >
+											200 000 € · Pack ELECTRIS (cascade de renforcement + BMS + pompe à chaleur flottante)
+										</span>
+									</div>
+									<div class="row-view27">
+										<img
+											src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/6r1fs8wx_expires_30_days.png" 
+											class="image15"
+										/>
+										<span class="text19" >
+											Investissement : 65 000 € · financé par ELECTRIS
+										</span>
+									</div>
+								</div>
+							</div>
+							<button class="button5"
+								onclick="alert('Pressed!')"}>
+								<div class="row-view28">
+									<div class="view10">
+										<span class="text20" >
+											Je veux ce résultat pour mon site
+										</span>
+									</div>
+									<img
+										src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/ddogdtv2_expires_30_days.png" 
+										class="image16"
+									/>
+								</div>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row-view29">
+				<div class="column28">
+					<div class="column17">
+						<span class="text28" >
+							Formulaire de contact
+						</span>
+						<span class="text29" >
+							Remplissez les informations ci-dessous pour nous envoyer votre demande.
+						</span>
+					</div>
+					<div class="column10">
+						<div class="column29">
+							<span class="text30" >
+								Nom de la structure
+							</span>
+							<input
+								type="text"
+								placeholder="Ex: Société Immobilière du Nord"
+								class="input"
+							/>
+						</div>
+						<div class="row-view13">
+							<div class="column30">
+								<span class="text30" >
+									Nom
+								</span>
+								<input
+									type="text"
+									placeholder="Ex: Dupont"
+									class="input"
+								/>
+							</div>
+							<div class="column30">
+								<span class="text30" >
+									Prénom
+								</span>
+								<input
+									type="text"
+									placeholder="Ex: Jean"
+									class="input"
+								/>
+							</div>
+						</div>
+						<div class="column29">
+							<span class="text30" >
+								Poste au sein de la structure
+							</span>
+							<input
+								type="text"
+								placeholder="Ex: Directeur Général"
+								class="input"
+							/>
+						</div>
+						<div class="row-view13">
+							<div class="column30">
+								<span class="text30" >
+									Mail
+								</span>
+								<button class="button6"
+									onclick="alert('Pressed!')"}>
+									<span class="text31" >
+										Ex: jean.dupont@entreprise.fr
+									</span>
+								</button>
+							</div>
+							<div class="column30">
+								<span class="text30" >
+									Numéro de téléphone professionnel
+								</span>
+								<input
+									type="text"
+									placeholder="Ex: +33 1 23 45 67 89"
+									class="input"
+								/>
+							</div>
+						</div>
+						<div class="column29">
+							<span class="text30" >
+								Adresse des travaux envisagées
+							</span>
+							<div class="view11">
+								<span class="text32" >
+									Ex: 12 Rue de la République, 75011 Paris
+								</span>
+							</div>
+						</div>
+					</div>
+					<button class="button-row-view"
+						onclick="alert('Pressed!')"}>
+						<span class="text33" >
+							Envoyer ma demande
+						</span>
+						<img
+							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/tkgctsia_expires_30_days.png" 
+							class="image9"
+						/>
+					</button>
+				</div>
+				<img
+					src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/brtoul5a_expires_30_days.png" 
+					class="image24"
+				/>
+			</div>
+			<div class="column31">
+				<div class="view12">
+					<div class="row-view30">
+						<img
+							src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/Ipad3k8BRx/rh881ghc_expires_30_days.png" 
+							class="image25"
+						/>
+						<div class="row-view31">
+							<div class="column32">
+								<span class="text34" >
+									Technologies
+								</span>
+								<div class="column18">
+									<div class="row-view32">
+										<div class="view13">
+											<span class="text35" >
+												angle-right
+											</span>
+										</div>
+										<span class="text36" >
+											Découvrir
+										</span>
+									</div>
+									<div class="row-view32">
+										<div class="view13">
+											<span class="text35" >
+												angle-right
+											</span>
+										</div>
+										<span class="text36" >
+											Financement
+										</span>
+									</div>
+									<div class="row-view32">
+										<div class="view13">
+											<span class="text35" >
+												angle-right
+											</span>
+										</div>
+										<span class="text36" >
+											Équipe
+										</span>
+									</div>
+									<div class="row-view32">
+										<div class="view13">
+											<span class="text35" >
+												angle-right
+											</span>
+										</div>
+										<span class="text36" >
+											Contact
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="column33">
+								<span class="text34" >
+									Solutions
+								</span>
+								<div class="column34">
+									<div class="row-view33">
+										<div class="view13">
+											<span class="text35" >
+												angle-right
+											</span>
+										</div>
+										<span class="text36" >
+											Récupération de chaleur fatale
+										</span>
+									</div>
+									<div class="row-view33">
+										<div class="view13">
+											<span class="text35" >
+												angle-right
+											</span>
+										</div>
+										<span class="text36" >
+											Gestion technique du bâtiment (GTB)
+										</span>
+									</div>
+									<div class="row-view33">
+										<div class="view13">
+											<span class="text35" >
+												angle-right
+											</span>
+										</div>
+										<span class="text36" >
+											Classe A
+										</span>
+									</div>
+									<div class="row-view33">
+										<div class="view13">
+											<span class="text35" >
+												angle-right
+											</span>
+										</div>
+										<span class="text36" >
+											Décarbonation thermique
+										</span>
+									</div>
+									<div class="row-view33">
+										<div class="view13">
+											<span class="text35" >
+												angle-right
+											</span>
+										</div>
+										<span class="text36" >
+											Contrat de performance (CP)
+										</span>
+									</div>
+								</div>
+							</div>
+							<div class="column33">
+								<span class="text34" >
+									Secteurs
+								</span>
+								<div class="column35">
+									<div class="row-view33">
+										<div class="view13">
+											<span class="text35" >
+												angle-right
+											</span>
+										</div>
+										<span class="text36" >
+											Grande distribution
+										</span>
+									</div>
+									<div class="row-view33">
+										<div class="view13">
+											<span class="text35" >
+												angle-right
+											</span>
+										</div>
+										<span class="text36" >
+											Industrie
+										</span>
+									</div>
+									<div class="row-view33">
+										<div class="view13">
+											<span class="text35" >
+												angle-right
+											</span>
+										</div>
+										<span class="text36" >
+											Hôtellerie
+										</span>
+									</div>
+									<div class="row-view33">
+										<div class="view13">
+											<span class="text35" >
+												angle-right
+											</span>
+										</div>
+										<span class="text36" >
+											Tertiaire &amp; Bureaux
+										</span>
+									</div>
+									<div class="row-view33">
+										<div class="view13">
+											<span class="text35" >
+												angle-right
+											</span>
+										</div>
+										<span class="text36" >
+											Centres de données
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="absolute-box">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
