@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>_10SecteursGrandeDistribution</title>
+	<title>_13SecteursIndustrie</title>
 	<style>
 		body {
 			font-family: system-ui;
@@ -1171,9 +1171,17 @@
 			align-items: flex-start;
 			padding: 3px 7px;
 		}
+		.hero-accent { color: #1212FF; }
+		/* Reference-design corrections: keep the intentional empty sixth slot. */
+		.column7 .column10 > .row-view13:last-child > .row-view14:last-child,
+		.column16 .column18 > .row-view17:nth-child(3) {
+			display: none;
+		}
 	</style>
 </head>
 <body>
+	<!-- _13SecteursIndustrie: reused from file 10. Common navbar/footer/layout/styles retained.
+	     Replace page-specific images later as requested. -->
 		<div class="contain">
 		<div class="column">
 			<div class="column2">
@@ -1295,10 +1303,10 @@
 					<div class="column4">
 						<div class="column5">
 							<span class="text6" >
-								Vos systèmes frigorifiques chauffent l&#39;air. Vous payez du gaz pour chauffer vos bâtiments. Nous y mettons fin.
+								Votre procédé rejette de la chaleur. Beaucoup. <span class="hero-accent">On arrête de la jeter.</span>
 							</span>
 							<span class="text7" >
-								Un supermarché moyen rejette 300 à 800 kW de chaleur par la toiture — plus que la puissance de sa chaudière. La cascade thermodynamique capte cette chaleur et l&#39;injecte dans le chauffage, l&#39;ECS et le dégivrage. Votre chaudière gaz s&#39;éteint. Durablement.
+								Compresseurs, groupes froids, fours : votre site évacue en continu une énergie que vous avez payée. Selon sa température, on la récupère, on la rehausse à 90–200 °C pour le process, ou on la convertit en électricité. La part fossile recule. Durablement.
 							</span>
 						</div>
 						<div class="row-view9">
@@ -1332,13 +1340,13 @@
 							class="image11"
 						/>
 						<span class="text10" >
-							ROI moyen sur nos installations
+							Fonds Chaleur, et DECARB IND pour les grands projets
 						</span>
 					</div>
 					<div class="box2">
 					</div>
 					<span class="text11" >
-						12 mois
+						CEE + ADEME
 					</span>
 				</div>
 				<div class="absolute-column2">
@@ -1348,13 +1356,13 @@
 							class="image11"
 						/>
 						<span class="text12" >
-							Investissement client (CPE)
+							ROI typique sur nos solutions
 						</span>
 					</div>
 					<div class="box3">
 					</div>
 					<span class="text11" >
-						0 €
+						2–4 ans
 					</span>
 				</div>
 				<div class="absolute-column3">
@@ -1364,13 +1372,13 @@
 							class="image11"
 						/>
 						<span class="text10" >
-							Consommation de gaz éliminée
+							Facture pour le poste énergétique concerné (plage typique)
 						</span>
 					</div>
 					<div class="box4">
 					</div>
 					<span class="text11" >
-						−58%
+						−20 à −45%
 					</span>
 				</div>
 			</div>
@@ -1426,16 +1434,16 @@
 									/>
 									<div class="column11">
 										<span class="text14" >
-											Cascade thermodynamique
+											Cascade booster / PAC booster
 										</span>
 										<span class="text15" >
-											Récupération chaleur frigorifique → chauffage + ECS + dégivrage
+											Chaleur fatale → chaleur process à 90–200 °C
 										</span>
 									</div>
 									<button class="button3"
 										onclick="alert('Pressed!')"}>
 										<span class="text16" >
-											−58%
+											COP 2,5–4
 										</span>
 									</button>
 								</div>
@@ -1446,16 +1454,16 @@
 									/>
 									<div class="column11">
 										<span class="text14" >
-											MCP
+											Machine ORC
 										</span>
 										<span class="text15" >
-											Récupération chaleur frigorifique → chauffage + ECS + dégivrage
+											Chaleur haute température → électricité
 										</span>
 									</div>
 									<button class="button3"
 										onclick="alert('Pressed!')"}>
 										<span class="text16" >
-											−58%
+											Retour 2–6 ans
 										</span>
 									</button>
 								</div>
@@ -1468,16 +1476,16 @@
 									/>
 									<div class="column11">
 										<span class="text14" >
-											GTB IA
+											MCP
 										</span>
 										<span class="text15" >
-											Récupération chaleur frigorifique → chauffage + ECS + dégivrage
+											Stockage et effacement de pointe
 										</span>
 									</div>
 									<button class="button3"
 										onclick="alert('Pressed!')"}>
 										<span class="text16" >
-											−58%
+											−15 à −25%
 										</span>
 									</button>
 								</div>
@@ -1488,16 +1496,16 @@
 									/>
 									<div class="column11">
 										<span class="text14" >
-											Free cooling
+											HP/BP flottantes
 										</span>
 										<span class="text15" >
-											Récupération chaleur frigorifique → chauffage + ECS + dégivrage
+											Pilotage du système frigorifique
 										</span>
 									</div>
 									<button class="button3"
 										onclick="alert('Pressed!')"}>
 										<span class="text16" >
-											−58%
+											−10 à −15%
 										</span>
 									</button>
 								</div>
@@ -1510,16 +1518,16 @@
 									/>
 									<div class="column11">
 										<span class="text14" >
-											HP/BP flottante
+											Détratification
 										</span>
 										<span class="text15" >
-											Récupération chaleur frigorifique → chauffage + ECS + dégivrage
+											Récupération de la chaleur piégée sous les plafonds d&#39;atelier
 										</span>
 									</div>
 									<button class="button3"
 										onclick="alert('Pressed!')"}>
 										<span class="text16" >
-											−58%
+											−15 à −25%
 										</span>
 									</button>
 								</div>
@@ -1533,13 +1541,13 @@
 											Détratification
 										</span>
 										<span class="text15" >
-											Récupération chaleur frigorifique → chauffage + ECS + dégivrage
+											Récupération de la chaleur piégée sous les plafonds d&#39;atelier
 										</span>
 									</div>
 									<button class="button3"
 										onclick="alert('Pressed!')"}>
 										<span class="text16" >
-											−58%
+											−15 à −25%
 										</span>
 									</button>
 								</div>
@@ -1572,7 +1580,7 @@
 							class="image14"
 						/>
 						<span class="text6" >
-							Résultats obtenus pour nos clients<br/>.
+							Résultats obtenus pour nos clients.
 						</span>
 					</div>
 					<div class="row-view16">
@@ -1581,11 +1589,11 @@
 								<div class="column17">
 									<div class="view7">
 										<span class="text17" >
-											SUPERMARCHÉ 1 500 m²
+											SITE INDUSTRIEL — transformation / traitement alimentaire
 										</span>
 									</div>
 									<span class="text18" >
-										55 000 € · économies annuelles
+										−20 à −45% · facture pour l&#39;élément traité (plage typique)
 									</span>
 								</div>
 								<div class="column18">
@@ -1595,7 +1603,7 @@
 											class="image15"
 										/>
 										<span class="text19" >
-											+ 8 000 € · potentiel de réponse à la demande annuel
+											2–6 ans · ROI
 										</span>
 									</div>
 									<div class="row-view17">
@@ -1604,7 +1612,7 @@
 											class="image15"
 										/>
 										<span class="text19" >
-											12 mois · ROI
+											CEE · Fonds Chaleur · financement mobilisé
 										</span>
 									</div>
 									<div class="row-view17">
@@ -1744,7 +1752,7 @@
 							<div class="column26">
 								<div class="view9">
 									<span class="text17" >
-										SUPERMARCHÉ 1 500 m² - Pack ELECTRIS
+										SITE INDUSTRIEL — Pack ELECTRIS
 									</span>
 								</div>
 								<div class="column27">
