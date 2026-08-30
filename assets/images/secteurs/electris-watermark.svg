@@ -1,0 +1,9 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="bolt-cut">
+      <rect width="640" height="640" fill="white"/>
+      <path d="M359 55L166 257C149 275 157 305 181 312L285 343L237 585L474 316C490 298 481 269 457 262L350 229L407 72C414 51 374 39 359 55Z" fill="black"/>
+    </mask>
+  </defs>
+  <circle cx="320" cy="320" r="270" fill="#cfd8e1" fill-opacity="0.32" mask="url(#bolt-cut)"/>
+</svg>
