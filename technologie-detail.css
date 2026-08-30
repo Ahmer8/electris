@@ -1,0 +1,838 @@
+/* Machine ORC detail page — Figma 2591:7936 (navbar from 24-technologie.css) */
+
+.page--orc .hero--detail {
+  background: var(--pale);
+  padding: 64px 64px 96px;
+}
+
+.page--orc .hero--detail .hero__title span {
+  color: #1212ff;
+}
+
+.page--orc .hero__note {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f172a;
+  align-self: center;
+}
+
+.page--orc .hero__visual img {
+  object-fit: contain;
+}
+
+/* Problem */
+.orc-problem {
+  background: var(--pale);
+  padding: 96px 0;
+}
+
+.orc-problem .detail-inner {
+  max-width: 1280px;
+}
+
+.orc-problem .detail-split {
+  align-items: center;
+  gap: 48px;
+}
+
+.orc-problem .detail-split__image {
+  width: 510px;
+  height: 518px;
+  min-height: 0;
+  border-radius: 0;
+  background: transparent;
+}
+
+.orc-problem .detail-split__image img {
+  width: 510px;
+  height: 518px;
+  object-fit: contain;
+}
+
+.orc-problem .detail-title {
+  font-size: 48px;
+  letter-spacing: -2.3942px;
+  color: #000;
+  line-height: 1.1;
+}
+
+.orc-problem .detail-desc {
+  font-size: 24px;
+  font-weight: 500;
+  color: #475569;
+  line-height: 1.5;
+  margin-top: 16px;
+}
+
+.orc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.orc-list li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.5;
+  color: #0f172a;
+}
+
+.orc-list li::before {
+  content: "";
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: linear-gradient(180deg, #1212ff, #0b0b99);
+  transform: rotate(45deg);
+}
+
+/* Process diagram */
+.orc-process {
+  background: #fff;
+  padding: 48px 0 96px;
+  text-align: center;
+}
+
+.orc-process .detail-title {
+  color: #000;
+  letter-spacing: -2.3942px;
+}
+
+.orc-process .detail-desc {
+  max-width: 1190px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  font-weight: 500;
+  color: #475569;
+}
+
+.orc-process__diagram {
+  display: block;
+  width: 100%;
+  max-width: 1280px;
+  height: auto;
+  margin: 48px auto 0;
+}
+
+/* Metrics / PPA */
+.orc-metrics {
+  background: #fff;
+  padding: 96px 0;
+  text-align: center;
+}
+
+.orc-metrics .detail-title {
+  color: #000;
+  letter-spacing: -2.3942px;
+}
+
+.orc-metrics .detail-desc {
+  max-width: 1280px;
+  margin: 12px auto 0;
+  font-size: 24px;
+  font-weight: 500;
+  color: #475569;
+}
+
+.orc-metrics__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1280px;
+  margin: 48px auto 0;
+  padding: 0 64px;
+}
+
+.orc-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 0 24px;
+}
+
+.orc-metric__icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 27px rgba(0, 0, 0, 0.1);
+}
+
+.orc-metric__icon img {
+  width: 48px;
+  height: 48px;
+}
+
+.orc-metric__icon--dark {
+  background: linear-gradient(180deg, #080f0a, #5f5e5e);
+}
+
+.orc-metric__icon--blue {
+  background: linear-gradient(180deg, #1212ff, #9292e5);
+  border: 1px solid #f1f5f9;
+}
+
+.orc-metric__value {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  color: #000;
+}
+
+.orc-metric__label {
+  margin: 2px 0 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #334155;
+}
+
+/* Eligibility */
+.orc-elig {
+  position: relative;
+  padding: 96px 0;
+  overflow: hidden;
+  background: var(--pale);
+}
+
+.orc-elig__grid {
+  position: absolute;
+  inset: 7.4% 14.15%;
+  pointer-events: none;
+  opacity: 0.35;
+  background-image:
+    repeating-linear-gradient(90deg, #e2e8f0 0 1px, transparent 1px 73px),
+    repeating-linear-gradient(0deg, #e2e8f0 0 1px, transparent 1px 71px);
+}
+
+.orc-elig .detail-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.orc-elig__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.orc-elig__header .detail-title {
+  color: #000;
+  letter-spacing: -2.3942px;
+}
+
+.orc-elig__header .detail-desc {
+  font-size: 24px;
+  font-weight: 500;
+  color: #475569;
+}
+
+.orc-elig__media {
+  position: relative;
+  width: 471px;
+  height: 428px;
+  flex-shrink: 0;
+}
+
+.orc-elig__media > img:first-child {
+  width: 471px;
+  height: 428px;
+  object-fit: contain;
+}
+
+.orc-elig__float {
+  position: absolute;
+  left: -40px;
+  top: 220px;
+  width: 260px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 24px;
+  border: 8px solid #fff;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.orc-elig .detail-split {
+  align-items: center;
+  gap: 48px;
+}
+
+/* Reasons — white illustrated cards */
+.orc-reasons {
+  background: #fff;
+  padding: 96px 80px 120px;
+}
+
+.orc-reasons__header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.orc-reasons__logo {
+  width: 64px;
+  height: 73px;
+  margin: 0 auto 16px;
+  object-fit: cover;
+  object-position: left;
+}
+
+.orc-reasons .detail-eyebrow {
+  color: #898888;
+  text-align: center;
+}
+
+.orc-reasons__title {
+  margin: 8px 0 0;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -2.39px;
+  line-height: 1.1;
+  color: #020034;
+  text-align: center;
+}
+
+.orc-reasons__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1352px;
+  margin: 0 auto;
+}
+
+.orc-reason {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.orc-reason__illu {
+  height: 160px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orc-reason__illu img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.orc-reason__title {
+  margin: 0 0 12px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: #0f172a;
+}
+
+.orc-reason__desc {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+.orc-reason__arrow {
+  margin-top: auto;
+  align-self: flex-end;
+  width: 20px;
+  height: 20px;
+}
+
+/* Technologies gallery */
+.orc-gallery {
+  position: relative;
+  background: var(--pale);
+  padding: 96px 0;
+  overflow: hidden;
+}
+
+.orc-gallery__deco {
+  position: absolute;
+  left: -52px;
+  top: 22px;
+  width: 704px;
+  height: 657px;
+  object-fit: contain;
+  object-position: bottom;
+  opacity: 0.04;
+  pointer-events: none;
+}
+
+.orc-gallery__header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 64px;
+  padding: 0 24px;
+}
+
+.orc-gallery__title {
+  margin: 0;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  line-height: 1.1;
+  color: #000;
+}
+
+.orc-gallery__title span {
+  color: #1212ff;
+}
+
+.orc-gallery__desc {
+  margin: 16px 0 0;
+  font-size: 20px;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.orc-gallery__row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 56px;
+  min-height: 520px;
+}
+
+.orc-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.orc-tile__photo {
+  position: relative;
+  width: 190px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.orc-tile__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.orc-tile__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.22);
+  pointer-events: none;
+}
+
+.orc-tile__badge {
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+  z-index: 1;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #1212ff;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12px;
+  text-transform: uppercase;
+}
+
+.orc-tile__badge--orange {
+  background: #c97a2b;
+}
+
+.orc-tile__name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
+}
+
+.orc-tile__meta {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+  max-width: 180px;
+}
+
+.orc-tile--1 { transform: rotate(-4deg); align-self: flex-end; }
+.orc-tile--1 .orc-tile__photo { height: 360px; }
+
+.orc-tile--2 { transform: rotate(3deg); margin-bottom: 24px; }
+.orc-tile--2 .orc-tile__photo { height: 211px; }
+
+.orc-tile--3 { transform: rotate(-2deg); align-self: flex-start; }
+.orc-tile--3 .orc-tile__photo { width: 210px; height: 400px; }
+.orc-tile--3 .orc-tile__meta { max-width: 200px; }
+
+.orc-tile--4 { transform: rotate(4deg); margin-bottom: 48px; }
+.orc-tile--4 .orc-tile__photo { height: 249px; }
+
+.orc-tile--5 { transform: rotate(-3deg); align-self: flex-start; margin-top: 40px; }
+.orc-tile--5 .orc-tile__photo { height: 350px; }
+
+.orc-tile--6 { transform: rotate(3deg); margin-bottom: 40px; }
+.orc-tile--6 .orc-tile__photo { height: 238px; }
+
+.orc-gallery__cta {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin-top: 64px;
+}
+
+.orc-gallery__cta .btn {
+  box-shadow: 0 8px 12px rgba(18, 18, 255, 0.25);
+  font-size: 20px;
+}
+
+.orc-gallery__note {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+}
+
+/* Results */
+.orc-results {
+  background: var(--pale);
+  padding: 96px 116px;
+}
+
+.orc-results__header {
+  text-align: center;
+  margin-bottom: 84px;
+}
+
+.orc-results__logo {
+  width: 58px;
+  height: 64px;
+  margin: 0 auto 12px;
+  object-fit: cover;
+  object-position: left;
+}
+
+.orc-results__title {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -2.3942px;
+  line-height: 1.1;
+  color: #000;
+}
+
+.orc-case {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.orc-case + .orc-case {
+  margin-top: 84px;
+}
+
+.orc-case__copy {
+  width: 490px;
+  flex-shrink: 0;
+}
+
+.orc-case__card {
+  background: #f1f5f9;
+  border-radius: 34px;
+  padding: 42px;
+  min-height: 333px;
+}
+
+.orc-case__card h3 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+  color: #272522;
+}
+
+.orc-case__card .meta {
+  margin: 8px 0 24px;
+  font-size: 17px;
+  color: #272522;
+}
+
+.orc-case__card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.orc-case__card li {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.28px;
+  line-height: 1.2;
+  color: #000;
+}
+
+.orc-case__card li.is-regular {
+  font-weight: 400;
+}
+
+.orc-case__card li img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.orc-case__cta {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 97px;
+  border-radius: 77px;
+  border: 2px solid #f4f4f4;
+}
+
+.orc-case__cta--green {
+  background: linear-gradient(169deg, #b2ffda 0%, #89d2af 100%);
+}
+
+.orc-case__cta--violet {
+  background: linear-gradient(180deg, #9badd0, #a0a1fc);
+}
+
+.orc-case__cta .btn {
+  background: #fff;
+  color: #000;
+  padding: 8px 24px;
+  font-size: 16px;
+  box-shadow: 0 1.333px 2.667px rgba(16, 24, 40, 0.05);
+}
+
+.orc-case__visual {
+  position: relative;
+  flex: 1;
+  min-height: 461px;
+  border-radius: 34px;
+  border: 8px solid #fff;
+  overflow: hidden;
+}
+
+.orc-case__visual--green {
+  background: linear-gradient(147deg, #b2ffda 0%, #89d2af 100%);
+}
+
+.orc-case__visual--blue {
+  background: linear-gradient(180deg, #9badd0, #a0a1fc);
+}
+
+.orc-case__visual > img {
+  width: 444px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.orc-case--alt .orc-case__visual > img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.orc-bubbles {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 368px;
+}
+
+.orc-bubbles--right {
+  right: 24px;
+  top: 70px;
+}
+
+.orc-bubbles--left {
+  left: 18px;
+  top: 46px;
+}
+
+.orc-bubble {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-radius: 999px;
+  color: #fff;
+  box-shadow: 0 12px 12px rgba(15, 23, 42, 0.1), 0 2px 3px rgba(15, 23, 42, 0.08);
+  align-self: flex-start;
+}
+
+.orc-bubble__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.orc-bubble__icon img {
+  width: 28px;
+  height: 28px;
+}
+
+.orc-bubble p {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: -0.36px;
+  line-height: 1.2;
+}
+
+.orc-bubble small {
+  display: block;
+  margin-top: 3px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.orc-bubble--orange { background: #f97316; }
+.orc-bubble--cyan { background: #06b6d4; }
+.orc-bubble--violet { background: #8b5cf6; }
+.orc-bubble--blue { background: #2e75f5; }
+.orc-bubble--green { background: #16a34a; }
+.orc-bubble--purple { background: #9e78dc; }
+
+@media (max-width: 1200px) {
+  .page--orc .hero--detail,
+  .orc-reasons,
+  .orc-results {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .orc-metrics__grid,
+  .orc-reasons__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .orc-gallery__row {
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 0;
+    padding: 0 24px;
+  }
+
+  .orc-tile,
+  .orc-tile--1,
+  .orc-tile--2,
+  .orc-tile--3,
+  .orc-tile--4,
+  .orc-tile--5,
+  .orc-tile--6 {
+    transform: none;
+    align-self: auto;
+    margin: 0;
+  }
+
+  .orc-case,
+  .orc-case--alt {
+    flex-direction: column;
+  }
+
+  .orc-case__copy,
+  .orc-elig__media,
+  .orc-problem .detail-split__image {
+    width: 100%;
+  }
+
+  .orc-elig__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .orc-case__visual > img,
+  .orc-case--alt .orc-case__visual > img {
+    width: 100%;
+    position: static;
+  }
+
+  .orc-bubbles {
+    position: relative;
+    right: auto;
+    left: auto;
+    top: auto;
+    width: 100%;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .orc-metrics__grid,
+  .orc-reasons__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .orc-gallery__title,
+  .orc-reasons__title,
+  .orc-results__title,
+  .orc-problem .detail-title {
+    font-size: 32px;
+  }
+
+  .orc-elig__float {
+    left: 8px;
+    width: 160px;
+    height: 110px;
+  }
+
+  .orc-list li {
+    font-size: 18px;
+  }
+}

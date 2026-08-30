@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>25-technologie-machine-orc — Electris</title>
+  <title>Machine ORC — Electris</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="24-technologie.css">
+  <link rel="stylesheet" href="technologie-detail.css">
 </head>
 <body>
-  <div class="page" style="--accent:#1212ff;--accent-bg:#eef2ff">
+  <div class="page page--orc">
 
     <header class="nav" id="nav">
       <a class="nav__logo" href="index.html"><img src="assets/images/technologie/hero-logo.png" alt="electris"></a>
@@ -33,7 +34,7 @@
     <section class="hero hero--detail">
       <div class="hero__content">
         <div>
-          <h1 class="hero__title">Votre chaleur perdue devient de l'<span>ÉLECTRICITÉ.</span></h1>
+          <h1 class="hero__title">Votre chaleur perdue <span>devient de l'ÉLECTRICITÉ.</span></h1>
           <p class="hero__desc">L'ORC (Cycle Organique de Rankine) convertit la chaleur perdue de vos machines en électricité, autoconsommée ou revendue — sans subventions et sans infrastructure lourde.</p>
         </div>
         <div class="hero__buttons">
@@ -41,7 +42,7 @@
           <span class="hero__note">Diagnostic en 48 heures</span>
         </div>
       </div>
-      <div class="hero__visual"><img src="assets/images/technologie/tech-01.png" alt="Machine ORC"></div>
+      <div class="hero__visual"><img src="assets/images/technologie/orc/hero.png" alt="Machine ORC convertissant la chaleur fatale en électricité"></div>
     </section>
 
     <section class="partners" aria-label="Nos clients">
@@ -60,143 +61,280 @@
       </div>
     </section>
 
-    <section class="detail-section detail-section--white">
+    <section class="orc-problem">
       <div class="detail-inner">
         <div class="detail-split">
-          <div class="detail-split__image"><img src="assets/images/technologie/tech-01.png" alt="Chaleur fatale industrielle"></div>
+          <div class="detail-split__image"><img src="assets/images/technologie/orc/problem.png" alt="Chaleur fatale industrielle" width="510" height="518"></div>
           <div class="detail-split__content">
             <p class="detail-eyebrow">Le problème</p>
             <h2 class="detail-title">L'industrie française rejette des quantités massives de chaleur dans l'atmosphère</h2>
             <p class="detail-desc">C'est de l'énergie déjà payée qui s'évapore — et une source de revenus inexploitée.</p>
             <hr class="detail-divider">
-            <ul class="detail-list">
-              <li><strong>109 TWh</strong> — Chaleur fatale rejetée chaque année — l'équivalent d'environ 10 réacteurs nucléaires</li>
-              <li><strong>3 à 25%</strong> — D'énergie consommée convertible en électricité</li>
-              <li><strong>€0</strong> — Investissement nécessaire en CPE : ELECTRIS finance tout</li>
+            <ul class="orc-list">
+              <li>109 TWh - Chaleur fatale rejetée chaque année — l'équivalent d'environ 10 réacteurs nucléaires</li>
+              <li>3 à 25% - D'énergie consommée convertible en électricité</li>
+              <li>€0 - Investissement nécessaire en CPE : ELECTRIS finance tout</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="detail-section detail-section--white detail-section--center">
+    <section class="orc-process">
       <div class="detail-inner">
         <p class="detail-eyebrow">Cycle ORC — Cycle Organique de Rankine</p>
         <h2 class="detail-title">Comment fonctionne l'ORC ?</h2>
         <p class="detail-desc">Il suit le même principe qu'une centrale à vapeur — mais utilise un fluide organique qui s'évapore dès 80°C. Aucune infrastructure lourde.</p>
-        <div class="detail-process" style="margin-top:48px">
-          <img src="assets/images/technologie/tech-01.png" alt="Étape 1 — Captage chaleur">
-          <img src="assets/images/technologie/tech-02.png" alt="Étape 2 — Évaporation fluide">
-          <img src="assets/images/technologie/tech-03.png" alt="Étape 3 — Turbine">
-          <img src="assets/images/technologie/tech-04.png" alt="Étape 4 — Électricité">
-        </div>
+        <img class="orc-process__diagram" src="assets/images/technologie/orc/cycle.png" alt="CYCLE ORC — Organic Rankine Cycle : source de chaleur, évaporateur, turbine, condenseur, pompe">
       </div>
     </section>
 
-    <section class="detail-section detail-section--white detail-section--center">
+    <section class="orc-metrics">
       <div class="detail-inner">
         <p class="detail-eyebrow">Innovation ELECTRIS</p>
         <h2 class="detail-title">Le PPA ORC : votre chaleur fatale devient un revenu récurrent</h2>
         <p class="detail-desc">Là où d'autres vendent des équipements, ELECTRIS propose un Power Purchase Agreement (PPA) : nous finançons, installons et exploitons. Vous vendez votre chaleur fatale. Revenu garanti pendant 15 à 20 ans, sans Capex.</p>
-        <div class="detail-metrics" style="margin-top:48px">
-          <div class="detail-metric">
-            <img src="assets/images/technologie/chip-01.png" alt="" width="90" height="90" style="border-radius:50%">
-            <p class="detail-metric__value">€100/MWh</p>
-            <p class="detail-metric__label">Prix garanti dans le cadre du contrat PPA [indicatif]</p>
-          </div>
-          <div class="detail-metric">
-            <img src="assets/images/technologie/chip-02.png" alt="" width="90" height="90" style="border-radius:50%">
-            <p class="detail-metric__value">15 ans</p>
-            <p class="detail-metric__label">Durée de contrat type</p>
-          </div>
-          <div class="detail-metric">
-            <img src="assets/images/technologie/chip-03.png" alt="" width="90" height="90" style="border-radius:50%">
-            <p class="detail-metric__value">€0</p>
-            <p class="detail-metric__label">Investissement nécessaire</p>
-          </div>
-          <div class="detail-metric">
-            <img src="assets/images/technologie/chip-04.png" alt="" width="90" height="90" style="border-radius:50%">
-            <p class="detail-metric__value">J+6 mois</p>
-            <p class="detail-metric__label">Délai de mise en service</p>
-          </div>
+      </div>
+      <div class="orc-metrics__grid">
+        <div class="orc-metric">
+          <div class="orc-metric__icon orc-metric__icon--dark"><img src="assets/images/technologie/orc/metric-1.svg" alt="" width="48" height="48"></div>
+          <p class="orc-metric__value">€100/MWh</p>
+          <p class="orc-metric__label">Prix garanti dans le cadre du contrat PPA [indicatif]</p>
+        </div>
+        <div class="orc-metric">
+          <div class="orc-metric__icon orc-metric__icon--blue"><img src="assets/images/technologie/orc/metric-2.svg" alt="" width="46" height="46"></div>
+          <p class="orc-metric__value">15 ans</p>
+          <p class="orc-metric__label">Durée de contrat type</p>
+        </div>
+        <div class="orc-metric">
+          <div class="orc-metric__icon orc-metric__icon--dark"><img src="assets/images/technologie/orc/metric-3.svg" alt="" width="48" height="48"></div>
+          <p class="orc-metric__value">€0</p>
+          <p class="orc-metric__label">Investissement nécessaire</p>
+        </div>
+        <div class="orc-metric">
+          <div class="orc-metric__icon orc-metric__icon--blue"><img src="assets/images/technologie/orc/metric-4.svg" alt="" width="48" height="48"></div>
+          <p class="orc-metric__value">J+6 mois</p>
+          <p class="orc-metric__label">Délai de mise en service</p>
         </div>
       </div>
     </section>
 
-    <section class="detail-elig detail-section--white">
-      <div class="detail-elig__grid" aria-hidden="true"></div>
-      <div class="detail-inner detail-cta-row" style="position:relative;z-index:1">
-        <div>
-          <p class="detail-eyebrow">Éligibilité</p>
-          <h2 class="detail-title">Votre secteur est-il éligible ?</h2>
-          <p class="detail-desc">Tout site avec une chaleur fatale continue au-dessus de 80°C est potentiellement éligible.</p>
+    <section class="orc-elig">
+      <div class="orc-elig__grid" aria-hidden="true"></div>
+      <div class="detail-inner">
+        <div class="orc-elig__header">
+          <div>
+            <p class="detail-eyebrow">Éligibilité</p>
+            <h2 class="detail-title">Votre secteur est-il éligible ?</h2>
+            <p class="detail-desc">Tout site avec une chaleur fatale continue au-dessus de 80°C est potentiellement éligible.</p>
+          </div>
+          <a class="btn btn--hero btn--blue" href="mailto:contact@electris.fr">Demander un audit gratuit <img src="assets/images/technologie/arrow-white.svg" alt=""></a>
         </div>
-        <a class="btn btn--hero btn--blue" href="mailto:contact@electris.fr">Demander un audit gratuit <img src="assets/images/technologie/arrow-white.svg" alt=""></a>
-      </div>
-      <div class="detail-inner" style="position:relative;z-index:1;margin-top:48px">
         <div class="detail-split">
-          <div class="detail-split__image"><img src="assets/images/technologie/contact-image.png" alt="Site industriel"></div>
-          <ul class="detail-list detail-split__content">
-            <li><strong>Industrie</strong> — fours, autoclaves, sécheurs, pasteurisateurs : chaleur continue à 100–180°C, grands volumes — ROI optimal dès quelques centaines de kW</li>
-            <li><strong>Data centres</strong> — refroidissement serveurs : chaleur à 45–80°C, disponible 8 760 heures/an, fonctionnement continu</li>
-            <li><strong>Entrepôts frigorifiques</strong> — condenseurs : chaleur de condensation à 35–55°C, disponible 24/7, profil stable</li>
+          <div class="orc-elig__media">
+            <img src="assets/images/technologie/orc/elig-main.png" alt="Installation industrielle" width="471" height="428">
+            <img class="orc-elig__float" src="assets/images/technologie/orc/elig-overlay.png" alt="" width="260" height="180">
+          </div>
+          <ul class="orc-list">
+            <li>Industrie - fours, autoclaves, sécheurs, pasteurisateurs : Chaleur continue à 100-180°C : profil idéal Chaleur fatale haute température, grands volumes - ROI optimal dès quelques centaines de kW</li>
+            <li>Data centres - refroidissement serveurs : Chaleur à 45-80°C, disponible 8 760 heures/an Fonctionnement continu : rendement maximal</li>
+            <li>Entrepôts frigorifiques - condenseurs : Chaleur de condensation à 35-55°C, disponible 24/7 Grands volumes, profil stable</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="detail-reasons">
-      <div class="detail-reasons__inner">
-        <p class="detail-eyebrow" style="color:#e2e8f0">Avantages</p>
-        <h2 class="detail-reasons__title">6 raisons de monétiser votre chaleur fatale</h2>
-        <div class="detail-reasons__grid">
-          <article class="detail-reason"><h3 class="detail-reason__title">Revenu garanti</h3><p class="detail-reason__desc">Revenu récurrent sur 15 à 20 ans, indexé sur l'électricité produite.</p></article>
-          <article class="detail-reason"><h3 class="detail-reason__title">Zéro investissement</h3><p class="detail-reason__desc">ELECTRIS finance 100% de l'installation. Aucun Capex, aucun risque technologique.</p></article>
-          <article class="detail-reason"><h3 class="detail-reason__title">Bilan carbone amélioré</h3><p class="detail-reason__desc">Électricité décarbonée produite sur site et comptabilisée dans votre bilan carbone.</p></article>
-          <article class="detail-reason"><h3 class="detail-reason__title">Maintenance incluse</h3><p class="detail-reason__desc">Exploitation et maintenance assurées par ELECTRIS, avec disponibilité contractuelle.</p></article>
-          <article class="detail-reason"><h3 class="detail-reason__title">CEE &amp; financement</h3><p class="detail-reason__desc">Éligible aux CEE et aux aides ADEME, avec la structure optimisée par ELECTRIS.</p></article>
-          <article class="detail-reason"><h3 class="detail-reason__title">Aucune perturbation</h3><p class="detail-reason__desc">Captage en dérivation, sans arrêt de production ni modification de process.</p></article>
-        </div>
+    <section class="orc-reasons">
+      <header class="orc-reasons__header">
+        <img class="orc-reasons__logo" src="assets/images/technologie/orc/reason-logo.png" alt="" width="64" height="73">
+        <p class="detail-eyebrow">Avantages</p>
+        <h2 class="orc-reasons__title">6 raisons de monétiser votre chaleur fatale</h2>
+      </header>
+      <div class="orc-reasons__grid">
+        <article class="orc-reason">
+          <div class="orc-reason__illu"><img src="assets/images/technologie/orc/reason-1.png" alt="" width="160" height="160"></div>
+          <div>
+            <h3 class="orc-reason__title">1. Revenu garanti</h3>
+            <p class="orc-reason__desc">Revenu récurrent sur 15 à 20 ans, indexé sur l'électricité produite.</p>
+          </div>
+          <img class="orc-reason__arrow" src="assets/images/technologie/orc/reason-arrow.svg" alt="" width="20" height="20">
+        </article>
+        <article class="orc-reason">
+          <div class="orc-reason__illu"><img src="assets/images/technologie/orc/reason-2.png" alt="" width="160" height="160"></div>
+          <div>
+            <h3 class="orc-reason__title">2. Zéro investissement</h3>
+            <p class="orc-reason__desc">ELECTRIS finance 100% de l'installation. Aucun Capex, aucun risque technologique.</p>
+          </div>
+          <img class="orc-reason__arrow" src="assets/images/technologie/orc/reason-arrow.svg" alt="" width="20" height="20">
+        </article>
+        <article class="orc-reason">
+          <div class="orc-reason__illu"><img src="assets/images/technologie/orc/reason-3.png" alt="" width="160" height="160"></div>
+          <div>
+            <h3 class="orc-reason__title">3. Bilan carbone amélioré</h3>
+            <p class="orc-reason__desc">Électricité décarbonée produite sur site et comptabilisée dans votre bilan carbone.</p>
+          </div>
+          <img class="orc-reason__arrow" src="assets/images/technologie/orc/reason-arrow.svg" alt="" width="20" height="20">
+        </article>
+        <article class="orc-reason">
+          <div class="orc-reason__illu"><img src="assets/images/technologie/orc/reason-4.png" alt="" width="160" height="160"></div>
+          <div>
+            <h3 class="orc-reason__title">4. Maintenance incluse</h3>
+            <p class="orc-reason__desc">Exploitation et maintenance assurées par ELECTRIS, avec disponibilité contractuelle.</p>
+          </div>
+          <img class="orc-reason__arrow" src="assets/images/technologie/orc/reason-arrow.svg" alt="" width="20" height="20">
+        </article>
+        <article class="orc-reason">
+          <div class="orc-reason__illu"><img src="assets/images/technologie/orc/reason-5.png" alt="" width="160" height="160"></div>
+          <div>
+            <h3 class="orc-reason__title">5. CEE &amp; financement</h3>
+            <p class="orc-reason__desc">Éligible aux CEE et aux aides ADEME, avec la structure optimisée par ELECTRIS.</p>
+          </div>
+          <img class="orc-reason__arrow" src="assets/images/technologie/orc/reason-arrow.svg" alt="" width="20" height="20">
+        </article>
+        <article class="orc-reason">
+          <div class="orc-reason__illu"><img src="assets/images/technologie/orc/reason-6.png" alt="" width="160" height="160"></div>
+          <div>
+            <h3 class="orc-reason__title">6. Aucune perturbation</h3>
+            <p class="orc-reason__desc">Captage en dérivation, sans arrêt de production ni modification de process.</p>
+          </div>
+          <img class="orc-reason__arrow" src="assets/images/technologie/orc/reason-arrow.svg" alt="" width="20" height="20">
+        </article>
       </div>
     </section>
 
-    <section class="detail-results">
-      <header class="detail-results__header">
-        <img src="assets/images/technologie/chip-05.png" alt="" width="58" height="64" style="margin:0 auto 12px">
-        <h2 class="detail-title">Résultats obtenus pour nos clients .</h2>
+    <section class="orc-gallery">
+      <img class="orc-gallery__deco" src="assets/images/technologie/orc/gallery-deco.png" alt="">
+      <header class="orc-gallery__header">
+        <h2 class="orc-gallery__title">Technologies <span>possibles</span></h2>
+        <p class="orc-gallery__desc">Six solutions d'ingénierie électrique pour décarboner votre site, réduire vos factures et optimiser vos systèmes thermiques.</p>
       </header>
-      <div class="detail-results__row">
-        <div style="width:490px;flex-shrink:0">
-          <div class="detail-result-card">
+      <div class="orc-gallery__row">
+        <a class="orc-tile orc-tile--1" href="26-technologie-pac-rehausse-cascade-booster.html">
+          <div class="orc-tile__photo" style="height:360px">
+            <img src="assets/images/technologie/orc/gallery-1.png" alt="Cascade Booster">
+            <span class="orc-tile__badge">−58%</span>
+          </div>
+          <p class="orc-tile__name">Cascade Booster</p>
+          <p class="orc-tile__meta">Récupération chaleur frigorifique</p>
+        </a>
+        <a class="orc-tile orc-tile--2" href="28-technologie-stockage-chaleur-mcp.html">
+          <div class="orc-tile__photo" style="height:211px">
+            <img src="assets/images/technologie/orc/gallery-2.png" alt="MCP">
+            <span class="orc-tile__badge orc-tile__badge--orange">−25%</span>
+          </div>
+          <p class="orc-tile__name">MCP</p>
+          <p class="orc-tile__meta">Stockage froid nocturne</p>
+        </a>
+        <a class="orc-tile orc-tile--3" href="27-technologie-gtb-prediction-ia.html">
+          <div class="orc-tile__photo" style="width:210px;height:400px">
+            <img src="assets/images/technologie/orc/gallery-3.png" alt="GTB IA">
+            <span class="orc-tile__badge">−40%</span>
+          </div>
+          <p class="orc-tile__name">GTB IA</p>
+          <p class="orc-tile__meta">Pilotage CVC &amp; éclairage intelligent</p>
+        </a>
+        <a class="orc-tile orc-tile--4" href="solutions-regulation-haute-pression-flottante.html">
+          <div class="orc-tile__photo" style="height:249px">
+            <img src="assets/images/technologie/orc/gallery-4.png" alt="HP/BP Flottante">
+            <span class="orc-tile__badge orc-tile__badge--orange">−15%</span>
+          </div>
+          <p class="orc-tile__name">HP/BP Flottante</p>
+          <p class="orc-tile__meta">Régulation groupe froid optimisée</p>
+        </a>
+        <a class="orc-tile orc-tile--5" href="29-technologie-freecooling.html">
+          <div class="orc-tile__photo" style="height:350px">
+            <img src="assets/images/technologie/orc/gallery-5.png" alt="Free cooling">
+            <span class="orc-tile__badge">−50%</span>
+          </div>
+          <p class="orc-tile__name">Free cooling</p>
+          <p class="orc-tile__meta">Refroidissement naturel nuit / hiver</p>
+        </a>
+        <a class="orc-tile orc-tile--6" href="destratification-air.html">
+          <div class="orc-tile__photo" style="height:238px">
+            <img src="assets/images/technologie/orc/gallery-6.png" alt="Déstratification">
+            <span class="orc-tile__badge orc-tile__badge--orange">−25%</span>
+          </div>
+          <p class="orc-tile__name">Déstratification</p>
+          <p class="orc-tile__meta">Récupération chaleur sous plafonds</p>
+        </a>
+      </div>
+      <div class="orc-gallery__cta">
+        <a class="btn btn--hero btn--blue" href="24-technologie.html">Explorer toutes nos technologies <img src="assets/images/technologie/arrow-white.svg" alt=""></a>
+        <p class="orc-gallery__note">Diagnostic gratuit sous 48 heures</p>
+      </div>
+    </section>
+
+    <section class="orc-results">
+      <header class="orc-results__header">
+        <img class="orc-results__logo" src="assets/images/technologie/orc/result-logo.png" alt="" width="58" height="64">
+        <h2 class="orc-results__title">Résultats obtenus pour nos clients .</h2>
+      </header>
+
+      <div class="orc-case">
+        <div class="orc-case__copy">
+          <div class="orc-case__card">
             <h3>Site industriel de transformation alimentaire</h3>
-            <p class="meta">Industrie · déchets continus &gt; 120 °C</p>
+            <p class="meta">Industrie • déchets continus &gt; 120 °C</p>
             <ul>
-              <li>✓ Plusieurs centaines de kW · production électrique monétisée [plage typique]</li>
-              <li>✓ 15–20 ans · revenus garantis du PPA</li>
-              <li>✓ Capture de contournement, sans arrêt de production.</li>
+              <li><img src="assets/images/technologie/orc/check.svg" alt=""> Plusieurs centaines de kW · production électrique monétisée [plage typique]</li>
+              <li><img src="assets/images/technologie/orc/check.svg" alt=""> 15–20 ans · revenus garantis du PPA</li>
+              <li class="is-regular"><img src="assets/images/technologie/orc/check.svg" alt=""> Capture de contournement, sans arrêt de production.</li>
             </ul>
           </div>
-          <a class="btn btn--hero btn--blue" href="mailto:contact@electris.fr" style="margin-top:26px;width:100%;justify-content:center">Je veux ce résultat pour mon site <img src="assets/images/technologie/arrow-white.svg" alt=""></a>
+          <div class="orc-case__cta orc-case__cta--green">
+            <a class="btn btn--hero" href="mailto:contact@electris.fr">Je veux ce résultat pour mon site <img src="assets/images/technologie/orc/arrow-dark.svg" alt="" width="20" height="20"></a>
+          </div>
         </div>
-        <div class="detail-result-visual">
-          <img src="assets/images/technologie/tech-01.png" alt="Résultat client ORC">
+        <div class="orc-case__visual orc-case__visual--green">
+          <img src="assets/images/technologie/orc/result-1.png" alt="Site de transformation alimentaire">
+          <div class="orc-bubbles orc-bubbles--right">
+            <div class="orc-bubble orc-bubble--orange">
+              <span class="orc-bubble__icon"><img src="assets/images/technologie/orc/banknote.svg" alt=""></span>
+              <p>Plusieurs centaines de kW · <small>Production électrique monétisée</small></p>
+            </div>
+            <div class="orc-bubble orc-bubble--cyan">
+              <span class="orc-bubble__icon"><img src="assets/images/technologie/orc/shield.svg" alt=""></span>
+              <p>15-20 ans · <small>Revenus garantis du PPA</small></p>
+            </div>
+            <div class="orc-bubble orc-bubble--violet">
+              <span class="orc-bubble__icon"><img src="assets/images/technologie/orc/refresh.svg" alt=""></span>
+              <p>Capture de contournement, sans arrêt de production.</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="detail-results__row" style="margin-top:48px">
-        <div class="detail-result-visual">
-          <img src="assets/images/technologie/tech-01.png" alt="Centre de données ORC">
+
+      <div class="orc-case orc-case--alt">
+        <div class="orc-case__visual orc-case__visual--blue">
+          <img src="assets/images/technologie/orc/result-2.png" alt="Centre de données">
+          <div class="orc-bubbles orc-bubbles--left">
+            <div class="orc-bubble orc-bubble--blue">
+              <span class="orc-bubble__icon"><img src="assets/images/technologie/orc/thermo.svg" alt=""></span>
+              <p>45-80 °C · <small>Chaleur monétisée</small></p>
+            </div>
+            <div class="orc-bubble orc-bubble--green">
+              <span class="orc-bubble__icon"><img src="assets/images/technologie/orc/coins.svg" alt=""></span>
+              <p>0 € · <small>Investissement (PPA)</small></p>
+            </div>
+            <div class="orc-bubble orc-bubble--purple">
+              <span class="orc-bubble__icon"><img src="assets/images/technologie/orc/zap.svg" alt=""></span>
+              <p>Production continue d'électricité.</p>
+            </div>
+          </div>
         </div>
-        <div style="width:489px;flex-shrink:0">
-          <div class="detail-result-card">
+        <div class="orc-case__copy">
+          <div class="orc-case__card">
             <h3>Centre de données</h3>
-            <p class="meta">Refroidissement continu · 8 760 heures/an</p>
+            <p class="meta">Refroidissement continu • 8 760 heures/an</p>
             <ul>
-              <li>✓ 45–80 °C · chaleur monétisée</li>
-              <li>✓ 0 € · investissement (PPA)</li>
-              <li>✓ Production continue d'électricité.</li>
+              <li><img src="assets/images/technologie/orc/check.svg" alt=""> 45–80 °C · chaleur monétisée</li>
+              <li><img src="assets/images/technologie/orc/check.svg" alt=""> 0 € · investissement (PPA)</li>
+              <li class="is-regular"><img src="assets/images/technologie/orc/check.svg" alt=""> Production continue d'électricité.</li>
             </ul>
           </div>
-          <a class="btn btn--hero btn--blue" href="mailto:contact@electris.fr" style="margin-top:26px;width:100%;justify-content:center">Je veux ce résultat pour mon site <img src="assets/images/technologie/arrow-white.svg" alt=""></a>
+          <div class="orc-case__cta orc-case__cta--violet">
+            <a class="btn btn--hero" href="mailto:contact@electris.fr">Je veux ce résultat pour mon site <img src="assets/images/technologie/orc/arrow-dark.svg" alt="" width="20" height="20"></a>
+          </div>
         </div>
       </div>
     </section>
