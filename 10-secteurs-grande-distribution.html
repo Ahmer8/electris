@@ -2453,6 +2453,51 @@
           height: 320px !important;
         }
       }
+
+      /* Keep hero copy and image from visually overlapping. */
+      .warehouse-hero > div:first-child {
+        position: relative;
+        z-index: 2;
+      }
+
+      .warehouse-visual {
+        z-index: 1;
+      }
+
+      .warehouse-hero h1 {
+        max-width: 720px;
+      }
+
+      .warehouse-hero h1 .warehouse-title-line {
+        max-width: 100%;
+      }
+
+      @media (min-width: 1025px) {
+        .warehouse-hero {
+          grid-template-columns: minmax(0, 720px) minmax(500px, 1fr);
+          gap: 46px;
+        }
+      }
+
+      @media (max-width: 640px) {
+        .warehouse-hero {
+          align-items: start !important;
+        }
+
+        .warehouse-visual {
+          display: grid !important;
+          gap: 12px !important;
+        }
+
+        .warehouse-metric,
+        .warehouse-metric--top,
+        .warehouse-metric--right,
+        .warehouse-metric--bottom {
+          position: static !important;
+          width: 100% !important;
+          transform: none !important;
+        }
+      }
     </style>
   </head>
   <body class="wasteheat-page">
@@ -2590,7 +2635,8 @@
           <h1>
             <span class="warehouse-title-line">Vos syst&egrave;mes frigorifiques</span>
             <span class="warehouse-title-line">chauffent l'air. Vous payez du</span>
-            <span class="warehouse-title-line warehouse-blue">gaz pour chauffer vos b&acirc;timents. Nous y mettons fin.</span>
+            <span class="warehouse-title-line warehouse-blue">gaz pour chauffer vos b&acirc;timents.</span>
+            <span class="warehouse-title-line warehouse-blue">Nous y mettons fin.</span>
           </h1>
           <p>
             Un supermarch&eacute; moyen rejette 300 &agrave; 800 kW de chaleur par la toiture &mdash; plus que la puissance de sa chaudi&egrave;re. La cascade thermodynamique capte cette chaleur et l&rsquo;injecte dans le chauffage. L&rsquo;ECS et le d&eacute;givrage. Votre chaudi&egrave;re gaz s&rsquo;&eacute;teint. Durablement.
@@ -2601,7 +2647,7 @@
           </div>
         </div>
         <div class="warehouse-visual">
-          <img src="assets/images/agricultural-sectors-and-sites/figma-extract/02_image1_2497_6402_1536x672.png" alt="Technicien Electris en grande distribution" />
+          <img src="assets/images/secteurs-grande-distribution/figma-extract/02_image1_2497_7442_1493x1054.png" alt="Technicien Electris en grande distribution" />
           <div class="warehouse-metric warehouse-metric--top">
             <small>Consommation de gaz &eacute;limin&eacute;e</small>
             <strong>-58%</strong>
@@ -2621,10 +2667,10 @@
         <span class="warehouse-kicker"></span>
         <h2 class="warehouse-section-title">Op&eacute;rations possibles</h2>
         <div class="warehouse-op-grid">
-          <img src="assets/images/agricultural-sectors-and-sites/figma-extract/03_image2_2497_6402_1024x1024.png" alt="Installation frigorifique en grande distribution" />
-          <img src="assets/images/agricultural-sectors-and-sites/figma-extract/04_image3_2497_6402_1024x1024.png" alt="Pilotage des installations frigorifiques" />
-          <img src="assets/images/agricultural-sectors-and-sites/figma-extract/05_image4_2497_6402_1024x1024.png" alt="Equipements techniques de grande distribution" />
-          <img src="assets/images/agricultural-sectors-and-sites/figma-extract/06_image5_2497_6402_1024x1024.png" alt="Supermarch&eacute; et b&acirc;timent commercial" />
+          <img src="assets/images/secteurs-grande-distribution/figma-extract/03_image2_2497_7442_1024x1024.png" alt="Installation frigorifique en grande distribution" />
+          <img src="assets/images/secteurs-grande-distribution/figma-extract/04_image3_2497_7442_1024x1024.png" alt="Pilotage des installations frigorifiques" />
+          <img src="assets/images/secteurs-grande-distribution/figma-extract/05_image4_2497_7442_1024x1024.png" alt="Equipements techniques de grande distribution" />
+          <img src="assets/images/secteurs-grande-distribution/figma-extract/06_image5_2497_7442_1024x1024.png" alt="Supermarch&eacute; et b&acirc;timent commercial" />
         </div>
       </section>
 
@@ -2687,7 +2733,7 @@
       </section>
 
       <section id="results" class="warehouse-section warehouse-results">
-        <img class="warehouse-mark" src="assets/images/agricultural-sectors-and-sites/figma-extract/01_image0_2497_6402_639x134.png" alt="" />
+        <img class="warehouse-mark" src="assets/images/secteurs-grande-distribution/figma-extract/01_image0_2497_7442_639x134.png" alt="" />
         <h2 class="warehouse-section-title">R&eacute;sultats obtenus pour nos clients.</h2>
         <div class="warehouse-result-grid">
           <div class="warehouse-result-copy">
@@ -2703,7 +2749,7 @@
             <a class="warehouse-result-cta warehouse-result-cta--green" href="mailto:contact@electris.fr"><span>Je veux ce r&eacute;sultat pour mon site &rarr;</span></a>
           </div>
           <div class="warehouse-result-photo warehouse-result-photo--split">
-            <img src="assets/images/agricultural-sectors-and-sites/figma-extract/08_image7_2497_6402_1024x1024.png" alt="Supermarch&eacute; Intermarch&eacute;" />
+            <img src="assets/images/secteurs-grande-distribution/figma-extract/09_image8_2497_7442_992x1056.png" alt="Supermarch&eacute; Intermarch&eacute;" />
             <span class="warehouse-badge warehouse-badge--orange">
               <span class="warehouse-badge-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M4 9.5l8 8 5.5-5.5 6.5 6.5" /><path d="M24 11v7.5h-7.5" /></svg></span>
               <span><strong>+ 8 000 &euro; &middot;</strong><small>Potentiel de r&eacute;ponse &agrave; la demande annuel</small></span>
@@ -2720,7 +2766,7 @@
         </div>
         <div class="warehouse-result-grid">
           <div class="warehouse-result-photo warehouse-result-photo--inside">
-            <img src="assets/images/agricultural-sectors-and-sites/figma-extract/09_image8_2497_6402_1024x1024.png" alt="Installation technique Pack ELECTRIS" />
+            <img src="assets/images/secteurs-grande-distribution/figma-extract/10_image9_2497_7442_1024x1024.png" alt="Installation technique Pack ELECTRIS" />
             <div class="warehouse-labels">
               <span class="warehouse-label warehouse-label--blue">
                 <span class="warehouse-badge-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M7 24V5h14v19" /><path d="M11 9h.01M17 9h.01M11 14h.01M17 14h.01M11 19h.01M17 19h.01" /></svg></span>
@@ -2788,7 +2834,7 @@
           <button class="warehouse-btn warehouse-submit" type="submit">Envoyer ma demande <span>&rarr;</span></button>
         </form>
         <div class="warehouse-contact-photo">
-          <img src="assets/images/agricultural-sectors-and-sites/figma-extract/10_image9_2497_6402_1024x1024.png" alt="Rayon frais de supermarch&eacute;" />
+          <img src="assets/images/secteurs-grande-distribution/figma-extract/11_image10_2497_7442_1024x1024.png" alt="Rayon frais de supermarch&eacute;" />
         </div>
       </section>
     </main>
