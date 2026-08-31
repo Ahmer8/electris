@@ -2535,6 +2535,85 @@
     height: 23px !important;
   }
 }
+
+@media (min-width: 1200px) {
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label {
+    align-items: center !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--blue {
+    width: 372px !important;
+    min-width: 372px !important;
+    grid-template-columns: 46px minmax(0, 1fr) !important;
+    column-gap: 13.796px !important;
+    padding-right: 28px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--green {
+    width: 370px !important;
+    min-width: 370px !important;
+    grid-template-columns: 46px minmax(0, 1fr) !important;
+    column-gap: 13.796px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--violet {
+    width: 306px !important;
+    min-width: 306px !important;
+    grid-template-columns: 49px minmax(0, 1fr) !important;
+    column-gap: 13.894px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon {
+    position: relative;
+    display: block;
+    width: 46px !important;
+    height: 46px !important;
+    transform: translateY(-1.3px);
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon {
+    width: 49px !important;
+    height: 49px !important;
+    transform: none;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon > img {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 32px !important;
+    height: 32px !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img {
+    transform: translate(-50%, -50%) rotate(-6deg) !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img {
+    transform: translate(-50%, -50%) rotate(4deg) !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label > span:last-child {
+    display: flex !important;
+    min-width: 0 !important;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    white-space: nowrap !important;
+    font-size: 21px !important;
+    font-weight: 400 !important;
+    line-height: 1.15 !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label > span:last-child small {
+    margin-top: 8px !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.15 !important;
+    white-space: nowrap !important;
+  }
+}
 </style>
 </head>
 <body class="wasteheat-page">
@@ -2773,7 +2852,7 @@
 </span>
 <span class="warehouse-label warehouse-label--green">
 <span aria-hidden="true" class="warehouse-badge-icon"><img src="assets/images/secteurs/result-icons/layers.svg" alt="" /></span>
-<span>Pack ELECTRIS<small>R&eacute;cup&eacute;ration + BMS + d&eacute;carbonisation</small></span>
+<span>Pack ELECTRIS &middot;<small>R&eacute;cup&eacute;ration + BMS + d&eacute;carbonisation</small></span>
 </span>
 <span class="warehouse-label warehouse-label--violet">
 <span aria-hidden="true" class="warehouse-badge-icon"><img src="assets/images/secteurs/result-icons/banknote.svg" alt="" /></span>
