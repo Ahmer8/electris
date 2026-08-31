@@ -2535,6 +2535,102 @@
     height: 23px !important;
   }
 }
+
+@media (min-width: 1200px) {
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--green {
+    width: 376px !important;
+    min-width: 376px !important;
+    max-width: none !important;
+    height: 96.875px !important;
+    min-height: 96.875px !important;
+    grid-template-columns: 46px 286px !important;
+    column-gap: 12px !important;
+    align-items: center !important;
+    box-sizing: border-box !important;
+    padding: 16px !important;
+    margin-left: 48.218px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon {
+    position: relative !important;
+    display: block !important;
+    width: 46px !important;
+    height: 46px !important;
+    transform: none !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 35px !important;
+    height: 35px !important;
+    max-width: none !important;
+    transform: translate(-50%, -50%) rotate(-6deg) !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--green > span:last-child {
+    display: flex !important;
+    width: 286px !important;
+    min-width: 0 !important;
+    flex: 0 0 286px !important;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    font-size: 21px !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--green > span:last-child small {
+    margin-top: 2.875px !important;
+    font-size: 15px !important;
+    font-weight: 400 !important;
+    line-height: 19px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--green > span:last-child small .figma-line {
+    display: block !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    white-space: nowrap !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--blue .warehouse-badge-icon {
+    position: relative !important;
+    display: block !important;
+    width: 46px !important;
+    height: 46px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--blue .warehouse-badge-icon > img {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 32px !important;
+    height: 32px !important;
+    max-width: none !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon {
+    position: relative !important;
+    display: block !important;
+    width: 49px !important;
+    height: 49px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 34px !important;
+    height: 34px !important;
+    max-width: none !important;
+    transform: translate(-50%, -50%) rotate(4deg) !important;
+  }
+}
 </style>
 </head>
 <body class="wasteheat-page">
@@ -2775,7 +2871,7 @@
 </span>
 <span class="warehouse-label warehouse-label--green">
 <span aria-hidden="true" class="warehouse-badge-icon"><img src="assets/images/secteurs/result-icons/layers.svg" alt="" /></span>
-<span>Pack ELECTRIS<small>Free cooling + récupération de chaleur + GTB prédictive</small></span>
+<span>Pack ELECTRIS &middot;<small><span class="figma-line">Free cooling + récupération de chaleur +</span><span class="figma-line">GTB prédictive</span></small></span>
 </span>
 <span class="warehouse-label warehouse-label--violet">
 <span aria-hidden="true" class="warehouse-badge-icon"><img src="assets/images/secteurs/result-icons/banknote.svg" alt="" /></span>
