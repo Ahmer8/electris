@@ -16,6 +16,7 @@ build/
 coverage/
 
 # Local temporary files
+_figma-ref/
 .tmp-responsive/
 .tmp/
 .tmp-*/
