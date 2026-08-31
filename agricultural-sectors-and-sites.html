@@ -1400,7 +1400,7 @@
         min-width: 289px;
         min-height: 81px;
         height: 81px;
-        margin-left: 46px;
+        margin-left: -28px;
       }
 
       .warehouse-contact {
@@ -2456,7 +2456,89 @@
         }
       }
     </style>
-  </head>
+
+<style>
+/* Match the Figma badge geometry and keep every exported icon aligned. */
+.warehouse-result-photo .warehouse-badge-icon {
+  flex: 0 0 auto;
+  align-items: center;
+  justify-items: center;
+}
+.warehouse-result-photo .warehouse-badge-icon > img {
+  position: static !important;
+  inset: auto !important;
+  display: block !important;
+  width: 28px !important;
+  height: 28px !important;
+  max-width: none !important;
+  border-radius: 0 !important;
+  object-fit: contain !important;
+}
+.warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon {
+  width: 46px;
+  height: 46px;
+  border: 0;
+  background: transparent;
+}
+.warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon {
+  background: rgba(255, 255, 255, 0.15);
+}
+.warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon {
+  width: 49px;
+  height: 49px;
+  background: transparent;
+}
+.warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon > img {
+  width: 32px !important;
+  height: 32px !important;
+}
+.warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img {
+  width: 30px !important;
+  height: 30px !important;
+}
+.warehouse-result-photo .warehouse-badge-icon > img[src$="/thermometer.svg"] {
+  width: 42px !important;
+  height: 43px !important;
+}
+.warehouse-result-photo .warehouse-badge-icon > img[src$="/coins.svg"] {
+  width: 30px !important;
+  height: 30px !important;
+}
+.warehouse-result-photo .warehouse-badge-icon > img[src$="/leaf.svg"] {
+  width: 30px !important;
+  height: 30px !important;
+}
+@media (min-width: 1200px) {
+  .warehouse-results--large .warehouse-result-photo--inside .warehouse-label--blue .warehouse-badge-icon > img { width: 46px !important; height: 46px !important; }
+  .warehouse-results--large .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img,
+  .warehouse-results--large .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img { width: 49px !important; height: 49px !important; }
+  .warehouse-results--standard .warehouse-result-photo--inside .warehouse-label--blue .warehouse-badge-icon > img { width: 32px !important; height: 32px !important; }
+  .warehouse-results--standard .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img { width: 35px !important; height: 35px !important; }
+  .warehouse-results--standard .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img { width: 34px !important; height: 34px !important; }
+  .warehouse-results--compact .warehouse-result-photo--inside .warehouse-label--blue .warehouse-badge-icon > img { width: 28px !important; height: 28px !important; }
+  .warehouse-results--compact .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img { width: 31px !important; height: 31px !important; }
+  .warehouse-results--compact .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img { width: 30px !important; height: 30px !important; }
+  .warehouse-results--residential .warehouse-result-photo--inside .warehouse-label--blue .warehouse-badge-icon > img { width: 46px !important; height: 46px !important; }
+  .warehouse-results--residential .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img { width: 24px !important; height: 24px !important; }
+  .warehouse-results--residential .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img { width: 49px !important; height: 49px !important; }
+  .warehouse-results--top-compact .warehouse-result-photo--split .warehouse-badge-icon > img { width: 24px !important; height: 24px !important; }
+}
+@media (max-width: 1199px) {
+  .warehouse-result-photo .warehouse-label .warehouse-badge-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon {
+    width: 36px;
+    height: 36px;
+  }
+  .warehouse-result-photo .warehouse-label .warehouse-badge-icon > img {
+    width: 23px !important;
+    height: 23px !important;
+  }
+}
+</style>
+</head>
   <body class="wasteheat-page">
     <main
       class="gtb-export-shell export-png-crop"
@@ -2682,7 +2764,7 @@
         </div>
       </section>
 
-      <section id="results" class="warehouse-section warehouse-results">
+      <section id="results" class="warehouse-section warehouse-results warehouse-results--compact">
         <img class="warehouse-mark" src="assets/images/agricultural-sectors-and-sites/figma-extract/01_image0_2497_6402_639x134.png" alt="" />
         <h2 class="warehouse-section-title">R&eacute;sultats obtenus pour nos clients.</h2>
         <div class="warehouse-result-grid">
@@ -2700,15 +2782,15 @@
           <div class="warehouse-result-photo warehouse-result-photo--split">
             <img src="assets/images/agricultural-sectors-and-sites/figma-extract/08_image7_2497_6402_1024x1024.png" alt="Ferme et refroidissement de processus" />
             <span class="warehouse-badge warehouse-badge--orange">
-              <span class="warehouse-badge-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M4 9.5l8 8 5.5-5.5 6.5 6.5" /><path d="M24 11v7.5h-7.5" /></svg></span>
+              <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/trending-down.svg" alt="" /></span>
               <span><strong>-20 &agrave; -40 % &middot;</strong><small>Facture d'&eacute;nergie (plage typique)</small></span>
             </span>
             <span class="warehouse-badge warehouse-badge--cyan">
-              <span class="warehouse-badge-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M4 18l7-7 5 5 8-8" /><path d="M17 8h7v7" /></svg></span>
+              <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/trending-up.svg" alt="" /></span>
               <span><strong>18-30 mois &middot;</strong><small>ROI</small></span>
             </span>
             <span class="warehouse-badge warehouse-badge--violet">
-              <span class="warehouse-badge-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M14 4l10 5-10 5L4 9l10-5z" /><path d="M4 14l10 5 10-5" /><path d="M4 19l10 5 10-5" /></svg></span>
+              <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/banknote.svg" alt="" /></span>
               <span><strong>CEE - Fonds Chaleur &middot;</strong><small>Financement mobilis&eacute;</small></span>
             </span>
           </div>
@@ -2718,15 +2800,15 @@
             <img src="assets/images/agricultural-sectors-and-sites/figma-extract/09_image8_2497_6402_1024x1024.png" alt="Process industriel agricole" />
             <div class="warehouse-labels">
               <span class="warehouse-label warehouse-label--blue">
-                <span class="warehouse-badge-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M7 24V5h14v19" /><path d="M11 9h.01M17 9h.01M11 14h.01M17 14h.01M11 19h.01M17 19h.01" /></svg></span>
+                <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/leaf.svg" alt="" /></span>
                 <span>FERME / COOP&Eacute;RATIVE -<small>Pack ELECTRIS</small></span>
               </span>
               <span class="warehouse-label warehouse-label--green">
-                <span class="warehouse-badge-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><path d="M14 4l10 5-10 5L4 9l10-5z" /><path d="M4 14l10 5 10-5" /><path d="M4 19l10 5 10-5" /></svg></span>
+                <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/layers.svg" alt="" /></span>
                 <span>Pack ELECTRIS &middot;<small>R&eacute;cup&eacute;ration + HP flottant + MCP</small></span>
               </span>
               <span class="warehouse-label warehouse-label--violet">
-                <span class="warehouse-badge-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><rect x="5" y="9" width="18" height="10" rx="2" /><circle cx="14" cy="14" r="2" /><path d="M8 12h.01M20 16h.01" /></svg></span>
+                <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/banknote.svg" alt="" /></span>
                 <span>Investissement &middot;<small>financ&eacute; par ELECTRIS (EPC)</small></span>
               </span>
             </div>
