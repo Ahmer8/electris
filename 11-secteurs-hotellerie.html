@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 
 <html lang="en">
   <head>
@@ -839,26 +839,23 @@
         font-size: 12px;
         line-height: 1.25;
       }
-
       .warehouse-metric small::before {
+        content: "";
         flex: 0 0 auto;
-        color: #1212ff;
-        font-size: 15px;
-        line-height: 1;
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
       }
-
       .warehouse-metric--top small::before {
-        content: "&#9671;";
-        color: #2faf71;
+        background-image: url("assets/images/secteurs/metric-icons/metric-savings.svg");
       }
-
       .warehouse-metric--right small::before {
-        content: "&#9673;";
-        color: #111827;
+        background-image: url("assets/images/secteurs/metric-icons/metric-roi.svg");
       }
-
       .warehouse-metric--bottom small::before {
-        content: "&#9649;";
+        background-image: url("assets/images/secteurs/metric-icons/metric-investment.svg");
       }
 
       .warehouse-metric strong {
@@ -1826,10 +1823,15 @@
           gap: 5px;
           font-size: 10px;
         }
-
-        .warehouse-metric small::before {
-          font-size: 11px;
-        }
+      .warehouse-metric small::before {
+        content: "";
+        flex: 0 0 auto;
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
 
         .warehouse-metric::after {
           margin: 6px 0 7px;
@@ -2714,7 +2716,7 @@
                 <a class="nav-link" href="index.html">Bienvenue</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Technologie.html">Technologies</a>
+                <a class="nav-link" href="24-technologie.html">Technologies</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" href="solutions.html">Solutions</a>
@@ -2865,7 +2867,7 @@
           </article>
         </div>
         <div class="warehouse-tech-actions">
-          <a class="warehouse-btn warehouse-btn--blue" href="Technologie.html"
+          <a class="warehouse-btn warehouse-btn--blue" href="24-technologie.html"
             >D&eacute;couvrir toutes nos technologies <span>&rarr;</span></a
           >
           <small>Diagnostic gratuit en 48 heures</small>
@@ -3079,7 +3081,7 @@
               <ul class="list-unstyled d-flex flex-column">
                 <li>
                   <span class="chevron">&rsaquo;</span
-                  ><a href="Technologie.html">D&eacute;couvrir</a>
+                  ><a href="24-technologie.html">D&eacute;couvrir</a>
                 </li>
                 <li>
                   <span class="chevron">&rsaquo;</span
