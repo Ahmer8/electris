@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap");
+
 :root {
   --blue: #1212ff;
   --pale: #f1f5f9;
@@ -8619,4 +8621,191 @@ h3 {
   width: 32px;
   height: 32px;
   object-fit: contain;
+}
+
+/* Shared Figma client-results layout for all sector detail pages. */
+.warehouse-results .warehouse-checks li {
+  display: flex !important;
+  align-items: flex-start !important;
+  gap: 8px !important;
+}
+
+.warehouse-results .warehouse-checks li::before {
+  content: "" !important;
+  display: block !important;
+  flex: 0 0 20px !important;
+  width: 20px !important;
+  height: 20px !important;
+  margin: -1.6px 0 0 !important;
+  background: url("assets/images/technologie/orc/check.svg") center / contain no-repeat !important;
+}
+
+.warehouse-results .warehouse-checks li > img {
+  display: none !important;
+}
+
+@media (min-width: 1101px) {
+  .warehouse-results {
+    min-height: 0 !important;
+    padding: 96px 116px !important;
+    font-family: Raleway, system-ui, sans-serif !important;
+  }
+
+  .warehouse-results .warehouse-mark {
+    margin: 0 auto 12px !important;
+  }
+
+  .warehouse-results .warehouse-section-title {
+    width: 828px !important;
+    max-width: 100% !important;
+    margin: 0 auto 84.058px !important;
+    white-space: nowrap !important;
+    line-height: 1.1 !important;
+    letter-spacing: -2.3942px !important;
+  }
+
+  .warehouse-results .warehouse-result-grid {
+    margin-top: 0 !important;
+  }
+
+  .warehouse-results .warehouse-result-grid + .warehouse-result-grid {
+    align-items: flex-start !important;
+    margin-top: 84.058px !important;
+  }
+
+  .warehouse-results .warehouse-result-copy {
+    gap: 25.218px !important;
+  }
+
+  .warehouse-results .warehouse-result-card {
+    min-height: 325px !important;
+    padding: 41.86px 42px !important;
+    border-radius: 33.623px !important;
+  }
+
+  .warehouse-results .warehouse-result-card h3 {
+    margin: 0 !important;
+    font-family: Raleway, system-ui, sans-serif !important;
+    line-height: 40.348px !important;
+  }
+
+  .warehouse-results .warehouse-result-card p {
+    margin: 8px 0 0 !important;
+    font-size: 16.812px !important;
+    line-height: 25.218px !important;
+  }
+
+  .warehouse-results .warehouse-checks {
+    gap: 12px !important;
+    margin-top: 27px !important;
+  }
+
+  .warehouse-results .warehouse-checks li {
+    min-width: 0 !important;
+    line-height: 16.8px !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .warehouse-results .warehouse-result-cta {
+    min-height: 96.667px !important;
+  }
+
+  .warehouse-results .warehouse-badge {
+    grid-template-columns: 44px minmax(0, 1fr) !important;
+    column-gap: 12px !important;
+    padding: 16px !important;
+    overflow: hidden !important;
+  }
+
+  .warehouse-results .warehouse-badge--orange {
+    width: 371px !important;
+  }
+
+  .warehouse-results .warehouse-badge strong {
+    font-size: 20.184px !important;
+    line-height: normal !important;
+  }
+
+  .warehouse-results .warehouse-badge small {
+    margin-top: 2.883px !important;
+    font-size: 14.417px !important;
+    line-height: 1.3 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--split {
+    grid-template-columns: 444.186px minmax(0, 1fr) !important;
+    min-height: 461.477px !important;
+    background: linear-gradient(147.4866deg, #b2ffda 0%, #89d2af 100%) !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--split img {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 444.186px !important;
+    max-width: none !important;
+    height: 461.477px !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside {
+    min-height: 459.169px !important;
+    background: linear-gradient(180deg, #9badd0 0%, #a0a1fc 100%) !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-labels {
+    left: 9.59px !important;
+    top: 37.69px !important;
+    gap: 47.53px !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label {
+    grid-template-columns: 46px minmax(0, 1fr) !important;
+    column-gap: 12px !important;
+    padding: 16px !important;
+    min-height: 78px !important;
+    height: 78px !important;
+    max-width: calc(100% - 10px) !important;
+    overflow: hidden !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label > span:last-child {
+    min-width: 0 !important;
+    font-size: 20.184px !important;
+    line-height: normal !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label > span:last-child small {
+    margin-top: 2.875px !important;
+    font-size: 14.417px !important;
+    line-height: 1.3 !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label--blue {
+    width: 334px !important;
+    min-width: 334px !important;
+    margin-left: 28px !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label--green {
+    width: 199px !important;
+    min-width: 199px !important;
+    margin-left: 48.22px !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label--violet {
+    width: 373.097px !important;
+    min-width: 373.097px !important;
+    height: 81px !important;
+    min-height: 81px !important;
+    margin-left: 0 !important;
+  }
+
+  .warehouse-results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-card {
+    min-height: 333.081px !important;
+  }
 }

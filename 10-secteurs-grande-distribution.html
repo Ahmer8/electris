@@ -8,6 +8,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <style>
       body {
@@ -2594,6 +2598,180 @@
     height: 23px !important;
   }
 }
+
+/* Figma client-results alignment and exported icon geometry. */
+.warehouse-results .warehouse-checks li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.warehouse-results .warehouse-checks li::before {
+  display: none;
+}
+
+.warehouse-results .warehouse-checks li > img {
+  flex: 0 0 20px;
+  width: 20px;
+  height: 20px;
+  margin-top: -1.6px;
+  object-fit: contain;
+}
+
+@media (min-width: 1101px) {
+  .warehouse-results {
+    min-height: 0;
+    padding: 96px 116px;
+    font-family: Raleway, system-ui, sans-serif;
+  }
+
+  .warehouse-results .warehouse-mark {
+    margin: 0 auto 12px;
+  }
+
+  .warehouse-results .warehouse-section-title {
+    width: 828px;
+    max-width: 100%;
+    margin: 0 auto 84.058px;
+    white-space: nowrap;
+    line-height: 1.1;
+    letter-spacing: -2.3942px;
+  }
+
+  .warehouse-results .warehouse-result-grid {
+    margin-top: 0;
+  }
+
+  .warehouse-results .warehouse-result-grid + .warehouse-result-grid {
+    align-items: start;
+    margin-top: 84.058px;
+  }
+
+  .warehouse-results .warehouse-result-copy {
+    gap: 25.218px;
+  }
+
+  .warehouse-results .warehouse-result-card {
+    min-height: 325px;
+    padding: 41.86px 42px;
+    border-radius: 33.623px;
+  }
+
+  .warehouse-results .warehouse-result-card h3 {
+    margin: 0;
+    font-family: Raleway, system-ui, sans-serif;
+    line-height: 40.348px;
+  }
+
+  .warehouse-results .warehouse-result-card p {
+    margin: 8px 0 0;
+    font-size: 16.812px;
+    line-height: 25.218px;
+  }
+
+  .warehouse-results .warehouse-checks {
+    gap: 12px;
+    margin-top: 27px;
+  }
+
+  .warehouse-results .warehouse-checks li {
+    line-height: 16.8px;
+  }
+
+  .warehouse-results .warehouse-result-cta {
+    min-height: 96.667px;
+  }
+
+  .warehouse-results .warehouse-badge {
+    grid-template-columns: 44px minmax(0, 1fr);
+    column-gap: 12px;
+    padding: 16px;
+    overflow: hidden;
+  }
+
+  .warehouse-results .warehouse-badge strong {
+    font-size: 20.184px;
+    line-height: normal;
+  }
+
+  .warehouse-results .warehouse-badge small {
+    margin-top: 2.883px;
+    font-size: 14.417px;
+    line-height: 1.3;
+  }
+
+  .warehouse-results .warehouse-result-photo--split {
+    grid-template-columns: 444.186px 1fr;
+    min-height: 461.477px;
+    background: linear-gradient(147.4866deg, #b2ffda 0%, #89d2af 100%);
+  }
+
+  .warehouse-results .warehouse-badge--orange {
+    width: 371px;
+  }
+
+  .warehouse-results .warehouse-result-photo--split img {
+    grid-column: 1;
+    grid-row: 1;
+    width: 444.186px;
+    max-width: none;
+    height: 461.477px;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside {
+    min-height: 459.169px;
+    background: linear-gradient(180deg, #9badd0 0%, #a0a1fc 100%);
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-labels {
+    left: 9.59px;
+    top: 37.69px;
+    gap: 47.53px;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label {
+    column-gap: 12px;
+    padding: 16px;
+    min-height: 78px;
+    height: 78px;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label > span:last-child {
+    font-size: 20.184px;
+    line-height: normal;
+    white-space: nowrap;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label > span:last-child small {
+    margin-top: 2.875px;
+    font-size: 14.417px;
+    line-height: 1.3;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label--blue {
+    width: 334px;
+    min-width: 334px;
+    margin-left: 28px;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label--green {
+    width: 199px;
+    min-width: 199px;
+    margin-left: 48.22px;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label--violet {
+    width: 373.097px;
+    min-width: 373.097px;
+    height: 81px;
+    min-height: 81px;
+    margin-left: 0;
+  }
+
+  .warehouse-results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-card {
+    min-height: 333.081px;
+  }
+}
 </style>
 </head>
   <body class="wasteheat-page">
@@ -2883,9 +3061,9 @@
               <h3>SUPERMARCH&Eacute; 1 500 m&sup2;</h3>
               <p>55 000 &euro; &middot; &eacute;conomies annuelles</p>
               <ul class="warehouse-checks">
-                <li>8 000 &euro; &middot; potentiel de r&eacute;ponse &agrave; la demande annuel.</li>
-                <li>12 mois &middot; ROI</li>
-                <li>50 / 50 &middot; partage des gains sur 5 ans</li>
+                <li><img src="assets/images/technologie/orc/check.svg" alt="" />8 000 &euro; &middot; potentiel de r&eacute;ponse &agrave; la demande annuel.</li>
+                <li><img src="assets/images/technologie/orc/check.svg" alt="" />12 mois &middot; ROI</li>
+                <li><img src="assets/images/technologie/orc/check.svg" alt="" />50 / 50 &middot; partage des gains sur 5 ans</li>
               </ul>
             </article>
             <a class="warehouse-result-cta warehouse-result-cta--green" href="mailto:contact@electris.fr"><span>Je veux ce r&eacute;sultat pour mon site &rarr;</span></a>
@@ -2928,8 +3106,8 @@
             <article class="warehouse-result-card">
               <h3>SUPERMARCH&Eacute; 1 500 m&sup2; - Pack ELECTRIS</h3>
               <ul class="warehouse-checks">
-                <li>200 000 &euro; &middot; Pack ELECTRIS (cascade de renforcement + BMS + pompe &agrave; chaleur flottante)</li>
-                <li>Investissement : 65 000 &euro; &middot; financ&eacute; par ELECTRIS</li>
+                <li><img src="assets/images/technologie/orc/check.svg" alt="" />200 000 &euro; &middot; Pack ELECTRIS (cascade de renforcement + BMS + pompe &agrave; chaleur flottante)</li>
+                <li><img src="assets/images/technologie/orc/check.svg" alt="" />Investissement : 65 000 &euro; &middot; financ&eacute; par ELECTRIS</li>
               </ul>
             </article>
             <a class="warehouse-result-cta warehouse-result-cta--violet" href="mailto:contact@electris.fr"><span>Je veux ce r&eacute;sultat pour mon site &rarr;</span></a>
