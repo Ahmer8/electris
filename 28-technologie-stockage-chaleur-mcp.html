@@ -51,13 +51,14 @@
           <div class="hero__content">
             <div>
               <h1 class="hero__title">
-                Votre énergie thermique disponible
-                <span>au bon moment,<br />SANS SURDIMENSIONNER.</span>
+                Votre chaleur est disponible<br />
+                au <span>mauvais moment, stockée pour le bon.</span>
               </h1>
               <p class="hero__desc">
-                Le stockage par matériaux à changement de phase absorbe la chaleur
-                ou le froid lorsqu'ils sont disponibles, puis les restitue au
-                moment utile pour réduire les pointes et les pertes.
+                Le stockage par matériau à changement de phase (MCP) stocke la
+                chaleur fatale dans un petit volume et la restitue à la demande :
+                pointes matinales, arrêts de production et demande d'eau chaude
+                décalée.
               </p>
             </div>
             <div class="hero__buttons">
@@ -68,11 +69,51 @@
               <span class="hero__note">Diagnostic en 48 heures</span>
             </div>
           </div>
-          <div class="hero__visual">
+          <div class="hero__visual pac-hero__visual">
             <img
-              src="assets/images/technologie/tech-04.png"
-              alt="Unité industrielle de stockage thermique"
+              class="pac-hero__art"
+              src="assets/images/technologie/mcp/hero.png"
+              alt="Stockage de chaleur fatale par matériau à changement de phase"
             />
+            <div class="pac-hero-metric pac-hero-metric--temp">
+              <p class="pac-hero-metric__label">
+                <img
+                  src="assets/images/technologie/mcp/icon-eco.svg"
+                  alt=""
+                  width="21"
+                  height="21"
+                />
+                Densité de stockage vs eau (indicatif)
+              </p>
+              <hr class="pac-hero-metric__divider" />
+              <p class="pac-hero-metric__value">×5</p>
+            </div>
+            <div class="pac-hero-metric pac-hero-metric--eff">
+              <p class="pac-hero-metric__label">
+                <img
+                  src="assets/images/technologie/mcp/icon-roi.svg"
+                  alt=""
+                  width="21"
+                  height="21"
+                />
+                Cycles sans dégradation
+              </p>
+              <hr class="pac-hero-metric__divider" />
+              <p class="pac-hero-metric__value">&gt; 40 000</p>
+            </div>
+            <div class="pac-hero-metric pac-hero-metric--cpe">
+              <p class="pac-hero-metric__label">
+                <img
+                  src="assets/images/technologie/mcp/icon-cpe.svg"
+                  alt=""
+                  width="21"
+                  height="21"
+                />
+                Investissement client (CPE)
+              </p>
+              <hr class="pac-hero-metric__divider" />
+              <p class="pac-hero-metric__value">0 €</p>
+            </div>
           </div>
         </section>
 
@@ -119,8 +160,8 @@
             <div class="detail-split">
               <div class="detail-split__image">
                 <img
-                  src="assets/images/secteurs-industrie/figma-extract/03_image2_2497_9495_1024x1024.png"
-                  alt="Réseau industriel transportant de la chaleur"
+                  src="assets/images/technologie/mcp/problem.png"
+                  alt="Technicien intervenant sur un circuit de récupération de chaleur"
                   width="510"
                   height="518"
                 />
@@ -128,19 +169,26 @@
               <div class="detail-split__content">
                 <p class="detail-eyebrow">Le problème</p>
                 <h2 class="detail-title">
-                  Vos besoins thermiques et vos sources d'énergie ne se
-                  présentent pas au même moment
+                  La chaleur fatale n'est pas toujours disponible quand on en a
+                  besoin
                 </h2>
                 <p class="detail-desc">
-                  Sans tampon, une chaleur fatale intermittente est rejetée,
-                  tandis que les pointes de chauffage ou de froid imposent des
-                  équipements puissants et des achats d'énergie coûteux.
+                  Sans stockage, vous la perdez — et rachetez de l'énergie quand
+                  la demande est forte.
                 </p>
                 <hr class="detail-divider" />
                 <ul class="orc-list">
-                  <li>Décalage de plusieurs heures entre charge et restitution</li>
-                  <li>Forte densité énergétique dans un volume compact</li>
-                  <li>Température stable pendant le changement de phase</li>
+                  <li>
+                    Décalage temporel - Entre production et demande de chaleur
+                  </li>
+                  <li>
+                    Encombrement réduit - Bien plus petit qu'un ballon d'eau
+                    chaude équivalent
+                  </li>
+                  <li>
+                    Écrêtement - Pointes de demande couvertes par restitution à
+                    la demande
+                  </li>
                 </ul>
               </div>
             </div>
@@ -150,60 +198,57 @@
         <section class="orc-process">
           <div class="detail-inner">
             <p class="detail-eyebrow">Stockage thermique MCP</p>
-            <h2 class="detail-title">Comment fonctionne un stockage à changement de phase ?</h2>
+            <h2 class="detail-title">Comment fonctionne le stockage MCP ?</h2>
             <p class="detail-desc">
-              Lors de la charge, un fluide caloporteur transmet son énergie au
-              matériau à changement de phase, qui fond ou se solidifie à une
-              température définie. Lors de la décharge, la transformation inverse
-              restitue cette chaleur ou ce froid à la boucle du bâtiment ou du
-              process, sans combustion.
+              Charge → Stockage latent → Décharge → Pilotage
             </p>
             <img
               class="orc-process__diagram"
-              src="assets/images/technologie/tech-04.png"
-              alt="Installation de stockage thermique utilisée comme représentation du système MCP"
+              src="assets/images/technologie/mcp/process.png"
+              alt="Schéma du stockage MCP : charge, stockage latent, décharge et pilotage"
             />
           </div>
         </section>
 
         <section class="orc-metrics">
           <div class="detail-inner">
-            <p class="detail-eyebrow">L'approche ELECTRIS</p>
-            <h2 class="detail-title">Un tampon thermique conçu autour de votre courbe de charge</h2>
+            <p class="detail-eyebrow">Innovation ELECTRIS</p>
+            <h2 class="detail-title">La batterie thermique clé en main</h2>
             <p class="detail-desc">
-              ELECTRIS mesure les profils, sélectionne la température de
-              transition du MCP, dimensionne les échangeurs et pilote les cycles
-              de charge et de décharge pour maximiser les économies réelles.
+              ELECTRIS dimensionne, finance et intègre le stockage dans votre
+              circuit de récupération de chaleur ou pompe à chaleur — du niveau
+              eau chaude sanitaire (55–58°C) aux sels haute température pour
+              l'industrie.
             </p>
           </div>
           <div class="orc-metrics__grid">
             <div class="orc-metric">
               <div class="orc-metric__icon orc-metric__icon--dark">
-                <img src="assets/images/technologie/orc/metric-1.svg" alt="" width="48" height="48" />
+                <img src="assets/images/technologie/mcp/metric-1.svg" alt="" width="48" height="48" />
               </div>
-              <p class="orc-metric__value">3× à 5×</p>
-              <p class="orc-metric__label">Plus compact qu'un stockage à eau sensible équivalent</p>
+              <p class="orc-metric__value">Haute densité</p>
+              <p class="orc-metric__label">Par rapport au stockage eau</p>
             </div>
             <div class="orc-metric">
               <div class="orc-metric__icon orc-metric__icon--blue">
-                <img src="assets/images/technologie/orc/metric-2.svg" alt="" width="46" height="46" />
+                <img src="assets/images/technologie/mcp/metric-2.svg" alt="" width="46" height="46" />
               </div>
-              <p class="orc-metric__value">24h/24</p>
-              <p class="orc-metric__label">Pilotage automatique selon les besoins et tarifs</p>
+              <p class="orc-metric__value">Faible encombrement</p>
+              <p class="orc-metric__label">Pose au sol</p>
             </div>
             <div class="orc-metric">
               <div class="orc-metric__icon orc-metric__icon--dark">
-                <img src="assets/images/technologie/orc/metric-3.svg" alt="" width="48" height="48" />
+                <img src="assets/images/technologie/mcp/metric-3.svg" alt="" width="48" height="48" />
               </div>
-              <p class="orc-metric__value">−25%</p>
-              <p class="orc-metric__label">Jusqu'à 25 % d'énergie de pointe évitée selon le profil</p>
+              <p class="orc-metric__value">55–58°C / HT</p>
+              <p class="orc-metric__label">Selon l'usage</p>
             </div>
             <div class="orc-metric">
               <div class="orc-metric__icon orc-metric__icon--blue">
-                <img src="assets/images/technologie/orc/metric-4.svg" alt="" width="48" height="48" />
+                <img src="assets/images/technologie/mcp/metric-4.svg" alt="" width="48" height="48" />
               </div>
-              <p class="orc-metric__value">0 €</p>
-              <p class="orc-metric__label">Investissement client possible en CPE</p>
+              <p class="orc-metric__value">€0</p>
+              <p class="orc-metric__label">Capex client</p>
             </div>
           </div>
         </section>
@@ -214,10 +259,10 @@
             <div class="orc-elig__header">
               <div>
                 <p class="detail-eyebrow">Éligibilité</p>
-                <h2 class="detail-title">Votre site se prête-t-il au stockage MCP ?</h2>
+                <h2 class="detail-title">Votre secteur est-il éligible ?</h2>
                 <p class="detail-desc">
-                  Le meilleur potentiel apparaît lorsqu'une source et un besoin
-                  thermique proches en température sont décalés dans le temps.
+                  Partout où la chaleur fatale est intermittente ou décalée de la
+                  demande.
                 </p>
               </div>
               <a class="btn btn--hero btn--blue" href="mailto:contact@electris.fr">
@@ -228,31 +273,31 @@
             <div class="detail-split">
               <div class="orc-elig__media">
                 <img
-                  src="assets/images/secteurs-industrie/figma-extract/02_image1_2497_9495_1536x672.png"
-                  alt="Techniciens étudiant le profil énergétique d'un site industriel"
+                  src="assets/images/technologie/mcp/elig-main.png"
+                  alt="Local technique industriel équipé d'un circuit de récupération de chaleur"
                   width="471"
                   height="428"
                 />
                 <img
                   class="orc-elig__float"
-                  src="assets/images/technologie/tech-04.png"
-                  alt="Stockage thermique industriel"
+                  src="assets/images/technologie/mcp/elig-overlay.png"
+                  alt="Cuve de stockage thermique haute température"
                   width="260"
                   height="180"
                 />
               </div>
               <ul class="orc-list">
                 <li>
-                  Industrie : chaleur fatale, fours, stérilisation, lavage,
-                  séchage ou cycles de production discontinus
+                  Hôtellerie &amp; Santé - eau chaude sanitaire : Lissage des
+                  pointes ECS (matin / soir)
                 </li>
                 <li>
-                  Froid commercial et logistique : production nocturne,
-                  dégivrage, écrêtement de puissance et secours froid
+                  Industrie - écrêtement : Stockage haute température et lissage
+                  des cycles de production
                 </li>
                 <li>
-                  Tertiaire, santé et réseaux : chauffage, ECS ou
-                  rafraîchissement avec pointes quotidiennes prévisibles
+                  Data centres - redondance thermique : Tampon entre production
+                  froid / chaleur et demande.
                 </li>
               </ul>
             </div>
