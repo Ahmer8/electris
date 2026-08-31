@@ -2535,6 +2535,142 @@
     height: 23px !important;
   }
 }
+
+@media (min-width: 1200px) {
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-labels {
+    left: 18px !important;
+    top: 46.094px !important;
+    width: 368px !important;
+    height: 348.227px !important;
+    display: block !important;
+    gap: 0 !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label {
+    position: absolute !important;
+    align-items: center !important;
+    min-height: auto !important;
+    box-sizing: border-box !important;
+    margin-left: 0 !important;
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--blue {
+    left: 28px !important;
+    top: 0 !important;
+    width: 254px !important;
+    min-width: 254px !important;
+    grid-template-columns: 46px minmax(0, 1fr) !important;
+    column-gap: 12px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--green {
+    left: 48.569px !important;
+    top: 125.582px !important;
+    width: 326px !important;
+    min-width: 326px !important;
+    height: 96.875px !important;
+    min-height: 96.875px !important;
+    grid-template-columns: 46px minmax(0, 1fr) !important;
+    column-gap: 12px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--violet {
+    left: -0.43px !important;
+    top: 251.523px !important;
+    width: 306px !important;
+    min-width: 306px !important;
+    grid-template-columns: 49px minmax(0, 1fr) !important;
+    column-gap: 8.792px !important;
+    padding-left: 19.208px !important;
+    padding-right: 51px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon {
+    position: relative;
+    display: block;
+    width: 46px !important;
+    height: 46px !important;
+    transform: none !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon {
+    transform: none !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon {
+    width: 49px !important;
+    height: 49px !important;
+    transform: none !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon > img {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    width: 32px !important;
+    height: 32px !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img {
+    transform: translate(-50%, -50%) rotate(-6deg) !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img {
+    transform: translate(-50%, -50%) rotate(4deg) !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label > span:last-child {
+    display: flex !important;
+    min-width: 0 !important;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    font-size: 21px !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label > span:last-child small {
+    margin-top: 2.875px !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 19px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--green > span:last-child {
+    width: 236px !important;
+    flex: 0 0 236px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--green > span:last-child small {
+    font-size: 15px !important;
+    line-height: 19px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--green > span:last-child small .figma-line {
+    display: block !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
+    white-space: nowrap !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--violet > span:last-child small {
+    margin-top: 3.172px !important;
+  }
+
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--blue > span:last-child,
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--violet > span:last-child,
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--blue small,
+  #results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-photo--inside .warehouse-label--violet small {
+    white-space: nowrap !important;
+  }
+}
 </style>
 </head>
 <body class="wasteheat-page">
@@ -2774,11 +2910,11 @@
 </span>
 <span class="warehouse-label warehouse-label--green">
 <span aria-hidden="true" class="warehouse-badge-icon"><img src="assets/images/secteurs/result-icons/layers.svg" alt="" /></span>
-<span>Pack ELECTRIS<small>Récupération + renforcement + ORC selon la ressource disponible</small></span>
+<span>Pack ELECTRIS &middot;<small><span class="figma-line">Récupération + renforcement +</span><span class="figma-line">ORC selon la ressource disponible</span></small></span>
 </span>
 <span class="warehouse-label warehouse-label--violet">
 <span aria-hidden="true" class="warehouse-badge-icon"><img src="assets/images/secteurs/result-icons/banknote.svg" alt="" /></span>
-<span>Étude préliminaire<small>Incluse</small></span>
+<span>Étude préliminaire :<small>Incluse</small></span>
 </span>
 </div>
 </div>
@@ -2787,7 +2923,7 @@
 <h3>SITE INDUSTRIEL — Pack ELECTRIS</h3>
 <ul class="warehouse-checks"><li>Pack ELECTRIS : récupération + renforcement + ORC selon la ressource disponible</li><li>Étude préliminaire : incluse</li></ul>
 </article>
-<a class="warehouse-result-cta warehouse-result-cta--violet" href="mailto:contact@electris.fr"><span>Je veux ce résultat pour mon site →</span></a>
+<a class="warehouse-result-cta warehouse-result-cta--violet" href="mailto:contact@electris.fr"><span>Je veux ce résultat pour mon site &rarr;</span></a>
 </div>
 </div>
 </section>
