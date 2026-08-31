@@ -1,177 +1,637 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stockage Thermique MCP — Electris</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="24-technologie.css">
-</head>
-<body>
-  <div class="page" style="--accent:#000000;--accent-bg:#ffffff">
-    <header class="nav" id="nav">
-      <a class="nav__logo" href="index.html"><img src="assets/images/technologie/hero-logo.png" alt="electris"></a>
-      <ul class="nav__menu">
-        <li><a href="index.html">Bienvenue</a></li>
-        <li><a href="24-technologie.html" class="is-active-tech">Technologies</a></li>
-        <li><a href="solutions.html">Solutions</a></li>
-        <li><a href="sectrus.html">Secteurs</a></li>
-        <li><a href="index.html#process">Financement</a></li>
-        <li><a href="index.html#impact">Équipe</a></li>
-        <li><a href="index.html#news">Actualités</a></li>
-      </ul>
-      <div class="nav__actions">
-        <a class="btn btn--primary" href="mailto:contact@electris.fr">Contactez-nous.</a>
-        <button class="btn btn--lang" type="button">Fr.</button>
-      </div>
-      <button class="nav__toggle" type="button" aria-label="Menu" aria-expanded="false"><span></span></button>
-    </header>
-
-    <section class="hero hero--detail">
-      <div class="hero__content">
-        <div>
-          <h1 class="hero__title">La batterie thermique : <span>stocker</span> la chaleur pour le bon moment.</h1>
-          <p class="hero__desc">Le stockage MCP lisse la production et la consommation pour maximiser l'Process et réduire les pointes.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Stockage thermique MCP : décalez la production de chaleur ou de froid, écrêtez les pointes et valorisez les énergies fatales avec ELECTRIS."
+    />
+    <title>Stockage Thermique MCP — Electris</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="24-technologie.css" />
+    <link rel="stylesheet" href="technologie-detail.css" />
+  </head>
+  <body>
+    <div class="page page--orc page--mcp">
+      <header class="nav" id="nav">
+        <a class="nav__logo" href="index.html">
+          <img src="assets/images/technologie/hero-logo.png" alt="electris" />
+        </a>
+        <ul class="nav__menu">
+          <li><a href="index.html">Bienvenue</a></li>
+          <li><a href="24-technologie.html" class="is-active-tech">Technologies</a></li>
+          <li><a href="solutions.html">Solutions</a></li>
+          <li><a href="sectrus.html">Secteurs</a></li>
+          <li><a href="index.html#process">Financement</a></li>
+          <li><a href="index.html#impact">Équipe</a></li>
+          <li><a href="index.html#news">Actualités</a></li>
+        </ul>
+        <div class="nav__actions">
+          <a class="btn btn--primary" href="mailto:contact@electris.fr">Contactez-nous.</a>
+          <button class="btn btn--lang" type="button">Fr.</button>
         </div>
-        <div class="hero__buttons">
-          <a class="btn btn--hero btn--blue" href="mailto:contact@electris.fr">Demander un audit gratuit <img src="assets/images/technologie/arrow-white.svg" alt=""></a>
-        </div>
-      </div>
-      <div class="hero__visual"><img src="assets/images/technologie/tech-04.png" alt="Stockage Thermique MCP — Electris"></div>
-    </section>
+        <button
+          class="nav__toggle"
+          type="button"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+        >
+          <span></span>
+        </button>
+      </header>
 
-    <section class="partners" aria-label="Nos clients">
-      <div class="partners__row">
-        <div class="partners__logo partners__logo--01"><img src="assets/images/technologie/logo-partner-01.svg" alt=""></div>
-        <div class="partners__logo partners__logo--02"><img src="assets/images/technologie/logo-partner-02.svg" alt=""></div>
-        <div class="partners__logo partners__logo--03"><img src="assets/images/technologie/logo-partner-03.svg" alt=""></div>
-        <div class="partners__logo partners__logo--04"><img src="assets/images/technologie/logo-partner-04.svg" alt=""></div>
-        <div class="partners__logo partners__logo--05"><img src="assets/images/technologie/logo-partner-05.svg" alt=""></div>
-        <div class="partners__logo partners__logo--06"><img src="assets/images/technologie/logo-partner-06.svg" alt=""></div>
-        <div class="partners__logo partners__logo--07"><img src="assets/images/technologie/logo-partner-07.svg" alt=""></div>
-        <div class="partners__logo partners__logo--08"><img src="assets/images/technologie/logo-partner-08.svg" alt=""></div>
-        <div class="partners__logo partners__logo--09"><img src="assets/images/technologie/logo-partner-09.svg" alt=""></div>
-        <div class="partners__logo partners__logo--10"><img src="assets/images/technologie/logo-partner-10.svg" alt=""></div>
-        <div class="partners__logo partners__logo--11"><img src="assets/images/technologie/logo-partner-11.svg" alt=""></div>
-      </div>
-    </section>
-
-    <section class="detail-section">
-      <div class="detail-inner">
-        <div class="detail-split">
-          <div class="detail-split__image"><img src="assets/images/technologie/tech-04.png" alt=""></div>
-          <div class="detail-split__content">
-            <p class="detail-eyebrow">Le problème</p>
-            <h2 class="detail-title">Production et consommation de chaleur ne coïncident pas</h2>
-            <p class="detail-desc">Sans stockage, l'énergie est gaspillée ou achetée au mauvais moment.</p>
-            <hr class="detail-divider">
-            <ul class="detail-list">
-              <li>MCP — Matériau à changement de phase</li>
-              <li>+40% — Process</li>
-              <li>Pointes — Lissées</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="detail-section detail-section--white">
-      <div class="detail-inner">
-        <header class="detail-header">
-          <p class="detail-eyebrow">Stockage MCP</p>
-          <h2 class="detail-title">Comment fonctionne le MCP ?</h2>
-          <div class="detail-flow">
-            <span>Chaleur</span><img src="assets/images/technologie/arrow-black.svg" alt="">
-            <span>Stockage</span><img src="assets/images/technologie/arrow-black.svg" alt="">
-            <span>Déstockage</span><img src="assets/images/technologie/arrow-black.svg" alt="">
-            <span>Process</span>
-          </div>
-        </header>
-        <div class="detail-steps">
-          <article class="detail-step"><p class="detail-step__num">01.</p><h3 class="detail-step__title">Captage</h3><p class="detail-step__desc">Récupération sur compresseurs, groupes froid et fours.</p></article>
-          <article class="detail-step"><p class="detail-step__num">02.</p><h3 class="detail-step__title">Conversion</h3><p class="detail-step__desc">Le Stockage MCP transforme la chaleur en Déstockage.</p></article>
-          <article class="detail-step"><p class="detail-step__num">03.</p><h3 class="detail-step__title">Valorisation</h3><p class="detail-step__desc">Process ou revente sur le réseau.</p></article>
-          <article class="detail-step"><p class="detail-step__num">04.</p><h3 class="detail-step__title">Suivi</h3><p class="detail-step__desc">Monitoring et maintenance par ELECTRIS.</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="detail-section">
-      <div class="detail-inner">
-        <header class="detail-header">
-          <p class="detail-eyebrow">L'approche ELECTRIS</p>
-          <h2 class="detail-title">Stockage dimensionné au profil site</h2>
-          <p class="detail-desc">ELECTRIS intègre le MCP dans la boucle thermique existante.</p>
-        </header>
-        <div class="detail-cards">
-          <div class="detail-card"><div class="detail-card__icon">€0</div><p class="detail-card__value">€0</p><p class="detail-card__label">Capex client</p></div>
-          <div class="detail-card"><div class="detail-card__icon">⚡</div><p class="detail-card__value">+40%</p><p class="detail-card__label">Autoconso</p></div>
-          <div class="detail-card"><div class="detail-card__icon">♨</div><p class="detail-card__value">24h</p><p class="detail-card__label">Seuil Chaleur</p></div>
-          <div class="detail-card"><div class="detail-card__icon">✓</div><p class="detail-card__value">€0</p><p class="detail-card__label">Capex CPE</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="detail-section detail-section--white">
-      <div class="detail-inner detail-cta-row">
-        <div>
-          <p class="detail-eyebrow">Éligibilité</p>
-          <h2 class="detail-title">Êtes-vous éligible ?</h2>
-          <p class="detail-desc">Chaleur continue au-dessus de 80°C.</p>
-          <ul class="detail-list" style="margin-top:24px">
-            <li>Industrie</li>
-            <li>Réseaux de chaleur</li>
-            <li>Data centres</li>
-          </ul>
-        </div>
-        <a class="btn btn--hero btn--blue" href="mailto:contact@electris.fr">Demander un audit gratuit <img src="assets/images/technologie/arrow-white.svg" alt=""></a>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="contact__bg" aria-hidden="true"><img src="assets/images/technologie/cta-bg.svg" alt=""></div>
-      <div class="contact__inner">
-        <div class="contact-card">
-          <img class="contact-card__shape" src="assets/images/technologie/contact-card.svg" alt="">
-          <img class="contact-card__deco" src="assets/images/technologie/contact-bg.png" alt="">
-          <div class="contact-card__content">
+      <main>
+        <section class="hero hero--detail">
+          <div class="hero__content">
             <div>
-              <h2 class="contact-card__title">Contactez-nous .</h2>
-              <div class="contact-card__details">
-                <div class="contact-card__row"><img src="assets/images/technologie/mail.svg" alt=""><a href="mailto:contact@electris.fr">contact@electris.fr</a></div>
-                <img class="contact-card__line" src="assets/images/technologie/line-contact.svg" alt="">
-                <div class="contact-card__row"><img src="assets/images/technologie/phone.svg" alt=""><span>+33 (0)1 XX XX XX XX</span></div>
+              <h1 class="hero__title">
+                Votre énergie thermique disponible
+                <span>au bon moment,<br />SANS SURDIMENSIONNER.</span>
+              </h1>
+              <p class="hero__desc">
+                Le stockage par matériaux à changement de phase absorbe la chaleur
+                ou le froid lorsqu'ils sont disponibles, puis les restitue au
+                moment utile pour réduire les pointes et les pertes.
+              </p>
+            </div>
+            <div class="hero__buttons">
+              <a class="btn btn--hero btn--blue" href="mailto:contact@electris.fr">
+                Demander un audit gratuit
+                <img src="assets/images/technologie/arrow-white.svg" alt="" />
+              </a>
+              <span class="hero__note">Diagnostic en 48 heures</span>
+            </div>
+          </div>
+          <div class="hero__visual">
+            <img
+              src="assets/images/technologie/tech-04.png"
+              alt="Unité industrielle de stockage thermique"
+            />
+          </div>
+        </section>
+
+        <section class="partners" aria-label="Nos clients">
+          <div class="partners__row">
+            <div class="partners__logo partners__logo--01">
+              <img src="assets/images/technologie/logo-partner-01.svg" alt="ibis Styles" />
+            </div>
+            <div class="partners__logo partners__logo--02">
+              <img src="assets/images/technologie/logo-partner-02.svg" alt="Mercure" />
+            </div>
+            <div class="partners__logo partners__logo--03">
+              <img src="assets/images/technologie/logo-partner-03.svg" alt="Intermarché" />
+            </div>
+            <div class="partners__logo partners__logo--04">
+              <img src="assets/images/technologie/logo-partner-04.svg" alt="Carrefour" />
+            </div>
+            <div class="partners__logo partners__logo--05">
+              <img src="assets/images/technologie/logo-partner-05.svg" alt="GXO" />
+            </div>
+            <div class="partners__logo partners__logo--06">
+              <img src="assets/images/technologie/logo-partner-06.svg" alt="E.Leclerc" />
+            </div>
+            <div class="partners__logo partners__logo--07">
+              <img src="assets/images/technologie/logo-partner-07.svg" alt="Nexity" />
+            </div>
+            <div class="partners__logo partners__logo--08">
+              <img src="assets/images/technologie/logo-partner-08.svg" alt="Super U" />
+            </div>
+            <div class="partners__logo partners__logo--09">
+              <img src="assets/images/technologie/logo-partner-09.svg" alt="Système U" />
+            </div>
+            <div class="partners__logo partners__logo--10">
+              <img src="assets/images/technologie/logo-partner-10.svg" alt="" />
+            </div>
+            <div class="partners__logo partners__logo--11">
+              <img src="assets/images/technologie/logo-partner-11.svg" alt="Franprix" />
+            </div>
+          </div>
+        </section>
+
+        <section class="orc-problem">
+          <div class="detail-inner">
+            <div class="detail-split">
+              <div class="detail-split__image">
+                <img
+                  src="assets/images/secteurs-industrie/figma-extract/03_image2_2497_9495_1024x1024.png"
+                  alt="Réseau industriel transportant de la chaleur"
+                  width="510"
+                  height="518"
+                />
+              </div>
+              <div class="detail-split__content">
+                <p class="detail-eyebrow">Le problème</p>
+                <h2 class="detail-title">
+                  Vos besoins thermiques et vos sources d'énergie ne se
+                  présentent pas au même moment
+                </h2>
+                <p class="detail-desc">
+                  Sans tampon, une chaleur fatale intermittente est rejetée,
+                  tandis que les pointes de chauffage ou de froid imposent des
+                  équipements puissants et des achats d'énergie coûteux.
+                </p>
+                <hr class="detail-divider" />
+                <ul class="orc-list">
+                  <li>Décalage de plusieurs heures entre charge et restitution</li>
+                  <li>Forte densité énergétique dans un volume compact</li>
+                  <li>Température stable pendant le changement de phase</li>
+                </ul>
               </div>
             </div>
-            <div class="contact-card__cta-wrap">
-              <a class="btn btn--hero btn--white" href="mailto:contact@electris.fr">Demander un audit gratuit <img src="assets/images/technologie/arrow-contact.svg" alt=""></a>
-              <div class="contact-card__footer"><p>L'ingénierie qui rend vos bâtiments plus performants.</p><p>Paris · France · 100 % électrique · 0 % énergie fossile</p></div>
+          </div>
+        </section>
+
+        <section class="orc-process">
+          <div class="detail-inner">
+            <p class="detail-eyebrow">Stockage thermique MCP</p>
+            <h2 class="detail-title">Comment fonctionne un stockage à changement de phase ?</h2>
+            <p class="detail-desc">
+              Lors de la charge, un fluide caloporteur transmet son énergie au
+              matériau à changement de phase, qui fond ou se solidifie à une
+              température définie. Lors de la décharge, la transformation inverse
+              restitue cette chaleur ou ce froid à la boucle du bâtiment ou du
+              process, sans combustion.
+            </p>
+            <img
+              class="orc-process__diagram"
+              src="assets/images/technologie/tech-04.png"
+              alt="Installation de stockage thermique utilisée comme représentation du système MCP"
+            />
+          </div>
+        </section>
+
+        <section class="orc-metrics">
+          <div class="detail-inner">
+            <p class="detail-eyebrow">L'approche ELECTRIS</p>
+            <h2 class="detail-title">Un tampon thermique conçu autour de votre courbe de charge</h2>
+            <p class="detail-desc">
+              ELECTRIS mesure les profils, sélectionne la température de
+              transition du MCP, dimensionne les échangeurs et pilote les cycles
+              de charge et de décharge pour maximiser les économies réelles.
+            </p>
+          </div>
+          <div class="orc-metrics__grid">
+            <div class="orc-metric">
+              <div class="orc-metric__icon orc-metric__icon--dark">
+                <img src="assets/images/technologie/orc/metric-1.svg" alt="" width="48" height="48" />
+              </div>
+              <p class="orc-metric__value">3× à 5×</p>
+              <p class="orc-metric__label">Plus compact qu'un stockage à eau sensible équivalent</p>
+            </div>
+            <div class="orc-metric">
+              <div class="orc-metric__icon orc-metric__icon--blue">
+                <img src="assets/images/technologie/orc/metric-2.svg" alt="" width="46" height="46" />
+              </div>
+              <p class="orc-metric__value">24h/24</p>
+              <p class="orc-metric__label">Pilotage automatique selon les besoins et tarifs</p>
+            </div>
+            <div class="orc-metric">
+              <div class="orc-metric__icon orc-metric__icon--dark">
+                <img src="assets/images/technologie/orc/metric-3.svg" alt="" width="48" height="48" />
+              </div>
+              <p class="orc-metric__value">−25%</p>
+              <p class="orc-metric__label">Jusqu'à 25 % d'énergie de pointe évitée selon le profil</p>
+            </div>
+            <div class="orc-metric">
+              <div class="orc-metric__icon orc-metric__icon--blue">
+                <img src="assets/images/technologie/orc/metric-4.svg" alt="" width="48" height="48" />
+              </div>
+              <p class="orc-metric__value">0 €</p>
+              <p class="orc-metric__label">Investissement client possible en CPE</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="orc-elig">
+          <div class="orc-elig__grid" aria-hidden="true"></div>
+          <div class="detail-inner">
+            <div class="orc-elig__header">
+              <div>
+                <p class="detail-eyebrow">Éligibilité</p>
+                <h2 class="detail-title">Votre site se prête-t-il au stockage MCP ?</h2>
+                <p class="detail-desc">
+                  Le meilleur potentiel apparaît lorsqu'une source et un besoin
+                  thermique proches en température sont décalés dans le temps.
+                </p>
+              </div>
+              <a class="btn btn--hero btn--blue" href="mailto:contact@electris.fr">
+                Demander un audit gratuit
+                <img src="assets/images/technologie/arrow-white.svg" alt="" />
+              </a>
+            </div>
+            <div class="detail-split">
+              <div class="orc-elig__media">
+                <img
+                  src="assets/images/secteurs-industrie/figma-extract/02_image1_2497_9495_1536x672.png"
+                  alt="Techniciens étudiant le profil énergétique d'un site industriel"
+                  width="471"
+                  height="428"
+                />
+                <img
+                  class="orc-elig__float"
+                  src="assets/images/technologie/tech-04.png"
+                  alt="Stockage thermique industriel"
+                  width="260"
+                  height="180"
+                />
+              </div>
+              <ul class="orc-list">
+                <li>
+                  Industrie : chaleur fatale, fours, stérilisation, lavage,
+                  séchage ou cycles de production discontinus
+                </li>
+                <li>
+                  Froid commercial et logistique : production nocturne,
+                  dégivrage, écrêtement de puissance et secours froid
+                </li>
+                <li>
+                  Tertiaire, santé et réseaux : chauffage, ECS ou
+                  rafraîchissement avec pointes quotidiennes prévisibles
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="orc-reasons">
+          <header class="orc-reasons__header">
+            <img
+              class="orc-reasons__logo"
+              src="assets/images/technologie/orc/reason-logo.png"
+              alt=""
+              width="64"
+              height="73"
+            />
+            <p class="detail-eyebrow">Avantages</p>
+            <h2 class="orc-reasons__title">6 raisons d'adopter le stockage thermique MCP</h2>
+          </header>
+          <div class="orc-reasons__grid">
+            <article class="orc-reason">
+              <div class="orc-reason__illu">
+                <img src="assets/images/technologie/orc/reason-1.png" alt="" width="160" height="160" />
+              </div>
+              <div>
+                <h3 class="orc-reason__title">1. Écrêter les pointes</h3>
+                <p class="orc-reason__desc">
+                  Chargez hors pointe et restituez pendant les appels de puissance
+                  afin de réduire l'abonnement et les équipements de secours.
+                </p>
+              </div>
+              <img class="orc-reason__arrow" src="assets/images/technologie/orc/reason-arrow.svg" alt="" width="20" height="20" />
+            </article>
+            <article class="orc-reason">
+              <div class="orc-reason__illu">
+                <img src="assets/images/technologie/orc/reason-2.png" alt="" width="160" height="160" />
+              </div>
+              <div>
+                <h3 class="orc-reason__title">2. Valoriser la chaleur fatale</h3>
+                <p class="orc-reason__desc">
+                  Conservez une énergie disponible hors des heures de besoin au
+                  lieu de la dissiper dans l'air ou l'eau.
+                </p>
+              </div>
+              <img class="orc-reason__arrow" src="assets/images/technologie/orc/reason-arrow.svg" alt="" width="20" height="20" />
+            </article>
+            <article class="orc-reason">
+              <div class="orc-reason__illu">
+                <img src="assets/images/technologie/orc/reason-3.png" alt="" width="160" height="160" />
+              </div>
+              <div>
+                <h3 class="orc-reason__title">3. Gagner de la place</h3>
+                <p class="orc-reason__desc">
+                  La chaleur latente du MCP offre davantage de capacité utile
+                  qu'un ballon d'eau de même encombrement.
+                </p>
+              </div>
+              <img class="orc-reason__arrow" src="assets/images/technologie/orc/reason-arrow.svg" alt="" width="20" height="20" />
+            </article>
+            <article class="orc-reason">
+              <div class="orc-reason__illu">
+                <img src="assets/images/technologie/orc/reason-4.png" alt="" width="160" height="160" />
+              </div>
+              <div>
+                <h3 class="orc-reason__title">4. Stabiliser la température</h3>
+                <p class="orc-reason__desc">
+                  La transition de phase restitue l'énergie autour d'un palier
+                  précis, adapté au process ou au confort recherché.
+                </p>
+              </div>
+              <img class="orc-reason__arrow" src="assets/images/technologie/orc/reason-arrow.svg" alt="" width="20" height="20" />
+            </article>
+            <article class="orc-reason">
+              <div class="orc-reason__illu">
+                <img src="assets/images/technologie/orc/reason-5.png" alt="" width="160" height="160" />
+              </div>
+              <div>
+                <h3 class="orc-reason__title">5. Décarboner sans perturber</h3>
+                <p class="orc-reason__desc">
+                  Le module s'intègre en dérivation de la boucle existante et
+                  améliore l'usage des équipements déjà en place.
+                </p>
+              </div>
+              <img class="orc-reason__arrow" src="assets/images/technologie/orc/reason-arrow.svg" alt="" width="20" height="20" />
+            </article>
+            <article class="orc-reason">
+              <div class="orc-reason__illu">
+                <img src="assets/images/technologie/orc/reason-6.png" alt="" width="160" height="160" />
+              </div>
+              <div>
+                <h3 class="orc-reason__title">6. Financer la performance</h3>
+                <p class="orc-reason__desc">
+                  ELECTRIS peut financer, exploiter et maintenir la solution dans
+                  un contrat de performance énergétique.
+                </p>
+              </div>
+              <img class="orc-reason__arrow" src="assets/images/technologie/orc/reason-arrow.svg" alt="" width="20" height="20" />
+            </article>
+          </div>
+        </section>
+
+        <section class="orc-gallery">
+          <img class="orc-gallery__deco" src="assets/images/technologie/orc/gallery-deco.png" alt="" />
+          <header class="orc-gallery__header">
+            <h2 class="orc-gallery__title">Technologies <span>complémentaires</span></h2>
+            <p class="orc-gallery__desc">
+              Six solutions d'ingénierie électrique à combiner avec le stockage
+              pour réduire les consommations et mieux piloter votre site.
+            </p>
+          </header>
+          <div class="orc-gallery__row">
+            <a class="orc-tile orc-tile--1" href="25-technologie-machine-orc.html">
+              <div class="orc-tile__photo" style="height: 360px">
+                <img src="assets/images/technologie/orc/gallery-orc.png" alt="Machine ORC" />
+                <span class="orc-tile__badge">−58%</span>
+              </div>
+              <p class="orc-tile__name">Machine ORC</p>
+              <p class="orc-tile__meta">Chaleur fatale → électricité</p>
+            </a>
+            <a class="orc-tile orc-tile--2" href="26-technologie-pac-rehausse-cascade-booster.html">
+              <div class="orc-tile__photo" style="height: 211px">
+                <img src="assets/images/technologie/pac/hero.png" alt="Cascade Booster" />
+                <span class="orc-tile__badge orc-tile__badge--orange">−70%</span>
+              </div>
+              <p class="orc-tile__name">Cascade Booster</p>
+              <p class="orc-tile__meta">Chaleur basse température → process</p>
+            </a>
+            <a class="orc-tile orc-tile--3" href="27-technologie-gtb-prediction-ia.html">
+              <div class="orc-tile__photo" style="width: 210px; height: 400px">
+                <img src="assets/images/technologie/orc/gallery-3.png" alt="GTB IA" />
+                <span class="orc-tile__badge">−40%</span>
+              </div>
+              <p class="orc-tile__name">GTB IA</p>
+              <p class="orc-tile__meta">Pilotage CVC et éclairage intelligent</p>
+            </a>
+            <a class="orc-tile orc-tile--4" href="solutions-regulation-haute-pression-flottante.html">
+              <div class="orc-tile__photo" style="height: 249px">
+                <img src="assets/images/technologie/orc/gallery-4.png" alt="HP/BP Flottante" />
+                <span class="orc-tile__badge orc-tile__badge--orange">−15%</span>
+              </div>
+              <p class="orc-tile__name">HP/BP Flottante</p>
+              <p class="orc-tile__meta">Régulation du groupe froid optimisée</p>
+            </a>
+            <a class="orc-tile orc-tile--5" href="29-technologie-freecooling.html">
+              <div class="orc-tile__photo" style="height: 350px">
+                <img src="assets/images/technologie/orc/gallery-5.png" alt="Free Cooling" />
+                <span class="orc-tile__badge">−50%</span>
+              </div>
+              <p class="orc-tile__name">Free Cooling</p>
+              <p class="orc-tile__meta">Refroidissement naturel nuit et hiver</p>
+            </a>
+            <a class="orc-tile orc-tile--6" href="destratification-air.html">
+              <div class="orc-tile__photo" style="height: 238px">
+                <img src="assets/images/technologie/orc/gallery-6.png" alt="Déstratification" />
+                <span class="orc-tile__badge orc-tile__badge--orange">−25%</span>
+              </div>
+              <p class="orc-tile__name">Déstratification</p>
+              <p class="orc-tile__meta">Récupération de chaleur sous plafonds</p>
+            </a>
+          </div>
+          <div class="orc-gallery__cta">
+            <a class="btn btn--hero btn--blue" href="24-technologie.html">
+              Explorer toutes nos technologies
+              <img src="assets/images/technologie/arrow-white.svg" alt="" />
+            </a>
+            <p class="orc-gallery__note">Diagnostic gratuit sous 48 heures</p>
+          </div>
+        </section>
+
+        <section class="orc-results">
+          <header class="orc-results__header">
+            <img
+              class="orc-results__logo"
+              src="assets/images/technologie/orc/result-logo.png"
+              alt=""
+              width="58"
+              height="64"
+            />
+            <h2 class="orc-results__title">Deux applications types du stockage MCP.</h2>
+          </header>
+
+          <div class="orc-case">
+            <div class="orc-case__copy">
+              <div class="orc-case__card">
+                <h3>Site industriel — récupération de chaleur</h3>
+                <p class="meta">Industrie • cycles de production décalés</p>
+                <ul>
+                  <li>
+                    <img src="assets/images/technologie/orc/check.svg" alt="" />
+                    Chaleur fatale stockée entre deux cycles
+                  </li>
+                  <li>
+                    <img src="assets/images/technologie/orc/check.svg" alt="" />
+                    Pointe chaudière réduite jusqu'à 25 %
+                  </li>
+                  <li class="is-regular">
+                    <img src="assets/images/technologie/orc/check.svg" alt="" />
+                    Restitution à température stable pour le process.
+                  </li>
+                </ul>
+              </div>
+              <div class="orc-case__cta orc-case__cta--green">
+                <a class="btn btn--hero" href="mailto:contact@electris.fr">
+                  Je veux ce résultat pour mon site
+                  <img src="assets/images/technologie/orc/arrow-dark.svg" alt="" width="20" height="20" />
+                </a>
+              </div>
+            </div>
+            <div class="orc-case__visual orc-case__visual--green">
+              <img src="assets/images/technologie/tech-04.png" alt="Stockage thermique sur un site industriel" />
+              <div class="orc-bubbles orc-bubbles--right">
+                <div class="orc-bubble orc-bubble--orange">
+                  <span class="orc-bubble__icon"><img src="assets/images/technologie/orc/banknote.svg" alt="" /></span>
+                  <p>−25 % <small>Pointe thermique visée</small></p>
+                </div>
+                <div class="orc-bubble orc-bubble--cyan">
+                  <span class="orc-bubble__icon"><img src="assets/images/technologie/orc/shield.svg" alt="" /></span>
+                  <p>Décalage <small>Entre production et besoin</small></p>
+                </div>
+                <div class="orc-bubble orc-bubble--violet">
+                  <span class="orc-bubble__icon"><img src="assets/images/technologie/orc/refresh.svg" alt="" /></span>
+                  <p>Cycles pilotés automatiquement.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="orc-case orc-case--alt">
+            <div class="orc-case__visual orc-case__visual--blue">
+              <img
+                src="assets/images/secteurs-industrie/figma-extract/03_image2_2497_9495_1024x1024.png"
+                alt="Boucle thermique industrielle"
+              />
+              <div class="orc-bubbles orc-bubbles--left">
+                <div class="orc-bubble orc-bubble--blue">
+                  <span class="orc-bubble__icon"><img src="assets/images/technologie/orc/thermo.svg" alt="" /></span>
+                  <p>Palier MCP <small>Température adaptée au besoin</small></p>
+                </div>
+                <div class="orc-bubble orc-bubble--green">
+                  <span class="orc-bubble__icon"><img src="assets/images/technologie/orc/coins.svg" alt="" /></span>
+                  <p>Heures creuses <small>Charge optimisée</small></p>
+                </div>
+                <div class="orc-bubble orc-bubble--purple">
+                  <span class="orc-bubble__icon"><img src="assets/images/technologie/orc/zap.svg" alt="" /></span>
+                  <p>Puissance frigorifique écrêtée.</p>
+                </div>
+              </div>
+            </div>
+            <div class="orc-case__copy">
+              <div class="orc-case__card">
+                <h3>Entrepôt frigorifique — stockage de froid</h3>
+                <p class="meta">Logistique • production nocturne</p>
+                <ul>
+                  <li>
+                    <img src="assets/images/technologie/orc/check.svg" alt="" />
+                    Charge lorsque l'électricité et l'air sont plus favorables
+                  </li>
+                  <li>
+                    <img src="assets/images/technologie/orc/check.svg" alt="" />
+                    Décharge pendant les pointes d'activité
+                  </li>
+                  <li class="is-regular">
+                    <img src="assets/images/technologie/orc/check.svg" alt="" />
+                    Compresseurs moins sollicités et réserve de sécurité.
+                  </li>
+                </ul>
+              </div>
+              <div class="orc-case__cta orc-case__cta--violet">
+                <a class="btn btn--hero" href="mailto:contact@electris.fr">
+                  Je veux ce résultat pour mon site
+                  <img src="assets/images/technologie/orc/arrow-dark.svg" alt="" width="20" height="20" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact" id="contact">
+          <div class="contact__bg" aria-hidden="true">
+            <img src="assets/images/technologie/cta-bg.svg" alt="" />
+          </div>
+          <div class="contact__inner">
+            <div class="contact-card">
+              <img class="contact-card__shape" src="assets/images/technologie/contact-card.svg" alt="" />
+              <img class="contact-card__deco" src="assets/images/technologie/contact-bg.png" alt="" />
+              <div class="contact-card__content">
+                <div>
+                  <h2 class="contact-card__title">Contactez-nous .</h2>
+                  <div class="contact-card__details">
+                    <div class="contact-card__row">
+                      <img src="assets/images/technologie/mail.svg" alt="" />
+                      <a href="mailto:contact@electris.fr">contact@electris.fr</a>
+                    </div>
+                    <img class="contact-card__line" src="assets/images/technologie/line-contact.svg" alt="" />
+                    <div class="contact-card__row">
+                      <img src="assets/images/technologie/phone.svg" alt="" />
+                      <span>+33 (0)1 XX XX XX XX</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact-card__cta-wrap">
+                  <a class="btn btn--hero btn--white" href="mailto:contact@electris.fr">
+                    Demander un audit gratuit
+                    <img src="assets/images/technologie/arrow-contact.svg" alt="" />
+                  </a>
+                  <div class="contact-card__footer">
+                    <p>L'ingénierie qui rend vos bâtiments plus performants.</p>
+                    <p>Paris · France · 100 % électrique · 0 % énergie fossile</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contact-image">
+              <img src="assets/images/technologie/contact-image.png" alt="Installation thermique industrielle" />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="footer__shell">
+          <img class="footer__shape" src="assets/images/technologie/footer-shape.svg" alt="" />
+          <div class="footer__content">
+            <div class="footer__grid">
+              <img class="footer__logo" src="assets/images/technologie/hero-logo.png" alt="electris" />
+              <div class="footer__col">
+                <h3>Technologies</h3>
+                <ul>
+                  <li><a href="24-technologie.html">Découvrir</a></li>
+                  <li><a href="index.html#process">Financement</a></li>
+                  <li><a href="index.html#impact">Équipe</a></li>
+                  <li><a href="#contact">Contact</a></li>
+                </ul>
+              </div>
+              <div class="footer__col">
+                <h3>Solutions</h3>
+                <ul>
+                  <li><a href="WasteHeatRecoverySolutions.html">Récupération de chaleur fatale</a></li>
+                  <li><a href="27-technologie-gtb-prediction-ia.html">Gestion technique du bâtiment (GTB)</a></li>
+                  <li><a href="F-gas-compliance-solutions.html">Classe A</a></li>
+                  <li><a href="26-technologie-pac-rehausse-cascade-booster.html">Décarbonation thermique</a></li>
+                  <li><a href="cpe.html">Contrat de performance (CP)</a></li>
+                </ul>
+              </div>
+              <div class="footer__col">
+                <h3>Secteurs</h3>
+                <ul>
+                  <li><a href="10-secteurs-grande-distribution.html">Grande distribution</a></li>
+                  <li><a href="13-secteurs-industrie.html">Industrie</a></li>
+                  <li><a href="11-secteurs-hotellerie.html">Hôtellerie</a></li>
+                  <li><a href="15-secteurs-bureaux.html">Tertiaire &amp; Bureaux</a></li>
+                  <li><a href="14-secteurs-data-centers.html">Centres de données</a></li>
+                  <li><a href="secteurs-sante-dom-tom.html">DOM-TOM</a></li>
+                </ul>
+              </div>
+            </div>
+            <img class="footer__line" src="assets/images/technologie/footer-line.svg" alt="" />
+            <div class="footer__bottom">
+              <span>Mentions légales &nbsp; Confidentialité &nbsp; © 2026 ELECTRIS</span>
+              <div class="footer__social">
+                <a href="#"><img src="assets/images/technologie/social-1.svg" alt="Facebook" /></a>
+                <a href="#"><img src="assets/images/technologie/social-2.svg" alt="Instagram" /></a>
+                <a href="#"><img src="assets/images/technologie/social-3.svg" alt="YouTube" /></a>
+                <a href="#"><img src="assets/images/technologie/social-4.svg" alt="X" /></a>
+                <a href="#"><img src="assets/images/technologie/social-5.svg" alt="LinkedIn" /></a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="contact-image"><img src="assets/images/technologie/contact-image.png" alt=""></div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="footer__shell">
-        <img class="footer__shape" src="assets/images/technologie/footer-shape.svg" alt="">
-        <div class="footer__content">
-          <div class="footer__grid">
-            <img class="footer__logo" src="assets/images/technologie/hero-logo.png" alt="electris">
-            <div class="footer__col"><h3>Technologies</h3><ul><li><a href="24-technologie.html">Découvrir</a></li><li><a href="#contact">Contact</a></li></ul></div>
-            <div class="footer__col"><h3>Solutions</h3><ul><li><a href="WasteHeatRecoverySolutions.html">Récupération de Chaleur</a></li></ul></div>
-            <div class="footer__col"><h3>Secteurs</h3><ul><li><a href="13-secteurs-industrie.html">Industrie</a></li></ul></div>
-          </div>
-          <img class="footer__line" src="assets/images/technologie/footer-line.svg" alt="">
-          <div class="footer__bottom"><span>Mentions légales · Confidentialité · © 2026 ELECTRIS</span></div>
-        </div>
-      </div>
-    </footer>
-  </div>
-  <script>document.querySelector('.nav__toggle').addEventListener('click',function(){var n=document.getElementById('nav'),o=n.classList.toggle('is-open');this.setAttribute('aria-expanded',o);});</script>
-</body>
+      </footer>
+    </div>
+    <script>
+      document
+        .querySelector(".nav__toggle")
+        .addEventListener("click", function () {
+          var nav = document.getElementById("nav");
+          var open = nav.classList.toggle("is-open");
+          this.setAttribute("aria-expanded", open);
+          this.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
+        });
+    </script>
+  </body>
 </html>
-
