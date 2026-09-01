@@ -336,6 +336,13 @@
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+.audit-button img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  transform: rotate(-90deg) scaleX(-1);
+}
+
 .audit-button:hover { color: #000; }
 
 .solutions-contact-content p {
