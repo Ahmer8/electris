@@ -1,0 +1,997 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      name="description"
+      content="ELECTRIS identifie et combine les CEE, aides ADEME, France 2030 et aides au logement collectif pour financer votre électrification."
+    />
+    <title>Financement de l'électrification — Electris</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@600;700;800&family=Raleway:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css?v=financement-30" />
+    <link rel="stylesheet" href="solutions.css?v=financement-30" />
+    <style>
+      :root {
+        --financing-page: #f1f5f9;
+        --financing-blue: #1212ff;
+        --financing-ink: #0f172a;
+        --financing-muted: #475569;
+      }
+
+      .financing-main {
+        overflow: hidden;
+        background: var(--financing-page);
+      }
+
+      .financing-hero {
+        padding: 64px 64px 96px;
+      }
+
+      .financing-hero__inner {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: center;
+        gap: 48px;
+        width: min(1384px, 100%);
+        min-height: 473px;
+        margin: 0 auto;
+      }
+
+      .financing-hero__copy {
+        display: flex;
+        min-width: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 64px;
+      }
+
+      .financing-hero h1 {
+        margin: 0 0 13px;
+        color: #000;
+        font-size: clamp(42px, 3.18vw, 48px);
+        font-weight: 700;
+        line-height: 1.33;
+        letter-spacing: -1px;
+      }
+
+      .financing-hero h1 span {
+        color: var(--financing-blue);
+      }
+
+      .financing-hero__lead {
+        max-width: 668px;
+        margin: 0;
+        color: #000;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 1.6;
+      }
+
+      .financing-hero__actions {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: wrap;
+      }
+
+      .financing-hero__button {
+        display: inline-flex;
+        min-height: 64px;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 16px 24px;
+        border-radius: 32px;
+        background: var(--financing-blue);
+        box-shadow: 0 1px 3px rgba(16, 24, 40, 0.05);
+        color: #fff;
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 32px;
+        text-decoration: none;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .financing-hero__button:hover,
+      .financing-hero__button:focus-visible {
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(18, 18, 255, 0.22);
+      }
+
+      .financing-hero__button img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .financing-hero__note {
+        color: var(--financing-ink);
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.6;
+      }
+
+      .financing-hero__visual {
+        position: relative;
+        min-width: 0;
+        height: 473px;
+      }
+
+      .financing-hero__art {
+        position: absolute;
+        top: 32px;
+        left: 50%;
+        display: block;
+        width: 685px;
+        max-width: 103%;
+        height: 441px;
+        transform: translateX(-50%);
+        object-fit: cover;
+      }
+
+      .financing-metric {
+        position: absolute;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 14px 15px;
+        border-radius: 13px;
+        background: rgba(255, 255, 255, 0.64);
+        box-shadow: 0 0 28px rgba(0, 0, 0, 0.12);
+        backdrop-filter: blur(11px);
+        -webkit-backdrop-filter: blur(11px);
+      }
+
+      .financing-metric--fund {
+        top: 15px;
+        left: 0;
+        width: 325px;
+      }
+
+      .financing-metric--levers {
+        top: -18px;
+        right: -23px;
+        width: 253px;
+      }
+
+      .financing-metric--ptz {
+        bottom: -83px;
+        left: 162px;
+        width: 276px;
+      }
+
+      .financing-metric__label {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        margin: 0;
+        color: #475467;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 1.43;
+      }
+
+      .financing-metric__label img {
+        width: 22px;
+        height: 22px;
+        flex: 0 0 22px;
+      }
+
+      .financing-metric hr {
+        width: 100%;
+        margin: 0;
+        border-color: #e2e8f0;
+        opacity: 1;
+      }
+
+      .financing-metric strong {
+        color: #101828;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      .financing-partners {
+        overflow: hidden;
+        padding: 24px 0;
+        background: #000;
+      }
+
+      .financing-partners__track {
+        display: flex;
+        width: max-content;
+        align-items: center;
+        gap: 16px;
+        animation: financingPartners 30s linear infinite;
+        will-change: transform;
+      }
+
+      .financing-partners__group {
+        display: flex;
+        flex: none;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .financing-partners img {
+        display: block;
+        flex: none;
+        object-fit: contain;
+      }
+
+      .financing-partners__group img:nth-child(1) {
+        width: 116.573px;
+        height: 71.962px;
+      }
+
+      .financing-partners__group img:nth-child(2) {
+        width: 116.573px;
+        height: 68.588px;
+      }
+
+      .financing-partners__group img:nth-child(3) {
+        width: 145.984px;
+        height: 30.881px;
+      }
+
+      .financing-partners__group img:nth-child(4) {
+        width: 82.339px;
+        height: 68.588px;
+      }
+
+      .financing-partners__group img:nth-child(5) {
+        width: 95.201px;
+        height: 50.933px;
+      }
+
+      .financing-partners__group img:nth-child(6) {
+        width: 208.891px;
+        height: 49.102px;
+      }
+
+      .financing-partners__group img:nth-child(7) {
+        width: 175.316px;
+        height: 55.809px;
+      }
+
+      .financing-partners__group img:nth-child(8) {
+        width: 228.306px;
+        height: 49.364px;
+      }
+
+      .financing-partners__group img:nth-child(9) {
+        width: 119.714px;
+        height: 66.441px;
+      }
+
+      .financing-partners__group img:nth-child(10) {
+        width: 102.901px;
+        height: 66.441px;
+      }
+
+      @keyframes financingPartners {
+        to {
+          transform: translateX(calc(-50% - 8px));
+        }
+      }
+
+      .financing-options {
+        position: relative;
+        padding: 96px 0;
+      }
+
+      .financing-options__heading {
+        margin-bottom: 48px;
+        padding: 0 32px 24px;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .financing-options__eyebrow {
+        margin: 0 0 8px;
+        color: var(--financing-muted);
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+
+      .financing-options h2 {
+        margin: 0;
+        color: #1f252e;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: -2.39px;
+      }
+
+      .financing-options .solution-copy--finance-green {
+        background: #eaf0e5;
+      }
+
+      .financing-options .solution-row {
+        gap: 24px;
+        grid-template-columns: minmax(0, 1fr) 564px;
+        height: 385px;
+        animation: none;
+        opacity: 1;
+        transform: none;
+      }
+
+      .financing-options .solution-copy {
+        gap: 12px;
+        padding: 28px 28px 24px;
+        border-radius: 32px;
+      }
+
+      .financing-options .solution-index {
+        margin: 0;
+        font-size: 56px;
+        line-height: 1.2;
+        letter-spacing: -1.715px;
+        -webkit-text-stroke: 1.5px #1212ff;
+      }
+
+      .financing-options .solution-copy h2 {
+        margin: 0;
+        font-size: 30px;
+        font-weight: 800;
+        line-height: 1.4;
+      }
+
+      .financing-options .solution-copy p {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.4;
+        color: #334155;
+      }
+
+      .financing-options .solution-link {
+        margin-top: auto;
+        padding-top: 4px;
+        font-size: 16px;
+        line-height: 19.5px;
+        letter-spacing: -0.0762px;
+      }
+
+      .financing-options .solution-link--finance-green {
+        color: #4a7a2a;
+      }
+
+      .financing-options .solution-icon {
+        right: -4px;
+        bottom: -12px;
+        border: 0;
+        border-radius: 24px;
+        background: transparent;
+        opacity: 0.3;
+      }
+
+      .financing-options .solution-photo {
+        width: 564px;
+        height: 385px;
+        border-radius: 0;
+        opacity: 0.9;
+        object-fit: fill;
+      }
+
+      .financing-contact .solutions-contact-card {
+        border-radius: 0;
+        background: transparent url("assets/images/financement/contact-card.svg") center / 100% 100%
+          no-repeat;
+      }
+
+      .financing-contact .contact-decoration {
+        content: url("assets/images/financement/contact-grid.svg");
+      }
+
+      .financing-contact .solutions-contact-card::after {
+        position: absolute;
+        top: -61px;
+        right: -42px;
+        width: 338px;
+        height: 315px;
+        background: url("assets/images/financement/contact-accent.png") center / cover no-repeat;
+        content: "";
+        opacity: 0.13;
+        pointer-events: none;
+      }
+
+      .financing-contact .solutions-contact-content {
+        z-index: 1;
+      }
+
+      .financing-contact .solutions-contact-content h2 {
+        font-size: 48px;
+        line-height: 1.2;
+        letter-spacing: -2.394px;
+      }
+
+      .financing-contact .solutions-contact-content address a {
+        font-size: 24px;
+        line-height: 1.5;
+      }
+
+      .financing-contact .audit-button {
+        font-size: 21.333px;
+        line-height: 32px;
+      }
+
+      .financing-contact .solutions-contact-content p {
+        font-size: 22px;
+        line-height: 1.5;
+      }
+
+      .financing-contact address img {
+        width: 28px;
+        height: 28px;
+        flex: 0 0 28px;
+      }
+
+      .financing-contact .audit-button img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .financing-contact .solutions-contact-photo {
+        width: 100%;
+        height: 482.866px;
+        border-radius: 0;
+        object-fit: fill;
+      }
+
+      @media (min-width: 1200px) {
+        .financing-options .solution-copy h2 {
+          font-size: 30px;
+        }
+
+        .financing-options .solution-copy p {
+          font-size: 24px;
+        }
+
+        .financing-options .solution-index {
+          font-size: 56px;
+        }
+
+        .financing-contact .solutions-contact-content h2 {
+          font-size: 48px;
+        }
+
+        .financing-contact .solutions-contact-content address a {
+          font-size: 24px;
+        }
+
+        .financing-contact .solutions-contact-content p {
+          font-size: 22px;
+        }
+      }
+
+      @media (max-width: 1199.98px) {
+        .financing-hero {
+          padding: 56px 32px 92px;
+        }
+
+        .financing-hero__inner {
+          gap: 30px;
+        }
+
+        .financing-hero__copy {
+          gap: 44px;
+        }
+
+        .financing-hero h1 {
+          font-size: clamp(38px, 4vw, 48px);
+          line-height: 1.2;
+        }
+
+        .financing-hero__lead {
+          font-size: 18px;
+        }
+
+        .financing-hero__art {
+          width: 590px;
+          max-width: 110%;
+          object-fit: contain;
+        }
+
+        .financing-metric--fund {
+          width: min(280px, 67%);
+        }
+
+        .financing-metric--levers {
+          right: 0;
+          width: 218px;
+        }
+
+        .financing-metric--ptz {
+          left: 20%;
+        }
+      }
+
+      @media (max-width: 991.98px) {
+        .financing-hero {
+          padding-bottom: 54px;
+        }
+
+        .financing-hero__inner {
+          grid-template-columns: 1fr;
+        }
+
+        .financing-hero__copy {
+          gap: 34px;
+        }
+
+        .financing-hero__visual {
+          width: min(668px, 100%);
+          margin: 0 auto;
+        }
+
+        .financing-metric--ptz {
+          bottom: -26px;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        .financing-hero {
+          padding: 44px 16px 48px;
+        }
+
+        .financing-hero h1 {
+          font-size: clamp(34px, 10vw, 46px);
+          letter-spacing: -1.3px;
+        }
+
+        .financing-hero__lead {
+          font-size: 17px;
+          line-height: 1.5;
+        }
+
+        .financing-hero__actions {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 14px;
+        }
+
+        .financing-hero__button {
+          width: 100%;
+          min-height: 56px;
+          padding: 12px 18px;
+          font-size: 17px;
+        }
+
+        .financing-hero__visual {
+          height: auto;
+          padding-bottom: 40px;
+        }
+
+        .financing-hero__art {
+          position: relative;
+          top: auto;
+          left: auto;
+          width: 100%;
+          max-width: none;
+          height: auto;
+          transform: none;
+          aspect-ratio: 685 / 441;
+        }
+
+        .financing-metric {
+          position: relative;
+          inset: auto;
+          width: calc(100% - 28px);
+          margin: -12px 14px 22px;
+        }
+
+        .financing-metric--fund {
+          margin-top: -4px;
+        }
+
+        .financing-metric--levers,
+        .financing-metric--ptz {
+          margin-top: 0;
+        }
+
+        .financing-partners img {
+          max-width: 136px;
+          height: 54px;
+        }
+
+        .financing-options {
+          padding: 64px 0;
+        }
+
+        .financing-options__heading {
+          margin-bottom: 36px;
+          padding: 0 8px 20px;
+        }
+
+        .financing-options__eyebrow {
+          font-size: 18px;
+        }
+
+        .financing-options h2 {
+          font-size: clamp(35px, 10vw, 48px);
+          letter-spacing: -1.5px;
+        }
+
+        .financing-contact .solutions-contact-card {
+          border-radius: 0;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .financing-partners__track {
+          animation: none;
+        }
+
+        .financing-hero__button {
+          transition: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="solutions-page">
+    <div class="site-frame" id="top">
+      <header class="sticky-top">
+        <nav class="navbar navbar-expand-xl py-0">
+          <div class="container-fluid px-4 px-lg-5">
+            <a class="navbar-brand logo" href="index.html">
+              <img src="assets/images/logo/electris-logo.png" alt="Electris" />
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#mainNav"
+              aria-controls="mainNav"
+              aria-expanded="false"
+              aria-label="Ouvrir le menu"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+              <ul class="navbar-nav mx-auto align-items-lg-center">
+                <li class="nav-item"><a class="nav-link" href="index.html">Bienvenue</a></li>
+                <li class="nav-item">
+                  <a class="nav-link" href="24-technologie.html">Technologies</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="solutions.html">Solutions</a></li>
+                <li class="nav-item"><a class="nav-link" href="sectrus.html">Secteurs</a></li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#top">Financement</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#impact">Équipe</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html#news">Actualités</a>
+                </li>
+              </ul>
+              <div class="d-flex align-items-center gap-3 py-3 py-xl-0">
+                <a class="btn btn-primary rounded-pill px-4" href="#contact">Contactez-nous.</a>
+                <span class="language rounded-circle bg-white shadow-sm">Fr.</span>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <main class="financing-main">
+        <section class="financing-hero" aria-labelledby="financing-title">
+          <div class="financing-hero__inner">
+            <div class="financing-hero__copy">
+              <div>
+                <h1 id="financing-title">
+                  Tous les leviers pour financer <span>votre électrification.</span>
+                </h1>
+                <p class="financing-hero__lead">
+                  Entre CEE, aides ADEME, France 2030 et aides au logement collectif, une part
+                  importante — souvent la totalité — du coût peut être couverte. ELECTRIS
+                  identifie, combine et sécurise la bonne structure.
+                </p>
+              </div>
+              <div class="financing-hero__actions">
+                <a class="financing-hero__button" href="mailto:contact@electris.fr">
+                  Demander un audit gratuit
+                  <img src="assets/images/financement/arrow-blue.svg" alt="" />
+                </a>
+                <span class="financing-hero__note">Diagnostic en 48 heures</span>
+              </div>
+            </div>
+            <div class="financing-hero__visual">
+              <img
+                class="financing-hero__art"
+                src="assets/images/financement/hero.png"
+                alt="Illustration des aides CEE, ADEME et France 2030 pour l'électrification"
+              />
+              <div class="financing-metric financing-metric--fund">
+                <p class="financing-metric__label">
+                  <img src="assets/images/financement/metric-leaf.svg" alt="" />
+                  Des coûts de récupération de chaleur via le Fonds Chaleur ADEME
+                </p>
+                <hr />
+                <strong>Jusqu'à 65%</strong>
+              </div>
+              <div class="financing-metric financing-metric--levers">
+                <p class="financing-metric__label">
+                  <img src="assets/images/financement/metric-cumulative.svg" alt="" />
+                  Cumulables
+                </p>
+                <hr />
+                <strong>Six leviers</strong>
+              </div>
+              <div class="financing-metric financing-metric--ptz">
+                <p class="financing-metric__label">
+                  <img src="assets/images/financement/metric-ptz.svg" alt="" />
+                  Éco-PTZ collectif jusqu'à 50 000 € par logement
+                </p>
+                <hr />
+                <strong>0 €</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="financing-partners" aria-label="Ils nous font confiance">
+          <div class="financing-partners__track">
+            <div class="financing-partners__group">
+              <img src="assets/images/financement/brand-01.svg" alt="Best Western" />
+              <img src="assets/images/financement/brand-02.svg" alt="Barrière" />
+              <img src="assets/images/financement/brand-03.svg" alt="Intermarché" />
+              <img src="assets/images/financement/brand-04.svg" alt="Carrefour" />
+              <img src="assets/images/financement/brand-05.svg" alt="Orpi" />
+              <img src="assets/images/financement/brand-06.svg" alt="E.Leclerc" />
+              <img src="assets/images/financement/brand-07.svg" alt="Super U" />
+              <img src="assets/images/financement/brand-08.svg" alt="Franprix" />
+              <img src="assets/images/financement/brand-09.svg" alt="Mercure" />
+              <img src="assets/images/financement/brand-10.svg" alt="ibis Styles" />
+            </div>
+            <div class="financing-partners__group" aria-hidden="true">
+              <img src="assets/images/financement/brand-01.svg" alt="" />
+              <img src="assets/images/financement/brand-02.svg" alt="" />
+              <img src="assets/images/financement/brand-03.svg" alt="" />
+              <img src="assets/images/financement/brand-04.svg" alt="" />
+              <img src="assets/images/financement/brand-05.svg" alt="" />
+              <img src="assets/images/financement/brand-06.svg" alt="" />
+              <img src="assets/images/financement/brand-07.svg" alt="" />
+              <img src="assets/images/financement/brand-08.svg" alt="" />
+              <img src="assets/images/financement/brand-09.svg" alt="" />
+              <img src="assets/images/financement/brand-10.svg" alt="" />
+            </div>
+          </div>
+        </section>
+
+        <section class="financing-options" aria-labelledby="financing-options-title">
+          <div class="solutions-shell">
+            <div class="financing-options__heading">
+              <p class="financing-options__eyebrow">Six leviers, cumulables</p>
+              <h2 id="financing-options-title">Solutions de financement</h2>
+            </div>
+            <div class="solutions-list">
+              <article class="solution-row">
+                <div class="solution-copy solution-copy--green">
+                  <strong class="solution-index">01.</strong>
+                  <h2>Certificats d'Économies d'Énergie (CEE)</h2>
+                  <p>Le socle de quasiment toutes nos structures de financement. 6e période, 2026–2030.</p>
+                  <a class="solution-link solution-link--green" href="31-financement-cee.html">
+                    <img src="assets/images/financement/link-green.svg" alt="" />Découvrir la solution
+                  </a>
+                  <img class="solution-icon" src="assets/images/financement/icon-01.png" alt="" />
+                </div>
+                <img
+                  class="solution-photo"
+                  src="assets/images/financement/photo-01.png"
+                  alt="Technicien inspectant des équipements de production énergétique"
+                />
+              </article>
+
+              <article class="solution-row">
+                <div class="solution-copy solution-copy--blue">
+                  <strong class="solution-index">02.</strong>
+                  <h2>Fonds Chaleur ADEME</h2>
+                  <p>Jusqu'à 65% des coûts de récupération de chaleur, cumulable avec les CEE. 800 M€ en 2026.</p>
+                  <a class="solution-link solution-link--blue" href="32-financement-fonds-chaleur.html">
+                    <img src="assets/images/financement/link-blue.svg" alt="" />En savoir plus
+                  </a>
+                  <img class="solution-icon" src="assets/images/financement/icon-02.png" alt="" />
+                </div>
+                <img
+                  class="solution-photo"
+                  src="assets/images/financement/photo-02.png"
+                  alt="Installation industrielle de récupération de chaleur"
+                />
+              </article>
+
+              <article class="solution-row">
+                <div class="solution-copy solution-copy--cyan">
+                  <strong class="solution-index">03.</strong>
+                  <h2>DECARB IND — France 2030</h2>
+                  <p>Jusqu'à 30 M€ pour les grands projets industriels.</p>
+                  <a class="solution-link solution-link--cyan" href="33-financement-decarb-ind.html">
+                    <img src="assets/images/financement/link-cyan.svg" alt="" />En savoir plus
+                  </a>
+                  <img class="solution-icon" src="assets/images/financement/icon-03.png" alt="" />
+                </div>
+                <img
+                  class="solution-photo"
+                  src="assets/images/financement/photo-03.png"
+                  alt="Grand chantier industriel soutenu par France 2030"
+                />
+              </article>
+
+              <article class="solution-row">
+                <div class="solution-copy solution-copy--white">
+                  <strong class="solution-index">04.</strong>
+                  <h2>Fonds Vert</h2>
+                  <p>837 M€ pour la rénovation énergétique du parc immobilier public.</p>
+                  <a class="solution-link solution-link--black" href="34-financement-fonds-vert.html">
+                    <img src="assets/images/financement/link-black.svg" alt="" />En savoir plus
+                  </a>
+                  <img class="solution-icon" src="assets/images/financement/icon-04.png" alt="" />
+                </div>
+                <img
+                  class="solution-photo"
+                  src="assets/images/financement/photo-04.png"
+                  alt="Rénovation énergétique d'un bâtiment public"
+                />
+              </article>
+
+              <article class="solution-row">
+                <div class="solution-copy solution-copy--finance-green">
+                  <strong class="solution-index">05.</strong>
+                  <h2>MaPrimeRénov' Copropriété</h2>
+                  <p>30 à 45% des travaux, plafonné à 25 000 € par logement.</p>
+                  <a class="solution-link solution-link--finance-green" href="35-financement-maprimerenov-copropriete.html">
+                    <img src="assets/images/financement/link-green.svg" alt="" />En savoir plus
+                  </a>
+                  <img class="solution-icon" src="assets/images/financement/icon-05.png" alt="" />
+                </div>
+                <img
+                  class="solution-photo"
+                  src="assets/images/financement/photo-05.png"
+                  alt="Immeuble collectif rénové énergétiquement"
+                />
+              </article>
+
+              <article class="solution-row">
+                <div class="solution-copy solution-copy--sand">
+                  <strong class="solution-index">06.</strong>
+                  <h2>Éco-PTZ collectif</h2>
+                  <p>Jusqu'à 50 000 € par logement à taux zéro, sur 20 ans.</p>
+                  <a class="solution-link solution-link--gold" href="36-financement-eco-ptz-collectif.html">
+                    <img src="assets/images/financement/link-gold.svg" alt="" />En savoir plus
+                  </a>
+                  <img class="solution-icon" src="assets/images/financement/icon-06.png" alt="" />
+                </div>
+                <img
+                  class="solution-photo"
+                  src="assets/images/financement/photo-06.png"
+                  alt="Réunion de copropriété consacrée au financement de travaux"
+                />
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="solutions-contact financing-contact" id="contact">
+          <img class="contact-decoration" src="assets/images/financement/contact-grid.svg" alt="" />
+          <div class="solutions-contact-grid">
+            <div class="solutions-contact-card">
+              <div class="solutions-contact-content">
+                <h2>Contactez-nous .</h2>
+                <address>
+                  <a href="mailto:contact@electris.fr">
+                    <img src="assets/images/financement/mail.svg" alt="" />contact@electris.fr
+                  </a>
+                  <a href="tel:+33100000000">
+                    <img src="assets/images/financement/phone.svg" alt="" />+33 (0)1 XX XX XX XX
+                  </a>
+                </address>
+                <a class="audit-button" href="mailto:contact@electris.fr">
+                  Demander un audit gratuit
+                  <img src="assets/images/financement/arrow-black.svg" alt="" />
+                </a>
+                <p>L'ingénierie qui rend vos bâtiments plus performants.</p>
+                <p>Paris · France · 100 % électrique · 0 % énergie fossile</p>
+              </div>
+            </div>
+            <img
+              class="solutions-contact-photo"
+              src="assets/images/financement/contact-photo.png"
+              alt="Site industriel à décarboner"
+            />
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer-panel">
+      <div class="footer-inner d-flex flex-column">
+        <div class="footer-top d-flex align-items-start">
+          <a class="footer-logo d-flex align-items-center text-decoration-none" href="#top">
+            <img src="assets/images/logo/electris-logo.png" alt="Electris" />
+          </a>
+          <div class="footer-cols d-grid flex-grow-1">
+            <section class="footer-col">
+              <h5>TECHNOLOGIES</h5>
+              <ul class="list-unstyled d-flex flex-column">
+                <li><span class="chevron">›</span><a href="24-technologie.html">Découvrir</a></li>
+                <li><span class="chevron">›</span><a href="#top">Financement</a></li>
+                <li><span class="chevron">›</span><a href="index.html#impact">Équipe</a></li>
+                <li><span class="chevron">›</span><a href="#contact">Contact</a></li>
+              </ul>
+            </section>
+            <section class="footer-col">
+              <h5>SOLUTIONS</h5>
+              <ul class="list-unstyled d-flex flex-column">
+                <li>
+                  <span class="chevron">›</span>
+                  <a href="WasteHeatRecoverySolutions.html">Récupération de chaleur fatale</a>
+                </li>
+                <li>
+                  <span class="chevron">›</span>
+                  <a href="solution-gtb.html">Gestion technique du bâtiment (GTB)</a>
+                </li>
+                <li><span class="chevron">›</span><a href="solution-gtb.html">Classe A</a></li>
+                <li>
+                  <span class="chevron">›</span><a href="cascade.html">Décarbonation thermique</a>
+                </li>
+                <li>
+                  <span class="chevron">›</span><a href="cpe.html">Contrat de performance (CP)</a>
+                </li>
+              </ul>
+            </section>
+            <section class="footer-col">
+              <h5>SECTEURS</h5>
+              <ul class="list-unstyled d-flex flex-column">
+                <li>
+                  <span class="chevron">›</span>
+                  <a href="10-secteurs-grande-distribution.html">Grande distribution</a>
+                </li>
+                <li>
+                  <span class="chevron">›</span><a href="13-secteurs-industrie.html">Industrie</a>
+                </li>
+                <li>
+                  <span class="chevron">›</span><a href="11-secteurs-hotellerie.html">Hôtellerie</a>
+                </li>
+                <li>
+                  <span class="chevron">›</span><a href="15-secteurs-bureaux.html">Tertiaire &amp; Bureaux</a>
+                </li>
+                <li>
+                  <span class="chevron">›</span>
+                  <a href="14-secteurs-data-centers.html">Centres de données</a>
+                </li>
+                <li>
+                  <span class="chevron">›</span>
+                  <a href="secteurs-hotellerie-dom-tom.html">DOM-TOM</a>
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-bottom d-flex align-items-center justify-content-between">
+          <p>Mentions légales Confidentialité (c) 2026 ELECTRIS</p>
+          <div class="footer-social d-flex align-items-center" aria-label="Réseaux sociaux">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">◎</a>
+            <a href="#" aria-label="YouTube">▶</a>
+            <a href="#" aria-label="X">𝕏</a>
+            <a href="#" aria-label="LinkedIn">in</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
