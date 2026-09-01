@@ -799,6 +799,10 @@
   height: 20px;
 }
 
+.btn--hero img {
+  transform: rotate(-90deg) scaleX(-1);
+}
+
 .orc-case__visual {
   position: relative;
   flex: 1;

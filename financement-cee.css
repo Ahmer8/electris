@@ -68,6 +68,7 @@
 /* Figma exports the arrow glyph pointing down; the design rotates it. */
 .cee-page .cee-hero__button img,
 .cee-page .cee-process__flow img,
+.cee-page .btn--hero img,
 .cee-page .orc-case__cta .btn img,
 .cee-page .audit-button img {
   transform: rotate(-90deg) scaleX(-1);
@@ -633,6 +634,8 @@
 
 .cee-page .orc-elig__header .cee-hero__button {
   width: 354.333px;
+  flex-shrink: 0;
+  align-self: center;
 }
 
 /* Bootstrap + technologie-detail typography — lock to Figma px values */
