@@ -1,0 +1,22 @@
+/* 35-financement-maprimerenov-copropriete — deltas from the shared CEE layout (financement-cee.css) */
+
+.mpr-page .orc-problem .detail-title {
+  font-size: 42px;
+  letter-spacing: -1.5px;
+}
+
+.mpr-page .cee-advantages__banner {
+  min-height: 838px;
+}
+
+.mpr-page .cee-advantages__pattern::before {
+  background-image: url("assets/images/financement-maprimerenov-copropriete/advantages-pattern-a.svg");
+}
+
+.mpr-page .cee-advantages__pattern::after {
+  background-image: url("assets/images/financement-maprimerenov-copropriete/advantages-pattern-b.svg");
+}
+
+.mpr-page .cee-contact.financing-contact .solutions-contact-card {
+  background: transparent url("assets/images/financement-maprimerenov-copropriete/contact-card.svg") center / 100% 100% no-repeat;
+}

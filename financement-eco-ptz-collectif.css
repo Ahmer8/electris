@@ -1,0 +1,22 @@
+/* 36-financement-eco-ptz-collectif — deltas from the shared CEE layout (financement-cee.css) */
+
+.eptc-page .orc-problem .detail-title {
+  font-size: 42px;
+  letter-spacing: -1.5px;
+}
+
+.eptc-page .cee-advantages__banner {
+  min-height: 812px;
+}
+
+.eptc-page .cee-advantages__pattern::before {
+  background-image: url("assets/images/financement-eco-ptz-collectif/advantages-pattern-a.svg");
+}
+
+.eptc-page .cee-advantages__pattern::after {
+  background-image: url("assets/images/financement-eco-ptz-collectif/advantages-pattern-b.svg");
+}
+
+.eptc-page .cee-contact.financing-contact .solutions-contact-card {
+  background: transparent url("assets/images/financement-eco-ptz-collectif/contact-card.svg") center / 100% 100% no-repeat;
+}
