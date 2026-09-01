@@ -326,17 +326,18 @@
 }
 
 .cee-advantages {
-  padding: 96px 80px;
+  padding: 96px 0;
   background: #fff;
 }
 
 .cee-advantages__inner {
   display: grid;
-  grid-template-columns: 558px 642px;
+  grid-template-columns: minmax(0, 558fr) minmax(0, 642fr);
   gap: 80px;
   align-items: center;
-  max-width: 1280px;
+  max-width: 1344px;
   margin: 0 auto;
+  padding: 0 32px;
 }
 
 .cee-timeline {
@@ -414,7 +415,7 @@
 .cee-advantages__banner {
   position: relative;
   overflow: hidden;
-  width: 642px;
+  isolation: isolate;
   min-height: 838px;
   padding: 48px;
   border-radius: 24px;
@@ -422,55 +423,88 @@
   color: #fff;
   display: flex;
   flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
   justify-content: center;
 }
 
-.cee-advantages__banner::before {
+/* Two overlapping line-art layers exported from Figma, screened over the green fill. */
+/* No z-index here: a stacking context would cut the layers off from the green backdrop. */
+.cee-advantages__pattern {
   position: absolute;
-  inset: -60% -152% -181% -33%;
-  background-image:
-    linear-gradient(62deg, transparent 0 43%, rgba(255, 255, 255, 0.2) 43.08% 43.18%, transparent 43.25%),
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0 1px, transparent 1px 74px),
-    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0 1px, transparent 1px 71px);
-  background-position: center;
-  opacity: 0.47;
-  transform: perspective(900px) rotateX(0deg) skewX(-16deg);
-  transform-origin: 22% 34%;
-  content: "";
+  inset: 0;
   pointer-events: none;
 }
 
-.cee-advantages__banner > * {
+.cee-advantages__pattern::before,
+.cee-advantages__pattern::after {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  mix-blend-mode: screen;
+  opacity: 0.47;
+  content: "";
+}
+
+.cee-advantages__pattern::before {
+  left: -46.2377%;
+  top: -66.9273%;
+  width: 299.8099%;
+  height: 118.8268%;
+  background-image: url("assets/images/financement-cee/advantages-pattern-a.svg");
+}
+
+.cee-advantages__pattern::after {
+  left: -43.2204%;
+  top: -63.857%;
+  width: 98.0048%;
+  height: 349.6284%;
+  background-image: url("assets/images/financement-cee/advantages-pattern-b.svg");
+}
+
+.cee-advantages__head {
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.cee-advantages__title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
 }
 
 .cee-advantages__logo {
-  width: 69px;
+  width: 69.33px;
   height: 64px;
-  margin-bottom: 16px;
-  object-fit: cover;
-  object-position: left;
-  filter: brightness(0) invert(1);
+  object-fit: contain;
 }
 
 .cee-advantages__banner .eyebrow {
-  margin: 0 0 8px;
+  margin: 0;
   color: #e2e8f0;
   font-size: 24px;
   font-weight: 500;
+  line-height: 1.5;
 }
 
 .cee-advantages__banner h2 {
-  margin: 0 0 24px;
+  margin: 0;
   font-size: 48px;
   font-weight: 700;
   line-height: 1.1;
-  letter-spacing: -2.394px;
+  letter-spacing: -2.3942px;
 }
 
-.cee-advantages__banner p {
-  max-width: 546px;
+.cee-advantages__lede {
+  position: relative;
+  z-index: 1;
+  width: 100%;
   margin: 0;
   font-size: 16px;
   line-height: 1.5;
@@ -481,15 +515,15 @@
   position: relative;
   padding: 96px 0;
   overflow: hidden;
-  background: #fff;
+  background: var(--cee-page);
 }
 
 .cee-operations__bg {
   position: absolute;
   z-index: 0;
-  left: -52px;
+  left: -26px;
   top: 22px;
-  width: 704px;
+  width: 652px;
   height: 657px;
   object-fit: contain;
   object-position: bottom;
@@ -547,17 +581,23 @@
   padding-top: 56px;
 }
 
-.cee-operation__index {
-  margin: 0;
+.cee-operation {
+  padding: 0 16px;
+}
+
+/* Outlined numeral: needs to outrank the generic `.cee-operation p` rule below. */
+.cee-operation .cee-operation__index {
+  margin: 0 0 20px;
   font-size: 56px;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -1.715px;
   color: transparent;
-  -webkit-text-stroke: 1.5px var(--cee-green);
+  -webkit-text-stroke: 1.5px #16a34a;
 }
 
 .cee-operation h3 {
+  max-width: 540px;
   margin: 0;
   font-size: 30px;
   font-weight: 800;
@@ -566,6 +606,7 @@
 }
 
 .cee-operation p {
+  max-width: 540px;
   margin: 10px 0 0;
   font-size: 24px;
   line-height: 1.4;
@@ -698,11 +739,11 @@
   }
 
   .cee-advantages {
-    padding: 64px 32px;
+    padding: 64px 0;
   }
 
   .cee-advantages__banner {
-    min-height: 420px;
+    min-height: 520px;
   }
 
   .cee-operations__photo {
@@ -736,7 +777,7 @@
     font-size: 18px;
   }
 
-  .cee-operation__index {
+  .cee-operation .cee-operation__index {
     font-size: 44px;
   }
 
