@@ -369,6 +369,11 @@
   margin-bottom: 48px;
 }
 
+.orc-elig__header .btn {
+  flex-shrink: 0;
+  align-self: center;
+}
+
 .orc-elig__header .detail-title {
   color: #000;
   letter-spacing: -2.3942px;
@@ -787,6 +792,11 @@
   padding: 8px 24px;
   font-size: 16px;
   box-shadow: 0 1.333px 2.667px rgba(16, 24, 40, 0.05);
+}
+
+.orc-case__cta .btn img {
+  width: 20px;
+  height: 20px;
 }
 
 .orc-case__visual {
