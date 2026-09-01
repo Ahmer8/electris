@@ -1,0 +1,773 @@
+/* 31-financement-cee — CEE detail page */
+
+:root {
+  --cee-page: #f1f5f9;
+  --cee-blue: #1212ff;
+  --cee-green: #2e9d68;
+  --cee-ink: #0f172a;
+  --cee-muted: #475569;
+  --pale: #f1f5f9;
+}
+
+/* Shared detail layout primitives (source: 24-technologie.css, not linked here) */
+.cee-page .detail-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.cee-page .detail-split {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+}
+
+.cee-page .detail-split__image {
+  flex-shrink: 0;
+  width: 510px;
+  overflow: hidden;
+}
+
+.cee-page .detail-split__content {
+  flex: 1;
+  min-width: 0;
+}
+
+.cee-page .detail-eyebrow {
+  margin: 0 0 12px;
+  color: var(--cee-muted);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.cee-page .detail-title {
+  margin: 0;
+  color: #000;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -2.394px;
+}
+
+.cee-page .detail-desc {
+  margin: 16px 0 0;
+  color: var(--cee-muted);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.cee-page .detail-divider {
+  border: none;
+  height: 1px;
+  margin: 24px 0;
+  background: #e2e8f0;
+}
+
+/* Figma exports the arrow glyph pointing down; the design rotates it. */
+.cee-page .cee-hero__button img,
+.cee-page .cee-process__flow img,
+.cee-page .orc-case__cta .btn img,
+.cee-page .audit-button img {
+  transform: rotate(-90deg) scaleX(-1);
+}
+
+.cee-page {
+  overflow: hidden;
+  background: var(--cee-page);
+}
+
+.cee-hero {
+  padding: 64px 64px 96px;
+}
+
+.cee-hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 48px;
+  width: min(1384px, 100%);
+  min-height: 473px;
+  margin: 0 auto;
+}
+
+.cee-hero__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.cee-hero h1 {
+  margin: 0 0 13px;
+  color: #000;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -1px;
+}
+
+.cee-hero h1 span {
+  color: var(--cee-blue);
+}
+
+.cee-hero__lead {
+  max-width: 668px;
+  margin: 0;
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.cee-hero__actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.cee-hero__button {
+  display: inline-flex;
+  min-height: 64px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 24px;
+  border-radius: 32px;
+  border: 0;
+  background: var(--cee-blue);
+  box-shadow: 0 1px 3px rgba(16, 24, 40, 0.05);
+  color: #fff;
+  font-family: Raleway, sans-serif;
+  font-size: 21.333px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.cee-hero__button img {
+  width: 24px;
+  height: 24px;
+}
+
+.cee-hero__note {
+  color: var(--cee-ink);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cee-hero__visual {
+  position: relative;
+  min-height: 473px;
+}
+
+.cee-hero__art {
+  display: block;
+  width: 100%;
+  height: 441px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.cee-metric {
+  position: absolute;
+  z-index: 2;
+  width: min(253px, 46%);
+  padding: 14px 15px;
+  border-radius: 13px;
+  background: rgba(255, 255, 255, 0.34);
+  backdrop-filter: blur(11px);
+  box-shadow: 0 0 28px rgba(0, 0, 0, 0.12);
+}
+
+.cee-metric__label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.3;
+  color: #475467;
+}
+
+.cee-metric__label img {
+  width: 21px;
+  height: 21px;
+  flex-shrink: 0;
+}
+
+.cee-metric__divider {
+  border: none;
+  height: 1px;
+  margin: 8px 0 6px;
+  background: #e2e8f0;
+}
+
+.cee-metric__value {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #101828;
+}
+
+.cee-metric--period {
+  top: 15px;
+  left: 0;
+}
+
+.cee-metric--cumul {
+  top: -18px;
+  right: -23px;
+}
+
+.cee-metric--cpe {
+  top: 88%;
+  left: 24%;
+}
+
+.cee-partners {
+  overflow: hidden;
+  padding: 24px 0;
+  background: #000;
+  border-top: 1px solid #e2e8f0;
+}
+
+.cee-partners__track {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: max-content;
+  animation: cee-partners-scroll 40s linear infinite;
+  will-change: transform;
+}
+
+.cee-partners__track img {
+  height: 54px;
+  width: auto;
+  max-width: 136px;
+  flex-shrink: 0;
+}
+
+@keyframes cee-partners-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.cee-process {
+  padding: 48px 0 96px;
+  text-align: center;
+}
+
+.cee-process__inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.cee-process__eyebrow {
+  margin: 0;
+  color: var(--cee-muted);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.cee-process h2 {
+  margin: 9px 0 10px;
+  color: #000;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -2.394px;
+}
+
+.cee-process__flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  flex-wrap: wrap;
+  margin-bottom: 48px;
+  color: var(--cee-muted);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.cee-process__flow img {
+  width: 24px;
+  height: 24px;
+}
+
+.cee-process__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.cee-process__card {
+  height: 564px;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.cee-process__card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cee-advantages {
+  padding: 96px 80px;
+  background: #fff;
+}
+
+.cee-advantages__inner {
+  display: grid;
+  grid-template-columns: 558px 642px;
+  gap: 80px;
+  align-items: center;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.cee-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.cee-timeline__item {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  gap: 24px;
+}
+
+.cee-timeline__rail {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.cee-timeline__num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #d5dbe2;
+  border-radius: 8px;
+  background: #f9fafb;
+  color: #011e19;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.cee-timeline__num.is-active {
+  border-color: #d5dbe2;
+  background: var(--cee-green);
+  color: #fff;
+}
+
+.cee-timeline__line {
+  width: 1px;
+  flex: 1;
+  min-height: 96px;
+  background: #d5dbe2;
+}
+
+.cee-timeline__content {
+  padding-bottom: 46px;
+}
+
+.cee-timeline__item:last-child .cee-timeline__content {
+  padding-bottom: 0;
+}
+
+.cee-timeline__content h3 {
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.96px;
+  color: #000;
+}
+
+.cee-timeline__content p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 26px;
+  color: #000;
+}
+
+.cee-advantages__banner {
+  position: relative;
+  overflow: hidden;
+  width: 642px;
+  min-height: 838px;
+  padding: 48px;
+  border-radius: 24px;
+  background: var(--cee-green);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cee-advantages__banner::before {
+  position: absolute;
+  inset: -60% -152% -181% -33%;
+  background-image:
+    linear-gradient(62deg, transparent 0 43%, rgba(255, 255, 255, 0.2) 43.08% 43.18%, transparent 43.25%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0 1px, transparent 1px 74px),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.15) 0 1px, transparent 1px 71px);
+  background-position: center;
+  opacity: 0.47;
+  transform: perspective(900px) rotateX(0deg) skewX(-16deg);
+  transform-origin: 22% 34%;
+  content: "";
+  pointer-events: none;
+}
+
+.cee-advantages__banner > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cee-advantages__logo {
+  width: 69px;
+  height: 64px;
+  margin-bottom: 16px;
+  object-fit: cover;
+  object-position: left;
+  filter: brightness(0) invert(1);
+}
+
+.cee-advantages__banner .eyebrow {
+  margin: 0 0 8px;
+  color: #e2e8f0;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.cee-advantages__banner h2 {
+  margin: 0 0 24px;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -2.394px;
+}
+
+.cee-advantages__banner p {
+  max-width: 546px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.cee-operations {
+  position: relative;
+  padding: 96px 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+.cee-operations__bg {
+  position: absolute;
+  z-index: 0;
+  left: -52px;
+  top: 22px;
+  width: 704px;
+  height: 657px;
+  object-fit: contain;
+  object-position: bottom;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.cee-operations__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.cee-operations__header {
+  margin-bottom: 32px;
+}
+
+.cee-operations__header .eyebrow {
+  margin: 0;
+  color: var(--cee-muted);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.cee-operations__header h2 {
+  margin: 8px 0 0;
+  color: #1f252e;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -2.394px;
+}
+
+.cee-operations__divider {
+  border: none;
+  height: 1px;
+  margin: 0 0 32px;
+  background: #e2e8f0;
+}
+
+.cee-operations__split {
+  display: grid;
+  grid-template-columns: minmax(0, 706px) 510px;
+  gap: 0;
+  align-items: start;
+  justify-content: center;
+}
+
+.cee-operations__list {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-top: 56px;
+}
+
+.cee-operation__index {
+  margin: 0;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -1.715px;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--cee-green);
+}
+
+.cee-operation h3 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.4;
+  color: #000;
+}
+
+.cee-operation p {
+  margin: 10px 0 0;
+  font-size: 24px;
+  line-height: 1.4;
+  color: #334155;
+}
+
+.cee-operations__photo img {
+  width: 510px;
+  height: 380px;
+  object-fit: contain;
+}
+
+.cee-operations__cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.cee-operations__cta .cee-hero__button {
+  font-size: 21.333px;
+}
+
+.cee-page .orc-elig__header .cee-hero__button {
+  width: 354.333px;
+}
+
+/* Bootstrap + technologie-detail typography — lock to Figma px values */
+.cee-page .orc-problem .detail-title,
+.cee-page .orc-metrics .detail-title,
+.cee-page .orc-elig__header .detail-title,
+.cee-page .orc-results__title {
+  font-size: 48px;
+  line-height: 1.1;
+  letter-spacing: -2.394px;
+}
+
+.cee-page .orc-problem .detail-desc,
+.cee-page .orc-metrics .detail-desc,
+.cee-page .orc-elig__header .detail-desc {
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.cee-page .orc-list li {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.cee-page .orc-case__card h3 {
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.cee-page .orc-case__card .meta {
+  font-size: 17px;
+}
+
+.cee-page .orc-case__card li {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+/* Section overrides for the shared orc-* blocks */
+.cee-page .orc-problem .detail-split__image,
+.cee-page .orc-problem .detail-split__image img {
+  width: 510px;
+  height: 518px;
+}
+
+.cee-page .orc-metrics__grid {
+  padding: 0 32px;
+}
+
+.cee-page .orc-metric__value {
+  font-size: 32px;
+  line-height: normal;
+}
+
+.cee-page .orc-elig__media,
+.cee-page .orc-elig__media > img {
+  width: 471px;
+  height: 428px;
+}
+
+.cee-page .orc-elig .detail-split .orc-list {
+  flex: 1;
+  min-width: 0;
+  gap: 32px;
+}
+
+.cee-results {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 96px 32px 120px;
+}
+
+.cee-results .orc-results__title {
+  text-transform: none;
+}
+
+.cee-results .orc-case {
+  max-width: 1216px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cee-contact.financing-contact .solutions-contact-card {
+  border-radius: 0;
+  background: transparent url("assets/images/financement-cee/contact-card.svg") center / 100% 100% no-repeat;
+}
+
+@media (max-width: 1200px) {
+  .cee-hero__inner,
+  .cee-advantages__inner,
+  .cee-operations__split,
+  .cee-process__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cee-hero__visual {
+    min-height: 360px;
+  }
+
+  .cee-metric {
+    width: 48%;
+    max-width: none;
+  }
+
+  .cee-advantages {
+    padding: 64px 32px;
+  }
+
+  .cee-advantages__banner {
+    min-height: 420px;
+  }
+
+  .cee-operations__photo {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .cee-hero h1 {
+    font-size: 36px;
+    line-height: 1.25;
+  }
+
+  .cee-page .detail-title,
+  .cee-page .orc-problem .detail-title,
+  .cee-page .orc-metrics .detail-title,
+  .cee-page .orc-elig__header .detail-title,
+  .cee-page .orc-results__title,
+  .cee-process h2,
+  .cee-operations__header h2,
+  .cee-advantages__banner h2 {
+    font-size: 36px;
+  }
+
+  .cee-operation h3 {
+    font-size: 24px;
+  }
+
+  .cee-operation p,
+  .cee-page .orc-list li {
+    font-size: 18px;
+  }
+
+  .cee-operation__index {
+    font-size: 44px;
+  }
+
+  .cee-hero {
+    padding: 48px 24px 64px;
+  }
+
+  .cee-metric {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin-top: 12px;
+  }
+
+  .cee-hero__visual {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .cee-hero__art {
+    height: 280px;
+  }
+
+  .cee-process__card {
+    height: 320px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cee-partners__track {
+    animation: none;
+  }
+}
