@@ -1,0 +1,26 @@
+/* 34-financement-fonds-vert — deltas from the shared CEE layout (financement-cee.css) */
+
+.fv-page .orc-problem .detail-title {
+  font-size: 42px;
+  letter-spacing: -1.5px;
+}
+
+.fv-page .cee-advantages__banner {
+  min-height: 812px;
+}
+
+.fv-page .cee-advantages__pattern::before {
+  background-image: url("assets/images/financement-fonds-vert/advantages-pattern-a.svg");
+}
+
+.fv-page .cee-advantages__pattern::after {
+  background-image: url("assets/images/financement-fonds-vert/advantages-pattern-b.svg");
+}
+
+.fv-page .cee-contact.financing-contact .solutions-contact-card {
+  background: transparent url("assets/images/financement-fonds-vert/contact-card.svg") center / 100% 100% no-repeat;
+}
+
+.fv-page .cee-operations__list {
+  gap: 40px;
+}
