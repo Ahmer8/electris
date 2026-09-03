@@ -309,21 +309,153 @@
 }
 
 .cee-process__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   gap: 24px;
+  width: 100%;
+  align-items: stretch;
 }
 
 .cee-process__card {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  width: auto;
+  max-width: none;
   height: 564px;
+  margin: 0;
   border-radius: 24px;
   overflow: hidden;
+  isolation: isolate;
+  cursor: pointer;
+  background: #111;
+  transition: flex 0.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .cee-process__card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.cee-process__badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 2;
+  display: none;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: #16a34a;
+}
+
+.cee-process__badge img {
+  width: 24px;
+  height: 24px;
+  transform: rotate(-45deg);
+}
+
+.cee-process__card figcaption {
+  position: absolute;
+  z-index: 2;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 119px;
+  box-sizing: border-box;
+  padding: 16px 24px;
+  border: 1px solid rgba(22, 163, 74, 0.5);
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(2px);
+  color: #fff;
+}
+
+.cee-process__card figcaption strong {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.cee-process__card figcaption small {
+  display: block;
+  color: #e2e8f0;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.cee-process__card::after {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.52);
+  content: "";
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* Accordion: expand one card, others share remaining space — always fill row */
+@media (min-width: 1200px) {
+  .cee-process__grid:has(.cee-process__card:hover) .cee-process__card,
+  .cee-process__grid:has(.cee-process__card:focus-visible) .cee-process__card,
+  .cee-process__grid:has(.cee-process__card.card-selected) .cee-process__card {
+    flex: 1 1 0;
+  }
+
+  .cee-process__grid:has(.cee-process__card:hover) .cee-process__card:hover,
+  .cee-process__grid:has(.cee-process__card:focus-visible) .cee-process__card:focus-visible,
+  .cee-process__grid:has(.cee-process__card.card-selected):not(:has(.cee-process__card:hover))
+    .cee-process__card.card-selected {
+    flex: 2.35 1 0;
+  }
+
+  /* Hover wins over a stuck selected card on another item */
+  .cee-process__grid:has(.cee-process__card:hover) .cee-process__card.card-selected:not(:hover) {
+    flex: 1 1 0;
+  }
+
+  .cee-process__card:hover::after,
+  .cee-process__card:focus-visible::after,
+  .cee-process__grid:has(.cee-process__card.card-selected):not(:has(.cee-process__card:hover))
+    .cee-process__card.card-selected::after {
+    opacity: 1;
+  }
+
+  .cee-process__card:hover .cee-process__badge,
+  .cee-process__card:focus-visible .cee-process__badge,
+  .cee-process__grid:has(.cee-process__card.card-selected):not(:has(.cee-process__card:hover))
+    .cee-process__card.card-selected
+    .cee-process__badge {
+    display: grid;
+  }
+
+  .cee-process__card:hover figcaption,
+  .cee-process__card:focus-visible figcaption,
+  .cee-process__grid:has(.cee-process__card.card-selected):not(:has(.cee-process__card:hover))
+    .cee-process__card.card-selected
+    figcaption {
+    display: flex;
+  }
+}
+
+@media (max-width: 1199px) {
+  .cee-process__card.card-selected::after {
+    opacity: 1;
+  }
+
+  .cee-process__card.card-selected .cee-process__badge {
+    display: grid;
+  }
+
+  .cee-process__card.card-selected figcaption {
+    display: flex;
+  }
 }
 
 .cee-advantages {
@@ -803,9 +935,12 @@
 @media (max-width: 1200px) {
   .cee-hero__inner,
   .cee-advantages__inner,
-  .cee-operations__split,
-  .cee-process__grid {
+  .cee-operations__split {
     grid-template-columns: 1fr;
+  }
+
+  .cee-process__grid {
+    flex-direction: column;
   }
 
   .cee-hero__visual {

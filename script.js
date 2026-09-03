@@ -36,6 +36,18 @@ function makeSelectable(selector) {
 
 makeSelectable(".tech-cards article");
 makeSelectable(".solution-cards figure");
+makeSelectable(".cee-process__grid .cee-process__card");
+
+/* Desktop hover accordion: clear sticky selection so the row returns to equal widths */
+const processGrid = document.querySelector(".cee-process__grid");
+const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+processGrid?.addEventListener("mouseleave", () => {
+  if (!finePointer.matches) return;
+  processGrid.querySelectorAll(".cee-process__card").forEach((card) => {
+    card.classList.remove("card-selected", "expanded", "selected");
+    card.setAttribute("aria-pressed", "false");
+  });
+});
 
 const solutionCards = document.querySelector(".solution-cards");
 const touchSolutionQuery = window.matchMedia("(hover: none), (pointer: coarse)");
