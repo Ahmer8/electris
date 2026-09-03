@@ -1292,3 +1292,584 @@
     font-size: 18px;
   }
 }
+
+/* ═══════════════════════════════════════════
+   Technology pages responsive
+   Desktop 1512 · Tablet ≤1200/900 · Mobile 390 (Figma)
+   ═══════════════════════════════════════════ */
+
+@media (max-width: 1200px) {
+  .page--orc .detail-inner,
+  .page--pac .detail-inner,
+  .page--gtb .detail-inner,
+  .page--freecooling .detail-inner {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .orc-process,
+  .orc-metrics,
+  .orc-elig,
+  .orc-problem {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .orc-process__diagram {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .orc-metrics__grid {
+    padding: 0 32px;
+    gap: 20px;
+  }
+
+  .orc-case__cta .btn {
+    white-space: normal;
+    text-align: center;
+    line-height: 1.3;
+  }
+
+  .pac-hero__visual {
+    min-height: 360px;
+  }
+}
+
+@media (max-width: 900px) {
+  .page--orc .hero--detail,
+  .page--pac .hero--detail,
+  .page--gtb .hero--detail,
+  .page--freecooling .hero--detail {
+    flex-direction: column;
+    padding: 48px 32px 64px;
+    gap: 40px;
+  }
+
+  .page--orc .hero--detail .hero__content,
+  .page--pac .hero--detail .hero__content,
+  .page--gtb .hero--detail .hero__content,
+  .page--freecooling .hero--detail .hero__content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .page--orc .hero--detail .hero__title,
+  .page--pac .hero--detail .hero__title,
+  .page--gtb .hero--detail .hero__title,
+  .page--freecooling .hero--detail .hero__title {
+    font-size: 36px;
+    line-height: 1.15;
+    letter-spacing: -1px;
+  }
+
+  .page--orc .hero--detail .hero__desc,
+  .page--pac .hero--detail .hero__desc,
+  .page--gtb .hero--detail .hero__desc,
+  .page--freecooling .hero--detail .hero__desc {
+    font-size: 18px;
+  }
+
+  .page--orc .hero--detail .hero__buttons,
+  .page--pac .hero--detail .hero__buttons,
+  .page--gtb .hero--detail .hero__buttons,
+  .page--freecooling .hero--detail .hero__buttons {
+    flex-wrap: wrap;
+  }
+
+  .pac-hero__visual {
+    width: 100%;
+    height: auto;
+    min-height: 280px;
+  }
+
+  .pac-hero-metric {
+    transform: scale(0.9);
+    transform-origin: center;
+  }
+
+  .orc-problem .detail-split,
+  .orc-elig .detail-split {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .orc-problem .detail-split__image,
+  .orc-problem .detail-split__image img,
+  .page--pac .orc-problem .detail-split__image,
+  .page--pac .orc-problem .detail-split__image img,
+  .orc-elig__media,
+  .orc-elig__media > img:first-child,
+  .page--gtb .orc-elig__media,
+  .page--gtb .orc-elig__media > img:first-child {
+    width: 100%;
+    max-width: 510px;
+    height: auto;
+  }
+
+  .orc-elig__media {
+    height: auto;
+    min-height: 280px;
+    align-self: flex-start;
+  }
+
+  .page--pac .orc-problem .detail-split__content,
+  .page--gtb .orc-elig .orc-list {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .detail-title,
+  .orc-reasons__title,
+  .orc-results__title,
+  .orc-gallery__title {
+    font-size: 36px;
+    letter-spacing: -1.5px;
+  }
+
+  .detail-eyebrow,
+  .orc-problem .detail-desc,
+  .orc-elig__header .detail-desc,
+  .orc-list li {
+    font-size: 20px;
+  }
+
+  .orc-reasons {
+    padding: 72px 32px 80px;
+  }
+
+  .orc-results {
+    padding: 72px 32px;
+  }
+
+  .page--pac .orc-reasons {
+    padding: 72px 32px 80px;
+  }
+
+  .orc-reason {
+    min-height: 0;
+  }
+
+  .orc-gallery {
+    padding: 72px 0;
+  }
+
+  .orc-gallery__row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+    padding: 0 32px;
+    min-height: 0;
+  }
+
+  .orc-tile,
+  .orc-tile--1,
+  .orc-tile--2,
+  .orc-tile--3,
+  .orc-tile--4,
+  .orc-tile--5,
+  .orc-tile--6 {
+    width: 100%;
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .orc-tile__photo,
+  .orc-tile--1 .orc-tile__photo,
+  .orc-tile--2 .orc-tile__photo,
+  .orc-tile--3 .orc-tile__photo,
+  .orc-tile--4 .orc-tile__photo,
+  .orc-tile--5 .orc-tile__photo,
+  .orc-tile--6 .orc-tile__photo {
+    width: 100% !important;
+    height: 200px !important;
+    border-radius: 20px;
+  }
+
+  .orc-gallery__cta {
+    padding: 0 32px;
+  }
+
+  .orc-gallery__cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 640px) {
+  .page--orc .hero--detail,
+  .page--pac .hero--detail,
+  .page--gtb .hero--detail,
+  .page--freecooling .hero--detail {
+    padding: 32px 16px 48px;
+    gap: 28px;
+  }
+
+  .page--orc .hero--detail .hero__title,
+  .page--pac .hero--detail .hero__title,
+  .page--gtb .hero--detail .hero__title,
+  .page--freecooling .hero--detail .hero__title {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .page--orc .hero--detail .hero__desc,
+  .page--pac .hero--detail .hero__desc,
+  .page--gtb .hero--detail .hero__desc,
+  .page--freecooling .hero--detail .hero__desc {
+    font-size: 16px;
+  }
+
+  .page--orc .hero--detail .hero__buttons .btn,
+  .page--pac .hero--detail .hero__buttons .btn,
+  .page--gtb .hero--detail .hero__buttons .btn,
+  .page--freecooling .hero--detail .hero__buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero__note {
+    width: 100%;
+    text-align: center;
+  }
+
+  .pac-hero__visual {
+    min-height: 240px;
+  }
+
+  .pac-hero-metric {
+    position: static !important;
+    transform: none;
+    width: 100%;
+    max-width: 280px;
+    margin: 8px auto;
+  }
+
+  .pac-hero__visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .pac-hero__art {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+  }
+
+  .partners {
+    padding: 16px;
+    overflow-x: auto;
+  }
+
+  .page--orc .detail-inner,
+  .page--pac .detail-inner,
+  .page--gtb .detail-inner,
+  .page--freecooling .detail-inner,
+  .page--orc .hero--detail,
+  .page--pac .orc-reasons,
+  .page--pac .orc-results,
+  .orc-reasons,
+  .orc-results {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .orc-problem,
+  .orc-process,
+  .orc-metrics,
+  .orc-elig {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
+
+  .detail-title,
+  .orc-reasons__title,
+  .orc-results__title,
+  .orc-gallery__title,
+  .orc-problem .detail-title,
+  .orc-elig__header .detail-title {
+    font-size: 28px;
+    letter-spacing: -1px;
+    line-height: 1.15;
+  }
+
+  .detail-eyebrow,
+  .orc-problem .detail-desc,
+  .orc-elig__header .detail-desc,
+  .orc-metrics .detail-desc,
+  .orc-process .detail-desc {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .orc-list {
+    gap: 14px;
+  }
+
+  .orc-list li {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .orc-list li::before {
+    width: 12px;
+    height: 12px;
+    margin-top: 6px;
+  }
+
+  .orc-metrics__grid {
+    grid-template-columns: 1fr;
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  .orc-metric__value {
+    font-size: 28px;
+  }
+
+  .orc-elig__header {
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+
+  .orc-elig__header .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .orc-elig__float {
+    left: 12px;
+    top: auto;
+    bottom: 12px;
+    width: 140px;
+    height: 96px;
+    border-width: 4px;
+  }
+
+  .page--gtb .orc-elig .orc-list {
+    gap: 18px;
+  }
+
+  .orc-reasons {
+    padding: 56px 16px 64px;
+  }
+
+  .page--pac .orc-reasons {
+    padding: 56px 16px 64px;
+  }
+
+  .orc-reasons__grid {
+    gap: 16px;
+  }
+
+  .orc-reason {
+    padding: 20px;
+    gap: 16px;
+    border-radius: 20px;
+  }
+
+  .orc-reason__illu {
+    height: 140px;
+  }
+
+  .orc-reason__title {
+    font-size: 16px;
+  }
+
+  .orc-reason__desc {
+    font-size: 13px;
+  }
+
+  .orc-gallery {
+    padding: 56px 0;
+  }
+
+  .orc-gallery__header {
+    margin-bottom: 40px;
+    padding: 0 16px;
+  }
+
+  .orc-gallery__desc {
+    font-size: 15px;
+    line-height: 1.45;
+  }
+
+  .orc-gallery__row {
+    padding: 0 16px;
+    gap: 16px;
+  }
+
+  /* Figma technologies-mobile: stacked photo cards */
+  .orc-tile {
+    position: relative;
+    gap: 0;
+  }
+
+  .orc-tile__photo {
+    height: 200px !important;
+  }
+
+  .orc-tile__photo::after {
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    opacity: 1;
+  }
+
+  .orc-tile__badge {
+    top: 16px;
+    right: 16px;
+    left: auto;
+  }
+
+  .orc-tile__name,
+  .orc-tile__meta {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    z-index: 2;
+    text-align: left;
+    color: #fff;
+    margin: 0;
+  }
+
+  .orc-tile__name {
+    bottom: 36px;
+    font-size: 18px;
+  }
+
+  .orc-tile__meta {
+    bottom: 16px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .orc-gallery__cta {
+    padding: 24px 16px 0;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .orc-gallery__cta .btn {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .orc-gallery__note {
+    font-size: 13px;
+  }
+
+  .orc-results {
+    padding: 56px 16px;
+  }
+
+  .orc-results__header {
+    margin-bottom: 40px;
+  }
+
+  .orc-case,
+  .orc-case--alt {
+    gap: 20px;
+  }
+
+  .page--pac .orc-case__copy,
+  .orc-case__copy {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+  }
+
+  .orc-case__card {
+    padding: 24px;
+    min-height: 0;
+    border-radius: 24px;
+  }
+
+  .orc-case__card h3 {
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .orc-case__card .meta {
+    font-size: 15px;
+  }
+
+  .orc-case__card li {
+    font-size: 13px;
+  }
+
+  .orc-case__cta {
+    height: auto;
+    min-height: 72px;
+    padding: 12px;
+    border-radius: 40px;
+  }
+
+  .orc-case__cta .btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+
+  .orc-case__visual,
+  .page--pac .orc-case__visual,
+  .page--pac .orc-case--alt .orc-case__visual {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+    min-height: 280px;
+    height: auto;
+  }
+
+  .orc-case__visual > img,
+  .orc-case--alt .orc-case__visual > img,
+  .page--pac .orc-case--alt .orc-case__visual > img {
+    width: 100%;
+    height: 260px;
+    position: static;
+    object-fit: cover;
+  }
+
+  .orc-bubbles {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .orc-bubble {
+    padding: 12px;
+    max-width: 100%;
+  }
+
+  .orc-bubble p {
+    font-size: 15px;
+  }
+
+  .orc-bubble small {
+    font-size: 12px;
+  }
+
+  .page--pac .orc-bubbles--right .orc-bubble--orange,
+  .page--pac .orc-bubbles--right .orc-bubble--cyan,
+  .page--pac .orc-bubbles--right .orc-bubble--violet,
+  .page--pac .orc-bubbles--left .orc-bubble--blue,
+  .page--pac .orc-bubbles--left .orc-bubble--green,
+  .page--pac .orc-bubbles--left .orc-bubble--purple {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+  }
+
+  .contact {
+    padding: 48px 16px;
+  }
+
+  .footer__shell {
+    padding: 0 16px;
+  }
+}

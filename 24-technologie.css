@@ -796,12 +796,41 @@ button {
     line-height: 1.2;
   }
 
+  .hero__buttons {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero__buttons .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
   .tech__title {
     font-size: 36px;
   }
 
   .tech-card__desc {
     font-size: 18px;
+  }
+
+  .tech__inner {
+    padding: 0 32px;
+  }
+
+  .tech-row {
+    gap: 24px;
+  }
+
+  .tech-row__image {
+    max-width: 100%;
+    height: 280px;
+  }
+
+  .tech-row__image img {
+    height: 100%;
+    object-fit: cover;
   }
 
   .footer__grid {
@@ -816,7 +845,7 @@ button {
 
 @media (max-width: 640px) {
   .nav {
-    padding: 20px;
+    padding: 16px 20px;
   }
 
   .nav__logo {
@@ -828,12 +857,33 @@ button {
     display: none;
   }
 
+  .nav__actions .btn--primary {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+
   .hero {
-    padding: 32px 20px 48px;
+    padding: 32px 16px 48px;
+    gap: 28px;
   }
 
   .hero__content {
     gap: 32px;
+  }
+
+  .hero__title {
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+
+  .hero__desc {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .hero__visual {
+    height: 260px;
   }
 
   .partners {
@@ -841,23 +891,77 @@ button {
   }
 
   .tech {
-    padding: 64px 0;
+    padding: 56px 0;
   }
 
   .tech__inner {
-    padding: 0 20px;
+    padding: 0 16px;
+  }
+
+  .tech__header {
+    margin-bottom: 40px;
+  }
+
+  .tech__eyebrow {
+    font-size: 14px;
+  }
+
+  .tech__title {
+    font-size: 28px;
+    letter-spacing: -1px;
+  }
+
+  .tech__list {
+    gap: 40px;
+  }
+
+  /* Figma mobile tech rows: card then image, 350px content width */
+  .tech-row {
+    gap: 20px;
+  }
+
+  .tech-card {
+    width: 100%;
+    padding: 24px 16px;
+    border-radius: 24px;
+  }
+
+  .tech-card__number {
+    font-size: 48px;
+  }
+
+  .tech-card__title {
+    font-size: 22px;
+  }
+
+  .tech-card__desc {
+    font-size: 16px;
+  }
+
+  .tech-row__image {
+    height: 220px;
+    border-radius: 24px;
+    overflow: hidden;
   }
 
   .contact {
-    padding: 48px 20px;
+    padding: 48px 16px;
   }
 
   .contact-card__title {
-    font-size: 36px;
+    font-size: 32px;
   }
 
   .contact-card__content {
-    padding: 32px 24px;
+    padding: 32px 20px;
+  }
+
+  .contact-image {
+    height: 280px;
+  }
+
+  .footer__shell {
+    padding: 0 16px;
   }
 }
 
