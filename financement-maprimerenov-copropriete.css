@@ -20,3 +20,185 @@
 .mpr-page .cee-contact.financing-contact .solutions-contact-card {
   background: transparent url("assets/images/financement-maprimerenov-copropriete/contact-card.svg") center / 100% 100% no-repeat;
 }
+
+/* ------------------------------------------------------------------
+   Éligibilité — Figma 2591:14863
+   Two-column: copy (eyebrow → title → desc → bullet → CTA) | Subtract image
+   ------------------------------------------------------------------ */
+.mpr-page .orc-elig {
+  padding: 96px 0;
+  background: #f1f5f9;
+}
+
+.mpr-page .orc-elig__grid {
+  inset: -8.41% 14.15% -8.22%;
+  opacity: 1;
+  background: transparent url("assets/images/financement-maprimerenov-copropriete/elig-grid.svg") center / 100% 100% no-repeat;
+}
+
+.mpr-page .orc-elig__layout {
+  display: flex;
+  align-items: center;
+  gap: 48px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.mpr-page .orc-elig__copy {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  min-width: 0;
+}
+
+.mpr-page .orc-elig__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  width: 100%;
+}
+
+.mpr-page .orc-elig__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  width: 100%;
+}
+
+.mpr-page .orc-elig__intro .detail-title + .detail-desc {
+  margin-top: -4px;
+}
+
+.mpr-page .orc-elig__intro .detail-eyebrow {
+  margin: 0;
+  color: #475569;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.mpr-page .orc-elig__intro .detail-title {
+  margin: 0;
+  color: #000;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -2.3942px;
+}
+
+.mpr-page .orc-elig__intro .detail-desc {
+  margin: 0;
+  color: #475569;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.mpr-page .orc-elig__copy .orc-list {
+  width: 100%;
+  max-width: 658px;
+  gap: 0;
+}
+
+.mpr-page .orc-elig__copy .orc-list li {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.5;
+  color: #0f172a;
+}
+
+.mpr-page .orc-elig__copy .cee-hero__button {
+  width: auto;
+  min-width: 0;
+  flex-shrink: 0;
+  align-self: flex-start;
+}
+
+.mpr-page .orc-elig__media {
+  position: relative;
+  flex: 0 0 471px;
+  width: 471px;
+  height: auto;
+  aspect-ratio: 471 / 427.58;
+}
+
+.mpr-page .orc-elig__media > img,
+.mpr-page .orc-elig__media > img:first-child {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 1100px) {
+  .mpr-page .orc-elig {
+    padding: 72px 0;
+  }
+
+  .mpr-page .orc-elig__layout {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 40px;
+  }
+
+  .mpr-page .orc-elig__media {
+    flex: none;
+    width: min(471px, 100%);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .mpr-page .orc-elig__intro .detail-title {
+    font-size: clamp(32px, 6vw, 42px);
+  }
+
+  .mpr-page .orc-elig__intro .detail-desc,
+  .mpr-page .orc-elig__copy .orc-list li {
+    font-size: 20px;
+  }
+
+  .mpr-page .orc-elig__copy .cee-hero__button {
+    width: 100%;
+    max-width: 354px;
+  }
+}
+
+@media (max-width: 640px) {
+  .mpr-page .orc-elig {
+    padding: 48px 0;
+  }
+
+  .mpr-page .orc-elig__copy {
+    gap: 24px;
+  }
+
+  .mpr-page .orc-elig__intro {
+    gap: 10px;
+  }
+
+  .mpr-page .orc-elig__intro .detail-eyebrow {
+    font-size: 16px;
+  }
+
+  .mpr-page .orc-elig__intro .detail-title {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .mpr-page .orc-elig__intro .detail-desc,
+  .mpr-page .orc-elig__copy .orc-list li {
+    font-size: 16px;
+  }
+
+  .mpr-page .orc-elig__copy .cee-hero__button {
+    width: 100%;
+    max-width: none;
+    white-space: normal;
+  }
+}
