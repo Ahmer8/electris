@@ -1009,6 +1009,27 @@
   max-width: 280px;
 }
 
+/* PAC advantages — Figma 2591:8925 */
+.page--pac .orc-reasons {
+  padding: 96px 116px 120px;
+}
+
+.page--pac .orc-reasons__grid {
+  max-width: 1216px;
+  width: 100%;
+  gap: 24px;
+}
+
+.page--pac .orc-reason {
+  min-height: 353px;
+  box-sizing: border-box;
+}
+
+.page--pac .orc-reason__arrow {
+  width: 24px;
+  height: 24px;
+}
+
 @media (max-width: 1200px) {
   .page--orc .hero--detail,
   .page--pac .hero--detail,
