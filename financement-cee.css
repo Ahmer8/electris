@@ -664,15 +664,23 @@
 .cee-page .orc-case__card h3 {
   font-size: 32px;
   line-height: 40px;
+  color: #272522;
 }
 
 .cee-page .orc-case__card .meta {
-  font-size: 17px;
+  font-size: 16.812px;
+  line-height: 25.218px;
+  color: #272522;
 }
 
 .cee-page .orc-case__card li {
-  font-size: 17px;
-  line-height: 1.5;
+  font-size: 14px;
+  line-height: 16.8px;
+  letter-spacing: -0.28px;
+}
+
+.cee-page .orc-case:first-of-type .orc-case__card {
+  min-height: 325px;
 }
 
 /* Section overrides for the shared orc-* blocks */
@@ -719,6 +727,58 @@
   margin-right: auto;
 }
 
+/* Stat pills — Figma 2591:12538 / 2591:12565 */
+.cee-results .orc-case__visual {
+  flex: 0 1 724px;
+  width: 724px;
+  max-width: 724px;
+}
+
+.cee-results .orc-bubbles {
+  width: 368px;
+  gap: 50px;
+}
+
+.cee-results .orc-bubble {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.cee-results .orc-bubbles--right .orc-bubble--orange {
+  width: 254px;
+  margin-left: 28px;
+}
+
+.cee-results .orc-bubbles--right .orc-bubble--cyan {
+  width: 256px;
+  margin-left: 48px;
+}
+
+.cee-results .orc-bubbles--right .orc-bubble--violet {
+  width: 368px;
+  margin-left: 0;
+}
+
+.cee-results .orc-bubbles--left .orc-bubble--blue {
+  width: 254px;
+  margin-left: 28px;
+}
+
+.cee-results .orc-bubbles--left .orc-bubble--green {
+  width: 242px;
+  margin-left: 48px;
+}
+
+.cee-results .orc-bubbles--left .orc-bubble--purple {
+  width: 368px;
+  margin-left: 0;
+}
+
+.cee-results .orc-bubble--violet p,
+.cee-results .orc-bubble--purple p {
+  max-width: 280px;
+}
+
 .cee-contact.financing-contact .solutions-contact-card {
   border-radius: 0;
   background: transparent url("assets/images/financement-cee/contact-card.svg") center / 100% 100% no-repeat;
@@ -751,6 +811,27 @@
 
   .cee-operations__photo {
     justify-self: center;
+  }
+
+  .cee-results .orc-case__visual {
+    flex: 1 1 auto;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cee-results .orc-bubbles {
+    width: min(368px, 92%);
+  }
+
+  .cee-results .orc-bubbles--right .orc-bubble--orange,
+  .cee-results .orc-bubbles--right .orc-bubble--cyan,
+  .cee-results .orc-bubbles--right .orc-bubble--violet,
+  .cee-results .orc-bubbles--left .orc-bubble--blue,
+  .cee-results .orc-bubbles--left .orc-bubble--green,
+  .cee-results .orc-bubbles--left .orc-bubble--purple {
+    width: auto;
+    max-width: 100%;
+    margin-left: 0;
   }
 }
 
