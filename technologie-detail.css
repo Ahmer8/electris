@@ -1112,6 +1112,36 @@
   color: #0f172a;
 }
 
+/* GTB éligibilité — Figma 2591:9606 */
+.page--gtb .orc-elig .detail-inner {
+  max-width: 1280px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.page--gtb .orc-elig__header .detail-eyebrow {
+  color: #475569;
+  font-weight: 500;
+}
+
+.page--gtb .orc-elig__media,
+.page--gtb .orc-elig__media > img:first-child {
+  width: 471px;
+  height: 428px;
+}
+
+.page--gtb .orc-elig .detail-split {
+  gap: 48px;
+  max-width: 1216px;
+  margin: 0 auto;
+}
+
+.page--gtb .orc-elig .orc-list {
+  width: 658px;
+  max-width: 100%;
+  gap: 32px;
+}
+
 @media (max-width: 1200px) {
   .page--orc .hero--detail,
   .page--pac .hero--detail,
@@ -1153,6 +1183,16 @@
   .orc-case__copy,
   .orc-elig__media,
   .orc-problem .detail-split__image {
+    width: 100%;
+  }
+
+  .page--gtb .orc-elig__media,
+  .page--gtb .orc-elig__media > img:first-child {
+    width: 100%;
+    height: auto;
+  }
+
+  .page--gtb .orc-elig .orc-list {
     width: 100%;
   }
 
