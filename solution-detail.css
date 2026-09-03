@@ -1,569 +1,959 @@
-/* Solution detail pages — mobile & tablet responsive (Figma: Solutions Page Mobile) */
+/* ============================================================
+   Solution detail pages — responsive layer
+   Reference: Figma "Solutions Page Mobile" (390px frame)
+   node 2597:29041 — file 4xlVGtTid0obu5rXEzZRD5
 
-.wasteheat-page {
-  font-family: "Raleway", system-ui, -apple-system, "Segoe UI", sans-serif;
+   Loaded AFTER each page's inline <style> block so these rules
+   win over the per-page media queries.
+
+   Figma mobile tokens
+     h-padding      16px  (hero 20px)
+     eyebrow        16px  Medium   #475569
+     section title  32px  ExtraBold  line-height 1.15
+     hero title     42px  Bold       tracking -1px
+     body           16px  Medium   #475569  line-height 1.5
+     hero lead      18px  Medium   #475569  line-height 1.4
+     button         full width, radius 32px, 16px/24px, text 21.33px
+     sector card    334x510, radius 32px, gap 12px
+   ============================================================ */
+
+body.wasteheat-page {
+  font-family: Raleway, system-ui, -apple-system, "Segoe UI", sans-serif;
+  overflow-x: hidden;
 }
 
-/* ── Tablet (901px – 1199px) ── */
+body.wasteheat-page *,
+body.wasteheat-page *::before,
+body.wasteheat-page *::after {
+  box-sizing: border-box;
+}
+
+body.wasteheat-page .wasteheat-legacy-header,
+body.wasteheat-page .legacy-ok2-footer,
+body.wasteheat-page .legacy-ok2-footer-space {
+  display: none !important;
+}
+
+/* Sector cards — photo + name overlay (Figma 2597:30650).
+   Desktop keeps the 3×2 grid; tablet/mobile override the track below. */
+body.wasteheat-page .wasteheat-industries .sector-track {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+body.wasteheat-page .wasteheat-industries .sector-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 32px;
+  aspect-ratio: 1 / 1;
+}
+
+body.wasteheat-page .wasteheat-industries .sector-card img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+body.wasteheat-page .wasteheat-industries .sector-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(123.26deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.753) 75%);
+}
+
+body.wasteheat-page .wasteheat-industries .sector-card figcaption {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  color: #fff;
+  font-family: Raleway, system-ui, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* ============================================================
+   TABLET — 901px to 1199px
+   ============================================================ */
 @media (min-width: 901px) and (max-width: 1199.98px) {
-  .wasteheat-hero {
+  /* Inline pixel widths from the Figma export must never exceed the viewport. */
+  body.wasteheat-page [style*="width:"] {
+    max-width: 100% !important;
+  }
+
+  body.wasteheat-page .wasteheat-hero {
     grid-template-columns: 1fr !important;
     padding: 56px 40px 72px !important;
+    gap: 44px !important;
+  }
+
+  body.wasteheat-page .wasteheat-hero > div:first-child {
+    max-width: 100% !important;
+    padding-left: 0 !important;
     gap: 40px !important;
   }
 
-  .wasteheat-hero > div:first-child {
-    max-width: 720px;
-    gap: 40px !important;
-  }
-
-  .wasteheat-hero-visual {
+  body.wasteheat-page .wasteheat-hero-visual {
     width: min(680px, 100%) !important;
     margin: 0 auto !important;
   }
 
-  .wasteheat-hero span[style*="font-size: 48px"],
-  .reference-section-title,
-  .wasteheat-contact-cta span[style*="font-size: 48px"] {
-    font-size: clamp(38px, 4.5vw, 44px) !important;
-    letter-spacing: -1.5px !important;
+  body.wasteheat-page .wasteheat-hero-art {
+    width: 100% !important;
+  }
+
+  body.wasteheat-page .wasteheat-hero span[style*="font-size: 48px"] {
+    font-size: 40px !important;
+    line-height: 1.15 !important;
+  }
+
+  body.wasteheat-page .reference-section-title,
+  body.wasteheat-page span[style*="font-size: 48px"] {
+    font-size: 40px !important;
+    line-height: 1.15 !important;
     white-space: normal !important;
+    margin-right: 0 !important;
   }
 
-  .wasteheat-hero span[style*="font-size: 20px"] {
-    font-size: 19px !important;
-    line-height: 1.55 !important;
-  }
-
-  .wasteheat-content section,
-  .wasteheat-how,
-  .wasteheat-industries,
-  .wasteheat-service,
-  .wasteheat-contact-cta > div {
+  body.wasteheat-page .wasteheat-content section,
+  body.wasteheat-page .wasteheat-how,
+  body.wasteheat-page .wasteheat-industries,
+  body.wasteheat-page .wasteheat-service,
+  body.wasteheat-page .wasteheat-contact-cta > div {
     padding-inline: 40px !important;
   }
 
-  .wasteheat-content section {
+  body.wasteheat-page .wasteheat-content section {
     flex-direction: column !important;
-    gap: 32px !important;
-    padding-block: 64px !important;
+    gap: 36px !important;
   }
 
-  .wasteheat-content section > div[style*="width:"],
-  .wasteheat-content section span[style*="width:"],
-  .wasteheat-content section > div > div[style*="width:"] {
+  body.wasteheat-page .wasteheat-content section > div {
+    order: 1 !important;
     width: 100% !important;
-    max-width: 100% !important;
+    padding-top: 0 !important;
   }
 
-  .wasteheat-how {
-    padding-block: 64px !important;
+  body.wasteheat-page .wasteheat-content section > img {
+    order: 2 !important;
+    width: min(520px, 100%) !important;
+    height: auto !important;
+    margin-inline: auto !important;
   }
 
-  .wasteheat-service {
-    padding-block: 72px !important;
-  }
-
-  .wasteheat-service > div > div:first-child {
-    width: 100% !important;
-    max-width: 640px;
-    margin-inline: auto;
-    text-align: center;
-  }
-
-  .service-timeline {
-    gap: 16px !important;
-  }
-
-  .service-timeline > div::after {
-    display: none;
-  }
-
-  .service-timeline > div > div,
-  .service-timeline > div:nth-child(5) {
-    border: 1px solid #cbd5e1 !important;
-    border-radius: 24px !important;
-    background: rgba(255, 255, 255, 0.82);
-    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
-  }
-
-  /* Sector cards: 2-column grid on tablet */
-  .wasteheat-industries {
-    padding-block: 72px !important;
-  }
-
-  .wasteheat-industries > div > div[style*="gap: 20px"] {
+  /* Sector photos: 2-up grid on tablet. */
+  body.wasteheat-page .wasteheat-industries .sector-track {
     display: grid !important;
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 16px !important;
-    overflow: visible !important;
-    flex-wrap: wrap !important;
   }
 
-  .wasteheat-industries > div > div[style*="gap: 20px"] > img {
+  body.wasteheat-page .wasteheat-industries .sector-card {
     width: 100% !important;
-    height: auto !important;
+    max-width: none !important;
     aspect-ratio: 334 / 510;
-    object-fit: cover !important;
-    border-radius: 32px !important;
   }
 
-  .wasteheat-industries > img[style*="position: absolute"] {
-    width: 55vw !important;
-    opacity: 0.3;
+  /* Staggered timeline: Figma 68px teardrop cards, stacked. */
+  body.wasteheat-page .service-timeline {
+    gap: 12px !important;
+    background-image: none !important;
   }
 
-  .wasteheat-contact-cta > div {
-    padding-block: 72px !important;
+  body.wasteheat-page .service-timeline > div::after {
+    display: none !important;
   }
 
-  .wasteheat-contact-cta > div > div:last-child {
-    flex-direction: row !important;
-    flex-wrap: wrap;
-    gap: 24px !important;
+  body.wasteheat-page .service-timeline > div:nth-child(1) > div,
+  body.wasteheat-page .service-timeline > div:nth-child(n + 2):nth-child(-n + 4) > div,
+  body.wasteheat-page .service-timeline > div:nth-child(5) {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 28px 24px !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 68px !important;
+    background: #ffffff !important;
   }
 
-  .wasteheat-contact-cta > div > div:last-child > div,
-  .wasteheat-contact-cta > div > div:last-child > img {
-    flex: 1 1 calc(50% - 12px) !important;
-    min-width: 280px;
+  body.wasteheat-page .wasteheat-industries > img[style*="position: absolute"] {
+    width: 60% !important;
+    height: auto !important;
+    opacity: 0.28;
   }
 
-  .client-results__row,
-  .client-results__third-row {
-    flex-direction: column !important;
-    padding-inline: 40px !important;
-  }
-
-  .wasteheat-logo-strip > div {
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-    gap: 20px !important;
-    padding-inline: 32px;
-  }
-
-  .wasteheat-logo-strip > div > img {
-    position: static !important;
-    max-width: min(160px, 22vw) !important;
-    margin-right: 0 !important;
-  }
-}
-
-/* ── Mobile & small tablet (≤900px) — Figma mobile frame (390px) ── */
-@media (max-width: 900px) {
-  .wasteheat-hero {
-    grid-template-columns: 1fr !important;
-    padding: 36px 20px 56px !important;
-    gap: 32px !important;
-    min-height: 0 !important;
-  }
-
-  .wasteheat-hero > div:first-child {
-    gap: 24px !important;
-    padding-left: 0 !important;
-    max-width: 100%;
-  }
-
-  .wasteheat-hero > div:first-child > div:first-child {
-    gap: 24px !important;
-  }
-
-  /* Hero title — Figma: 42px bold */
-  .wasteheat-hero span[style*="font-size: 48px"] {
-    font-size: clamp(32px, 10.8vw, 42px) !important;
-    line-height: 1.15 !important;
-    letter-spacing: -1px !important;
-  }
-
-  /* Hero lead — Figma: 18px medium, #475569 */
-  .wasteheat-hero span[style*="font-size: 20px"] {
-    font-size: 18px !important;
-    line-height: 1.4 !important;
-    color: #475569 !important;
-  }
-
-  .wasteheat-hero span[style*="font-size: 20px"] br {
-    display: none;
-  }
-
-  /* CTA button — full width on mobile */
-  .wasteheat-hero > div:first-child > div:last-child {
-    flex-direction: column !important;
+  /* Staggered timeline collapses to a single column. */
+  body.wasteheat-page .service-timeline > div {
     align-items: stretch !important;
-    gap: 18px !important;
-    width: 100%;
   }
 
-  .wasteheat-hero > div:first-child > div:last-child > div {
-    width: 100% !important;
-    justify-content: center !important;
-  }
-
-  .wasteheat-hero > div:first-child > div:last-child button,
-  .wasteheat-hero > div:first-child > div:last-child > div[style*="background: #1212ff"],
-  .wasteheat-hero > div:first-child > div:last-child > div[style*="background:#1212ff"] {
-    width: 100% !important;
-    min-height: 64px !important;
-    justify-content: center !important;
-    border-radius: 32px !important;
-    font-size: 21px !important;
-  }
-
-  .wasteheat-hero-visual {
+  body.wasteheat-page .service-timeline > div > div {
     width: 100% !important;
     margin: 0 !important;
   }
 
-  .wasteheat-hero-art {
+  body.wasteheat-page .client-results {
+    padding-bottom: 0 !important;
+  }
+
+  body.wasteheat-page .client-results__third {
+    position: static !important;
+    padding-top: 48px !important;
+  }
+
+  body.wasteheat-page .client-results__row,
+  body.wasteheat-page .client-results__third-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 40px !important;
+    gap: 28px !important;
+  }
+
+  body.wasteheat-page .client-results__row > div,
+  body.wasteheat-page .client-results__third-row > div {
     width: 100% !important;
-    aspect-ratio: 350 / 311;
+    margin: 0 !important;
+    flex: none !important;
+  }
+
+  body.wasteheat-page .wasteheat-contact-cta > div > div:last-child {
+    flex-direction: column !important;
+    padding-inline: 0 !important;
+    gap: 24px !important;
+  }
+
+  body.wasteheat-page .wasteheat-contact-cta > div > div:last-child > div,
+  body.wasteheat-page .wasteheat-contact-cta > div > div:last-child > img {
+    width: 100% !important;
+    flex: none !important;
+    height: auto !important;
+  }
+
+  body.wasteheat-page .wasteheat-logo-strip > div {
+    justify-content: flex-start !important;
+    width: max-content !important;
+    min-width: 100%;
+    gap: 24px !important;
+    padding-inline: 40px !important;
+  }
+
+  body.wasteheat-page .wasteheat-logo-strip {
+    overflow-x: auto !important;
+  }
+
+  body.wasteheat-page .wasteheat-logo-strip > div > img {
+    position: static !important;
+    inset: auto !important;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    height: 56px !important;
+    margin: 0 !important;
+    align-self: center !important;
+  }
+}
+
+/* ============================================================
+   MOBILE + SMALL TABLET — up to 900px
+   Mirrors the Figma 390px frame.
+   ============================================================ */
+@media (max-width: 900px) {
+  /* ---- global guards ---- */
+  body.wasteheat-page [style*="width:"] {
+    max-width: 100% !important;
+  }
+
+  body.wasteheat-page [style*="margin-right:"],
+  body.wasteheat-page [style*="margin-left:"] {
+    margin-inline: 0 !important;
+  }
+
+  /* ---------- HERO ---------- */
+  body.wasteheat-page .wasteheat-hero {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 36px 20px 48px !important;
+    gap: 32px !important;
+    min-height: 0 !important;
+  }
+
+  body.wasteheat-page .wasteheat-hero > div:first-child {
+    max-width: 100% !important;
+    padding-left: 0 !important;
+    gap: 24px !important;
+  }
+
+  /* title + lead group */
+  body.wasteheat-page .wasteheat-hero > div:first-child > div:first-child {
+    gap: 24px !important;
+  }
+
+  /* Figma: 42px Bold, tracking -1px. Fixed <br> breaks are dropped. */
+  body.wasteheat-page .wasteheat-hero span[style*="font-size: 48px"] {
+    font-size: clamp(30px, 10.7vw, 42px) !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -1px !important;
+  }
+
+  body.wasteheat-page .wasteheat-hero span[style*="font-size: 48px"] br {
+    display: none !important;
+  }
+
+  /* Figma: 18px Medium #475569, line-height 1.4 */
+  body.wasteheat-page .wasteheat-hero span[style*="font-size: 20px"] {
+    font-size: 18px !important;
+    font-weight: 500 !important;
+    line-height: 1.4 !important;
+    color: #475569 !important;
+  }
+
+  body.wasteheat-page .wasteheat-hero span[style*="font-size: 20px"] br {
+    display: none !important;
+  }
+
+  /* Figma: full-width button, note centred underneath, 18px apart. */
+  body.wasteheat-page .wasteheat-hero > div:first-child > div:last-child {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 18px !important;
+    width: 100% !important;
+  }
+
+  body.wasteheat-page .wasteheat-hero > div:first-child > div:last-child > div {
+    width: 100% !important;
+    flex-shrink: 1 !important;
+    justify-content: center !important;
+    min-height: 64px !important;
+    border-radius: 32px !important;
+    padding: 16px 24px !important;
+  }
+
+  body.wasteheat-page .wasteheat-hero > div:first-child > div:last-child > div span {
+    font-size: 21px !important;
+    font-weight: 600 !important;
+  }
+
+  body.wasteheat-page .wasteheat-hero > div:first-child > div:last-child > span {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+  }
+
+  /* Hero visual stacks: artwork first, then the metric cards as plain
+     full-width rows. Absolute offsets and transform scaling are what made
+     the cards drift, so both are removed. */
+  body.wasteheat-page .wasteheat-hero-visual {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  body.wasteheat-page .wasteheat-hero-visual > div:first-child {
+    width: 100% !important;
+    padding-top: 0 !important;
+    margin: 0 !important;
+  }
+
+  body.wasteheat-page .wasteheat-hero-art {
+    position: relative !important;
+    display: flex !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    min-height: 0 !important;
+    aspect-ratio: 350 / 260;
+    padding: 14px !important;
+    border-radius: 24px;
+    background-position: center !important;
     background-size: cover !important;
+    overflow: hidden;
   }
 
-  .wasteheat-hero-art .wasteheat-metric-savings,
-  .wasteheat-metric {
-    transform: scale(0.78);
+  body.wasteheat-page .wasteheat-metric {
+    position: static !important;
+    inset: auto !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    transform: none !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
   }
 
-  .wasteheat-hero-art .wasteheat-metric-savings {
-    transform-origin: left top;
-    top: 6% !important;
-    left: 0 !important;
+  body.wasteheat-page .wasteheat-hero-art .wasteheat-metric-savings {
+    width: min(257px, 88%) !important;
   }
 
-  .wasteheat-metric {
-    width: min(230px, 72vw) !important;
-  }
-
-  /* Logo strip — horizontal scroll */
-  .wasteheat-logo-strip {
+  /* ---------- LOGO STRIP ---------- */
+  body.wasteheat-page .wasteheat-logo-strip {
     overflow-x: auto !important;
     -webkit-overflow-scrolling: touch;
     padding-block: 24px !important;
+    scrollbar-width: none;
   }
 
-  .wasteheat-logo-strip > div {
-    display: flex !important;
+  body.wasteheat-page .wasteheat-logo-strip::-webkit-scrollbar {
+    display: none;
+  }
+
+  body.wasteheat-page .wasteheat-logo-strip > div {
+    justify-content: flex-start !important;
+    align-items: center !important;
     flex-wrap: nowrap !important;
-    gap: 22px !important;
-    padding-inline: 20px !important;
     width: max-content !important;
     min-width: 100%;
-    justify-content: flex-start !important;
+    gap: 22px !important;
+    padding: 0 16px !important;
   }
 
-  .wasteheat-logo-strip > div > img {
+  body.wasteheat-page .wasteheat-logo-strip > div > img {
     position: static !important;
+    inset: auto !important;
     flex: 0 0 auto !important;
     width: auto !important;
+    height: 48px !important;
     max-width: none !important;
-    max-height: 56px !important;
-    margin-right: 0 !important;
+    margin: 0 !important;
+    align-self: center !important;
+    object-fit: contain !important;
   }
 
-  /* Content sections — Figma: 16px padding */
-  .wasteheat-content section,
-  .wasteheat-how,
-  .wasteheat-industries,
-  .wasteheat-service,
-  .wasteheat-contact-cta > div {
-    padding-inline: 16px !important;
-  }
-
-  .wasteheat-content section {
-    padding-block: 45px !important;
+  /* ---------- ALTERNATING CONTENT SECTIONS ---------- */
+  /* Figma stacks copy above the photo in every section, so `order` pins the
+     text first regardless of the source order in the export. */
+  body.wasteheat-page .wasteheat-content section {
     flex-direction: column !important;
-    gap: 37px !important;
+    align-items: stretch !important;
+    justify-content: flex-start !important;
+    padding: 45px 16px !important;
+    gap: 24px !important;
   }
 
-  /* Section eyebrow — Figma: 16px */
-  .wasteheat-content span[style*="font-size: 24px"],
-  .wasteheat-how span[style*="font-size: 24px"],
-  .wasteheat-industries span[style*="font-size: 24px"] {
-    font-size: 16px !important;
-    line-height: 1.5 !important;
+  body.wasteheat-page .wasteheat-content section > div {
+    order: 1 !important;
+    width: 100% !important;
+    flex-shrink: 1 !important;
+    align-items: flex-start !important;
+    padding-top: 0 !important;
   }
 
-  /* Section title — Figma: ~34px extrabold */
-  .reference-section-title,
-  .wasteheat-content span[style*="font-size: 48px"],
-  .wasteheat-how span[style*="font-size: 48px"],
-  .wasteheat-industries span[style*="font-size: 48px"],
-  .wasteheat-contact-cta span[style*="font-size: 48px"] {
-    font-size: clamp(28px, 8.6vw, 34px) !important;
-    line-height: 1.15 !important;
-    letter-spacing: -0.5px !important;
-    white-space: normal !important;
+  body.wasteheat-page .wasteheat-content section > div > div {
+    width: 100% !important;
+    gap: 16px !important;
   }
 
-  /* Section body — Figma: 16px */
-  .wasteheat-content span[style*="font-size: 20px"],
-  .wasteheat-how span[style*="font-size: 20px"] {
-    font-size: 16px !important;
-    line-height: 1.5 !important;
-  }
-
-  .wasteheat-content section img {
+  body.wasteheat-page .wasteheat-content section > img {
+    order: 2 !important;
     width: 100% !important;
     max-width: 350px !important;
     height: auto !important;
     max-height: none !important;
-    margin-inline: auto;
+    margin-inline: auto !important;
     object-fit: cover !important;
   }
 
-  .wasteheat-how {
-    padding-block: 45px !important;
+  /* ---------- SHARED TYPOGRAPHY ---------- */
+  /* eyebrow — Figma 16px Medium #475569 */
+  body.wasteheat-page .wasteheat-content span[style*="font-size: 24px"],
+  body.wasteheat-page .wasteheat-how span[style*="font-size: 24px"],
+  body.wasteheat-page .wasteheat-industries span[style*="font-size: 24px"],
+  body.wasteheat-page .wasteheat-service span[style*="font-size: 24px"] {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
   }
 
-  .wasteheat-how > div:first-child {
-    gap: 22px !important;
-  }
-
-  .wasteheat-how-flow {
-    flex-wrap: wrap !important;
-    justify-content: flex-start !important;
-    gap: 8px !important;
-    text-align: left !important;
-  }
-
-  .wasteheat-how-flow > img {
-    width: 18px !important;
-    height: 18px !important;
+  /* section title — Figma 32px ExtraBold, line-height 1.15 */
+  body.wasteheat-page .reference-section-title,
+  body.wasteheat-page span[style*="font-size: 48px"] {
+    font-size: clamp(25px, 8.2vw, 32px) !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.4px !important;
+    white-space: normal !important;
     margin-right: 0 !important;
   }
 
-  /* CPE / service steps — Figma: vertical cards */
-  .wasteheat-service {
-    padding-block: 48px !important;
-  }
-
-  .wasteheat-service > div {
-    gap: 32px !important;
-  }
-
-  .wasteheat-service > div > div:first-child {
-    width: 100% !important;
-    padding-inline: 0 !important;
-    text-align: left !important;
-  }
-
-  .service-timeline {
-    flex-direction: column !important;
-    gap: 32px !important;
-    padding: 0 !important;
-    background: transparent !important;
-  }
-
-  .service-timeline > div {
-    width: 100% !important;
-    align-items: stretch !important;
-  }
-
-  .service-timeline > div::after {
+  body.wasteheat-page .reference-section-title br,
+  body.wasteheat-page span[style*="font-size: 48px"] br {
     display: none !important;
   }
 
-  .service-timeline > div > div,
-  .service-timeline > div:nth-child(5) {
+  /* ---------- "COMMENT ÇA MARCHE" ---------- */
+  body.wasteheat-page .wasteheat-how {
+    padding: 45px 16px !important;
+    gap: 24px !important;
+  }
+
+  /* Figma centres this header block (eyebrow, title and the flow row). */
+  body.wasteheat-page .wasteheat-how > div:first-child {
+    gap: 10px !important;
+    text-align: center !important;
+  }
+
+  body.wasteheat-page .wasteheat-how-flow {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px 11px !important;
+  }
+
+  body.wasteheat-page .wasteheat-how-flow > span,
+  body.wasteheat-page .wasteheat-how-flow > img {
+    margin: 0 !important;
+  }
+
+  body.wasteheat-page .wasteheat-how-flow > span {
+    font-size: clamp(15px, 4.6vw, 20px) !important;
+    white-space: nowrap !important;
+  }
+
+  body.wasteheat-page .wasteheat-how-flow > img {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  body.wasteheat-page .wasteheat-how > img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* ---------- SECTEURS ---------- */
+  body.wasteheat-page .wasteheat-industries {
+    padding: 48px 16px !important;
+    overflow: hidden !important;
+  }
+
+  /* header block: Figma drops the 44px inset and tightens the gap */
+  body.wasteheat-page .wasteheat-industries > div > div:first-child {
+    padding-top: 0 !important;
+    margin-bottom: 16px !important;
+    gap: 8px !important;
+  }
+
+  body.wasteheat-page .wasteheat-industries > div > div[style*="height: 1px"] {
+    margin-bottom: 16px !important;
+  }
+
+  /* Figma: one horizontal track, 334x510 cards, 12px gutter, name on the photo. */
+  body.wasteheat-page .wasteheat-industries .sector-track {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    width: calc(100% + 32px) !important;
+    margin: 0 -16px 12px !important;
+    padding: 0 16px 4px !important;
+    scrollbar-width: none;
+  }
+
+  body.wasteheat-page .wasteheat-industries .sector-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  body.wasteheat-page .wasteheat-industries .sector-card {
+    flex: 0 0 auto !important;
+    width: min(334px, 84vw) !important;
+    max-width: min(334px, 84vw) !important;
+    height: auto !important;
+    aspect-ratio: 334 / 510;
+    scroll-snap-align: start;
+  }
+
+  body.wasteheat-page .wasteheat-industries > img[style*="position: absolute"] {
+    width: 100% !important;
+    height: auto !important;
+    opacity: 0.22;
+  }
+
+  /* ---------- CLIENT RESULTS ---------- */
+  /* The desktop build reserves 651px of padding for an absolutely placed
+     block; on mobile both become normal flow items. */
+  body.wasteheat-page .client-results {
+    display: flex !important;
+    flex-direction: column !important;
+    padding-bottom: 0 !important;
+    background-size: cover !important;
+  }
+
+  body.wasteheat-page .client-results__content {
+    order: 1 !important;
+  }
+
+  body.wasteheat-page .client-results__third {
+    position: static !important;
+    inset: auto !important;
+    order: 2 !important;
+    padding-top: 8px !important;
+  }
+
+  body.wasteheat-page .client-results__row,
+  body.wasteheat-page .client-results__third-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    width: 100% !important;
+    padding: 24px 16px !important;
+    margin: 0 !important;
+    gap: 24px !important;
+  }
+
+  body.wasteheat-page .client-results__row > div,
+  body.wasteheat-page .client-results__third-row > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: none !important;
+    margin: 0 !important;
+    gap: 20px !important;
+  }
+
+  body.wasteheat-page .client-results__row > div > div,
+  body.wasteheat-page .client-results__third-row > div > div {
+    width: 100% !important;
+    padding: 24px 20px !important;
+    border-radius: 28px !important;
+  }
+
+  body.wasteheat-page .client-results__row img,
+  body.wasteheat-page .client-results__third-row img {
+    max-width: 100% !important;
+  }
+
+  body.wasteheat-page .client-results span[style*="font-size: 33px"] {
+    font-size: 24px !important;
+    line-height: 1.2 !important;
+  }
+
+  body.wasteheat-page .client-results button {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  body.wasteheat-page .client-results button > div {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  body.wasteheat-page .client-results [style*="padding-left: 57px"] {
+    padding: 0 16px 28px !important;
+  }
+
+  /* Result photo cards.
+     The desktop build pins the metric pills with px offsets measured against a
+     ~1450px wide card, so at phone width they spill outside the frame. Here the
+     photo becomes a plain backdrop and the pills flow in a bottom-aligned
+     stack, which keeps every pill inside the rounded card. */
+  body.wasteheat-page .client-results div:has(> .client-result-photo) {
+    position: relative !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important;
+    align-items: stretch !important;
+    aspect-ratio: auto !important;
+    height: auto !important;
+    min-height: 320px !important;
+    padding: 16px !important;
+    border: 0 !important;
+    border-radius: 28px !important;
+    overflow: hidden !important;
+  }
+
+  body.wasteheat-page .client-results .client-result-photo {
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 0 !important;
+    object-fit: cover !important;
+  }
+
+  body.wasteheat-page .client-results .client-result-photo + div {
+    position: relative !important;
+    inset: auto !important;
+    z-index: 1 !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    gap: 10px !important;
+  }
+
+  body.wasteheat-page .client-results .client-result-photo + div > div {
+    align-self: flex-start !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 12px 14px !important;
+    gap: 10px !important;
+  }
+
+  /* ---------- SERVICE / CPE STEPS ---------- */
+  /* Figma 2597:32194 — stacked 68px-radius cards, 24/28 padding, 12px gap. */
+  body.wasteheat-page .wasteheat-service {
+    padding: 48px 16px !important;
+    background: #ffffff !important;
+  }
+
+  body.wasteheat-page .wasteheat-service > div {
+    gap: 64px !important;
+  }
+
+  body.wasteheat-page .wasteheat-service > div > div:first-child {
+    width: 100% !important;
+    padding-inline: 0 !important;
+    gap: 9px !important;
+    text-align: center !important;
+  }
+
+  body.wasteheat-page .wasteheat-service .reference-section-title {
+    font-size: 36px !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+  }
+
+  body.wasteheat-page .service-timeline {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    background-image: none !important;
+  }
+
+  body.wasteheat-page .service-timeline > div {
+    width: 100% !important;
+    align-items: stretch !important;
+    padding: 0 !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+  }
+
+  body.wasteheat-page .service-timeline > div::after {
+    display: none !important;
+  }
+
+  /* The 68px radius is the Figma card shape — same on all 5 steps, including
+     the last two which the page CSS otherwise styles with a different corner. */
+  body.wasteheat-page .service-timeline > div:nth-child(1) > div,
+  body.wasteheat-page .service-timeline > div:nth-child(n + 2):nth-child(-n + 4) > div,
+  body.wasteheat-page .service-timeline > div:not(:nth-child(5)) > div,
+  body.wasteheat-page .service-timeline > div:nth-child(5) {
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
-    gap: 16px !important;
-    padding: 12px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 28px 24px !important;
+    border: 1px solid #e2e8f0 !important;
+    border-left: 1px solid #e2e8f0 !important;
+    border-right: 1px solid #e2e8f0 !important;
+    border-bottom: 1px solid #e2e8f0 !important;
+    border-radius: 68px !important;
+    border-bottom-left-radius: 68px !important;
+    border-bottom-right-radius: 68px !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+  }
+
+  body.wasteheat-page .service-timeline > div:not(:nth-child(5)) > div > div,
+  body.wasteheat-page .service-timeline > div:nth-child(5) > div {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
     border: 0 !important;
     border-radius: 0 !important;
     background: transparent !important;
     box-shadow: none !important;
   }
 
-  .service-timeline span[style*="font-size: 24px"] {
-    font-size: 20px !important;
-    line-height: 1.5 !important;
-  }
-
-  .service-timeline span[style*="font-size: 16px"],
-  .service-timeline span[style*="font-size: 17px"] {
-    font-size: 16px !important;
-    line-height: 1.5 !important;
-  }
-
-  /* Sector cards — Figma: horizontal scroll, 334px cards */
-  .wasteheat-industries {
-    padding-block: 48px !important;
-    overflow: hidden;
-  }
-
-  .wasteheat-industries > div > div[style*="gap: 20px"] {
+  body.wasteheat-page .service-timeline div:has(> img + span) {
     display: flex !important;
+    flex-direction: row !important;
     flex-wrap: nowrap !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 0 14px !important;
+    padding: 0 !important;
     gap: 12px !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-    padding-bottom: 8px;
-    margin-inline: -16px;
-    padding-inline: 16px;
-    width: calc(100% + 32px) !important;
   }
 
-  .wasteheat-industries > div > div[style*="gap: 20px"] > img {
-    flex: 0 0 min(334px, 85vw) !important;
-    width: min(334px, 85vw) !important;
+  body.wasteheat-page .service-timeline div:has(> img + span) > img {
+    flex: 0 0 auto !important;
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  body.wasteheat-page .service-timeline span[style*="font-size: 24px"] {
+    font-size: 24px !important;
+    font-weight: 700 !important;
+    line-height: 24px !important;
+    letter-spacing: -0.32px !important;
+  }
+
+  body.wasteheat-page .service-timeline span[style*="font-size: 15px"] {
+    display: block !important;
+    font-size: 15px !important;
+    line-height: 1.6 !important;
+    color: #0f172a !important;
+    margin: 0 0 4px !important;
+  }
+
+  /* ---------- CONTACT / AUDIT CTA ---------- */
+  /* The standalone audit banner is a 1512x564 SVG wrapping a single raster, so
+     its headline cannot reflow: scaled to fit it renders at ~12px, and cropped
+     to stay legible it loses the copy at both edges. It is dropped on phones —
+     the "Contactez-nous" card directly below carries the same call to action
+     as live text with a working button. */
+  body.wasteheat-page .wasteheat-contact-cta > img {
+    display: none !important;
+  }
+
+  body.wasteheat-page .wasteheat-contact-cta > div {
+    padding: 48px 16px !important;
+  }
+
+  /* decorative backdrop behind the contact card */
+  body.wasteheat-page .wasteheat-contact-cta > div > div[style*="position: absolute"] img {
+    width: 100% !important;
     height: auto !important;
-    aspect-ratio: 334 / 510 !important;
-    scroll-snap-align: start;
-    border-radius: 32px !important;
-    object-fit: cover !important;
   }
 
-  .wasteheat-industries > img[style*="position: absolute"] {
-    width: 80vw !important;
-    opacity: 0.25;
-  }
-
-  /* Client results */
-  .client-results {
-    display: flex !important;
+  body.wasteheat-page .wasteheat-contact-cta > div > div:last-child {
     flex-direction: column !important;
-  }
-
-  .client-results__content {
-    order: 1;
-  }
-
-  .client-results__third {
-    position: static !important;
-    order: 2;
-    padding-top: 48px !important;
-  }
-
-  .client-results__row,
-  .client-results__third-row {
-    flex-direction: column !important;
-    padding: 28px 16px !important;
-    gap: 24px !important;
-    width: 100% !important;
-    margin: 0 !important;
-  }
-
-  .client-results__row > div,
-  .client-results__third-row > div {
-    width: 100% !important;
-    max-width: 100% !important;
-    flex: none !important;
-  }
-
-  .client-results span[style*="font-size: 33px"] {
-    font-size: 25px !important;
-  }
-
-  .client-results [style*="padding-left: 57px"] {
-    padding-inline: 16px !important;
-    text-align: center;
-  }
-
-  /* Contact CTA */
-  .wasteheat-contact-cta > img {
-    height: clamp(220px, 45vw, 320px) !important;
-    object-fit: cover !important;
-  }
-
-  .wasteheat-contact-cta > div {
-    padding-block: 48px !important;
-  }
-
-  .wasteheat-contact-cta > div > div:last-child {
-    flex-direction: column !important;
+    align-items: stretch !important;
     padding-inline: 0 !important;
     gap: 20px !important;
   }
 
-  .wasteheat-contact-cta > div > div:last-child > div,
-  .wasteheat-contact-cta > div > div:last-child > img {
+  body.wasteheat-page .wasteheat-contact-cta > div > div:last-child > div,
+  body.wasteheat-page .wasteheat-contact-cta > div > div:last-child > img {
     width: 100% !important;
     flex: none !important;
   }
 
-  .wasteheat-contact-cta > div > div:last-child > div > div {
-    padding: 28px 24px !important;
-    border-radius: 30px !important;
+  body.wasteheat-page .wasteheat-contact-cta > div > div:last-child > img {
+    height: auto !important;
+    aspect-ratio: 1.3 / 1;
+    object-fit: cover !important;
+    border-radius: 64px !important;
   }
 
-  .wasteheat-contact-cta span[style*="width:"] {
+  body.wasteheat-page .wasteheat-contact-cta > div > div:last-child > div {
+    padding: 28px 20px !important;
+    border-radius: 64px !important;
+    background-size: cover !important;
+  }
+
+  body.wasteheat-page .wasteheat-contact-cta > div > div:last-child > div > div {
     width: 100% !important;
+    gap: 20px !important;
   }
 
-  .wasteheat-contact-cta button {
-    width: 100%;
-    justify-content: center;
+  /* the small artwork tucked into the card corner */
+  body.wasteheat-page .wasteheat-contact-cta > div > div:last-child > div > img {
+    width: 46% !important;
+    height: auto !important;
+    opacity: 0.55;
   }
 
-  .wasteheat-contact-cta span[style*="font-size: 24px"],
-  .wasteheat-contact-cta span[style*="font-size: 22px"] {
+  body.wasteheat-page .wasteheat-contact-cta span[style*="font-size: 24px"] {
+    font-size: 17px !important;
+  }
+
+  body.wasteheat-page .wasteheat-contact-cta span[style*="font-size: 22px"] {
+    font-size: 16px !important;
+    line-height: 1.6 !important;
+  }
+
+  body.wasteheat-page .wasteheat-contact-cta button {
+    width: 100% !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    padding: 16px 18px !important;
+    border-radius: 32px !important;
+  }
+
+  body.wasteheat-page .wasteheat-contact-cta button span {
+    font-size: 16px !important;
+    white-space: nowrap !important;
+  }
+
+  body.wasteheat-page .wasteheat-contact-cta button img {
+    flex: 0 0 auto !important;
+  }
+}
+
+/* ============================================================
+   SMALL PHONES — up to 480px
+   ============================================================ */
+@media (max-width: 480px) {
+  body.wasteheat-page .wasteheat-hero {
+    padding: 32px 16px 44px !important;
+  }
+
+  /* At 360px the 21px label plus the arrow overruns the pill, so the label
+     steps down and the arrow is pinned against shrinking. */
+  body.wasteheat-page .wasteheat-hero > div:first-child > div:last-child > div {
+    padding: 16px 20px !important;
+    gap: 10px !important;
+  }
+
+  body.wasteheat-page .wasteheat-hero > div:first-child > div:last-child > div span {
     font-size: 18px !important;
   }
-}
 
-/* ── Small mobile (≤420px) ── */
-@media (max-width: 420px) {
-  .wasteheat-hero {
-    padding-inline: 16px !important;
+  body.wasteheat-page .wasteheat-hero > div:first-child > div:last-child > div img {
+    flex: 0 0 auto !important;
   }
 
-  .wasteheat-hero span[style*="font-size: 48px"] {
-    font-size: clamp(28px, 9.5vw, 36px) !important;
+  body.wasteheat-page .wasteheat-logo-strip > div > img {
+    height: 40px !important;
   }
 
-  .wasteheat-hero-art .wasteheat-metric-savings,
-  .wasteheat-metric {
-    transform: scale(0.62) !important;
+  body.wasteheat-page .wasteheat-industries .sector-card {
+    width: 84vw !important;
+    max-width: 84vw !important;
   }
 
-  .wasteheat-metric-roi {
-    right: -20px !important;
+  body.wasteheat-page .client-results__row > div > div,
+  body.wasteheat-page .client-results__third-row > div > div {
+    padding: 20px 16px !important;
   }
 
-  .wasteheat-metric-capex {
-    left: 6% !important;
-  }
-
-  .wasteheat-content section,
-  .wasteheat-how,
-  .wasteheat-industries,
-  .wasteheat-service,
-  .wasteheat-contact-cta > div {
-    padding-inline: 16px !important;
+  body.wasteheat-page .wasteheat-contact-cta > div > div:last-child > div {
+    padding: 24px 16px !important;
   }
 }
 
-/* Hide legacy browser chrome mockup on all viewports */
-.wasteheat-legacy-header {
-  display: none !important;
-}
-
-/* Prevent horizontal overflow from inline fixed widths */
-.wasteheat-page [style*="width: 1216px"],
-.wasteheat-page [style*="width: 1280px"],
-.wasteheat-page [style*="width: 1384px"] {
-  max-width: 100% !important;
-}
-
-@media (max-width: 1199.98px) {
-  .wasteheat-page [style*="padding: 96px 148px"],
-  .wasteheat-page [style*="padding:96px 148px"] {
-    padding-inline: clamp(16px, 5vw, 48px) !important;
-  }
-
-  .wasteheat-page [style*="padding: 96px 64px"],
-  .wasteheat-page [style*="padding:96px 64px"] {
-    padding-inline: clamp(16px, 4vw, 40px) !important;
-  }
-
-  .wasteheat-page [style*="margin-left: 148px"],
-  .wasteheat-page [style*="margin-left:148px"] {
-    margin-left: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
+/* ============================================================
+   Motion preferences
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  body.wasteheat-page * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
