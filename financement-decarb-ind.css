@@ -1,5 +1,21 @@
 /* 33-financement-decarb-ind — deltas from the shared CEE layout (financement-cee.css) */
 
+/* Hero metric cards — Figma 2591:13324 */
+.di-page .cee-metric--period {
+  width: min(257px, 48%);
+}
+
+.di-page .cee-metric--cumul {
+  width: min(253px, 46%);
+}
+
+.di-page .cee-metric--cpe {
+  width: min(276px, 50%);
+  top: auto;
+  bottom: 0;
+  left: 26%;
+}
+
 .di-page .orc-problem .detail-title {
   font-size: 42px;
   letter-spacing: -1.5px;
@@ -24,4 +40,16 @@
 
 .di-page .cee-contact.financing-contact .solutions-contact-card {
   background: transparent url("assets/images/financement-decarb-ind/contact-card.svg") center / 100% 100% no-repeat;
+}
+
+@media (max-width: 768px) {
+  .di-page .cee-metric--period,
+  .di-page .cee-metric--cumul,
+  .di-page .cee-metric--cpe {
+    width: 100%;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+  }
 }
