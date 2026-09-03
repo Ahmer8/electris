@@ -901,6 +901,114 @@
 .orc-bubble--green { background: #16a34a; }
 .orc-bubble--purple { background: #9e78dc; }
 
+/* PAC results — Figma 2591:9049 */
+.page--pac .orc-case {
+  max-width: 1216px;
+  width: 100%;
+  gap: 0;
+}
+
+.page--pac .orc-case--alt {
+  gap: 55px;
+}
+
+.page--pac .orc-case__copy {
+  width: 490px;
+  max-width: 490px;
+  flex: 0 0 490px;
+}
+
+.page--pac .orc-case__card,
+.page--pac .orc-case__cta {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.page--pac .orc-case:first-of-type .orc-case__card {
+  min-height: 325px;
+}
+
+/* Case 1 image — Figma 2591:9308 */
+.page--pac .orc-case__visual {
+  flex: 0 0 724px;
+  width: 724px;
+  max-width: 724px;
+  min-height: 461px;
+}
+
+/* Case 2 image — Figma 2591:9335 */
+.page--pac .orc-case--alt .orc-case__visual {
+  flex: 0 0 672px;
+  width: 672px;
+  max-width: 672px;
+  min-height: 459px;
+  height: 459px;
+}
+
+.page--pac .orc-case--alt .orc-case__visual > img {
+  width: 444px;
+  height: 450px;
+  right: -2px;
+  top: -5px;
+  object-fit: cover;
+}
+
+/* Stat pills — Figma 2591:9310 / 2591:9337 */
+.page--pac .orc-bubbles {
+  width: 368px;
+  gap: 48px;
+}
+
+.page--pac .orc-bubbles--right {
+  right: 38px;
+  top: 70px;
+}
+
+.page--pac .orc-bubbles--left {
+  left: 18px;
+  top: 46px;
+}
+
+.page--pac .orc-bubble {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.page--pac .orc-bubbles--right .orc-bubble--orange {
+  width: 302px;
+  margin-left: 28px;
+}
+
+.page--pac .orc-bubbles--right .orc-bubble--cyan {
+  width: 256px;
+  margin-left: 48px;
+}
+
+.page--pac .orc-bubbles--right .orc-bubble--violet {
+  width: 368px;
+  margin-left: 0;
+}
+
+.page--pac .orc-bubbles--left .orc-bubble--blue {
+  width: 254px;
+  margin-left: 28px;
+}
+
+.page--pac .orc-bubbles--left .orc-bubble--green {
+  width: 229px;
+  margin-left: 48px;
+}
+
+.page--pac .orc-bubbles--left .orc-bubble--purple {
+  width: 370px;
+  margin-left: 0;
+}
+
+.page--pac .orc-bubble--violet p,
+.page--pac .orc-bubble--purple p {
+  max-width: 280px;
+}
+
 @media (max-width: 1200px) {
   .page--orc .hero--detail,
   .page--pac .hero--detail,
@@ -943,6 +1051,52 @@
   .orc-elig__media,
   .orc-problem .detail-split__image {
     width: 100%;
+  }
+
+  .page--pac .orc-case,
+  .page--pac .orc-case--alt {
+    gap: 24px;
+  }
+
+  .page--pac .orc-case__copy,
+  .page--pac .orc-case__visual,
+  .page--pac .orc-case--alt .orc-case__visual {
+    width: 100%;
+    max-width: 100%;
+    flex: none;
+    height: auto;
+    min-height: 0;
+  }
+
+  .page--pac .orc-case--alt .orc-case__visual > img {
+    width: 100%;
+    height: auto;
+    right: auto;
+    top: auto;
+    position: static;
+  }
+
+  .page--pac .orc-bubbles {
+    width: 100%;
+    gap: 16px;
+  }
+
+  .page--pac .orc-bubbles--right,
+  .page--pac .orc-bubbles--left {
+    right: auto;
+    left: auto;
+    top: auto;
+  }
+
+  .page--pac .orc-bubbles--right .orc-bubble--orange,
+  .page--pac .orc-bubbles--right .orc-bubble--cyan,
+  .page--pac .orc-bubbles--right .orc-bubble--violet,
+  .page--pac .orc-bubbles--left .orc-bubble--blue,
+  .page--pac .orc-bubbles--left .orc-bubble--green,
+  .page--pac .orc-bubbles--left .orc-bubble--purple {
+    width: 100%;
+    max-width: 368px;
+    margin-left: 0;
   }
 
   .orc-elig__header {
