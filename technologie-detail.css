@@ -1030,6 +1030,88 @@
   height: 24px;
 }
 
+/* PAC problem — Figma 2591:8772 */
+.page--pac .orc-problem {
+  padding: 96px 0;
+}
+
+.page--pac .orc-problem .detail-inner {
+  max-width: 1280px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.page--pac .orc-problem .detail-split {
+  align-items: center;
+  gap: 48px;
+  max-width: 1216px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.page--pac .orc-problem .detail-split__image {
+  width: 510px;
+  height: 518px;
+  flex-shrink: 0;
+  background: transparent;
+  border-radius: 0;
+  overflow: visible;
+}
+
+.page--pac .orc-problem .detail-split__image img {
+  width: 510px;
+  height: 518px;
+  object-fit: contain;
+  display: block;
+}
+
+.page--pac .orc-problem .detail-split__content {
+  flex: 1;
+  min-width: 0;
+  max-width: 658px;
+}
+
+.page--pac .orc-problem .detail-eyebrow {
+  margin: 0 0 12px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.page--pac .orc-problem .detail-title {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -2.3942px;
+  line-height: 1.1;
+  color: #000;
+}
+
+.page--pac .orc-problem .detail-desc {
+  margin: 16px 0 0;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.page--pac .orc-problem .detail-divider {
+  margin: 20px 0;
+  background: #e2e8f0;
+}
+
+.page--pac .orc-problem .orc-list {
+  gap: 18px;
+}
+
+.page--pac .orc-problem .orc-list li {
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.5;
+  color: #0f172a;
+}
+
 @media (max-width: 1200px) {
   .page--orc .hero--detail,
   .page--pac .hero--detail,
@@ -1072,6 +1154,12 @@
   .orc-elig__media,
   .orc-problem .detail-split__image {
     width: 100%;
+  }
+
+  .page--pac .orc-problem .detail-split__image,
+  .page--pac .orc-problem .detail-split__image img {
+    width: 100%;
+    height: auto;
   }
 
   .page--pac .orc-case,
