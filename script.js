@@ -195,3 +195,28 @@ if ("IntersectionObserver" in window) {
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
 }
+
+/* Secteurs ops gallery: tap-to-expand on touch devices */
+document.querySelectorAll(".warehouse-op-grid").forEach((grid) => {
+  const panels = [...grid.querySelectorAll(":scope > img, :scope > figure, :scope > a")];
+  if (!panels.length) return;
+
+  const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+
+  panels.forEach((panel) => {
+    panel.tabIndex = panel.tabIndex || 0;
+    panel.addEventListener("click", (event) => {
+      if (finePointer.matches) return;
+      if (panel.classList.contains("is-expanded")) return;
+      event.preventDefault();
+      panels.forEach((item) => item.classList.remove("is-expanded"));
+      panel.classList.add("is-expanded");
+    });
+  });
+
+  grid.addEventListener("mouseleave", () => {
+    if (!finePointer.matches) return;
+    panels.forEach((item) => item.classList.remove("is-expanded"));
+  });
+});
+

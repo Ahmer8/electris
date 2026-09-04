@@ -8,7 +8,7 @@
 }
 
 
-/* Homepage process — clean desktop implementation of the Figma artwork. */
+/* Homepage process â clean desktop implementation of the Figma artwork. */
 .process-section {
   overflow: hidden;
   width: 100%;
@@ -1232,7 +1232,7 @@ header {
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='854 259 510 380' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1293.2 299.819C1293.2 319.372 1309.05 335.222 1328.6 335.222C1348.15 335.222 1364 351.072 1364 370.624V596C1364 619.748 1344.75 639 1321 639H1021.17C997.417 639 978.165 619.748 978.165 596V573.499C978.165 549.751 958.913 530.499 935.165 530.499H897C873.252 530.499 854 511.247 854 487.499V302C854 278.252 873.252 259 897 259H1255.08C1276.13 259 1293.2 276.063 1293.2 297.111V299.819Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
 }
 
-/* Match the lighter, softer colour grading of the Figma café visual. */
+/* Match the lighter, softer colour grading of the Figma cafÃ© visual. */
 .reason-row:nth-of-type(2) .reason-img {
   filter: brightness(1.08) contrast(0.88) saturate(0.88);
 }
@@ -4963,7 +4963,7 @@ h3 {
   }
 }
 
-/* Homepage footer — client-supplied mobile composition. */
+/* Homepage footer â client-supplied mobile composition. */
 @media (max-width: 767px) {
   .footer-panel {
     width: 100vw !important;
@@ -6133,7 +6133,7 @@ h3 {
   }
 }
 
-/* Homepage process — client-supplied mobile composition. */
+/* Homepage process â client-supplied mobile composition. */
 @media (max-width: 767px) {
   #process.process-section {
     width: 100vw !important;
@@ -6277,7 +6277,7 @@ h3 {
   }
 }
 
-/* Mobile technologies — swipeable, snap-aligned card rail. */
+/* Mobile technologies â swipeable, snap-aligned card rail. */
 @media (max-width: 767px) {
   #tech {
     overflow: hidden;
@@ -6322,7 +6322,7 @@ h3 {
   }
 }
 
-/* Homepage solutions — client-supplied mobile gallery. */
+/* Homepage solutions â client-supplied mobile gallery. */
 @media (max-width: 767px) {
   #solutions.solutions {
     padding: 52px 14px 64px !important;
@@ -8178,7 +8178,7 @@ h3 {
   }
 }
 
-/* Tablet "Géopolitique" visual: preserve the asymmetric Figma silhouette instead
+/* Tablet "GÃ©opolitique" visual: preserve the asymmetric Figma silhouette instead
    of the generic rounded rectangle applied by the tablet layout pass. */
 @media (min-width: 768px) and (max-width: 1199.98px) {
   .why .reason-row:nth-of-type(2) .reason-img {
@@ -8807,5 +8807,108 @@ h3 {
 
   .warehouse-results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-card {
     min-height: 333.081px !important;
+  }
+}
+
+/* ============================================================
+   Secteurs ops gallery  Figma accordion hover expand
+   (node 2497:3803 / Opérations possibles image row)
+   ============================================================ */
+@media (hover: hover) and (pointer: fine) and (min-width: 1101px) {
+  .warehouse-op-grid {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    justify-content: center !important;
+    gap: 24px !important;
+    width: 100% !important;
+    max-width: 1216px !important;
+    height: 564px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    grid-template-columns: none !important;
+  }
+
+  .warehouse-op-grid > img,
+  .warehouse-op-grid > figure,
+  .warehouse-op-grid > a {
+    flex: 1 1 0 !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    height: 100% !important;
+    aspect-ratio: auto !important;
+    margin: 0 !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    object-fit: cover !important;
+    cursor: pointer;
+    transition:
+      flex 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      flex-grow 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 0.28s ease,
+      box-shadow 0.28s ease !important;
+  }
+
+  .warehouse-op-grid > figure img,
+  .warehouse-op-grid > a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+
+  /* When one panel is hovered / focused / active, shrink the others */
+  .warehouse-op-grid:has(> *:hover) > *:not(:hover),
+  .warehouse-op-grid:has(> *:focus-visible) > *:not(:focus-visible),
+  .warehouse-op-grid:has(> *.is-expanded) > *:not(.is-expanded) {
+    flex: 0.42 1 0 !important;
+    filter: brightness(0.92);
+  }
+
+  .warehouse-op-grid > *:hover,
+  .warehouse-op-grid > *:focus-visible,
+  .warehouse-op-grid > *.is-expanded {
+    flex: 2.85 1 0 !important;
+    z-index: 1;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.16);
+    filter: brightness(1.02);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .warehouse-op-grid > img,
+  .warehouse-op-grid > figure,
+  .warehouse-op-grid > a {
+    transition: none !important;
+  }
+}
+
+/* Touch / click expand (same proportions as hover accordion) */
+@media (min-width: 1101px) {
+  .warehouse-op-grid:has(> *.is-expanded) {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: stretch !important;
+    gap: 24px !important;
+    max-width: 1216px !important;
+    height: 564px !important;
+    grid-template-columns: none !important;
+  }
+
+  .warehouse-op-grid:has(> *.is-expanded) > * {
+    flex: 0.42 1 0 !important;
+    min-width: 0 !important;
+    height: 100% !important;
+    aspect-ratio: auto !important;
+    border-radius: 24px !important;
+    object-fit: cover !important;
+    transition: flex 0.7s cubic-bezier(0.22, 1, 0.36, 1) !important;
+  }
+
+  .warehouse-op-grid:has(> *.is-expanded) > *.is-expanded {
+    flex: 2.85 1 0 !important;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.16);
   }
 }
