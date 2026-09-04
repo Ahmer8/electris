@@ -6,6 +6,12 @@
    Loaded AFTER each page's inline <style> block so these rules
    win over the per-page media queries.
 
+   Breakpoints
+     desktop  ≥1200px   3-col sectors, side-by-side results
+     tablet   901–1199  stacked hero, 2-col sectors
+     mobile   ≤900      Figma 390 layout (hero stack, swipe sectors)
+     phones   ≤480      tighter type / padding
+
    Figma mobile tokens
      h-padding      16px  (hero 20px)
      eyebrow        16px  Medium   #475569
@@ -225,6 +231,38 @@ body.wasteheat-page .wasteheat-industries .sector-card figcaption {
     width: 100% !important;
     margin: 0 !important;
     flex: none !important;
+  }
+
+  /* HP / destrat / F-gas result rows (shared Figma card layout) */
+  body.wasteheat-page .hp-results-inner,
+  body.wasteheat-page .cpe-results-inner {
+    gap: 56px !important;
+    padding-inline: 0 !important;
+  }
+
+  body.wasteheat-page .hp-result-row,
+  body.wasteheat-page .hp-result-row--reverse,
+  body.wasteheat-page .cpe-result-row,
+  body.wasteheat-page .cpe-result-row--reverse {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 28px !important;
+  }
+
+  body.wasteheat-page .hp-result-copy,
+  body.wasteheat-page .hp-result-visual,
+  body.wasteheat-page .cpe-result-copy,
+  body.wasteheat-page .cpe-result-visual {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  body.wasteheat-page .fgas-compare {
+    padding: 64px 40px !important;
+  }
+
+  body.wasteheat-page .fgas-compare-inner {
+    gap: 32px !important;
   }
 
   body.wasteheat-page .wasteheat-contact-cta > div > div:last-child {
@@ -614,29 +652,37 @@ body.wasteheat-page .wasteheat-industries .sector-card figcaption {
   }
 
   body.wasteheat-page .cpe-result-row,
-  body.wasteheat-page .cpe-result-row--reverse {
+  body.wasteheat-page .cpe-result-row--reverse,
+  body.wasteheat-page .hp-result-row,
+  body.wasteheat-page .hp-result-row--reverse {
     flex-direction: column !important;
     align-items: stretch !important;
     gap: 24px !important;
   }
 
   body.wasteheat-page .cpe-result-copy,
-  body.wasteheat-page .cpe-result-visual {
+  body.wasteheat-page .cpe-result-visual,
+  body.wasteheat-page .hp-result-copy,
+  body.wasteheat-page .hp-result-visual {
     width: 100% !important;
+    max-width: 100% !important;
   }
 
-  body.wasteheat-page .cpe-result-copy > div:first-child {
+  body.wasteheat-page .cpe-result-copy > div:first-child,
+  body.wasteheat-page .hp-result-copy > div:first-child {
     min-height: 0 !important;
     padding: 24px 20px !important;
   }
 
-  body.wasteheat-page .cpe-result-visual {
+  body.wasteheat-page .cpe-result-visual,
+  body.wasteheat-page .hp-result-visual {
     min-height: 0 !important;
     display: flex !important;
     flex-direction: column !important;
   }
 
-  body.wasteheat-page .cpe-result-visual > .client-result-photo {
+  body.wasteheat-page .cpe-result-visual > .client-result-photo:not(.cpe-result-card-shot):not(.hp-result-card-shot),
+  body.wasteheat-page .hp-result-visual > .client-result-photo:not(.hp-result-card-shot) {
     position: relative !important;
     inset: auto !important;
     left: auto !important;
@@ -646,9 +692,50 @@ body.wasteheat-page .wasteheat-industries .sector-card figcaption {
     object-fit: cover !important;
   }
 
-  body.wasteheat-page .cpe-result-visual--figma > .cpe-result-card-shot {
+  body.wasteheat-page .cpe-result-visual--figma > .cpe-result-card-shot,
+  body.wasteheat-page .hp-result-visual--figma > .hp-result-card-shot {
+    position: static !important;
+    inset: auto !important;
+    width: 100% !important;
     height: auto !important;
     object-fit: contain !important;
+  }
+
+  body.wasteheat-page .hp-results-inner,
+  body.wasteheat-page .cpe-results-inner {
+    gap: 48px !important;
+  }
+
+  body.wasteheat-page .hp-result-cta,
+  body.wasteheat-page .cpe-result-cta {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 72px !important;
+  }
+
+  body.wasteheat-page .hp-result-cta span span,
+  body.wasteheat-page .cpe-result-cta span span {
+    white-space: normal !important;
+    font-size: 14px !important;
+  }
+
+  /* F-Gas HFC/HFO comparison */
+  body.wasteheat-page .fgas-compare {
+    padding: 48px 16px !important;
+  }
+
+  body.wasteheat-page .fgas-compare-inner {
+    gap: 24px !important;
+  }
+
+  body.wasteheat-page .fgas-compare-inner > div:first-child span[style*="font-size: 24px"] {
+    font-size: 16px !important;
+  }
+
+  body.wasteheat-page .fgas-compare img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
   }
 
   body.wasteheat-page .cpe-result-pills {
@@ -739,7 +826,7 @@ body.wasteheat-page .wasteheat-industries .sector-card figcaption {
     padding: 0 16px 28px !important;
   }
 
-  body.wasteheat-page .client-results div:has(> .client-result-photo):not(.cpe-result-visual) {
+  body.wasteheat-page .client-results div:has(> .client-result-photo):not(.cpe-result-visual):not(.hp-result-visual):not(.hp-result-visual--figma):not(.cpe-result-visual--figma) {
     position: relative !important;
     display: flex !important;
     flex-direction: column !important;
@@ -1011,6 +1098,43 @@ body.wasteheat-page .wasteheat-industries .sector-card figcaption {
 
   body.wasteheat-page .wasteheat-contact-cta > div > div:last-child > div {
     padding: 24px 16px !important;
+  }
+}
+
+/* ============================================================
+   DESKTOP — 1200px and up (Figma desktop solution frames)
+   Keep the composition stable; prevent export overflow.
+   ============================================================ */
+@media (min-width: 1200px) {
+  body.wasteheat-page {
+    overflow-x: hidden;
+  }
+
+  body.wasteheat-page .wasteheat-industries .sector-track {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  body.wasteheat-page .hp-results-inner,
+  body.wasteheat-page .cpe-results-inner {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+  }
+
+  body.wasteheat-page .hp-result-row,
+  body.wasteheat-page .cpe-result-row {
+    flex-wrap: nowrap;
+  }
+
+  body.wasteheat-page .fgas-compare-inner {
+    max-width: 1280px;
+  }
+
+  /* Keep metric overlays readable on wide screens without overflow */
+  body.wasteheat-page .wasteheat-hero {
+    overflow: hidden;
   }
 }
 
