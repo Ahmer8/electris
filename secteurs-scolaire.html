@@ -1097,7 +1097,7 @@
 
       .warehouse-result-grid {
         display: grid;
-        grid-template-columns: 489px 724px;
+        grid-template-columns: 489px 719px;
         gap: 67px;
         max-width: 1280px;
         margin: 83px auto 0;
@@ -1170,23 +1170,25 @@
       }
 
       .warehouse-result-photo--split {
-        display: grid;
-        grid-template-columns: 444px 280px;
-        min-height: 462px;
+        position: relative;
+        display: block;
+        box-sizing: content-box;
+        width: 702px;
+        max-width: 100%;
+        height: 461.477px;
+        min-height: 461.477px;
+        border: 8.406px solid #fff;
+        border-radius: 33.623px;
+        background: linear-gradient(146.68deg, #b2ffda 0%, #89d2af 100%);
+        overflow: clip;
       }
 
-      .warehouse-result-photo--split img {
-        grid-column: 1 / -1;
-        grid-row: 1;
-        height: 462px;
+      .warehouse-result-photo--split > img {
+        display: none;
       }
 
       .warehouse-result-photo--split::after {
-        content: "";
-        grid-column: 2;
-        grid-row: 1;
-        z-index: 1;
-        background: #9ee7c3;
+        display: none;
       }
 
       .warehouse-badge {
@@ -1714,7 +1716,15 @@
         }
 
         .warehouse-result-photo--split {
-          grid-template-columns: 1fr 32%;
+          width: 100%;
+          height: 444px;
+          min-height: 444px;
+          border-width: 6px;
+        }
+
+        .warehouse-result-photo--split .scolaire-split-media {
+          width: 66%;
+          height: 100%;
         }
 
         .warehouse-contact {
@@ -2180,7 +2190,16 @@
         }
 
         .warehouse-result-photo--split {
-          grid-template-columns: 1fr 34%;
+          width: 100%;
+          height: 350px;
+          min-height: 350px;
+          border-width: 4px;
+          border-radius: 24px;
+        }
+
+        .warehouse-result-photo--split .scolaire-split-media {
+          width: 66%;
+          height: 100%;
         }
 
         .warehouse-result-photo--inside {
@@ -2983,6 +3002,183 @@
     width: auto;
   }
 }
+
+/* Figma split photo 2497:7298 — school image + orange/cyan/violet pills */
+.warehouse-result-photo--split .scolaire-split-media {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 504.566px;
+  height: 461.477px;
+  overflow: hidden;
+  pointer-events: none;
+}
+.warehouse-result-photo--split .scolaire-split-media > img {
+  position: absolute !important;
+  left: -0.06% !important;
+  top: -21.08% !important;
+  width: 99.9% !important;
+  height: 142.35% !important;
+  max-width: none !important;
+  border-radius: 0 !important;
+  object-fit: cover !important;
+}
+.warehouse-result-photo--split .scolaire-split-pills {
+  position: absolute;
+  left: 318px;
+  top: 70.57px;
+  z-index: 3;
+  width: 368px;
+  height: 348.227px;
+}
+.warehouse-result-photo--split .scolaire-split-pill {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  padding: 16px;
+  border-radius: 999px;
+  color: #fff;
+  font-family: Raleway, system-ui, sans-serif;
+  box-shadow:
+    0 12px 12px rgba(15, 23, 42, 0.1),
+    0 2px 3px rgba(15, 23, 42, 0.08);
+}
+.warehouse-result-photo--split .scolaire-split-icon {
+  position: relative;
+  flex: 0 0 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
+}
+.warehouse-result-photo--split .scolaire-split-icon > img {
+  display: block;
+  width: 24px !important;
+  height: 24px !important;
+  max-width: none !important;
+  object-fit: contain !important;
+}
+.warehouse-result-photo--split .scolaire-split-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2.883px;
+  min-width: 0;
+  text-align: left;
+}
+.warehouse-result-photo--split .scolaire-split-title {
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-size: 20.184px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3604px;
+  text-align: left;
+  white-space: nowrap;
+}
+.warehouse-result-photo--split .scolaire-split-sub {
+  display: block;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14.417px;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: left;
+  white-space: nowrap;
+}
+.warehouse-result-photo--split .scolaire-split-pill--orange {
+  top: 0;
+  left: 28px;
+  width: 318px;
+  height: 77.883px;
+  background: #f97316;
+}
+.warehouse-result-photo--split .scolaire-split-pill--orange .scolaire-split-text {
+  width: 230px;
+}
+.warehouse-result-photo--split .scolaire-split-pill--cyan {
+  top: 126px;
+  left: 48px;
+  width: 256px;
+  height: 77.875px;
+  background: #06b6d4;
+}
+.warehouse-result-photo--split .scolaire-split-pill--cyan .scolaire-split-text {
+  width: 112px;
+  gap: 2.875px;
+}
+.warehouse-result-photo--split .scolaire-split-pill--violet {
+  top: 250.58px;
+  left: 0;
+  width: 313px;
+  height: 78.172px;
+  background: #8b5cf6;
+}
+.warehouse-result-photo--split .scolaire-split-pill--violet .scolaire-split-text {
+  width: 225px;
+  gap: 3.172px;
+}
+
+@media (max-width: 1199px) {
+  .warehouse-result-photo--split {
+    width: 100%;
+    height: 350px;
+    min-height: 350px;
+    border-width: 4px;
+    border-radius: 24px;
+  }
+  .warehouse-result-photo--split .scolaire-split-media {
+    width: 68%;
+    height: 100%;
+  }
+  .warehouse-result-photo--split .scolaire-split-pills {
+    left: 42%;
+    top: 10%;
+    width: 56%;
+    height: 80%;
+  }
+  .warehouse-result-photo--split .scolaire-split-pill {
+    height: auto;
+    min-height: 56px;
+    padding: 10px 12px;
+  }
+  .warehouse-result-photo--split .scolaire-split-title {
+    font-size: 14px;
+  }
+  .warehouse-result-photo--split .scolaire-split-sub {
+    font-size: 11px;
+    white-space: normal;
+  }
+  .warehouse-result-photo--split .scolaire-split-pill--orange {
+    top: 0;
+    left: 6%;
+    width: 88%;
+  }
+  .warehouse-result-photo--split .scolaire-split-pill--cyan {
+    top: 34%;
+    left: 12%;
+    width: 78%;
+  }
+  .warehouse-result-photo--split .scolaire-split-pill--violet {
+    top: 68%;
+    left: 0;
+    width: 100%;
+  }
+  .warehouse-result-photo--split .scolaire-split-pill--orange .scolaire-split-text,
+  .warehouse-result-photo--split .scolaire-split-pill--cyan .scolaire-split-text,
+  .warehouse-result-photo--split .scolaire-split-pill--violet .scolaire-split-text {
+    width: auto;
+  }
+}
 </style>
 </head>
   <body class="wasteheat-page">
@@ -3219,19 +3415,32 @@
             <a class="warehouse-result-cta warehouse-result-cta--green" href="mailto:contact@electris.fr"><span>Je veux le m&ecirc;me r&eacute;sultat &rarr;</span></a>
           </div>
           <div class="warehouse-result-photo warehouse-result-photo--split">
-            <img src="assets/images/secteurs-scolaire/figma-extract/08_image7_2497_6922_1024x1024.png" alt="Ecole et cour scolaire" />
-            <span class="warehouse-badge warehouse-badge--orange">
-              <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/trending-down.svg" alt="" /></span>
-              <span><strong>-20 &agrave; -40 % &middot;</strong><small>Facture de chauffage</small></span>
-            </span>
-            <span class="warehouse-badge warehouse-badge--cyan">
-              <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/trending-up.svg" alt="" /></span>
-              <span><strong>18-30 mois &middot;</strong><small>ROI</small></span>
-            </span>
-            <span class="warehouse-badge warehouse-badge--violet">
-              <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/banknote.svg" alt="" /></span>
-              <span><strong>Fonds Vert + CEE &middot;</strong><small>Financement mobilis&eacute;</small></span>
-            </span>
+            <div class="scolaire-split-media">
+              <img src="assets/images/secteurs-scolaire/figma-extract/08_image7_2497_6922_1024x1024.png" alt="Ecole et cour scolaire" />
+            </div>
+            <div class="scolaire-split-pills">
+              <div class="scolaire-split-pill scolaire-split-pill--orange">
+                <span class="scolaire-split-icon"><img src="assets/images/secteurs/result-icons/trending-down.svg" alt="" /></span>
+                <span class="scolaire-split-text">
+                  <span class="scolaire-split-title">&minus;20 &agrave; &minus;40 % &middot;</span>
+                  <span class="scolaire-split-sub">Facture de chauffage</span>
+                </span>
+              </div>
+              <div class="scolaire-split-pill scolaire-split-pill--cyan">
+                <span class="scolaire-split-icon"><img src="assets/images/secteurs/result-icons/trending-up.svg" alt="" /></span>
+                <span class="scolaire-split-text">
+                  <span class="scolaire-split-title">18-30 mois &middot;</span>
+                  <span class="scolaire-split-sub">ROI</span>
+                </span>
+              </div>
+              <div class="scolaire-split-pill scolaire-split-pill--violet">
+                <span class="scolaire-split-icon"><img src="assets/images/secteurs-scolaire/figma-extract/banknote-split.svg" alt="" /></span>
+                <span class="scolaire-split-text">
+                  <span class="scolaire-split-title">Fonds Vert + CEE &middot;</span>
+                  <span class="scolaire-split-sub">Financement mobilis&eacute;</span>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
         <div class="warehouse-result-grid">
