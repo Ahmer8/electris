@@ -70,7 +70,7 @@
         background-position: center;
         background-size: cover !important;
       }
-      .wasteheat-hero-art .wasteheat-metric-savings {
+      .wasteheat-metric-savings {
         position: absolute;
         top: 31%;
         left: -12%;
@@ -212,7 +212,7 @@
           aspect-ratio: 1370 / 883;
           background-size: cover !important;
         }
-        .wasteheat-hero-art .wasteheat-metric-savings {
+        .wasteheat-metric-savings {
           left: 0;
           top: 8%;
         }
@@ -242,11 +242,11 @@
           padding: 38px 20px 58px !important;
           gap: 42px !important;
         }
-        .wasteheat-hero-art .wasteheat-metric-savings,
+        .wasteheat-metric-savings,
         .wasteheat-metric {
           transform: scale(0.72);
         }
-        .wasteheat-hero-art .wasteheat-metric-savings {
+        .wasteheat-metric-savings {
           transform-origin: left top;
         }
         .wasteheat-metric-roi {
@@ -815,9 +815,9 @@
         }
       }
 </style>
-  <link rel="stylesheet" href="solution-detail.css?v=figma-responsive-all" />
+  <link rel="stylesheet" href="solution-detail.css?v=figma-hero-2761c" />
   </head>
-  <body class="wasteheat-page">
+  <body class="wasteheat-page cpe-page">
     <main class="gtb-export-shell export-png-crop" aria-label="Contrat de performance energetique">
       <img
         src="assets/images/full-page/solutions-cpe.png"
@@ -1324,20 +1324,23 @@
                   background-image: url(&quot;assets/images/cpe/hero.png&quot;);
                   background-size: 100% 100%;
                 "
-              >
-                <div
-                  class="wasteheat-metric wasteheat-metric-savings"
-                  style="
-                    width: 257px;
-                    box-sizing: border-box;
-                    display: flex;
-                    flex-direction: column;
-                    background: #ffffff57;
-                    border-radius: 13px;
-                    padding: 13px 15px;
-                    margin-bottom: 301px;
-                  "
-                >
+              ></div>
+            </div>
+            <div
+              class="wasteheat-metric wasteheat-metric-savings"
+              style="
+                position: absolute;
+                top: 26%;
+                left: -8%;
+                width: 257px;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: column;
+                background: #ffffff57;
+                border-radius: 13px;
+                padding: 13px 15px;
+              "
+            >
                   <div
                     style="
                       align-self: stretch;
@@ -1378,8 +1381,6 @@
                     </span>
                   </div>
                 </div>
-              </div>
-            </div>
             <div
               class="wasteheat-metric wasteheat-metric-roi"
               style="

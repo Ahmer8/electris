@@ -307,13 +307,43 @@ body.wasteheat-page .wasteheat-industries .sector-card figcaption {
    ============================================================ */
 @media (max-width: 900px) {
   /* ---- global guards ---- */
-  body.wasteheat-page [style*="width:"] {
+  /* Don't clamp metric chip widths — they must stay compact overlays. */
+  body.wasteheat-page [style*="width:"]:not(.wasteheat-metric) {
     max-width: 100% !important;
   }
 
-  body.wasteheat-page [style*="margin-right:"],
-  body.wasteheat-page [style*="margin-left:"] {
+  body.wasteheat-page [style*="margin-right:"]:not(.wasteheat-metric),
+  body.wasteheat-page [style*="margin-left:"]:not(.wasteheat-metric) {
     margin-inline: 0 !important;
+  }
+
+  /* Figma mobile nav: logo + hamburger only (64px bar). */
+  body.wasteheat-page > header.sticky-top,
+  body.wasteheat-page header.sticky-top {
+    min-height: 64px;
+  }
+
+  body.wasteheat-page .navbar {
+    min-height: 64px !important;
+    padding-block: 0 !important;
+  }
+
+  body.wasteheat-page .navbar > .container-fluid {
+    padding-inline: 16px !important;
+  }
+
+  body.wasteheat-page .navbar-brand img,
+  body.wasteheat-page .navbar-brand .logo img,
+  body.wasteheat-page .logo img {
+    max-height: 24px !important;
+    width: auto !important;
+  }
+
+  body.wasteheat-page .navbar-toggler {
+    width: 40px !important;
+    height: 40px !important;
+    padding: 8px !important;
+    border: 0 !important;
   }
 
   /* ---------- HERO ---------- */
@@ -339,9 +369,9 @@ body.wasteheat-page .wasteheat-industries .sector-card figcaption {
 
   /* Figma: 42px Bold, tracking -1px. Fixed <br> breaks are dropped. */
   body.wasteheat-page .wasteheat-hero span[style*="font-size: 48px"] {
-    font-size: clamp(30px, 10.7vw, 42px) !important;
+    font-size: 42px !important;
     font-weight: 700 !important;
-    line-height: 1.15 !important;
+    line-height: normal !important;
     letter-spacing: -1px !important;
   }
 
@@ -390,53 +420,130 @@ body.wasteheat-page .wasteheat-industries .sector-card figcaption {
     text-align: center !important;
   }
 
-  /* Hero visual stacks: artwork first, then the metric cards as plain
-     full-width rows. Absolute offsets and transform scaling are what made
-     the cards drift, so both are removed. */
+  /* Hero visual — Figma 2761:40683 (390 frame)
+     358×328 stage, 315×315 art @ left 23.7 radius 34.7, glass chips overlaid. */
   body.wasteheat-page .wasteheat-hero-visual {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: 12px !important;
+    position: relative !important;
+    display: block !important;
     width: 100% !important;
-    margin: 0 !important;
+    max-width: 358px !important;
+    aspect-ratio: 358 / 327.7 !important;
+    height: auto !important;
+    margin: 0 auto !important;
     padding: 0 !important;
+    overflow: visible !important;
   }
 
+  /* Art sits at Figma x=23.7 y=0 size=315.4 inside the 358 stage. */
   body.wasteheat-page .wasteheat-hero-visual > div:first-child {
-    width: 100% !important;
-    padding-top: 0 !important;
+    position: absolute !important;
+    left: 6.62% !important;
+    top: 0 !important;
+    width: 88.1% !important;
+    height: auto !important;
+    padding: 0 !important;
     margin: 0 !important;
   }
 
   body.wasteheat-page .wasteheat-hero-art {
     position: relative !important;
-    display: flex !important;
-    align-items: flex-start !important;
-    width: 100% !important;
-    min-height: 0 !important;
-    aspect-ratio: 350 / 260;
-    padding: 14px !important;
-    border-radius: 24px;
-    background-position: center !important;
-    background-size: cover !important;
-    overflow: hidden;
-  }
-
-  body.wasteheat-page .wasteheat-metric {
-    position: static !important;
-    inset: auto !important;
+    display: block !important;
     width: 100% !important;
     max-width: none !important;
+    min-height: 0 !important;
+    aspect-ratio: 1 / 1 !important;
     margin: 0 !important;
-    transform: none !important;
-    background: rgba(255, 255, 255, 0.9) !important;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.1);
+    padding: 0 !important;
+    border-radius: 34.7px !important;
+    background-position: center !important;
+    background-size: cover !important;
+    overflow: visible !important;
   }
 
+  /* CPE mobile uses the Figma collage asset (not the desktop photo). */
+  body.wasteheat-page.cpe-page .wasteheat-hero-art {
+    background-image: url("assets/images/cpe/hero-mobile.png") !important;
+  }
+
+  /* Glass chips — Figma: rgba(255,255,255,0.34), blur 5.7, radius 6.875 */
+  body.wasteheat-page .wasteheat-metric,
   body.wasteheat-page .wasteheat-hero-art .wasteheat-metric-savings {
-    width: min(257px, 88%) !important;
+    position: absolute !important;
+    z-index: 2;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    margin: 0 !important;
+    padding: 7.45px 8.02px !important;
+    gap: 4px !important;
+    border-radius: 6.875px !important;
+    transform: none !important;
+    background: rgba(255, 255, 255, 0.34) !important;
+    backdrop-filter: blur(5.73px);
+    -webkit-backdrop-filter: blur(5.73px);
+    box-shadow: 0 0 14.72px rgba(0, 0, 0, 0.12);
+  }
+
+  body.wasteheat-page .wasteheat-metric img {
+    width: 11px !important;
+    height: 11px !important;
+    flex-shrink: 0 !important;
+  }
+
+  body.wasteheat-page .wasteheat-metric > div:first-child {
+    gap: 4.5px !important;
+    margin: 0 !important;
+  }
+
+  /* Label 8px / value ~15px (Figma 8.021 / 14.896) */
+  body.wasteheat-page .wasteheat-metric span[style*="font-size: 15px"] {
+    font-size: 8px !important;
+    font-weight: 500 !important;
+    line-height: 11.5px !important;
+    color: #475467 !important;
+  }
+
+  body.wasteheat-page .wasteheat-metric span[style*="font-size: 28px"] {
+    font-size: 15px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+    color: #101828 !important;
+  }
+
+  body.wasteheat-page .wasteheat-metric > div[style*="height: 1px"] {
+    margin: 0 !important;
+    align-self: stretch !important;
+  }
+
+  /* ROI — Figma left 202.39 top 33.53 w 155.6 (of 358×328) */
+  body.wasteheat-page .wasteheat-metric-roi {
+    top: 10.23% !important;
+    left: 56.53% !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 43.47% !important;
+    max-width: 156px !important;
+  }
+
+  /* Savings — Figma left 0 top 82.42 w 135.2 (of 358×328 stage) */
+  body.wasteheat-page .wasteheat-metric-savings {
+    top: 25.15% !important;
+    left: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 37.77% !important;
+    max-width: 136px !important;
+  }
+
+  /* Capex — Figma left 105.67 top 273.77 w 135.2 */
+  body.wasteheat-page .wasteheat-metric-capex {
+    top: 83.54% !important;
+    left: 29.52% !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 37.77% !important;
+    max-width: 136px !important;
   }
 
   /* ---------- LOGO STRIP ---------- */
@@ -544,13 +651,18 @@ body.wasteheat-page .wasteheat-industries .sector-card figcaption {
   body.wasteheat-page .wasteheat-how > div:first-child {
     gap: 10px !important;
     text-align: center !important;
+    align-items: center !important;
   }
 
+  /* Two-row flow: Engagement → Financement / Mesure → Partage */
   body.wasteheat-page .wasteheat-how-flow {
+    display: flex !important;
     flex-wrap: wrap !important;
     justify-content: center !important;
     align-items: center !important;
     gap: 8px 11px !important;
+    max-width: 358px !important;
+    margin-inline: auto !important;
   }
 
   body.wasteheat-page .wasteheat-how-flow > span,
@@ -633,10 +745,21 @@ body.wasteheat-page .wasteheat-industries .sector-card figcaption {
     scroll-snap-align: start;
   }
 
+  body.wasteheat-page .wasteheat-industries .sector-card figcaption {
+    padding: 24px 20px !important;
+    font-size: clamp(20px, 5.5vw, 24px) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Kill page-local scale() hacks that fight the Figma chip sizes. */
+  body.wasteheat-page .wasteheat-metric {
+    transform: none !important;
+  }
+
+  /* Figma mobile has no decorative blob behind the sector track. */
   body.wasteheat-page .wasteheat-industries > img[style*="position: absolute"] {
-    width: 100% !important;
-    height: auto !important;
-    opacity: 0.22;
+    display: none !important;
   }
 
   /* ---------- CLIENT RESULTS (CPE Figma layout) ---------- */
@@ -1063,12 +1186,7 @@ body.wasteheat-page .wasteheat-industries .sector-card figcaption {
    SMALL PHONES — up to 480px
    ============================================================ */
 @media (max-width: 480px) {
-  body.wasteheat-page .wasteheat-hero {
-    padding: 32px 16px 44px !important;
-  }
-
-  /* At 360px the 21px label plus the arrow overruns the pill, so the label
-     steps down and the arrow is pinned against shrinking. */
+  /* Keep Figma 390 hero intact; only tighten below ~360. */
   body.wasteheat-page .wasteheat-hero > div:first-child > div:last-child > div {
     padding: 16px 20px !important;
     gap: 10px !important;
@@ -1098,6 +1216,16 @@ body.wasteheat-page .wasteheat-industries .sector-card figcaption {
 
   body.wasteheat-page .wasteheat-contact-cta > div > div:last-child > div {
     padding: 24px 16px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  body.wasteheat-page .wasteheat-hero {
+    padding: 32px 16px 44px !important;
+  }
+
+  body.wasteheat-page .wasteheat-hero span[style*="font-size: 48px"] {
+    font-size: 34px !important;
   }
 }
 
