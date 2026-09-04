@@ -1,0 +1,11 @@
+const fs = require("fs");
+const h = fs.readFileSync("F-gas-compliance-solutions.html", "utf8");
+console.log("hero?", h.includes("r&eacute;frig&eacute;rants") || h.includes("réfrigérants"));
+console.log("indep?", h.includes("affranchir"));
+console.log("countdown?", h.includes("compte") && h.includes("rebours"));
+console.log("audit inventaire?", h.includes("inventaire"));
+const idx = h.indexOf("Remplacement / retrofit");
+console.log(JSON.stringify(h.slice(idx, idx + 900)));
+const idx2 = h.indexOf("Montage contractuel");
+console.log("--- montage ---");
+console.log(JSON.stringify(h.slice(idx2, idx2 + 700)));
