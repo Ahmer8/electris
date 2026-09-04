@@ -8,6 +8,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <style>
       body {
@@ -1093,7 +1097,7 @@
 
       .warehouse-result-grid {
         display: grid;
-        grid-template-columns: 489px 724px;
+        grid-template-columns: 489px 719px;
         gap: 67px;
         max-width: 1280px;
         margin: 83px auto 0;
@@ -1165,24 +1169,61 @@
         object-fit: cover;
       }
 
-      .warehouse-result-photo--split {
-        display: grid;
-        grid-template-columns: 444px 280px;
-        min-height: 462px;
+      .warehouse-result-photo--split .warehouse-result-photo-media > img {
+        width: 159.58% !important;
+        height: 156.89% !important;
+        max-width: none !important;
       }
 
-      .warehouse-result-photo--split img {
-        grid-column: 1 / -1;
-        grid-row: 1;
-        height: 462px;
+      .warehouse-result-photo--split {
+        position: relative;
+        display: block;
+        box-sizing: content-box;
+        width: 702px;
+        max-width: 100%;
+        height: 461.477px;
+        min-height: 461.477px;
+        border: 8.406px solid #fff;
+        border-radius: 33.623px;
+        background: linear-gradient(146.68deg, #b2ffda 0%, #89d2af 100%);
+        overflow: clip;
+      }
+
+      .warehouse-result-photo--split > img,
+      .warehouse-result-photo--split .warehouse-result-photo-media > img {
+        position: absolute !important;
+        inset: auto !important;
+        left: 0 !important;
+        top: -28.44% !important;
+        width: 159.58% !important;
+        height: 156.89% !important;
+        max-width: none !important;
+        border-radius: 0 !important;
+        object-fit: cover !important;
+        object-position: left top !important;
+      }
+
+      .warehouse-result-photo--split .warehouse-result-photo-media {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 453.684px;
+        height: 461.477px;
+        overflow: hidden;
+        pointer-events: none;
       }
 
       .warehouse-result-photo--split::after {
-        content: "";
-        grid-column: 2;
-        grid-row: 1;
-        z-index: 1;
-        background: #9ee7c3;
+        display: none;
+      }
+
+      .warehouse-result-photo--split .warehouse-result-badges {
+        position: absolute;
+        left: 318px;
+        top: 70.57px;
+        width: 368px;
+        height: 348.227px;
+        z-index: 2;
       }
 
       .warehouse-badge {
@@ -1190,16 +1231,20 @@
         right: auto;
         z-index: 2;
         display: grid;
-        grid-template-columns: 44px 1fr;
+        grid-template-columns: 44px minmax(0, 1fr);
         align-items: center;
-        column-gap: 16px;
-        height: 78px;
-        min-height: 78px;
+        column-gap: 12px;
+        height: auto;
+        min-height: 0;
         box-sizing: border-box;
-        padding: 10px 28px 10px 16px;
+        padding: 16px;
         border-radius: 999px;
         color: #fff;
-        box-shadow: 0 10px 18px rgba(15, 23, 42, 0.18);
+        overflow: hidden;
+        font-family: Raleway, system-ui, sans-serif;
+        box-shadow:
+          0 12px 12px rgba(15, 23, 42, 0.1),
+          0 2px 3px rgba(15, 23, 42, 0.08);
       }
 
       .warehouse-badge::before {
@@ -1209,7 +1254,8 @@
       .warehouse-badge-icon {
         display: grid;
         place-items: center;
-        content: "";
+        position: relative;
+        flex-shrink: 0;
         width: 44px;
         height: 44px;
         border-radius: 999px;
@@ -1229,39 +1275,65 @@
 
       .warehouse-badge strong {
         display: block;
-        font-size: 26px;
-        font-weight: 500;
-        line-height: 1.08;
+        font-size: 20.184px;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: -0.3604px;
         white-space: nowrap;
       }
 
       .warehouse-badge small {
         display: block;
-        margin-top: 4px;
-        font-size: 15px;
+        margin-top: 2.883px;
+        font-size: 14.417px;
         font-weight: 400;
-        line-height: 1.25;
+        line-height: 1.3;
+        color: rgba(255, 255, 255, 0.8);
         white-space: nowrap;
       }
 
+      .warehouse-result-photo--split .warehouse-badge--orange {
+        top: 0;
+        left: 28px;
+        width: 254px;
+        height: 77.883px;
+        background: #f97316;
+      }
+
+      .warehouse-result-photo--split .warehouse-badge--cyan {
+        top: 126px;
+        left: 48px;
+        width: 256px;
+        height: 77.875px;
+        background: #06b6d4;
+      }
+
+      .warehouse-result-photo--split .warehouse-badge--violet {
+        top: 251.055px;
+        left: 0;
+        width: 368px;
+        height: 78.172px;
+        background: #8b5cf6;
+      }
+
       .warehouse-badge--orange {
-        top: 70px;
+        top: 70.57px;
         left: 346px;
-        width: 333px;
+        width: 254px;
         background: #f97316;
       }
 
       .warehouse-badge--cyan {
-        top: 196px;
+        top: 196.57px;
         left: 366px;
         width: 256px;
         background: #06b6d4;
       }
 
       .warehouse-badge--violet {
-        top: 321px;
+        top: 321.62px;
         left: 318px;
-        width: 282px;
+        width: 368px;
         background: #8b5cf6;
       }
 
@@ -1562,7 +1634,41 @@
         }
 
         .warehouse-result-photo--split {
-          grid-template-columns: 1fr 32%;
+          width: 100%;
+          height: 444px;
+          min-height: 444px;
+          border-width: 6px;
+        }
+
+        .warehouse-result-photo--split .warehouse-result-photo-media {
+          width: 66%;
+          height: 100%;
+        }
+
+        .warehouse-result-photo--split .warehouse-result-photo-media > img {
+          height: 156.89%;
+        }
+
+        .warehouse-result-photo--split .warehouse-result-badges {
+          left: 44%;
+          top: 12%;
+          width: 52%;
+          height: 76%;
+        }
+
+        .warehouse-result-photo--split .warehouse-badge--orange {
+          left: 8%;
+          width: 70%;
+        }
+
+        .warehouse-result-photo--split .warehouse-badge--cyan {
+          left: 12%;
+          width: 68%;
+        }
+
+        .warehouse-result-photo--split .warehouse-badge--violet {
+          left: 0;
+          width: 100%;
         }
 
         .warehouse-contact {
@@ -1620,6 +1726,34 @@
         .warehouse-labels {
           position: static;
           margin: 12px;
+        }
+
+        .warehouse-result-photo--split {
+          height: auto;
+          min-height: 0;
+        }
+
+        .warehouse-result-photo--split .warehouse-result-photo-media {
+          position: relative;
+          width: 100%;
+          height: 280px;
+        }
+
+        .warehouse-result-photo--split .warehouse-result-badges {
+          position: static;
+          width: 100%;
+          height: auto;
+          display: grid;
+          gap: 12px;
+          padding: 12px;
+        }
+
+        .warehouse-result-photo--split .warehouse-badge--orange,
+        .warehouse-result-photo--split .warehouse-badge--cyan,
+        .warehouse-result-photo--split .warehouse-badge--violet {
+          position: static;
+          width: 100%;
+          height: auto;
         }
 
         .warehouse-label {
@@ -2028,7 +2162,55 @@
         }
 
         .warehouse-result-photo--split {
-          grid-template-columns: 1fr 34%;
+          width: 100%;
+          height: 350px;
+          min-height: 350px;
+          border-width: 4px;
+          border-radius: 24px;
+        }
+
+        .warehouse-result-photo--split .warehouse-result-photo-media {
+          width: 66%;
+          height: 100%;
+          border-radius: 0;
+        }
+
+        .warehouse-result-photo--split .warehouse-result-photo-media > img {
+          height: 156.89%;
+          border-radius: 0;
+        }
+
+        .warehouse-result-photo--split .warehouse-result-badges {
+          left: 40%;
+          top: 10%;
+          width: 56%;
+          height: 80%;
+        }
+
+        .warehouse-result-photo--split .warehouse-badge {
+          height: auto;
+          min-height: 56px;
+          padding: 8px 12px;
+          grid-template-columns: 34px 1fr;
+          column-gap: 10px;
+        }
+
+        .warehouse-result-photo--split .warehouse-badge--orange {
+          top: 0;
+          left: 8%;
+          width: 78%;
+        }
+
+        .warehouse-result-photo--split .warehouse-badge--cyan {
+          top: 34%;
+          left: 12%;
+          width: 72%;
+        }
+
+        .warehouse-result-photo--split .warehouse-badge--violet {
+          top: 68%;
+          left: 0;
+          width: 100%;
         }
 
         .warehouse-result-photo--inside {
@@ -2474,6 +2656,13 @@
   border-radius: 0 !important;
   object-fit: contain !important;
 }
+.warehouse-result-photo--split .warehouse-result-photo-media > img {
+  position: absolute !important;
+  left: 0 !important;
+  top: -28.44% !important;
+  width: 159.58% !important;
+  height: 156.89% !important;
+}
 .warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon {
   width: 46px;
   height: 46px;
@@ -2773,19 +2962,23 @@
             <a class="warehouse-result-cta warehouse-result-cta--green" href="mailto:contact@electris.fr"><span>Je veux le m&ecirc;me r&eacute;sultat &rarr;</span></a>
           </div>
           <div class="warehouse-result-photo warehouse-result-photo--split">
-            <img src="assets/images/cold-storage-warehouse/figma-extract/08_image7_2497_5883_1024x1024.png" alt="Entrepot de conservation froide" />
-            <span class="warehouse-badge warehouse-badge--orange">
-              <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/trending-down.svg" alt="" /></span>
-              <span><strong>-15 &agrave; -35 % &middot;</strong><small>Facture d'&eacute;nergie</small></span>
-            </span>
-            <span class="warehouse-badge warehouse-badge--cyan">
-              <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/trending-up.svg" alt="" /></span>
-              <span><strong>12-24 mois &middot;</strong><small>ROI</small></span>
-            </span>
-            <span class="warehouse-badge warehouse-badge--violet">
-              <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/shield-check.svg" alt="" /></span>
-              <span><strong>R&eacute;frig&eacute;rants conformes &middot;</strong><small>F-Gaz</small></span>
-            </span>
+            <div class="warehouse-result-photo-media">
+              <img src="assets/images/cold-storage-warehouse/figma-extract/08_image7_2497_5883_1024x1024.png" alt="Entrepot de conservation froide" />
+            </div>
+            <div class="warehouse-result-badges">
+              <span class="warehouse-badge warehouse-badge--orange">
+                <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/trending-down.svg" alt="" /></span>
+                <span><strong>&minus;15 &agrave; &minus;35 % &middot;</strong><small>Facture d'&eacute;nergie</small></span>
+              </span>
+              <span class="warehouse-badge warehouse-badge--cyan">
+                <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/trending-up.svg" alt="" /></span>
+                <span><strong>12-24 mois &middot;</strong><small>ROI</small></span>
+              </span>
+              <span class="warehouse-badge warehouse-badge--violet">
+                <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/shield-check.svg" alt="" /></span>
+                <span><strong>R&eacute;frig&eacute;rants conformes &middot;</strong><small>F-Gaz</small></span>
+              </span>
+            </div>
           </div>
         </div>
         <div class="warehouse-result-grid">

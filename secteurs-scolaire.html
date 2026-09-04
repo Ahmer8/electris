@@ -8,6 +8,10 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <style>
       body {
@@ -1101,7 +1105,7 @@
       }
 
       .warehouse-result-grid + .warehouse-result-grid {
-        grid-template-columns: 736px 489px;
+        grid-template-columns: 720px 489px;
         gap: 55px;
         margin-top: 101px;
       }
@@ -1360,47 +1364,195 @@
       }
 
       .warehouse-result-photo--inside {
-        width: 736px;
-        min-height: 460px;
-        border: 8px solid #fff;
-        border-radius: 33px;
+        position: relative;
+        box-sizing: content-box;
+        width: 703px;
+        max-width: 100%;
+        height: 459.169px;
+        min-height: 459.169px;
+        border: 8.406px solid #fff;
+        border-radius: 33.623px;
         background: linear-gradient(180deg, #9badd0 0%, #a0a1fc 100%);
+        overflow: clip;
+        font-family: Raleway, system-ui, sans-serif;
       }
 
-      .warehouse-result-photo--inside img {
-        position: absolute;
-        top: 4px;
-        right: 5px;
-        width: 444px;
-        height: 450px;
-        border-radius: 33px;
+      .warehouse-result-photo--inside > img {
+        position: absolute !important;
+        top: -4.73px !important;
+        right: -2.41px !important;
+        left: auto !important;
+        width: 444px !important;
+        height: 450px !important;
+        max-width: none !important;
+        border-radius: 0 !important;
+        object-fit: cover !important;
       }
 
       .warehouse-result-photo--inside .warehouse-labels {
-        left: 38px;
-        top: 38px;
-        gap: 47px;
+        position: absolute;
+        left: 9.59px;
+        top: 37.69px;
+        width: 368px;
+        height: 348.227px;
+        display: block;
+        gap: 0;
+        z-index: 2;
       }
 
       .warehouse-result-photo--inside .warehouse-label {
-        min-height: 78px;
+        position: absolute;
+        display: flex !important;
+        flex-direction: row;
+        align-items: center !important;
+        justify-content: flex-start;
+        gap: 12px;
+        box-sizing: border-box;
+        padding: 16px;
+        min-height: 0;
         height: 78px;
+        width: auto;
+        border-radius: 999px;
+        color: #fff;
+        overflow: visible;
+        font-family: Raleway, system-ui, sans-serif;
+        box-shadow:
+          0 12px 12px rgba(15, 23, 42, 0.1),
+          0 2px 3px rgba(15, 23, 42, 0.08);
+      }
+
+      .warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon {
+        position: relative;
+        flex: 0 0 46px;
+        display: grid;
+        place-items: center;
+        align-self: center;
+        width: 46px !important;
+        height: 46px !important;
+        margin: 0;
+        border: 0;
+        border-radius: 999px;
+        background: transparent;
+      }
+
+      .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon {
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon {
+        flex: 0 0 49px;
+        width: 49px !important;
+        height: 49px !important;
+        background: transparent;
+      }
+
+      .warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon > img {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        width: 32px !important;
+        height: 32px !important;
+        max-width: none !important;
+        margin: 0 !important;
+        border-radius: 0 !important;
+        object-fit: contain !important;
+        transform: translate(-50%, -50%) !important;
+      }
+
+      .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img {
+        transform: translate(-50%, -50%) rotate(-6deg) !important;
+      }
+
+      .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img {
+        transform: translate(-50%, -50%) rotate(4deg) !important;
+      }
+
+      .warehouse-result-photo--inside .warehouse-label-text {
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 2.883px;
+        min-width: 0;
+        margin: 0;
+        padding: 0;
+        font-size: inherit !important;
+        font-weight: 400;
+        line-height: normal;
+        text-align: left;
+      }
+
+      .warehouse-result-photo--inside .warehouse-label-text strong {
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        color: #fff;
+        font-family: Raleway, system-ui, sans-serif;
+        font-size: 20.184px !important;
+        font-weight: 400 !important;
+        line-height: normal !important;
+        letter-spacing: -0.3604px;
+        text-align: left;
+        white-space: nowrap;
+      }
+
+      .warehouse-result-photo--inside .warehouse-label-text small {
+        display: block;
+        width: 100%;
+        margin: 0 !important;
+        padding: 0;
+        color: rgba(255, 255, 255, 0.8) !important;
+        font-family: Raleway, system-ui, sans-serif;
+        font-size: 14.417px !important;
+        font-weight: 400 !important;
+        line-height: 1.3 !important;
+        text-align: left;
+        white-space: nowrap;
       }
 
       .warehouse-result-photo--inside .warehouse-label--blue {
-        min-width: 330px;
+        top: 0;
+        left: 28px;
+        width: 346px;
+        max-width: none;
+        background: #2e75f5;
+      }
+
+      .warehouse-result-photo--inside .warehouse-label--blue .warehouse-label-text {
+        width: 256px;
       }
 
       .warehouse-result-photo--inside .warehouse-label--green {
-        min-width: 352px;
-        margin-left: 20px;
+        top: 125.53px;
+        left: 48.22px;
+        width: 352px;
+        max-width: none;
+        margin-left: 0;
+        background: #16a34a;
+      }
+
+      .warehouse-result-photo--inside .warehouse-label--green .warehouse-label-text {
+        width: 262px;
+        gap: 2.875px;
       }
 
       .warehouse-result-photo--inside .warehouse-label--violet {
-        min-width: 289px;
+        top: 251.05px;
+        left: 0;
+        width: 373.097px;
+        max-width: none;
+        min-width: 0;
         min-height: 81px;
-        height: 81px;
-        margin-left: -28px;
+        height: 81.097px;
+        margin-left: 0;
+        gap: 12px;
+        background: #9e78dc;
+      }
+
+      .warehouse-result-photo--inside .warehouse-label--violet .warehouse-label-text {
+        width: 280px;
+        gap: 3.172px;
       }
 
       .warehouse-contact {
@@ -2033,16 +2185,61 @@
 
         .warehouse-result-photo--inside {
           width: 100%;
+          height: 350px;
           min-height: 350px;
-          border-width: 0;
+          border-width: 4px;
+          border-radius: 24px;
         }
 
-        .warehouse-result-photo--inside img {
+        .warehouse-result-photo--inside > img {
+          top: 0 !important;
+          right: 0 !important;
+          width: 61% !important;
+          height: 350px !important;
+          border-radius: 0 !important;
+        }
+
+        .warehouse-result-photo--inside .warehouse-labels {
+          left: 4%;
+          top: 8%;
+          width: 52%;
+          height: 84%;
+        }
+
+        .warehouse-result-photo--inside .warehouse-label {
+          height: auto;
+          min-height: 56px;
+          padding: 10px 12px;
+        }
+
+        .warehouse-result-photo--inside .warehouse-label strong {
+          font-size: 14px;
+          white-space: normal;
+        }
+
+        .warehouse-result-photo--inside .warehouse-label small {
+          font-size: 11px;
+          white-space: normal;
+        }
+
+        .warehouse-result-photo--inside .warehouse-label--blue {
           top: 0;
-          right: 0;
-          width: 61%;
-          height: 350px;
-          border-radius: 24px;
+          left: 6%;
+          width: 88%;
+        }
+
+        .warehouse-result-photo--inside .warehouse-label--green {
+          top: 34%;
+          left: 10%;
+          width: 90%;
+        }
+
+        .warehouse-result-photo--inside .warehouse-label--violet {
+          top: 68%;
+          left: 0;
+          width: 100%;
+          height: auto;
+          min-height: 56px;
         }
 
         .warehouse-badge {
@@ -2093,9 +2290,11 @@
         }
 
         .warehouse-result-photo--inside .warehouse-labels {
-          left: 20px;
-          top: 26px;
-          gap: 38px;
+          left: 4%;
+          top: 8%;
+          width: 52%;
+          height: 84%;
+          gap: 0;
         }
 
         .warehouse-label {
@@ -2143,19 +2342,27 @@
           width: calc(100vw - 116px);
         }
 
-        .warehouse-result-photo--inside .warehouse-label--blue,
-        .warehouse-result-photo--inside .warehouse-label--green,
-        .warehouse-result-photo--inside .warehouse-label--violet {
-          min-width: 0;
-          margin-left: 0;
+        .warehouse-result-photo--inside .warehouse-label--blue {
+          top: 0;
+          left: 6%;
+          width: 88%;
+          max-width: none;
         }
 
         .warehouse-result-photo--inside .warehouse-label--green {
-          width: calc(100vw - 80px);
+          top: 34%;
+          left: 10%;
+          width: 90%;
+          max-width: none;
         }
 
         .warehouse-result-photo--inside .warehouse-label--violet {
-          width: calc(100vw - 116px);
+          top: 68%;
+          left: 0;
+          width: 100%;
+          max-width: none;
+          height: auto;
+          min-height: 56px;
         }
 
         .warehouse-result-cta {
@@ -2474,9 +2681,45 @@
   border-radius: 0 !important;
   object-fit: contain !important;
 }
+.warehouse-result-photo--inside .warehouse-label span.warehouse-label-text,
+.warehouse-result-photo--inside .warehouse-label .warehouse-label-text {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: center !important;
+  gap: 2.883px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  line-height: 0 !important;
+  text-align: left !important;
+}
+.warehouse-result-photo--inside .warehouse-label .warehouse-label-text strong {
+  display: block !important;
+  margin: 0 !important;
+  color: #fff !important;
+  font-size: 20.184px !important;
+  font-weight: 400 !important;
+  line-height: normal !important;
+  letter-spacing: -0.3604px !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+}
+.warehouse-result-photo--inside .warehouse-label .warehouse-label-text small {
+  display: block !important;
+  margin: 0 !important;
+  margin-top: 0 !important;
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-size: 14.417px !important;
+  font-weight: 400 !important;
+  line-height: 1.3 !important;
+  text-align: left !important;
+  white-space: nowrap !important;
+}
 .warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon {
-  width: 46px;
-  height: 46px;
+  flex: 0 0 46px;
+  width: 46px !important;
+  height: 46px !important;
   border: 0;
   background: transparent;
 }
@@ -2484,17 +2727,46 @@
   background: rgba(255, 255, 255, 0.15);
 }
 .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon {
-  width: 49px;
-  height: 49px;
+  flex: 0 0 49px;
+  width: 49px !important;
+  height: 49px !important;
   background: transparent;
 }
 .warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon > img {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
   width: 32px !important;
   height: 32px !important;
+  transform: translate(-50%, -50%) !important;
+}
+.warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img {
+  width: 32px !important;
+  height: 32px !important;
+  transform: translate(-50%, -50%) rotate(-6deg) !important;
 }
 .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img {
-  width: 30px !important;
-  height: 30px !important;
+  width: 32px !important;
+  height: 32px !important;
+  transform: translate(-50%, -50%) rotate(4deg) !important;
+}
+.warehouse-results--standard .warehouse-result-photo--inside .warehouse-label--blue .warehouse-badge-icon > img,
+.warehouse-results--top-compact .warehouse-result-photo--inside .warehouse-label--blue .warehouse-badge-icon > img {
+  width: 32px !important;
+  height: 32px !important;
+  transform: translate(-50%, -50%) !important;
+}
+.warehouse-results--standard .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img,
+.warehouse-results--top-compact .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img {
+  width: 32px !important;
+  height: 32px !important;
+  transform: translate(-50%, -50%) rotate(-6deg) !important;
+}
+.warehouse-results--standard .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img,
+.warehouse-results--top-compact .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img {
+  width: 32px !important;
+  height: 32px !important;
+  transform: translate(-50%, -50%) rotate(4deg) !important;
 }
 .warehouse-result-photo .warehouse-badge-icon > img[src$="/thermometer.svg"] {
   width: 42px !important;
@@ -2512,9 +2784,9 @@
   .warehouse-results--large .warehouse-result-photo--inside .warehouse-label--blue .warehouse-badge-icon > img { width: 46px !important; height: 46px !important; }
   .warehouse-results--large .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img,
   .warehouse-results--large .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img { width: 49px !important; height: 49px !important; }
-  .warehouse-results--standard .warehouse-result-photo--inside .warehouse-label--blue .warehouse-badge-icon > img { width: 32px !important; height: 32px !important; }
-  .warehouse-results--standard .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img { width: 35px !important; height: 35px !important; }
-  .warehouse-results--standard .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img { width: 34px !important; height: 34px !important; }
+  .warehouse-results--standard .warehouse-result-photo--inside .warehouse-label--blue .warehouse-badge-icon > img { width: 32px !important; height: 32px !important; transform: translate(-50%, -50%) !important; }
+  .warehouse-results--standard .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img { width: 32px !important; height: 32px !important; transform: translate(-50%, -50%) rotate(-6deg) !important; }
+  .warehouse-results--standard .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img { width: 32px !important; height: 32px !important; transform: translate(-50%, -50%) rotate(4deg) !important; }
   .warehouse-results--compact .warehouse-result-photo--inside .warehouse-label--blue .warehouse-badge-icon > img { width: 28px !important; height: 28px !important; }
   .warehouse-results--compact .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img { width: 31px !important; height: 31px !important; }
   .warehouse-results--compact .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img { width: 30px !important; height: 30px !important; }
@@ -2535,6 +2807,180 @@
   .warehouse-result-photo .warehouse-label .warehouse-badge-icon > img {
     width: 23px !important;
     height: 23px !important;
+  }
+}
+
+/* Figma pills 2497:7329 / 2497:7336 / 2497:7344 — isolated from warehouse-label rules */
+.warehouse-result-photo--inside .scolaire-pills {
+  position: absolute;
+  left: 9.59px;
+  top: 37.69px;
+  z-index: 3;
+  width: 368px;
+  height: 348.227px;
+  pointer-events: none;
+}
+.warehouse-result-photo--inside .scolaire-pill {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  padding: 16px;
+  border-radius: 999px;
+  color: #fff;
+  font-family: Raleway, system-ui, sans-serif;
+  box-shadow:
+    0 12px 12px rgba(15, 23, 42, 0.1),
+    0 2px 3px rgba(15, 23, 42, 0.08);
+}
+.warehouse-result-photo--inside .scolaire-pill-icon {
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  overflow: visible;
+}
+.warehouse-result-photo--inside .scolaire-pill-icon > img {
+  display: block;
+  width: 32px;
+  height: 32px;
+  max-width: none;
+  object-fit: contain;
+}
+.warehouse-result-photo--inside .scolaire-pill-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2.883px;
+  min-width: 0;
+  text-align: left;
+}
+.warehouse-result-photo--inside .scolaire-pill-title {
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-size: 20.184px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3604px;
+  text-align: left;
+  white-space: nowrap;
+}
+.warehouse-result-photo--inside .scolaire-pill-sub {
+  display: block;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14.417px;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* Blue — 2497:7329 */
+.warehouse-result-photo--inside .scolaire-pill--blue {
+  top: 0;
+  left: 28px;
+  width: 346px;
+  height: 78px;
+  background: #2e75f5;
+}
+.warehouse-result-photo--inside .scolaire-pill--blue .scolaire-pill-icon {
+  background: transparent;
+  border-radius: 0;
+}
+.warehouse-result-photo--inside .scolaire-pill--blue .scolaire-pill-text {
+  width: 256px;
+}
+
+/* Green — 2497:7336 */
+.warehouse-result-photo--inside .scolaire-pill--green {
+  top: 125.53px;
+  left: 48.22px;
+  width: max-content;
+  min-width: 352px;
+  height: 78px;
+  background: #16a34a;
+}
+.warehouse-result-photo--inside .scolaire-pill--green .scolaire-pill-icon {
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.15);
+}
+.warehouse-result-photo--inside .scolaire-pill--green .scolaire-pill-icon > img {
+  transform: rotate(-6deg);
+}
+.warehouse-result-photo--inside .scolaire-pill--green .scolaire-pill-text {
+  width: auto;
+  gap: 2.875px;
+}
+
+/* Violet — 2497:7344 */
+.warehouse-result-photo--inside .scolaire-pill--violet {
+  top: 251.05px;
+  left: 0;
+  width: auto;
+  min-width: 373px;
+  height: 81.097px;
+  background: #9e78dc;
+}
+.warehouse-result-photo--inside .scolaire-pill--violet .scolaire-pill-icon {
+  width: 49.097px;
+  height: 49.097px;
+  background: transparent;
+}
+.warehouse-result-photo--inside .scolaire-pill--violet .scolaire-pill-icon > img {
+  transform: rotate(4deg);
+}
+.warehouse-result-photo--inside .scolaire-pill--violet .scolaire-pill-text {
+  width: 280px;
+  gap: 3.172px;
+}
+
+@media (max-width: 1199px) {
+  .warehouse-result-photo--inside .scolaire-pills {
+    left: 4%;
+    top: 8%;
+    width: 54%;
+    height: 84%;
+  }
+  .warehouse-result-photo--inside .scolaire-pill {
+    height: auto;
+    min-height: 56px;
+    padding: 10px 14px;
+  }
+  .warehouse-result-photo--inside .scolaire-pill-title {
+    font-size: 14px;
+    white-space: normal;
+  }
+  .warehouse-result-photo--inside .scolaire-pill-sub {
+    font-size: 11px;
+    white-space: normal;
+  }
+  .warehouse-result-photo--inside .scolaire-pill--blue {
+    top: 0;
+    left: 6%;
+    width: 90%;
+  }
+  .warehouse-result-photo--inside .scolaire-pill--green {
+    top: 34%;
+    left: 10%;
+    width: 90%;
+  }
+  .warehouse-result-photo--inside .scolaire-pill--violet {
+    top: 68%;
+    left: 0;
+    width: 100%;
+    min-width: 0;
+  }
+  .warehouse-result-photo--inside .scolaire-pill--blue .scolaire-pill-text,
+  .warehouse-result-photo--inside .scolaire-pill--violet .scolaire-pill-text {
+    width: auto;
   }
 }
 </style>
@@ -2791,19 +3237,28 @@
         <div class="warehouse-result-grid">
           <div class="warehouse-result-photo warehouse-result-photo--inside">
             <img src="assets/images/secteurs-scolaire/figma-extract/09_image8_2497_6922_1024x1024.png" alt="Local technique scolaire" />
-            <div class="warehouse-labels">
-              <span class="warehouse-label warehouse-label--blue">
-                <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/building.svg" alt="" /></span>
-                <span>&Eacute;TABLISSEMENT &Eacute;DUCATIF -<small>Pack ELECTRIS</small></span>
-              </span>
-              <span class="warehouse-label warehouse-label--green">
-                <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/layers.svg" alt="" /></span>
-                <span>Pack ELECTRIS &middot;<small>D&eacute;carbonisation + d&eacute;stratification + GTC</small></span>
-              </span>
-              <span class="warehouse-label warehouse-label--violet">
-                <span class="warehouse-badge-icon" aria-hidden="true"><img src="assets/images/secteurs/result-icons/banknote.svg" alt="" /></span>
-                <span>Investissement &middot;<small>financ&eacute; par ELECTRIS (EPC)</small></span>
-              </span>
+            <div class="scolaire-pills" aria-hidden="false">
+              <div class="scolaire-pill scolaire-pill--blue">
+                <span class="scolaire-pill-icon"><img src="assets/images/secteurs/result-icons/building.svg" alt="" /></span>
+                <span class="scolaire-pill-text">
+                  <span class="scolaire-pill-title">&Eacute;TABLISSEMENT &Eacute;DUCATIF</span>
+                  <span class="scolaire-pill-sub">Pack ELECTRIS</span>
+                </span>
+              </div>
+              <div class="scolaire-pill scolaire-pill--green">
+                <span class="scolaire-pill-icon"><img src="assets/images/secteurs/result-icons/layers.svg" alt="" /></span>
+                <span class="scolaire-pill-text">
+                  <span class="scolaire-pill-title">Pack ELECTRIS &middot;</span>
+                  <span class="scolaire-pill-sub">D&eacute;carbonisation + destratification + GTC</span>
+                </span>
+              </div>
+              <div class="scolaire-pill scolaire-pill--violet">
+                <span class="scolaire-pill-icon"><img src="assets/images/secteurs/result-icons/banknote.svg" alt="" /></span>
+                <span class="scolaire-pill-text">
+                  <span class="scolaire-pill-title">Investissement &middot;</span>
+                  <span class="scolaire-pill-sub">Financ&eacute; par ELECTRIS (EPC)</span>
+                </span>
+              </div>
             </div>
           </div>
           <div class="warehouse-result-copy">
