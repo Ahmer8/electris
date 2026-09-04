@@ -1,0 +1,18 @@
+Indépendance énergétique</span
+                  >
+                  <span
+                    class="reference-section-title"
+                    style="
+                      color: #1f252e;
+                      font-size: 48px;
+                      font-weight: bold;
+                      margin-right: 102px;
+                    "
+                  >
+                    Pourquoi cela signifie indépendance ?
+                  </span>
+                  <span style="color: #475569; font-size: 24px; width: 878px">
+                    Chaque chaudi&egrave;re d&eacute;branch&eacute;e, c&#39;est une facture de gaz qui dispara&icirc;t
+                    et une d&eacute;pendance &agrave; l&#39;&eacute;nergie import&eacute;e qui s&#39;efface.
+                  </span>
+        

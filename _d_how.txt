@@ -1,0 +1,23 @@
+s: center;
+                gap: 9px;
+              "
+            >
+              <span class="reference-section-title" style="color: #000000; font-size: 48px; font-weight: bold">
+                Comment fonctionne la cascade PAC ?
+              </span>
+              <div
+                class="wasteheat-how-flow"
+                style="
+                  align-self: stretch;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                "
+              >
+                <span
+                  style="color: #475569; font-size: 24px; margin-right: 13px"
+                >
+                  Source
+                </span>
+                <img
+                  src="https://storage.googleapis.com/tagjs-pro
