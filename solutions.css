@@ -203,6 +203,15 @@
     opacity 0.45s ease;
 }
 
+.solution-photo-link {
+  display: block;
+  line-height: 0;
+  text-decoration: none;
+  color: inherit;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
 @media (hover: hover) and (pointer: fine) {
   .solution-row:hover .solution-copy {
     transform: translateY(-6px);
