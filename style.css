@@ -95,42 +95,37 @@
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='148 322 1216 158' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1364 443C1364 463.435 1347.43 480 1327 480H185C164.565 480 148 463.435 148 443V359C148 338.565 164.565 322 185 322H209.771C229.905 322 249.366 345 269.5 345H389.5C409.634 345 429.095 322 449.229 322H1327C1347.43 322 1364 338.565 1364 359V443Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
 }
 
-/* ── Hover: card lifts + goes green ── */
-.process-card:not(.process-card--active):hover {
+/* ── Hover: card lifts + goes green (default stays white) ── */
+.process-card:hover {
   transform: translateY(-4px);
   color: #fff;
 }
 
-.process-card:not(.process-card--active):hover::before {
+.process-card:hover::before {
   background: #2e9d68;
 }
 
 /* icon circle on hover → active style */
-.process-card:not(.process-card--active):hover .process-card__icon {
+.process-card:hover .process-card__icon {
   color: #2e9d68;
   background: linear-gradient(180deg, #fff, #999);
 }
 
 /* step badge on hover → green */
-.process-card:not(.process-card--active):hover .process-card__step {
+.process-card:hover .process-card__step {
+  padding-inline: 43px;
   background: #2e9d68;
   color: #fff;
 }
 
 /* body text on hover → white */
-.process-card:not(.process-card--active):hover .process-card__content > p {
+.process-card:hover .process-card__content > p {
   color: #fff;
 }
 
 .process-card:focus-visible::before {
   filter: drop-shadow(0 0 0.2rem rgba(18, 18, 255, 0.75));
 }
-
-.process-card--active::before {
-  background: #2e9d68;
-}
-
-.process-card--active { color: #fff; }
 
 .process-card__content {
   position: relative;
@@ -162,11 +157,6 @@
   transition: background 280ms ease, color 240ms ease, box-shadow 280ms ease;
 }
 
-.process-card--active .process-card__icon {
-  color: #2e9d68;
-  background: linear-gradient(180deg, #fff, #999);
-}
-
 .process-card__heading h3,
 .process-card__content > p {
   margin: 0;
@@ -185,10 +175,6 @@
   font-weight: 300;
   line-height: 1.4;
   transition: color 240ms ease;
-}
-
-.process-card--active .process-card__content > p {
-  color: #fff;
 }
 
 .process-card__step {
@@ -211,12 +197,6 @@
   line-height: 1;
   white-space: nowrap;
   transition: background 280ms ease, color 240ms ease;
-}
-
-.process-card--active .process-card__step {
-  padding-inline: 43px;
-  background: #2e9d68;
-  color: #fff;
 }
 
 * {
@@ -1441,18 +1421,14 @@ header {
     filter 0.24s ease;
 }
 
-.tech-cards article:hover,
-.tech-cards article.card-selected,
-.tech-cards article.selected {
+.tech-cards article:hover {
   background: linear-gradient(135deg, #1422e9, #7d66e6);
   color: #fff;
   box-shadow: 0 16px 35px rgba(20, 34, 233, 0.16);
   filter: brightness(1.01);
 }
 
-.tech-cards article:hover *,
-.tech-cards article.card-selected *,
-.tech-cards article.selected * {
+.tech-cards article:hover * {
   color: #fff !important;
   border-color: rgba(255, 255, 255, 0.42) !important;
 }
@@ -8689,26 +8665,26 @@ h3 {
 }
 
 /* Process hover must beat later #process … !important locks (card was staying white). */
-#process .process-card:not(.process-card--active):hover {
+#process .process-card:hover {
   color: #fff !important;
 }
 
-#process .process-card:not(.process-card--active):hover::before {
+#process .process-card:hover::before {
   background: #2e9d68 !important;
 }
 
-#process .process-card:not(.process-card--active):hover .process-card__step {
+#process .process-card:hover .process-card__step {
   background: #2e9d68 !important;
   color: #fff !important;
 }
 
-#process .process-card:not(.process-card--active):hover .process-card__icon {
+#process .process-card:hover .process-card__icon {
   color: #2e9d68 !important;
   background: linear-gradient(180deg, #fff, #999) !important;
 }
 
-#process .process-card:not(.process-card--active):hover .process-card__heading h3,
-#process .process-card:not(.process-card--active):hover .process-card__content > p {
+#process .process-card:hover .process-card__heading h3,
+#process .process-card:hover .process-card__content > p {
   color: #fff !important;
 }
 

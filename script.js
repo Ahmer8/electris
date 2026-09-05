@@ -34,13 +34,19 @@ function makeSelectable(selector) {
   });
 }
 
-makeSelectable(".tech-cards article");
 makeSelectable(".solution-cards figure");
 makeSelectable(".cee-process__grid .cee-process__card");
 
+/* Tech cards: white by default, blue only on hover (no sticky selected state). */
+const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
+document.querySelectorAll(".tech-cards article").forEach((card) => {
+  card.classList.remove("selected", "card-selected");
+  card.removeAttribute("aria-pressed");
+  if (card.getAttribute("role") === "button") card.removeAttribute("role");
+});
+
 /* Desktop hover accordion: clear sticky selection so the row returns to equal widths */
 const processGrid = document.querySelector(".cee-process__grid");
-const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
 processGrid?.addEventListener("mouseleave", () => {
   if (!finePointer.matches) return;
   processGrid.querySelectorAll(".cee-process__card").forEach((card) => {
@@ -109,28 +115,11 @@ mobileTechnologyQuery.addEventListener?.("change", centerSelectedTechnology);
 
 const processCards = [...document.querySelectorAll(".process-card")];
 
-function selectProcessCard(selectedCard) {
-  processCards.forEach((card) => {
-    const isSelected = card === selectedCard;
-    card.classList.toggle("process-card--active", isSelected);
-    card.setAttribute("aria-pressed", String(isSelected));
-  });
-}
-
+/* Process cards: white by default, green only on hover (no sticky active). */
 processCards.forEach((card) => {
-  card.tabIndex = 0;
-  card.setAttribute("role", "button");
-  card.setAttribute(
-    "aria-pressed",
-    String(card.classList.contains("process-card--active")),
-  );
-
-  card.addEventListener("click", () => selectProcessCard(card));
-  card.addEventListener("keydown", (event) => {
-    if (event.key !== "Enter" && event.key !== " ") return;
-    event.preventDefault();
-    selectProcessCard(card);
-  });
+  card.classList.remove("process-card--active");
+  card.removeAttribute("aria-pressed");
+  if (card.getAttribute("role") === "button") card.removeAttribute("role");
 });
 
 const navLinks = [...document.querySelectorAll(".navbar .nav-link")];
