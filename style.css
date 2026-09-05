@@ -257,16 +257,130 @@ a {
 .sectors-art-row {
   align-self: stretch;
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
   gap: 32px;
+  margin-left: 116px;
+  margin-right: 116px;
+  border-radius: 20px;
 }
 
-.sectors-art-row img {
+#sectors .industry-card,
+.sectors-art-row .industry-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 0 0 405.333px;
+  width: 405.333px;
+  max-width: 100%;
+  height: 410px;
+  min-height: 410px;
+  padding: 24px;
+  margin: 0;
+  overflow: hidden;
   border-radius: 32px;
-  height: 406px;
-  flex: 1;
-  object-fit: fill;
-  min-width: 0;
+  color: #fff;
+  text-decoration: none;
+  background: #0f172a;
+  cursor: pointer;
+  transform-origin: center;
+  transition:
+    box-shadow 0.3s ease,
+    filter 0.3s ease,
+    transform 0.3s ease;
+}
+
+#sectors .industry-card > img,
+.sectors-art-row .industry-card > img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  flex: none !important;
+  margin: 0 !important;
+  border-radius: 32px;
+  object-fit: cover !important;
+  pointer-events: none;
+  transition: transform 0.35s ease, filter 0.3s ease;
+}
+
+#sectors .industry-card::after,
+.sectors-art-row .industry-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: 32px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.9) 100%);
+  pointer-events: none;
+}
+
+.industry-card__label {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.industry-card__title {
+  color: #fff;
+  font-family: Raleway, "DM Sans", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.industry-card__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #16a34a;
+  font-family: Raleway, "DM Sans", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+#sectors .industry-card:hover,
+#sectors .industry-card:focus-visible,
+.sectors-art-row .industry-card:hover,
+.sectors-art-row .industry-card:focus-visible {
+  transform: translateY(-10px) scale(1.025);
+  box-shadow: 0 28px 62px rgba(15, 23, 42, 0.18);
+  filter: brightness(1.05) saturate(1.06);
+  outline: none;
+}
+
+#sectors .industry-card:hover > img,
+#sectors .industry-card:focus-visible > img,
+.sectors-art-row .industry-card:hover > img,
+.sectors-art-row .industry-card:focus-visible > img {
+  transform: scale(1.06);
+}
+
+#sectors .industry-card:hover .industry-card__cta,
+#sectors .industry-card:focus-visible .industry-card__cta,
+.sectors-art-row .industry-card:hover .industry-card__cta,
+.sectors-art-row .industry-card:focus-visible .industry-card__cta {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (hover: none) {
+  #sectors .industry-card__cta,
+  .sectors-art-row .industry-card__cta {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Bootstrap fallback utilities for offline/local rendering */
@@ -1514,31 +1628,58 @@ header {
   top: 35%;
 }
 
-.tech-actions .btn {
+.tech-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.tech-actions .btn,
+.tech-actions .tech-action-btn {
   min-height: 64px;
+  height: 64px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;
-  padding: 16px 34px;
+  gap: 10px;
+  padding: 16px 24px;
+  border-radius: 32px !important;
   font-family: Raleway, "DM Sans", Arial, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  box-shadow: 0 20px 42px rgba(15, 23, 42, 0.08);
+  font-size: 21.333px;
+  font-weight: 600;
+  line-height: 32px;
+  letter-spacing: 0;
+  white-space: nowrap;
+  text-decoration: none;
 }
 
-.tech-actions .btn:first-child {
-  min-width: 430px;
-  background: #000;
-  border-color: #000;
-  color: #fff;
+.tech-action-btn__arrow {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  object-fit: contain;
+  /* Figma arrow-right-02 export points down */
+  transform: rotate(-90deg) scaleX(-1);
 }
 
-.tech-actions .btn:last-child {
-  min-width: 585px;
-  background: #fff;
-  border: 1px solid rgba(18, 18, 255, 0.35) !important;
-  color: var(--blue) !important;
+.tech-actions .btn:first-child,
+.tech-actions .tech-action-btn--dark {
+  min-width: 420px;
+  background: #000 !important;
+  border: 0 !important;
+  color: #fff !important;
+  box-shadow: 0 1.333px 2.667px rgba(16, 24, 40, 0.05);
+}
+
+.tech-actions .btn:last-child,
+.tech-actions .tech-action-btn--light {
+  min-width: 588px;
+  background: #fff !important;
+  border: 1px solid rgba(18, 18, 255, 0.4) !important;
+  color: #1212ff !important;
+  box-shadow: 0 0 25px rgba(16, 24, 40, 0.09);
 }
 
 .solutions {
@@ -2120,26 +2261,6 @@ figcaption small {
   padding: 96px 0;
 }
 
-.industry-card {
-  min-height: 240px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  border-radius: 18px;
-  overflow: hidden;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  transition: box-shadow 0.24s ease, filter 0.24s ease;
-}
-
-.industry-card:hover,
-.industry-card.card-selected {
-  box-shadow: 0 17px 36px rgba(0, 0, 0, 0.2);
-  filter: brightness(1.04) saturate(1.04);
-}
-
 .industry-card small {
   margin-top: 6px;
   color: #00df72;
@@ -2400,7 +2521,7 @@ figcaption small {
 
 .impact-art-row > div,
 .impact-art-row > img,
-.sectors-art-row img,
+.sectors-art-row .industry-card,
 .contact-card,
 .contact-image,
 .cta {
@@ -2412,7 +2533,7 @@ figcaption small {
 
 .impact-art-row > div:hover,
 .impact-art-row > img:hover,
-.sectors-art-row img:hover,
+.sectors-art-row .industry-card:hover,
 .contact-card:hover,
 .contact-image:hover,
 .cta:hover {
@@ -2712,7 +2833,10 @@ figcaption small {
 
   .tech-actions .btn,
   .tech-actions .btn:first-child,
-  .tech-actions .btn:last-child {
+  .tech-actions .btn:last-child,
+  .tech-actions .tech-action-btn,
+  .tech-actions .tech-action-btn--dark,
+  .tech-actions .tech-action-btn--light {
     width: 100%;
     min-width: 0;
   }
@@ -2894,11 +3018,17 @@ figcaption small {
     flex-direction: column;
   }
 
-  .sectors-art-row img {
+  .sectors-art-row .industry-card {
     width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1;
     flex: none !important;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 1 / 1;
+  }
+
+  .sectors-art-row .industry-card > img {
+    width: 100% !important;
+    height: 100% !important;
     object-fit: cover !important;
   }
 
@@ -3855,25 +3985,21 @@ figcaption small {
   justify-content: center !important;
 }
 
-.sectors-art-row img {
+#sectors .industry-card,
+.sectors-art-row .industry-card {
   flex: 0 0 405.333px !important;
   width: 405.333px !important;
   max-width: 100% !important;
   height: 410px !important;
   border-radius: 32px !important;
-  object-fit: fill !important;
-  cursor: pointer;
-  transform-origin: center;
-  transition:
-    box-shadow 0.3s ease,
-    filter 0.3s ease,
-    transform 0.3s ease;
 }
 
-.sectors-art-row img:hover {
-  transform: translateY(-10px) scale(1.025);
-  box-shadow: 0 28px 62px rgba(15, 23, 42, 0.18);
-  filter: brightness(1.05) saturate(1.06);
+#sectors .industry-card > img,
+.sectors-art-row .industry-card > img {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 32px !important;
+  object-fit: cover !important;
 }
 
 /* Final responsive safety net for the Figma-exported inline dimensions. */
@@ -4016,13 +4142,27 @@ h3 {
     gap: 8px !important;
   }
 
-  .sectors-art-row img {
+  .sectors-art-row .industry-card {
     flex: 0 0 calc((100% - 16px) / 3) !important;
     width: calc((100% - 16px) / 3) !important;
     height: auto !important;
+    min-height: 0 !important;
     aspect-ratio: 405.333 / 410 !important;
     border-radius: 8px !important;
-    object-fit: fill !important;
+    padding: 14px !important;
+  }
+
+  .sectors-art-row .industry-card > img {
+    border-radius: 8px !important;
+    object-fit: cover !important;
+  }
+
+  .sectors-art-row .industry-card__title {
+    font-size: clamp(14px, 2.2vw, 18px) !important;
+  }
+
+  .sectors-art-row .industry-card__cta {
+    font-size: 12px !important;
   }
 }
 
@@ -4265,16 +4405,21 @@ h3 {
 
   #sectors > div:last-child::-webkit-scrollbar { display: none; }
 
-  #sectors .sectors-art-row img {
+  #sectors .sectors-art-row .industry-card {
     flex: 0 0 calc(100vw - 80px) !important;
     width: calc(100vw - 80px) !important;
     max-width: none !important;
     height: 386px !important;
+    min-height: 386px !important;
     aspect-ratio: auto !important;
     margin: 0 !important;
     border-radius: 22px !important;
-    object-fit: cover !important;
     scroll-snap-align: start;
+  }
+
+  #sectors .sectors-art-row .industry-card > img {
+    border-radius: 22px !important;
+    object-fit: cover !important;
   }
 
   /* The source has one flat rail; retain the parent as the scroll container. */
@@ -7354,11 +7499,17 @@ h3 {
     gap: 16px !important;
   }
 
-  .sectors-art-row img {
+  .sectors-art-row .industry-card {
     flex: 0 0 calc((100% - 32px) / 3) !important;
     width: calc((100% - 32px) / 3) !important;
     height: clamp(220px, 31vw, 300px) !important;
+    min-height: 0 !important;
     aspect-ratio: auto !important;
+    border-radius: 20px !important;
+    padding: 18px !important;
+  }
+
+  .sectors-art-row .industry-card > img {
     border-radius: 20px !important;
     object-fit: cover !important;
   }
@@ -7923,7 +8074,7 @@ h3 {
     display: grid !important;
   }
 
-  .sectors-art-row img {
+  .sectors-art-row .industry-card {
     width: 100% !important;
     height: clamp(240px, 50vw, 360px) !important;
     flex: none !important;
@@ -8210,15 +8361,25 @@ h3 {
 
   #tech .tech-actions .btn,
   #tech .tech-actions .btn:first-child,
-  #tech .tech-actions .btn:last-child {
+  #tech .tech-actions .btn:last-child,
+  #tech .tech-actions .tech-action-btn,
+  #tech .tech-actions .tech-action-btn--dark,
+  #tech .tech-actions .tech-action-btn--light {
     width: 100% !important;
     min-width: 0 !important;
     min-height: 68px !important;
+    height: auto !important;
     padding: 16px 22px !important;
-    gap: 14px !important;
+    gap: 10px !important;
     font-size: 17px !important;
     line-height: 1.22 !important;
     white-space: normal !important;
+  }
+
+  #tech .tech-action-btn__arrow {
+    width: 20px;
+    height: 20px;
+    flex-basis: 20px;
   }
 }
 
@@ -8281,12 +8442,16 @@ h3 {
     white-space: nowrap !important;
   }
 
-  #tech .tech-actions .btn:first-child {
-    width: min(100%, 430px) !important;
+  #tech .tech-actions .btn:first-child,
+  #tech .tech-actions .tech-action-btn--dark {
+    width: min(100%, 420px) !important;
+    min-width: 0 !important;
   }
 
-  #tech .tech-actions .btn:last-child {
-    width: min(100%, 585px) !important;
+  #tech .tech-actions .btn:last-child,
+  #tech .tech-actions .tech-action-btn--light {
+    width: min(100%, 588px) !important;
+    min-width: 0 !important;
   }
 }
 

@@ -742,14 +742,20 @@ body.wasteheat-page .wasteheat-industries .sector-card:focus-visible {
     white-space: nowrap !important;
   }
 
-  body.wasteheat-page .wasteheat-how-flow > img {
+  body.wasteheat-page .wasteheat-how-flow > img,
+  body.wasteheat-page .wasteheat-how-arrow {
     width: 20px !important;
     height: 20px !important;
+    transform: rotate(-90deg) scaleX(-1);
   }
 
-  body.wasteheat-page .wasteheat-how > img {
+  body.wasteheat-page .wasteheat-how > img,
+  body.wasteheat-page .wasteheat-how-diagram {
     width: 100% !important;
+    max-width: 100% !important;
     height: auto !important;
+    aspect-ratio: 1713 / 794;
+    object-fit: contain !important;
   }
 
   body.wasteheat-page .cpe-steps-row {
