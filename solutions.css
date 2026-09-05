@@ -29,13 +29,17 @@
 
 .solutions-decoration {
   position: absolute;
+  z-index: 0;
+  /* Figma 2706:60593 — image 19 at x:-52.43 y:22.21, 703.7×656.8 */
   top: 22px;
   left: -52px;
   width: 704px;
   height: 657px;
   object-fit: cover;
-  opacity: 0.04;
+  object-position: bottom left;
+  opacity: 1;
   pointer-events: none;
+  user-select: none;
 }
 
 .solutions-shell {
@@ -277,21 +281,45 @@
 .solutions-contact-card {
   position: relative;
   overflow: hidden;
-  border-radius: 43px;
-  background: #2f9d69 url("assets/images/solutions-page/figma/contact-card.svg") center / 100% 100% no-repeat;
+  /* Figma Subtract notch — same mask as landing audit-copy-card */
+  background: #2e9d68;
   color: #fff;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 592 483' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M592 414C592 438 573 457 549 457H302C279 457 258 483 235 483H43C19 483 0 464 0 440V43C0 19 19 0 43 0H549C573 0 592 19 592 43V414Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 592 483' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M592 414C592 438 573 457 549 457H302C279 457 258 483 235 483H43C19 483 0 464 0 440V43C0 19 19 0 43 0H549C573 0 592 19 592 43V414Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.contact-card-mark {
+  position: absolute;
+  z-index: 0;
+  /* Figma image 19 — 338×315 at x:296 y:-61 on 592×483 (global img max-width must not clip) */
+  top: -12.655%;
+  left: 50%;
+  width: 57.0946%;
+  height: 65.236%;
+  max-width: none;
+  max-height: none;
+  margin: 0;
+  object-fit: fill;
+  object-position: bottom center;
+  opacity: 0.13;
+  pointer-events: none;
+  user-select: none;
 }
 
 .solutions-contact-content {
   position: absolute;
-  top: 50%;
+  z-index: 1;
+  /* Figma content frame — x:58 y:31 (not vertically centered) */
+  top: 31px;
   left: 58px;
   display: flex;
   width: min(480px, calc(100% - 92px));
+  height: auto;
+  max-height: calc(100% - 62px);
   flex-direction: column;
   align-items: flex-start;
-  transform: translateY(-50%);
+  transform: none;
 }
 
 .solutions-contact-content h2 {
@@ -315,17 +343,40 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  min-height: 48px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: 36px;
+  padding: 0;
+  border: 0;
   color: #fff;
   font-size: 24px;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 36px;
   text-decoration: none;
 }
 
-.solutions-contact-content address a:last-child { border-bottom: 0; }
-.solutions-contact-content address span { width: 32px; text-align: center; }
+/* Figma: email → 12px → line → 12px → phone */
+.solutions-contact-content address a:first-child {
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* Figma mail/call — 28px icon in 32px column, vertically centered with text */
+.solutions-contact-content .contact-icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 28px;
+  line-height: 0;
+}
+
+.solutions-contact-content .contact-icon img {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
 
 .audit-button {
   display: inline-flex;
@@ -389,7 +440,6 @@
 }
 
 .solutions-page .footer-panel { margin-top: 0; }
-.footer-social > a { color: #fff; font-weight: 700; text-decoration: none; }
 
 @media (max-width: 1199.98px) {
   .solutions-shell,
@@ -421,9 +471,17 @@
   .solution-photo { height: auto; aspect-ratio: 564 / 385; }
   .solutions-contact { padding: 64px 0; }
   .solutions-contact-grid { grid-template-columns: 1fr; gap: 20px; }
-  .solutions-contact-card { height: 520px; border-radius: 32px; }
+  .solutions-contact-card { height: 520px; }
   .solutions-contact-photo { height: auto; aspect-ratio: 592 / 483; }
-  .solutions-contact-content { left: 28px; width: calc(100% - 56px); }
+  .solutions-contact-content { top: 28px; left: 28px; width: calc(100% - 56px); }
+  .contact-card-mark {
+    top: -40px;
+    left: auto;
+    right: -48px;
+    width: 240px;
+    height: 224px;
+    max-width: none;
+  }
   .solutions-contact-content h2 { font-size: 38px; }
   .solutions-contact-content address a { font-size: 17px; }
   .audit-button { width: 100%; padding: 14px 16px; font-size: 17px; }

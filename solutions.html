@@ -8,8 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@600;700;800&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css?v=solutions-figma" />
-    <link rel="stylesheet" href="solutions.css?v=figma-links-fix" />
+    <link rel="stylesheet" href="style.css?v=footer-figma" />
+    <link rel="stylesheet" href="solutions.css?v=footer-figma" />
   </head>
   <body class="solutions-page">
     <div class="site-frame" id="top">
@@ -41,7 +41,7 @@
 
       <main>
         <section class="solutions-showcase" aria-labelledby="solutions-title">
-          <img class="solutions-decoration" src="assets/images/solutions-page/figma/hero-decoration.png" alt="" />
+          <img class="solutions-decoration" src="assets/images/solutions-page/figma/solutions-watermark.png" alt="" aria-hidden="true" />
           <div class="solutions-shell">
             <h1 id="solutions-title">Sept solutions, un objectif : <span>0 % fossile</span></h1>
             <div class="solutions-list">
@@ -129,11 +129,27 @@
           <img class="contact-decoration" src="assets/images/solutions-page/figma/contact-decoration.svg" alt="" />
           <div class="solutions-contact-grid">
             <div class="solutions-contact-card">
+              <img
+                class="contact-card-mark"
+                src="assets/images/landing/cta-watermark.png"
+                alt=""
+                aria-hidden="true"
+              />
               <div class="solutions-contact-content">
                 <h2>Contactez-nous .</h2>
                 <address>
-                  <a href="mailto:contact@electris.fr"><span aria-hidden="true">✉</span>contact@electris.fr</a>
-                  <a href="tel:+33100000000"><span aria-hidden="true">⌕</span>+33 (0)1 XX XX XX XX</a>
+                  <a href="mailto:contact@electris.fr">
+                    <span class="contact-icon" aria-hidden="true">
+                      <img src="assets/images/solutions-page/figma/icon-mail.svg" alt="" width="28" height="28" />
+                    </span>
+                    contact@electris.fr
+                  </a>
+                  <a href="tel:+33100000000">
+                    <span class="contact-icon" aria-hidden="true">
+                      <img src="assets/images/solutions-page/figma/icon-phone.svg" alt="" width="28" height="28" />
+                    </span>
+                    +33 (0)1 XX XX XX XX
+                  </a>
                 </address>
                 <a class="audit-button" href="mailto:contact@electris.fr">Demander un audit gratuit <span aria-hidden="true">→</span></a>
                 <p>L'ingénierie qui rend vos bâtiments plus performants.</p>
@@ -149,18 +165,51 @@
     <footer class="footer-panel">
       <div class="footer-inner d-flex flex-column">
         <div class="footer-top d-flex align-items-start">
-          <a class="footer-logo d-flex align-items-center text-decoration-none" href="#top"><img src="assets/images/logo/electris-logo.png" alt="Electris" /></a>
+          <a class="footer-logo d-flex align-items-center text-decoration-none" href="#top">
+            <img src="assets/images/logo/electris-logo.png" alt="Electris" />
+          </a>
           <div class="footer-cols d-grid flex-grow-1">
-            <section class="footer-col"><h5>TECHNOLOGIES</h5><ul class="list-unstyled d-flex flex-column"><li><span class="chevron">›</span><a href="24-technologie.html">Découvrir</a></li><li><span class="chevron">›</span><a href="index.html#process">Financement</a></li><li><span class="chevron">›</span><a href="index.html#impact">Équipe</a></li><li><span class="chevron">›</span><a href="#contact">Contact</a></li></ul></section>
-            <section class="footer-col"><h5>SOLUTIONS</h5><ul class="list-unstyled d-flex flex-column"><li><span class="chevron">›</span><a href="WasteHeatRecoverySolutions.html">Récupération de chaleur fatale</a></li><li><span class="chevron">›</span><a href="cascade.html">Solution de cascade pompe à chaleur</a></li><li><span class="chevron">›</span><a href="solution-gtb.html">Gestion technique du bâtiment (GTB)</a></li><li><span class="chevron">›</span><a href="solution-gtb.html">Classe A</a></li><li><span class="chevron">›</span><a href="F-gas-compliance-solutions.html">Conformité F-Gas</a></li><li><span class="chevron">›</span><a href="destratification-air.html">Déstratification d'air</a></li><li><span class="chevron">›</span><a href="solutions-regulation-haute-pression-flottante.html">Régulation haute pression flottante</a></li><li><span class="chevron">›</span><a href="cpe.html">Contrat de performance (CPE)</a></li></ul></section>
-            <section class="footer-col"><h5>SECTEURS</h5><ul class="list-unstyled d-flex flex-column"><li><span class="chevron">›</span><a href="10-secteurs-grande-distribution.html">Grande distribution</a></li><li><span class="chevron">›</span><a href="13-secteurs-industrie.html">Industrie</a></li><li><span class="chevron">›</span><a href="11-secteurs-hotellerie.html">Hôtellerie</a></li><li><span class="chevron">›</span><a href="15-secteurs-bureaux.html">Tertiaire &amp; Bureaux</a></li><li><span class="chevron">›</span><a href="14-secteurs-data-centers.html">Centres de données</a></li><li><span class="chevron">›</span><a href="secteurs-hotellerie-dom-tom.html">DOM-TOM</a></li></ul></section>
+            <section class="footer-col">
+              <h5>Technologies</h5>
+              <ul class="list-unstyled d-flex flex-column">
+                <li><span class="chevron" aria-hidden="true">›</span><a href="24-technologie.html">Découvrir</a></li>
+                <li><span class="chevron" aria-hidden="true">›</span><a href="financement.html">Financement</a></li>
+                <li><span class="chevron" aria-hidden="true">›</span><a href="index.html#impact">Équipe</a></li>
+                <li><span class="chevron" aria-hidden="true">›</span><a href="#contact">Contact</a></li>
+              </ul>
+            </section>
+            <section class="footer-col">
+              <h5>Solutions</h5>
+              <ul class="list-unstyled d-flex flex-column">
+                <li><span class="chevron" aria-hidden="true">›</span><a href="WasteHeatRecoverySolutions.html">Récupération de chaleur fatale</a></li>
+                <li><span class="chevron" aria-hidden="true">›</span><a href="solution-gtb.html">Gestion technique du bâtiment (GTB)</a></li>
+                <li><span class="chevron" aria-hidden="true">›</span><a href="solution-gtb.html">Classe A</a></li>
+                <li><span class="chevron" aria-hidden="true">›</span><a href="cascade.html">Solution de cascade pompe à chaleur</a></li>
+                <li><span class="chevron" aria-hidden="true">›</span><a href="cpe.html">Contrat de performance (CP)</a></li>
+              </ul>
+            </section>
+            <section class="footer-col">
+              <h5>Secteurs</h5>
+              <ul class="list-unstyled d-flex flex-column">
+                <li><span class="chevron" aria-hidden="true">›</span><a href="10-secteurs-grande-distribution.html">Grande distribution</a></li>
+                <li><span class="chevron" aria-hidden="true">›</span><a href="13-secteurs-industrie.html">Industrie</a></li>
+                <li><span class="chevron" aria-hidden="true">›</span><a href="11-secteurs-hotellerie.html">Hôtellerie</a></li>
+                <li><span class="chevron" aria-hidden="true">›</span><a href="15-secteurs-bureaux.html">Tertiaire &amp; Bureaux</a></li>
+                <li><span class="chevron" aria-hidden="true">›</span><a href="14-secteurs-data-centers.html">Centres de données</a></li>
+                <li><span class="chevron" aria-hidden="true">›</span><a href="secteurs-hotellerie-dom-tom.html">DOM-TOM</a></li>
+              </ul>
+            </section>
           </div>
         </div>
         <div class="footer-divider"></div>
         <div class="footer-bottom d-flex align-items-center justify-content-between">
           <p>Mentions légales Confidentialité (c) 2026 ELECTRIS</p>
           <div class="footer-social d-flex align-items-center" aria-label="Réseaux sociaux">
-            <a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="X">𝕏</a><a href="#" aria-label="LinkedIn">in</a>
+            <a href="#" aria-label="Facebook"><img src="assets/images/footer/social-facebook.svg" alt="" width="20" height="20" /></a>
+            <a href="#" aria-label="Instagram"><img src="assets/images/footer/social-instagram.svg" alt="" width="20" height="20" /></a>
+            <a href="#" aria-label="YouTube"><img src="assets/images/footer/social-youtube.svg" alt="" width="26" height="18" /></a>
+            <a href="#" aria-label="X"><img src="assets/images/footer/social-x.svg" alt="" width="18" height="19" /></a>
+            <a href="#" aria-label="LinkedIn"><img src="assets/images/footer/social-linkedin.svg" alt="" width="20" height="20" /></a>
           </div>
         </div>
       </div>
