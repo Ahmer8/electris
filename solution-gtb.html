@@ -17,6 +17,20 @@
       .legacy-ok2-footer-space {
         display: none !important;
       }
+      .wasteheat-how-arrow {
+        width: 24px;
+        height: 24px;
+        flex: 0 0 24px;
+        object-fit: contain;
+        transform: rotate(-90deg) scaleX(-1);
+      }
+      .wasteheat-how-diagram {
+        width: 100%;
+        max-width: 1280px;
+        height: auto;
+        aspect-ratio: 1715 / 788;
+        object-fit: contain;
+      }
       .wasteheat-legacy-header {
         display: none !important;
       }
@@ -98,25 +112,38 @@
         mask-position: center;
       }
       /* The three client assets are complete Figma cards (photo + metrics). */
-      .client-results div:has(> .client-result-photo) {
-        aspect-ratio: 1450 / 922;
-        height: auto !important;
-        padding: 0 !important;
-        background: transparent !important;
-        border: 0 !important;
-        overflow: hidden;
+      .client-results .hp-result-visual--figma {
+      aspect-ratio: auto;
+      height: auto !important;
+      padding: 0 !important;
+      background: transparent !important;
+      border: 0 !important;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .client-results .hp-result-visual--figma .client-result-photo,
+    .client-results .hp-result-card-shot {
+      position: static !important;
+      inset: auto !important;
+      width: 100% !important;
+      height: auto !important;
+      object-fit: contain !important;
+      border-radius: 34px !important;
+      display: block !important;
+    }
+    .client-results .hp-result-visual--figma .client-result-photo + div {
+      display: none !important;
+    }
+    @media (max-width: 900px) {
+      .client-results .hp-result-row,
+      .client-results .hp-result-row--reverse {
+        flex-direction: column !important;
+        align-items: stretch !important;
       }
-      .client-results .client-result-photo {
-        position: absolute !important;
-        inset: 0 !important;
+      .client-results .hp-result-copy {
         width: 100% !important;
-        height: 100% !important;
-        border-radius: 32px;
-        object-fit: cover !important;
       }
-      .client-result-photo + div {
-        display: flex !important;
-      }
+    }
       span[style*="font-size: 48px"][style*="font-weight: bold"],
       .reference-section-title {
         font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -431,6 +458,12 @@
           object-fit: cover !important;
         }
 
+        .gtb-independence-intro img,
+        .gtb-independence-waste img {
+          object-fit: contain !important;
+          max-height: none !important;
+        }
+
         .wasteheat-how {
           padding: 56px 24px !important;
         }
@@ -729,6 +762,29 @@
         width: 100%;
         height: auto;
       }
+    
+      .hp-contact-card--figma {
+        align-self: stretch;
+        display: block;
+      }
+      .hp-contact-hotspot {
+        position: absolute;
+        display: block;
+        z-index: 2;
+      }
+      .hp-contact-hotspot--mail {
+        left: 9.8%;
+        top: 22%;
+        width: 62%;
+        height: 9%;
+      }
+      .hp-contact-hotspot--cta {
+        left: 9.8%;
+        top: 52%;
+        width: 58%;
+        height: 14%;
+      }
+
     </style>
   <link rel="stylesheet" href="solution-detail.css?v=secteurs-hover-all" />
   </head>
@@ -1512,99 +1568,106 @@
         >
           <div style="align-self: stretch">
             <section
+              class="gtb-independence-intro"
               style="
                 align-self: stretch;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background: #ffffff;
-                padding-top: 64px;
-                padding-bottom: 64px;
+                background: #f1f5f9;
+                border-bottom: 1px solid #e2e8f0;
+                padding: 64px 32px;
                 gap: 64px;
               "
             >
               <div
                 style="
-                  flex-shrink: 0;
+                  flex: 1;
+                  min-width: 0;
+                  max-width: 878px;
                   display: flex;
                   flex-direction: column;
-                  align-items: center;
-                  padding-top: 48px;
+                  align-items: flex-start;
+                  gap: 12px;
                 "
               >
+                <span style="color: #475569; font-size: 24px"
+                  >Indépendance énergétique</span
+                >
                 <div
                   style="
                     display: flex;
                     flex-direction: column;
                     align-items: flex-start;
                     gap: 16px;
+                    width: 100%;
                   "
                 >
-                  <span style="color: #475569; font-size: 24px"
-                    >Indépendance énergétique</span
-                  >
                   <span
                     class="reference-section-title"
                     style="
                       color: #1f252e;
                       font-size: 48px;
                       font-weight: bold;
-                      margin-right: 102px;
+                      letter-spacing: -2.39px;
+                      line-height: 1.1;
                     "
                   >
                     Pourquoi cela signifie indépendance ?
                   </span>
-                  <span style="color: #475569; font-size: 24px; width: 878px">
-                    Chaque chaudi&egrave;re d&eacute;branch&eacute;e, c&#39;est une facture de gaz qui dispara&icirc;t
-                    et une d&eacute;pendance &agrave; l&#39;&eacute;nergie import&eacute;e qui s&#39;efface.
+                  <span style="color: #475569; font-size: 24px; line-height: 1.5">
+                    Maîtriser, c&#39;est ne plus subir le gaspillage : chaque kWh
+                    évité est un kWh de moins à acheter.
                   </span>
                 </div>
               </div>
               <img
-                src="assets/images/cascade/independence-rooftop-curved.svg"
-                alt="Pompes a chaleur sur toiture a Paris"
+                src="assets/images/gtb/independence/dashboards-curved.png"
+                alt="Salle de contrôle GTB — dashboards de pilotage"
                 style="
-                  border-radius: 43px;
+                  flex-shrink: 0;
                   width: 270px;
                   height: 240px;
-                  object-fit: fill;
+                  object-fit: contain;
                 "
               />
             </section>
             <section
+              class="gtb-independence-waste"
               style="
                 align-self: stretch;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 background: #ffffff;
-                padding-top: 96px;
-                padding-bottom: 96px;
+                padding: 96px 32px;
                 gap: 48px;
               "
             >
               <img
-                class="gas-market-curved-photo"
-                src="assets/images/cascade/image3_2153_18060_1024x1024.png"
-                alt="Installation technique de pompes a chaleur en cascade"
+                src="assets/images/gtb/independence/control-center-curved.png"
+                alt="Centre de contrôle GTB — plan de bâtiment et pilotage"
                 style="
-                  border-radius: 43px;
+                  flex-shrink: 0;
                   width: 510px;
-                  height: 517px;
-                  object-fit: cover;
+                  height: auto;
+                  max-width: 100%;
+                  object-fit: contain;
                 "
               />
               <div
                 style="
-                  width: 658px;
+                  flex: 1;
+                  min-width: 0;
+                  max-width: 658px;
                   display: flex;
                   flex-direction: column;
                   align-items: flex-start;
-                  gap: 11px;
+                  gap: 12px;
                 "
               >
                 <span style="color: #475569; font-size: 24px">
-                  Le pi&egrave;ge du tout-gaz
+                  Gaspillage invisible
                 </span>
                 <div style="align-self: stretch">
                   <div
@@ -1618,20 +1681,23 @@
                     "
                   >
                     <span
+                      class="reference-section-title"
                       style="
-                        color: #1f252e;
+                        color: #000000;
                         font-size: 48px;
                         font-weight: bold;
-                        width: 575px;
+                        letter-spacing: -2.39px;
+                        line-height: 1.1;
                       "
                     >
-                      Vous chauffez au prix d&#39;un march&eacute; que vous ne contr&ocirc;lez pas.
+                      Vous chauffez des espaces vides et faites tourner la
+                      climatisation en plein hiver.
                     </span>
-                    <span style="color: #475569; font-size: 24px; width: 635px">
-                      Le prix du gaz est volatile et impos&eacute;. Tant que votre chaleur
-                      d&eacute;pend d&#39;un combustible import&eacute;, votre budget &eacute;nergie reste
-                      expos&eacute;. La cascade PAC vous redonne le contr&ocirc;le de votre co&ucirc;t de
-                      chaleur.
+                    <span style="color: #475569; font-size: 24px; line-height: 1.5">
+                      Sans régulation fine, un bâtiment fonctionne en continu
+                      comme s&#39;il était plein. Les consignes ne suivent ni
+                      l&#39;occupation ni la météo, et la dérive s&#39;installe sans que
+                      personne ne s&#39;en aperçoive.
                     </span>
                   </div>
                   <div
@@ -1662,7 +1728,6 @@
                         style="
                           flex-shrink: 0;
                           display: flex;
-                          flex-direction: column;
                           align-items: center;
                           padding-top: 8px;
                           padding-bottom: 8px;
@@ -1670,14 +1735,15 @@
                       >
                         <div
                           style="
-                            width: 22px;
-                            height: 22px;
+                            width: 16px;
+                            height: 16px;
                             background: linear-gradient(
                               180deg,
                               #1212ff,
-                              #0a0a99
+                              #0b0b99
                             );
                             border-radius: 5px;
+                            transform: rotate(45deg);
                           "
                         ></div>
                       </div>
@@ -1685,11 +1751,13 @@
                         style="
                           color: #0f172a;
                           font-size: 24px;
-                          font-weight: bold;
+                          font-weight: 800;
                           flex: 1;
+                          line-height: 1.5;
                         "
                       >
-                        x2-x3 volatilit&eacute; du prix du gaz observ&eacute;e sur 5 ans
+                        ~30 % de consommation CVC gaspillée sans régulation
+                        [indicatif]
                       </span>
                     </div>
                     <div
@@ -1704,7 +1772,6 @@
                         style="
                           flex-shrink: 0;
                           display: flex;
-                          flex-direction: column;
                           align-items: center;
                           padding-top: 8px;
                           padding-bottom: 8px;
@@ -1712,14 +1779,15 @@
                       >
                         <div
                           style="
-                            width: 22px;
-                            height: 22px;
+                            width: 16px;
+                            height: 16px;
                             background: linear-gradient(
                               180deg,
                               #1212ff,
-                              #0a0a99
+                              #0b0b99
                             );
                             border-radius: 5px;
+                            transform: rotate(45deg);
                           "
                         ></div>
                       </div>
@@ -1727,12 +1795,13 @@
                         style="
                           color: #0f172a;
                           font-size: 24px;
-                          font-weight: bold;
+                          font-weight: 800;
                           flex: 1;
+                          line-height: 1.5;
                         "
                       >
-                        Un d&eacute;clic : changement d&#39;&eacute;metteur requis dans la plupart des
-                        cas
+                        Classe A niveau de performance cible (NF EN ISO
+                        52120-1)
                       </span>
                     </div>
                     <div
@@ -1747,7 +1816,6 @@
                         style="
                           flex-shrink: 0;
                           display: flex;
-                          flex-direction: column;
                           align-items: center;
                           padding-top: 8px;
                           padding-bottom: 8px;
@@ -1755,14 +1823,15 @@
                       >
                         <div
                           style="
-                            width: 22px;
-                            height: 22px;
+                            width: 16px;
+                            height: 16px;
                             background: linear-gradient(
                               180deg,
                               #1212ff,
-                              #0a0a99
+                              #0b0b99
                             );
                             border-radius: 5px;
+                            transform: rotate(45deg);
                           "
                         ></div>
                       </div>
@@ -1770,11 +1839,12 @@
                         style="
                           color: #0f172a;
                           font-size: 24px;
-                          font-weight: bold;
+                          font-weight: 800;
                           flex: 1;
+                          line-height: 1.5;
                         "
                       >
-                        -99 % de CO2 par rapport &agrave; une chaudi&egrave;re gaz
+                        70 kW seuil d&#39;obligation du décret BACS
                       </span>
                     </div>
                   </div>
@@ -1782,17 +1852,6 @@
               </div>
             </section>
           </div>
-          <img
-            src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/828p8vl2_expires_30_days.png"
-            style="
-              position: absolute;
-              top: 83px;
-              left: 0px;
-              width: 703px;
-              height: 656px;
-              object-fit: fill;
-            "
-          />
         </div>
         <div
           class="wasteheat-how"
@@ -1800,22 +1859,33 @@
             align-self: stretch;
             display: flex;
             flex-direction: column;
-            padding: 63px 116px;
+            align-items: center;
+            padding: 64px 32px;
             margin-bottom: 1px;
             gap: 48px;
+            background: #ffffff;
           "
         >
           <div
             style="
-              align-self: stretch;
+              width: 100%;
+              max-width: 1280px;
               display: flex;
               flex-direction: column;
               align-items: center;
-              gap: 8px;
+              gap: 9px;
             "
           >
-            <span style="color: #475569; font-size: 24px">
-              D&eacute;carbonation thermique
+            <span
+              style="
+                color: #475569;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 1.5;
+                text-align: center;
+              "
+            >
+              GTB Classe A
             </span>
             <div
               style="
@@ -1823,73 +1893,78 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                gap: 9px;
+                gap: 10px;
               "
             >
-              <span class="reference-section-title" style="color: #000000; font-size: 48px; font-weight: bold">
-                Comment fonctionne la cascade PAC ?
+              <span
+                class="reference-section-title"
+                style="
+                  color: #000000;
+                  font-size: 48px;
+                  font-weight: bold;
+                  letter-spacing: -2.39px;
+                  line-height: 1.1;
+                  text-align: center;
+                "
+              >
+                Comment fonctionne la GTB Classe A ?
               </span>
               <div
                 class="wasteheat-how-flow"
                 style="
                   align-self: stretch;
                   display: flex;
+                  flex-wrap: wrap;
                   justify-content: center;
                   align-items: center;
+                  gap: 11px;
                 "
               >
-                <span
-                  style="color: #475569; font-size: 24px; margin-right: 13px"
-                >
-                  Source
-                </span>
+                <span style="color: #475569; font-size: 24px">Comptage</span>
                 <img
-                  src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/gp4rktdp_expires_30_days.png"
-                  style="
-                    width: 24px;
-                    height: 24px;
-                    margin-right: 11px;
-                    object-fit: fill;
-                  "
+                  class="wasteheat-how-arrow"
+                  src="assets/images/gtb/how/arrow.svg"
+                  alt=""
+                  width="24"
+                  height="24"
                 />
-                <span
-                  style="color: #475569; font-size: 24px; margin-right: 15px"
+                <span style="color: #475569; font-size: 24px"
+                  >Régulation zone par zone</span
                 >
-                  PAC primaire
-                </span>
                 <img
-                  src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/th199h8h_expires_30_days.png"
-                  style="
-                    width: 24px;
-                    height: 24px;
-                    margin-right: 11px;
-                    object-fit: fill;
-                  "
+                  class="wasteheat-how-arrow"
+                  src="assets/images/gtb/how/arrow.svg"
+                  alt=""
+                  width="24"
+                  height="24"
                 />
-                <span
-                  style="color: #475569; font-size: 24px; margin-right: 13px"
+                <span style="color: #475569; font-size: 24px"
+                  >Détection des dérives</span
                 >
-                  PAC de rehausse
-                </span>
                 <img
-                  src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/63bv8a8f_expires_30_days.png"
-                  style="
-                    width: 24px;
-                    height: 24px;
-                    margin-right: 11px;
-                    object-fit: fill;
-                  "
+                  class="wasteheat-how-arrow"
+                  src="assets/images/gtb/how/arrow.svg"
+                  alt=""
+                  width="24"
+                  height="24"
                 />
-                <span style="color: #475569; font-size: 24px">
-                  Distribution
-                </span>
+                <span style="color: #475569; font-size: 24px"
+                  >Pilotage prédictif</span
+                >
               </div>
             </div>
           </div>
           <img
-            src="assets/images/cascade/image5_2153_18060_1729x790.png"
-            alt="Schema de fonctionnement PAC en cascade air/eau et eau/eau"
-            style="height: auto; width: 100%; align-self: stretch; object-fit: contain"
+            class="wasteheat-how-diagram"
+            src="assets/images/gtb/how/diagram.png"
+            alt="Schéma GTB prédictive pilotée par IA — données site, moteur IA, automates, économies"
+            style="
+              width: 100%;
+              max-width: 1280px;
+              height: auto;
+              align-self: center;
+              object-fit: contain;
+            "
           />
         </div>
         <div
@@ -1991,1059 +2066,123 @@
           class="client-results"
           style="
             align-self: stretch;
-            background-color: #ffffff;
-            background-image: url(&quot;https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/z96kgddt_expires_30_days.png&quot;);
-            background-size: 100% 100%;
-            padding-bottom: 651px;
+            background: #ffffff;
+            padding: 96px 32px;
             margin-bottom: 1px;
             position: relative;
+            overflow: hidden;
           "
         >
-          <div
-            class="client-results__third"
-            style="
-              position: absolute;
-              bottom: 0px;
-              right: 0px;
-              left: 0px;
-              align-self: stretch;
-              padding-top: 197px;
-            "
-          >
-            <div
-              class="client-results__third-row"
-              style="
-                align-self: stretch;
-                display: flex;
-                align-items: center;
-                padding: 48px 116px 95px 116px;
-              "
-            >
-              <div
-                style="
-                  width: 489px;
-                  display: flex;
-                  flex-direction: column;
-                  margin-right: 67px;
-                  gap: 25px;
-                "
-              >
-                <div
-                  style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: column;
-                    background: #f1f5f9;
-                    border-radius: 33px;
-                    padding-top: 42px;
-                    padding-bottom: 18px;
-                    padding-left: 42px;
-                    gap: 27px;
-                  "
-                >
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      margin-right: 29px;
-                      gap: 8px;
-                    "
-                  >
-                    <span
-                      style="color: #272522; font-size: 33px; font-weight: bold"
-                    >
-                      Copropri&eacute;t&eacute; - chaufferie collective
-                    </span>
-                    <span style="color: #272522; font-size: 16px; width: 388px">
-                      Logement collectif - remplacement de gaz/fioul
-                    </span>
+          <div class="hp-results-inner" style="max-width:1280px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:84px;position:relative;z-index:1">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center">
+              <img src="assets/images/gtb/results/logo.png" alt="" style="width:58px;height:64px;object-fit:contain" />
+              <span class="reference-section-title" style="color:#000;font-size:48px;font-weight:700;letter-spacing:-2.4px;line-height:1.1">
+                Résultats obtenus pour nos clients .
+              </span>
+            </div>
+
+            <!-- Case 1: Bureaux — copy left / visual right -->
+            <div class="hp-result-row" style="display:flex;align-items:flex-start;justify-content:space-between;gap:48px;width:100%">
+              <div class="hp-result-copy" style="width:490px;display:flex;flex-direction:column;gap:25px;flex-shrink:0">
+                <div style="background:#f1f5f9;border-radius:34px;padding:42px;min-height:325px;box-sizing:border-box;display:flex;flex-direction:column;gap:27px">
+                  <div style="display:flex;flex-direction:column;gap:8px">
+                    <span style="color:#272522;font-size:32px;font-weight:700;line-height:1.25">Bâtiment de bureaux à plusieurs étages.</span>
+                    <span style="color:#272522;font-size:17px;line-height:1.5">Propriété commerciale • décret BACS</span>
                   </div>
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      gap: 12px;
-                    "
-                  >
-                    <div style="display: flex; align-items: center; gap: 8px">
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/67lbynx8_expires_30_days.png"
-                        style="width: 20px; height: 20px; object-fit: fill"
-                      />
-                      <span style="color: #000000; font-size: 14px">
-                        -40 &agrave; -50 % &middot; charge de chauffage / logement
-                      </span>
+                  <div style="display:flex;flex-direction:column;gap:12px">
+                    <div style="display:flex;align-items:flex-start;gap:8px">
+                      <img src="assets/images/gtb/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px"><strong>−10 à −30 %</strong> · consommation sur toutes les utilités [plage typique]</span>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 8px">
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/zweqzdzi_expires_30_days.png"
-                        style="width: 20px; height: 20px; object-fit: fill"
-                      />
-                      <span style="color: #000000; font-size: 14px">
-                        Subventions &middot; amortissement mensuel &lt; gaz/fioul
-                      </span>
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <img src="assets/images/gtb/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px"><strong>2–4 ans</strong> · ROI</span>
                     </div>
-                    <div
-                      style="
-                        align-self: stretch;
-                        display: flex;
-                        align-items: flex-start;
-                        gap: 8px;
-                      "
-                    >
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/opqzuwmu_expires_30_days.png"
-                        style="width: 20px; height: 20px; object-fit: fill"
-                      />
-                      <span style="color: #000000; font-size: 14px; flex: 1">
-                        Co&ucirc;t mensuel ma&icirc;tris&eacute; par logement.
-                      </span>
+                    <div style="display:flex;align-items:flex-start;gap:8px">
+                      <img src="assets/images/gtb/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px">Conformité au décret tertiaire + BACS assurée.</span>
                     </div>
                   </div>
                 </div>
-                <button
-                  style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    background: linear-gradient(180deg, #b2ffda, #88d2af);
-                    border-radius: 77px;
-                    border: 2px solid #f4f4f4;
-                    padding-top: 24px;
-                    padding-bottom: 24px;
-                    text-align: left;
-                  "
-                  onclick="alert('Pressed!')"
-                  }
-                >
-                  <div
-                    style="
-                      display: flex;
-                      align-items: center;
-                      background: #ffffff;
-                      border-radius: 32px;
-                      padding: 8px 41px;
-                      gap: 10px;
-                      box-shadow: 0px 1.3333333730697632px 2px #1018280d;
-                    "
-                  >
-                    <div
-                      style="
-                        flex-shrink: 0;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        padding-left: 2px;
-                        padding-right: 2px;
-                      "
-                    >
-                      <span
-                        style="
-                          color: #000000;
-                          font-size: 16px;
-                          font-weight: bold;
-                        "
-                      >
-                        Demander un audit gratuit
-                      </span>
-                    </div>
-                    <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/1cz8rgbv_expires_30_days.png"
-                      style="
-                        border-radius: 32px;
-                        width: 20px;
-                        height: 20px;
-                        object-fit: fill;
-                      "
-                    />
-                  </div>
-                </button>
+                <a href="mailto:contact@electris.fr" class="hp-result-cta" style="display:flex;align-items:center;justify-content:center;height:97px;border-radius:77px;border:2px solid #f4f4f4;text-decoration:none;background:linear-gradient(169deg,#b2ffda 0%,#89d2af 100%)">
+                  <span style="display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:32px;padding:8px 24px;box-shadow:0 1.3px 2.7px rgba(16,24,40,0.05)">
+                    <span style="color:#000;font-size:16px;font-weight:600;line-height:32px;white-space:nowrap">Je veux ce résultat pour mon site</span>
+                    <img src="assets/images/gtb/results/arrow.svg" alt="" width="20" height="20" style="transform:rotate(-90deg) scaleX(-1)" />
+                  </span>
+                </a>
               </div>
-              <div
-                style="
-                  flex: 1;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: flex-start;
-	                  background: linear-gradient(180deg, #b2ffda, #88d2af);
-	                  border-radius: 33px;
-	                  border: 8px solid #f1f5f9;
-	                  height: 476px;
-	                  box-sizing: border-box;
-	                  overflow: hidden;
-	                  padding-top: 10px;
-                  padding-bottom: 10px;
-                  position: relative;
-                "
-              >
-                <img
-                  class="client-result-photo"
-                  src="assets/images/cascade/image15_2153_18060_864x1184.png"
-                  alt="Technicien Electris devant une copropriete equipee de pompes a chaleur"
-                  style="
-	                    border-radius: 33px;
-	                    width: 554px;
-	                    height: 440px;
-	                    position: relative;
-	                    z-index: 0;
-	                    object-fit: fill;
-                  "
-                />
-                <div
-	                  style="
-	                    position: absolute;
-	                    z-index: 1;
-	                    bottom: 53px;
-                    right: 18px;
-                    width: 368px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                  "
-                >
-                  <div
-                    style="
-                      display: flex;
-                      align-items: center;
-                      background: #16a34a;
-                      border-radius: 999px;
-                      padding: 16px;
-                      margin-bottom: 48px;
-                      margin-left: 29px;
-                      gap: 11px;
-                      box-shadow: 0px 2px 6px #0f172a12;
-                    "
-                  >
-                    <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/l4qr61lj_expires_30_days.png"
-                      style="
-                        border-radius: 999px;
-                        width: 44px;
-                        height: 44px;
-                        object-fit: fill;
-                      "
-                    />
-                    <div
-                      style="
-                        flex-shrink: 0;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 2px;
-                      "
-                    >
-                      <span
-                        style="
-                          color: #ffffff;
-                          font-size: 20px;
-                          margin-right: 61px;
-                        "
-                      >
-                        -40 &agrave; -50 %
-                      </span>
-                      <span style="color: #ffffff; font-size: 14px">
-                        charge de chauffage / logement
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    style="
-                      display: flex;
-                      align-items: center;
-                      background: #3b82f6;
-                      border-radius: 999px;
-                      padding: 16px;
-                      margin-bottom: 49px;
-                      margin-left: 49px;
-                      gap: 11px;
-                      box-shadow: 0px 2px 6px #0f172a12;
-                    "
-                  >
-                    <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/x8l7i5qn_expires_30_days.png"
-                      style="
-                        border-radius: 999px;
-                        width: 44px;
-                        height: 44px;
-                        object-fit: fill;
-                      "
-                    />
-                    <div
-                      style="
-                        flex-shrink: 0;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 2px;
-                      "
-                    >
-                      <span
-                        style="
-                          color: #ffffff;
-                          font-size: 20px;
-                          margin-right: 36px;
-                        "
-                      >
-                        Subventions
-                      </span>
-                      <span style="color: #ffffff; font-size: 14px">
-                        amortissement mensuel &lt; gaz/fioul
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      align-items: center;
-                      background: #f97316;
-                      border-radius: 999px;
-                      padding: 16px;
-                      gap: 11px;
-                      box-shadow: 0px 2px 6px #0f172a12;
-                    "
-                  >
-                    <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/j73zs4u2_expires_30_days.png"
-                      style="
-                        border-radius: 999px;
-                        width: 44px;
-                        height: 44px;
-                        object-fit: fill;
-                      "
-                    />
-                    <div
-                      style="
-                        flex: 1;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 3px;
-                      "
-                    >
-                      <span style="color: #ffffff; font-size: 20px">
-                        Co&ucirc;t mensuel ma&icirc;tris&eacute; par logement
-                      </span>
-                      <span
-                        style="color: #ffffff; font-size: 14px; width: 248px"
-                      >
-                        mensuel
-                      </span>
-                    </div>
-                  </div>
-                </div>
+              <div class="hp-result-visual hp-result-visual--figma" style="flex:1;min-width:0;max-width:724px;border-radius:34px;overflow:hidden;position:relative;line-height:0">
+                <img class="client-result-photo hp-result-card-shot" src="assets/images/gtb/results/case1-bureaux.png" alt="Bureaux — résultats GTB" style="display:block;width:100%;height:auto;border-radius:34px;object-fit:contain" />
               </div>
             </div>
-          </div>
-          <div
-            class="client-results__content"
-            style="
-              align-self: stretch;
-              display: flex;
-              flex-direction: column;
-              gap: 49px;
-            "
-          >
-            <div
-              style="
-                align-self: stretch;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding-top: 96px;
-              "
-            >
-              <div
-                style="
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  padding-left: 57px;
-                  padding-right: 57px;
-                  margin-bottom: 84px;
-                  gap: 12px;
-                "
-              >
-                <img
-                  src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/31jw388y_expires_30_days.png"
-                  style="width: 58px; height: 64px; object-fit: fill"
-                />
-                <span
-                  class="reference-section-title"
-                  style="color: #000000; font-size: 48px; font-weight: bold"
-                >
-                  Résultats obtenus pour nos clients.
-                </span>
+
+            <!-- Case 2: Magasin — visual left / copy right -->
+            <div class="hp-result-row hp-result-row--reverse" style="display:flex;align-items:flex-start;justify-content:space-between;gap:55px;width:100%">
+              <div class="hp-result-visual hp-result-visual--figma" style="flex:1;min-width:0;max-width:672px;border-radius:34px;overflow:hidden;position:relative;line-height:0">
+                <img class="client-result-photo hp-result-card-shot" src="assets/images/gtb/results/case2-magasin.png" alt="Grand magasin — résultats GTB" style="display:block;width:100%;height:auto;border-radius:34px;object-fit:contain" />
               </div>
-              <div
-                class="client-results__row"
-                style="
-                  align-self: stretch;
-                  display: flex;
-                  align-items: center;
-                  margin-bottom: 48px;
-                  margin-left: 116px;
-                  margin-right: 116px;
-                "
-              >
-                <div
-                  style="
-                    width: 489px;
-                    display: flex;
-                    flex-direction: column;
-                    margin-right: 67px;
-                    gap: 26px;
-                  "
-                >
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      background: #f1f5f9;
-                      border-radius: 33px;
-                      padding-top: 41px;
-                      padding-bottom: 41px;
-                      padding-left: 42px;
-                      gap: 28px;
-                    "
-                  >
-                    <div
-                      style="
-                        align-self: stretch;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        padding-top: 1px;
-                        gap: 8px;
-                      "
-                    >
-                      <span
-                        style="
-                          color: #272522;
-                          font-size: 33px;
-                          font-weight: bold;
-                          width: 369px;
-                        "
-                      >
-                        EHPAD / &Eacute;tablissement de sant&eacute;
-                      </span>
-                      <span style="color: #272522; font-size: 16px">
-                        Sant&eacute; - chauffage continu + ECS
-                      </span>
-                    </div>
-                    <div
-                      style="
-                        align-self: stretch;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 12px;
-                      "
-                    >
-                      <div style="display: flex; align-items: center; gap: 8px">
-                        <img
-                          src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/jl0z1srn_expires_30_days.png"
-                          style="width: 20px; height: 20px; object-fit: fill"
-                        />
-                        <span style="color: #000000; font-size: 14px">
-                          -40 &agrave; -90 % &middot; gisement de CO2 long-terme
-                        </span>
-                      </div>
-                      <div style="display: flex; align-items: center; gap: 8px">
-                        <img
-                          src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/wmmeuzia_expires_30_days.png"
-                          style="width: 20px; height: 20px; object-fit: fill"
-                        />
-                        <span style="color: #000000; font-size: 14px">
-                          24h/24 &middot; continuit&eacute; de service
-                        </span>
-                      </div>
-                      <div
-                        style="
-                          align-self: stretch;
-                          display: flex;
-                          align-items: center;
-                          gap: 8px;
-                        "
-                      >
-                        <img
-                          src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/xhpfm9z4_expires_30_days.png"
-                          style="width: 20px; height: 19px; object-fit: fill"
-                        />
-                        <span style="color: #000000; font-size: 14px">
-                          Chauffage garanti en secours strict.
-                        </span>
-                      </div>
-                    </div>
+              <div class="hp-result-copy" style="width:489px;display:flex;flex-direction:column;gap:25px;flex-shrink:0">
+                <div style="background:#f1f5f9;border-radius:34px;padding:42px;min-height:333px;box-sizing:border-box;display:flex;flex-direction:column;gap:27px">
+                  <div style="display:flex;flex-direction:column;gap:8px">
+                    <span style="color:#272522;font-size:32px;font-weight:700;line-height:1.25">Grand magasin de détail.</span>
+                    <span style="color:#272522;font-size:17px;line-height:1.5">Grand magasin • CVC + éclairage</span>
                   </div>
-                  <button
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: center;
-                      background: linear-gradient(180deg, #b2ffda, #88d2af);
-                      border-radius: 77px;
-                      border: 2px solid #f4f4f4;
-                      padding-top: 24px;
-                      padding-bottom: 24px;
-                      text-align: left;
-                    "
-                    onclick="alert('Pressed!')"
-                    }
-                  >
-                    <div
-                      style="
-                        display: flex;
-                        align-items: center;
-                        background: #ffffff;
-                        border-radius: 32px;
-                        padding: 8px 41px;
-                        gap: 10px;
-                        box-shadow: 0px 1.3333333730697632px 2px #1018280d;
-                      "
-                    >
-                      <div
-                        style="
-                          flex-shrink: 0;
-                          display: flex;
-                          flex-direction: column;
-                          align-items: flex-start;
-                          padding-left: 2px;
-                          padding-right: 2px;
-                        "
-                      >
-                        <span
-                          style="
-                            color: #000000;
-                            font-size: 16px;
-                            font-weight: bold;
-                          "
-                        >
-                          Demander un audit gratuit
-                        </span>
-                      </div>
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/2df12jft_expires_30_days.png"
-                        style="
-                          border-radius: 32px;
-                          width: 20px;
-                          height: 20px;
-                          object-fit: fill;
-                        "
-                      />
+                  <div style="display:flex;flex-direction:column;gap:12px">
+                    <div style="display:flex;align-items:flex-start;gap:8px">
+                      <img src="assets/images/gtb/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px"><strong>−20 à −40 %</strong> · CVC et éclairage [plage typique]</span>
                     </div>
-                  </button>
-                </div>
-                <div
-                  style="
-                    flex: 1;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    background: linear-gradient(
-                      180deg,
-                      #fde68a,
-                      #a78bfa,
-                      #34d399
-                    );
-	                    border-radius: 32px;
-	                    border: 8px solid #f1f5f9;
-	                    height: 461px;
-	                    box-sizing: border-box;
-	                    overflow: hidden;
-	                    position: relative;
-                  "
-                >
-                  <img
-                    class="client-result-photo"
-                    src="assets/images/cascade/image13_2153_18060_896x1152.png"
-                    alt="Technicien Electris devant un EHPAD"
-                    style="
-	                      border-radius: 32px;
-	                      width: 444px;
-	                      height: 461px;
-	                      position: relative;
-	                      z-index: 0;
-	                      object-fit: fill;
-                    "
-                  />
-                  <div
-	                    style="
-	                      position: absolute;
-	                      z-index: 1;
-	                      bottom: 43px;
-                      right: 38px;
-                      width: 368px;
-                      box-sizing: border-box;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      padding-bottom: 19px;
-                    "
-                  >
-                    <div
-                      style="
-                        display: flex;
-                        align-items: center;
-                        background: #f97316;
-                        border-radius: 999px;
-                        padding: 16px;
-                        margin-bottom: 49px;
-                        margin-left: 28px;
-                        gap: 12px;
-                        box-shadow: 0px 2px 6px #0f172a12;
-                      "
-                    >
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/vvzmttwu_expires_30_days.png"
-                        style="
-                          border-radius: 999px;
-                          width: 44px;
-                          height: 44px;
-                          object-fit: fill;
-                        "
-                      />
-                      <div
-                        style="
-                          flex-shrink: 0;
-                          display: flex;
-                          flex-direction: column;
-                          align-items: flex-start;
-                          gap: 2px;
-                        "
-                      >
-                        <span
-                          style="
-                            color: #ffffff;
-                            font-size: 20px;
-                            margin-right: 83px;
-                          "
-                        >
-                          -40 &agrave; -90 %
-                        </span>
-                        <span style="color: #ffffff; font-size: 14px">
-                          Gisement de CO2 long-terme
-                        </span>
-                      </div>
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <img src="assets/images/gtb/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px"><strong>0 €</strong> · investissement (EPC)</span>
                     </div>
-                    <div
-                      style="
-                        align-self: stretch;
-                        display: flex;
-                        align-items: center;
-                        background: #06b6d4;
-                        border-radius: 999px;
-                        padding-top: 16px;
-                        padding-bottom: 16px;
-                        margin-bottom: 48px;
-                        margin-left: 48px;
-                        margin-right: 48px;
-                        box-shadow: 0px 2px 6px #0f172a12;
-                      "
-                    >
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/gq37wbt7_expires_30_days.png"
-                        style="
-                          border-radius: 999px;
-                          width: 44px;
-                          height: 44px;
-                          margin-left: 16px;
-                          margin-right: 12px;
-                          object-fit: fill;
-                        "
-                      />
-                      <div
-                        style="
-                          flex-shrink: 0;
-                          display: flex;
-                          flex-direction: column;
-                          align-items: flex-start;
-                          gap: 2px;
-                        "
-                      >
-                        <span style="color: #ffffff; font-size: 20px">
-                          24h/24
-                        </span>
-                        <span
-                          style="
-                            color: #ffffff;
-                            font-size: 14px;
-                            margin-right: 50px;
-                          "
-                        >
-                          Continuit&eacute; de service
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      style="
-                        align-self: stretch;
-                        display: flex;
-                        align-items: center;
-                        background: #8b5cf6;
-                        border-radius: 999px;
-                        padding: 16px;
-                        gap: 12px;
-                        box-shadow: 0px 2px 6px #0f172a12;
-                      "
-                    >
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/3ibpwiyf_expires_30_days.png"
-                        style="
-                          border-radius: 999px;
-                          width: 44px;
-                          height: 44px;
-                          object-fit: fill;
-                        "
-                      />
-                      <div
-                        style="
-                          flex: 1;
-                          display: flex;
-                          flex-direction: column;
-                          align-items: flex-start;
-                          gap: 3px;
-                        "
-                      >
-                        <span style="color: #ffffff; font-size: 20px">
-                          Chauffage garanti
-                        </span>
-                        <span style="color: #ffffff; font-size: 14px">
-                          en secours strict.
-                        </span>
-                      </div>
+                    <div style="display:flex;align-items:flex-start;gap:8px">
+                      <img src="assets/images/gtb/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px">Contrôle global du magasin.</span>
                     </div>
                   </div>
                 </div>
+                <a href="mailto:contact@electris.fr" class="hp-result-cta" style="display:flex;align-items:center;justify-content:center;height:97px;border-radius:77px;border:2px solid #f4f4f4;text-decoration:none;background:linear-gradient(180deg,#9badd0 0%,#a0a1fc 100%)">
+                  <span style="display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:32px;padding:8px 24px;box-shadow:0 1.3px 2.7px rgba(16,24,40,0.05)">
+                    <span style="color:#000;font-size:16px;font-weight:600;line-height:32px;white-space:nowrap">Je veux ce résultat pour mon site</span>
+                    <img src="assets/images/gtb/results/arrow.svg" alt="" width="20" height="20" style="transform:rotate(-90deg) scaleX(-1)" />
+                  </span>
+                </a>
               </div>
             </div>
-            <div
-              class="client-results__row"
-              style="
-                align-self: stretch;
-                display: flex;
-                align-items: center;
-                margin-left: 116px;
-                margin-right: 116px;
-                gap: 55px;
-              "
-            >
-              <div
-                style="
-                  flex: 1;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: flex-start;
-                  background: linear-gradient(180deg, #04347b66, #1212ff66);
-	                  border-radius: 33px;
-	                  border: 8px solid #f1f5f9;
-	                  height: 449px;
-	                  box-sizing: border-box;
-	                  overflow: hidden;
-	                  padding-top: 45px;
-                  padding-left: 18px;
-                  position: relative;
-                "
-              >
-	                <img
-	                  class="client-result-photo"
-	                  src="assets/images/cascade/image14_2153_18060_896x1152.png"
-	                  alt="Technicien Electris sur site hotelier"
-	                  style="
-	                    position: absolute;
-	                    z-index: 0;
-	                    top: 0px;
-                    right: 0px;
-                    border-radius: 33px;
-                    width: 468px;
-                    height: 449px;
-                    object-fit: fill;
-                  "
-                />
-                <div
-	                  style="
-	                    position: relative;
-	                    z-index: 1;
-	                    width: 368px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    margin-bottom: 66px;
-                  "
-                >
-                  <div
-                    style="
-                      display: flex;
-                      align-items: center;
-                      background: #2e75f5;
-                      border-radius: 999px;
-                      padding: 16px;
-                      margin-bottom: 48px;
-                      margin-left: 28px;
-                      gap: 12px;
-                      box-shadow: 0px 2px 6px #0f172a12;
-                    "
-                  >
-                    <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/l9qye5ws_expires_30_days.png"
-                      style="
-                        border-radius: 999px;
-                        width: 46px;
-                        height: 46px;
-                        object-fit: fill;
-                      "
-                    />
-                    <div
-                      style="
-                        flex-shrink: 0;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 2px;
-                      "
-                    >
-                      <span
-                        style="
-                          color: #ffffff;
-                          font-size: 20px;
-                          margin-right: 11px;
-                        "
-                      >
-                        >80 %
-                      </span>
-                      <span style="color: #ffffff; font-size: 14px">
-                        couvert par cascade
-                      </span>
-                    </div>
+
+            <!-- Case 3: Santé — copy left / visual right -->
+            <div class="hp-result-row" style="display:flex;align-items:flex-start;justify-content:space-between;gap:48px;width:100%">
+              <div class="hp-result-copy" style="width:490px;display:flex;flex-direction:column;gap:25px;flex-shrink:0">
+                <div style="background:#f1f5f9;border-radius:34px;padding:42px;min-height:333px;box-sizing:border-box;display:flex;flex-direction:column;gap:27px">
+                  <div style="display:flex;flex-direction:column;gap:8px">
+                    <span style="color:#272522;font-size:32px;font-weight:700;line-height:1.25">Établissement de santé multi-zone.</span>
+                    <span style="color:#272522;font-size:17px;line-height:1.5">Santé • fonctionnement continu</span>
                   </div>
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      align-items: center;
-                      background: #16a34a;
-                      border-radius: 999px;
-                      padding: 16px;
-                      margin-bottom: 47px;
-                      margin-left: 48px;
-                      margin-right: 48px;
-                      gap: 11px;
-                      box-shadow: 0px 2px 6px #0f172a12;
-                    "
-                  >
-                    <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/rtby3zaw_expires_30_days.png"
-                      style="
-                        border-radius: 1044px;
-                        width: 46px;
-                        height: 46px;
-                        object-fit: fill;
-                      "
-                    />
-                    <div
-                      style="
-                        flex: 1;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 2px;
-                      "
-                    >
-                      <span style="color: #ffffff; font-size: 20px">
-                        ECS
-                      </span>
-                      <span style="color: #ffffff; font-size: 14px">
-                        restaurant et piscine
-                      </span>
+                  <div style="display:flex;flex-direction:column;gap:12px">
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <img src="assets/images/gtb/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px"><strong>Classe A</strong> · niveau de performance</span>
                     </div>
-                  </div>
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      align-items: center;
-                      background: #9e78dc;
-                      border-radius: 999px;
-                      padding: 16px;
-                      gap: 11px;
-                      box-shadow: 0px 2px 6px #0f172a12;
-                    "
-                  >
-                    <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/ypefgjss_expires_30_days.png"
-                      style="
-                        border-radius: 999px;
-                        width: 49px;
-                        height: 49px;
-                        object-fit: fill;
-                      "
-                    />
-                    <div
-                      style="
-                        flex: 1;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 3px;
-                      "
-                    >
-                      <span style="color: #ffffff; font-size: 20px">
-                        Facture &eacute;nergie
-                      </span>
-                      <span style="color: #ffffff; font-size: 14px">
-                        d&eacute;coupl&eacute;e du prix du gaz.
-                      </span>
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <img src="assets/images/gtb/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px"><strong>Continuité</strong> · service jamais interrompu</span>
+                    </div>
+                    <div style="display:flex;align-items:flex-start;gap:8px">
+                      <img src="assets/images/gtb/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px">Surveillance et contrôle zone par zone.</span>
                     </div>
                   </div>
                 </div>
+                <a href="mailto:contact@electris.fr" class="hp-result-cta" style="display:flex;align-items:center;justify-content:center;height:97px;border-radius:77px;border:2px solid #f4f4f4;text-decoration:none;background:linear-gradient(169deg,#b2ffda 0%,#89d2af 100%)">
+                  <span style="display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:32px;padding:8px 24px;box-shadow:0 1.3px 2.7px rgba(16,24,40,0.05)">
+                    <span style="color:#000;font-size:16px;font-weight:600;line-height:32px;white-space:nowrap">Je veux ce résultat pour mon site</span>
+                    <img src="assets/images/gtb/results/arrow.svg" alt="" width="20" height="20" style="transform:rotate(-90deg) scaleX(-1)" />
+                  </span>
+                </a>
               </div>
-              <div
-                style="
-                  width: 489px;
-                  display: flex;
-                  flex-direction: column;
-                  gap: 25px;
-                "
-              >
-                <div
-                  style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: column;
-                    background: #f1f5f9;
-                    border-radius: 33px;
-                    padding: 42px 41px;
-                    gap: 27px;
-                  "
-                >
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      gap: 8px;
-                    "
-                  >
-                    <span
-                      style="color: #272522; font-size: 33px; font-weight: bold"
-                    >
-                      H&ocirc;tel - chauffage + ECS + piscine
-                    </span>
-                    <span style="color: #272522; font-size: 16px">
-                      H&ocirc;tellerie &bull; haute temp&eacute;rature
-                    </span>
-                  </div>
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      gap: 12px;
-                    "
-                  >
-                    <div style="display: flex; align-items: center; gap: 8px">
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/pk7yfr34_expires_30_days.png"
-                        style="width: 20px; height: 20px; object-fit: fill"
-                      />
-                      <span style="color: #000000; font-size: 14px">
-                        >80 % &middot; couvert par cascade
-                      </span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 8px">
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/64iyaoef_expires_30_days.png"
-                        style="width: 20px; height: 20px; object-fit: fill"
-                      />
-                      <span style="color: #000000; font-size: 14px">
-                        ECS restaurant piscine
-                      </span>
-                    </div>
-                    <div
-                      style="
-                        align-self: stretch;
-                        display: flex;
-                        align-items: flex-start;
-                        gap: 8px;
-                      "
-                    >
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/lmtv8xxh_expires_30_days.png"
-                        style="width: 20px; height: 20px; object-fit: fill"
-                      />
-                      <span style="color: #000000; font-size: 14px; flex: 1">
-                        Facture &eacute;nergie d&eacute;coupl&eacute;e des prix du gaz.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    background: linear-gradient(180deg, #04347b66, #1212ff66);
-                    border-radius: 77px;
-                    border: 2px solid #f4f4f4;
-                    padding-top: 24px;
-                    padding-bottom: 24px;
-                    text-align: left;
-                  "
-                  onclick="alert('Pressed!')"
-                  }
-                >
-                  <div
-                    style="
-                      display: flex;
-                      align-items: center;
-                      background: #ffffff;
-                      border-radius: 32px;
-                      padding: 8px 40px;
-                      gap: 11px;
-                      box-shadow: 0px 1.3333333730697632px 2px #1018280d;
-                    "
-                  >
-                    <div
-                      style="
-                        flex-shrink: 0;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        padding-left: 3px;
-                        padding-right: 3px;
-                      "
-                    >
-                      <span
-                        style="
-                          color: #000000;
-                          font-size: 16px;
-                          font-weight: bold;
-                        "
-                      >
-                        Demander un audit gratuit
-                      </span>
-                    </div>
-                    <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/8w7cl3aq_expires_30_days.png"
-                      style="
-                        border-radius: 32px;
-                        width: 20px;
-                        height: 20px;
-                        object-fit: fill;
-                      "
-                    />
-                  </div>
-                </button>
+              <div class="hp-result-visual hp-result-visual--figma" style="flex:1;min-width:0;max-width:724px;border-radius:34px;overflow:hidden;position:relative;line-height:0">
+                <img class="client-result-photo hp-result-card-shot" src="assets/images/gtb/results/case3-sante.png" alt="Santé — résultats GTB" style="display:block;width:100%;height:auto;border-radius:34px;object-fit:contain" />
               </div>
             </div>
           </div>
@@ -3405,23 +2544,7 @@
               position: relative;
             "
           >
-            <div
-              style="
-                position: absolute;
-                bottom: 0px;
-                right: 0px;
-                left: 0px;
-                align-self: stretch;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-              "
-            >
-              <img
-                src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/5fdwrl80_expires_30_days.png"
-                style="width: 1084px; height: 670px; object-fit: fill"
-              />
-            </div>
+            
             <div
               style="
                 align-self: stretch;
@@ -3432,172 +2555,32 @@
                 gap: 32px;
               "
             >
-              <div
-                style="
-                  flex: 1;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  border-radius: 43px;
-                  padding-top: 30px;
-                  padding-bottom: 30px;
-                  background-image: url(&quot;https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/3zutafau_expires_30_days.png&quot;);
-                  background-size: 100% 100%;
-                  position: relative;
-                "
-              >
+              <div class="hp-contact-card hp-contact-card--figma" style="flex:1;min-width:0;max-width:592px;position:relative;line-height:0">
                 <img
-                  src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/ax6by2j3_expires_30_days.png"
-                  style="
-                    position: absolute;
-                    top: 0px;
-                    right: 0px;
-                    border-radius: 43px;
-                    width: 296px;
-                    height: 315px;
-                    object-fit: fill;
-                  "
+                  src="assets/images/gtb/contact/contact-card.png"
+                  alt="Contactez-nous — Electris"
+                  style="display:block;width:100%;height:auto"
                 />
-                <div
-                  style="
-                    width: 480px;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 26px;
-                  "
-                >
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      gap: 15px;
-                    "
-                  >
-                    <span
-                      style="color: #ffffff; font-size: 48px; font-weight: bold"
-                    >
-                      Contactez-nous.
-                    </span>
-                    <div style="align-self: stretch">
-                      <div
-                        style="
-                          align-self: stretch;
-                          display: flex;
-                          align-items: center;
-                          margin-bottom: 12px;
-                          gap: 10px;
-                        "
-                      >
-                        <img
-                          src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/ostbqt43_expires_30_days.png"
-                          style="width: 32px; height: 28px; object-fit: fill"
-                        />
-                        <span style="color: #ffffff; font-size: 24px">
-                          contact@electris.fr
-                        </span>
-                      </div>
-                      <div
-                        style="
-                          height: 1px;
-                          align-self: stretch;
-                          background: #00000000;
-                          margin-bottom: 11px;
-                        "
-                      ></div>
-                      <div
-                        style="
-                          align-self: stretch;
-                          display: flex;
-                          align-items: center;
-                          gap: 10px;
-                        "
-                      >
-                        <img
-                          src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/kljo2cmo_expires_30_days.png"
-                          style="width: 32px; height: 28px; object-fit: fill"
-                        />
-                        <span style="color: #ffffff; font-size: 24px">
-                          +33 (0)1 XX XX XX XX
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      gap: 20px;
-                    "
-                  >
-                    <button
-                      style="
-                        display: flex;
-                        align-items: center;
-                        background: #ffffff;
-                        border-radius: 32px;
-                        border: none;
-                        padding: 16px 26px;
-                        gap: 15px;
-                        box-shadow: 0px 1.3333333730697632px 2px #1018280d;
-                        text-align: left;
-                      "
-                      onclick="alert('Pressed!')"
-                      }
-                    >
-                      <span
-                        style="
-                          color: #000000;
-                          font-size: 21px;
-                          font-weight: bold;
-                        "
-                      >
-                        Demander un audit gratuit
-                      </span>
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/n9opuz7r_expires_30_days.png"
-                        style="
-                          border-radius: 32px;
-                          width: 24px;
-                          height: 24px;
-                          object-fit: fill;
-                        "
-                      />
-                    </button>
-                    <div
-                      style="
-                        align-self: stretch;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 8px;
-                      "
-                    >
-                      <span
-                        style="color: #ffffff; font-size: 22px; width: 404px"
-                      >
-                        L&#39;ingénierie qui rend vos bâtiments plus
-                        performants.
-                      </span>
-                      <span
-                        style="color: #ffffff; font-size: 22px; width: 454px"
-                      >
-                        Paris · France · 100 % électrique · 0 % énergie fossile
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                <a
+                  href="mailto:contact@electris.fr"
+                  class="hp-contact-hotspot hp-contact-hotspot--mail"
+                  aria-label="Envoyer un email à contact@electris.fr"
+                ></a>
+                <a
+                  href="mailto:contact@electris.fr"
+                  class="hp-contact-hotspot hp-contact-hotspot--cta"
+                  aria-label="Demander un audit gratuit"
+                ></a>
               </div>
               <img
-                src="assets/images/cascade/image2_2153_18060_1344x768.png"
+                src="assets/images/gtb/contact/photo-curved.png"
+                alt="Équipe Electris — salle de contrôle GTB"
                 style="
-                  border-radius: 43px;
-                  height: 482px;
                   flex: 1;
-                  object-fit: fill;
+                  min-width: 0;
+                  max-width: 592px;
+                  height: auto;
+                  object-fit: contain;
                 "
               />
             </div>
@@ -4138,21 +3121,7 @@
                     </li>
                     <li>
                       <span class="chevron">&#8250;</span
-                      ><a href="F-gas-compliance-solutions.html">Conformit&eacute; F-Gas</a>
-                    </li>
-                    <li>
-                      <span class="chevron">&#8250;</span
-                      ><a href="destratification-air.html">D&eacute;stratification d&#39;air</a>
-                    </li>
-                    <li>
-                      <span class="chevron">&#8250;</span
-                      ><a href="solutions-regulation-haute-pression-flottante.html"
-                        >R&eacute;gulation haute pression flottante</a
-                      >
-                    </li>
-                    <li>
-                      <span class="chevron">&#8250;</span
-                      ><a href="cpe.html">Contrat de performance (CPE)</a>
+                      ><a href="cpe.html">Contrat de performance (CP)</a>
                     </li>
                   </ul>
                 </section>
