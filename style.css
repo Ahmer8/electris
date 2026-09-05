@@ -80,6 +80,8 @@
   background: transparent;
   cursor: pointer;
   outline: none;
+  transform: translateY(0);
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1), color 240ms ease, filter 300ms ease;
 }
 
 .process-card::before {
@@ -88,13 +90,36 @@
   z-index: 0;
   inset: 0;
   background: #fff;
-  transition: background-color 180ms ease, filter 180ms ease;
+  transition: background-color 280ms ease, filter 280ms ease;
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='148 322 1216 158' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1364 443C1364 463.435 1347.43 480 1327 480H185C164.565 480 148 463.435 148 443V359C148 338.565 164.565 322 185 322H209.771C229.905 322 249.366 345 269.5 345H389.5C409.634 345 429.095 322 449.229 322H1327C1347.43 322 1364 338.565 1364 359V443Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
   mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='148 322 1216 158' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1364 443C1364 463.435 1347.43 480 1327 480H185C164.565 480 148 463.435 148 443V359C148 338.565 164.565 322 185 322H209.771C229.905 322 249.366 345 269.5 345H389.5C409.634 345 429.095 322 449.229 322H1327C1347.43 322 1364 338.565 1364 359V443Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
 }
 
-.process-card:hover::before {
-  filter: brightness(0.985);
+/* ── Hover: card lifts + goes green ── */
+.process-card:not(.process-card--active):hover {
+  transform: translateY(-4px);
+  color: #fff;
+}
+
+.process-card:not(.process-card--active):hover::before {
+  background: #2e9d68;
+}
+
+/* icon circle on hover → active style */
+.process-card:not(.process-card--active):hover .process-card__icon {
+  color: #2e9d68;
+  background: linear-gradient(180deg, #fff, #999);
+}
+
+/* step badge on hover → green */
+.process-card:not(.process-card--active):hover .process-card__step {
+  background: #2e9d68;
+  color: #fff;
+}
+
+/* body text on hover → white */
+.process-card:not(.process-card--active):hover .process-card__content > p {
+  color: #fff;
 }
 
 .process-card:focus-visible::before {
@@ -134,6 +159,7 @@
   color: #585858;
   font-size: 31px;
   line-height: 1;
+  transition: background 280ms ease, color 240ms ease, box-shadow 280ms ease;
 }
 
 .process-card--active .process-card__icon {
@@ -158,6 +184,7 @@
   font-size: 20px;
   font-weight: 300;
   line-height: 1.4;
+  transition: color 240ms ease;
 }
 
 .process-card--active .process-card__content > p {
@@ -183,6 +210,7 @@
   font-weight: 500;
   line-height: 1;
   white-space: nowrap;
+  transition: background 280ms ease, color 240ms ease;
 }
 
 .process-card--active .process-card__step {
@@ -960,7 +988,9 @@ header {
   margin-bottom: 20px;
   border-radius: 50%;
   background: linear-gradient(180deg, #080f0a, #5f5e5e);
-  box-shadow: 0 12px 54px rgba(0, 0, 0, 0.1);
+  box-shadow:
+    0 0 12px rgba(201, 122, 43, 0.15),
+    0 12px 54px rgba(0, 0, 0, 0.1);
   transition: filter 0.22s ease, box-shadow 0.22s ease;
 }
 
@@ -976,10 +1006,13 @@ header {
 
 .stat-card .blue-icon {
   background: linear-gradient(180deg, #1212ff, #9292e5);
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 12px 54px rgba(0, 0, 0, 0.1);
 }
 
-.stat-card .brown-icon {
-  background: linear-gradient(180deg, #1e0f03, rgba(60, 31, 6, 0.5));
+.stat-card .green-icon {
+  background: #137333;
+  box-shadow: 0 12px 54px rgba(0, 0, 0, 0.1);
 }
 
 .stat-card img {
@@ -993,19 +1026,23 @@ header {
 }
 
 .stat-card b {
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   font-family: Raleway, Manrope, Arial, sans-serif;
   font-size: 42px;
-  line-height: 1;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.8px;
+  color: #000;
 }
 
 .stat-card span {
-  max-width: 210px;
+  max-width: 260px;
   margin: 0 auto;
   color: #334155;
   font-family: Raleway, "DM Sans", Arial, sans-serif;
   font-size: 18px;
-  line-height: 1.45;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .why {
@@ -4348,10 +4385,10 @@ h3 {
   height: 483px;
   min-height: 0;
   overflow: hidden;
+  transform: translateY(0);
   transition:
-    box-shadow 0.3s ease,
-    filter 0.3s ease,
-    transform 0.3s ease;
+    transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1),
+    filter 300ms ease;
 }
 
 .audit-copy-card {
@@ -4359,7 +4396,8 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 64px 58px 54px;
+  /* Figma 2349:24111 — content at 58x82 inside 592x483 */
+  padding: 82px 54px 83px 58px;
   color: #fff;
   background: #2e9d68;
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 592 483' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M592 414C592 438 573 457 549 457H302C279 457 258 483 235 483H43C19 483 0 464 0 440V43C0 19 19 0 43 0H549C573 0 592 19 592 43V414Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
@@ -4368,14 +4406,19 @@ h3 {
 
 .audit-copy-mark {
   position: absolute;
-  top: -61px;
-  right: -42px;
-  left: auto;
-  width: 338px;
-  height: 315px;
+  z-index: 0;
+  /* Figma 2349:24110 — 338x315 at x:296 y:-61.13 on a 592x483 card */
+  top: -12.655%;
+  left: 50%;
+  width: 57.0946%;
+  height: 65.236%;
+  margin: 0;
+  transform: none;
   opacity: 0.13;
   object-fit: fill;
+  object-position: bottom center;
   pointer-events: none;
+  user-select: none;
   transition: transform 0.42s ease;
 }
 
@@ -4386,12 +4429,13 @@ h3 {
 
 .audit-copy-card h2 {
   max-width: 472px;
-  margin: 0 0 22px;
+  margin: 0 0 16px;
   color: #fff;
   font-family: Raleway, "DM Sans", Arial, sans-serif;
   font-size: 48px;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.2;
+  letter-spacing: -2.39px;
 }
 
 .audit-copy-card p {
@@ -4402,17 +4446,17 @@ h3 {
   font-family: Raleway, "DM Sans", Arial, sans-serif;
   font-size: 24px;
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.5;
 }
 
 .audit-copy-card p:first-of-type {
-  padding-bottom: 8px;
+  padding-bottom: 12px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.45);
 }
 
 .audit-copy-card p + p {
-  padding-top: 21px;
-  margin-bottom: 22px;
+  padding-top: 12px;
+  margin-bottom: 26px;
 }
 
 .audit-copy-card a {
@@ -4433,15 +4477,18 @@ h3 {
   line-height: 1;
   white-space: nowrap;
   text-decoration: none;
+  box-shadow: 0 1.333px 2.667px rgba(16, 24, 40, 0.05);
   transition:
-    background-color 0.25s ease,
-    box-shadow 0.25s ease,
-    transform 0.25s ease;
+    background-color 280ms ease,
+    color 240ms ease,
+    box-shadow 280ms ease,
+    transform 280ms cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .audit-copy-card a span {
   font-size: 27px;
   line-height: 1;
+  transition: color 240ms ease;
 }
 
 .audit-image-card {
@@ -4458,22 +4505,46 @@ h3 {
   transition: transform 0.42s ease, filter 0.42s ease;
 }
 
+/* Same hover language as process cards: lift + green pill, no mask spill */
 .audit-copy-card:hover,
 .audit-image-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 28px 62px rgba(15, 23, 42, 0.18);
-  filter: brightness(1.025) saturate(1.025);
+  transform: translateY(-6px);
+  filter: drop-shadow(0 18px 36px rgba(46, 157, 104, 0.22));
 }
 
-.audit-copy-card:hover .audit-copy-mark,
+.audit-copy-card:hover .audit-copy-mark {
+  transform: scale(1.04);
+  transform-origin: 50% 80%;
+}
+
 .audit-image-card:hover img {
   transform: scale(1.04);
 }
 
-.audit-copy-card a:hover {
-  background: #f8fafc;
-  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.16);
+.audit-copy-card a:hover,
+.audit-copy-card:hover a {
+  background: #137333;
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(19, 115, 51, 0.28);
   transform: translateY(-2px);
+}
+
+.audit-copy-card a:hover span,
+.audit-copy-card:hover a span {
+  color: #fff;
+}
+
+.mobile-audit-copy a {
+  transition:
+    background-color 280ms ease,
+    color 240ms ease,
+    box-shadow 280ms ease,
+    transform 280ms ease;
+}
+
+.mobile-audit-copy a:hover {
+  background: #137333;
+  color: #fff;
 }
 
 /* The desktop artwork becomes the stacked audit card shown in the phone design. */
@@ -4497,17 +4568,21 @@ h3 {
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 358 410' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M42 0H316C339 0 358 19 358 42V331C358 354 339 373 316 373H207C194 373 183 384 183 397V410H42C19 410 0 391 0 368V42C0 19 19 0 42 0Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
   }
   .mobile-audit-copy::after {
-    content: "";
-    position: absolute;
-    top: -60px;
-    right: -78px;
-    width: 260px;
-    height: 310px;
-    border-radius: 47% 53% 55% 45%;
-    background: rgba(255,255,255,.12);
-    transform: rotate(-26deg);
+    content: none;
   }
-  .mobile-audit-copy > * { position: relative; z-index: 1; }
+  .mobile-audit-copy > *:not(.audit-copy-mark) {
+    position: relative;
+    z-index: 1;
+  }
+  .mobile-audit-copy .audit-copy-mark {
+    top: -40px;
+    left: auto;
+    right: -70px;
+    width: 240px;
+    height: 224px;
+    transform: none;
+    opacity: 0.16;
+  }
   .mobile-audit-copy h2 {
     margin: 0 0 24px;
     color: #fff;
@@ -4793,16 +4868,7 @@ h3 {
   }
 
   .stats .col-6:nth-child(3) .stat-card i {
-    background: linear-gradient(180deg, #047a36, #159447) !important;
-  }
-
-  .stats .col-6:nth-child(3) .stat-card b,
-  .stats .col-6:nth-child(4) .stat-card b {
-    color: #087c36;
-  }
-
-  .stats .col-6:nth-child(4) .stat-card span {
-    font-weight: 700;
+    background: #137333 !important;
   }
 
   .why {
@@ -8550,6 +8616,30 @@ h3 {
     font-size: 24px !important;
     line-height: 1.45 !important;
   }
+}
+
+/* Process hover must beat later #process … !important locks (card was staying white). */
+#process .process-card:not(.process-card--active):hover {
+  color: #fff !important;
+}
+
+#process .process-card:not(.process-card--active):hover::before {
+  background: #2e9d68 !important;
+}
+
+#process .process-card:not(.process-card--active):hover .process-card__step {
+  background: #2e9d68 !important;
+  color: #fff !important;
+}
+
+#process .process-card:not(.process-card--active):hover .process-card__icon {
+  color: #2e9d68 !important;
+  background: linear-gradient(180deg, #fff, #999) !important;
+}
+
+#process .process-card:not(.process-card--active):hover .process-card__heading h3,
+#process .process-card:not(.process-card--active):hover .process-card__content > p {
+  color: #fff !important;
 }
 
 /* Fluid desktop hero: scale the original 1448 x 700 Figma composition as one
