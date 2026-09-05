@@ -52,21 +52,42 @@
         backdrop-filter: blur(10px);
         box-shadow: 0 12px 30px rgba(15, 23, 42, 0.1);
       }
-      /* Client result photos stay as images; metrics remain real HTML text. */
-      .client-results div:has(> .client-result-photo) {
-        overflow: hidden;
+      /* Figma composite cards (photo + metric pills baked in) */
+      .client-results .hp-results-inner { width: 100%; }
+      .client-results .hp-result-row { width: 100%; }
+      .client-results .hp-result-cta:hover { filter: brightness(0.98); }
+      .client-results .hp-result-visual {
+        position: relative;
       }
-      .client-results .client-result-photo {
-        position: absolute !important;
-        inset: 0 !important;
+      .client-results .hp-result-visual--figma {
+        min-height: 0 !important;
+        height: auto !important;
+        border: 0 !important;
+        background: transparent !important;
+        overflow: visible !important;
+      }
+      .client-results .hp-result-visual--figma .hp-result-card-shot {
+        position: static !important;
+        inset: auto !important;
         width: 100% !important;
-        height: 100% !important;
-        border-radius: 32px;
-        object-fit: cover !important;
+        height: auto !important;
+        border-radius: 34px !important;
+        object-fit: contain !important;
+      }
+      @media (max-width: 1100px) {
+        .client-results .hp-result-row,
+        .client-results .hp-result-row--reverse {
+          flex-direction: column !important;
+        }
+        .client-results .hp-result-copy,
+        .client-results .hp-result-visual {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
       }
       span[style*="font-size: 48px"][style*="font-weight: bold"],
       .reference-section-title {
-        font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+        font-family: Raleway, system-ui, -apple-system, "Segoe UI", sans-serif;
         font-weight: 700 !important;
         letter-spacing: -0.035em;
         line-height: 1.12;
@@ -655,7 +676,7 @@
         height: auto;
       }
     </style>
-  <link rel="stylesheet" href="solution-detail.css?v=figma-hero-2761c" />
+  <link rel="stylesheet" href="solution-detail.css?v=secteurs-hover-all" />
   </head>
   <body class="wasteheat-page">
     <main
@@ -1921,1139 +1942,222 @@
             align-self: stretch;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
+            justify-content: center;
             background: #f1f5f9;
-            padding: 96px 148px;
+            padding: 96px 0;
             position: relative;
+            overflow: hidden;
           "
         >
-          <div style="align-self: stretch">
-            <div
-              style="
-                align-self: stretch;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                padding-top: 44px;
-                margin-bottom: 32px;
-                gap: 12px;
-              "
-            >
-              <span style="color: #475569; font-size: 24px">Secteurs</span>
-              <span class="reference-section-title" style="color: #1f252e; font-size: 48px; font-weight: bold">
-                6 secteurs où ELECTRIS intervient.
-              </span>
-            </div>
-            <div
-              style="
-                height: 1px;
-                align-self: stretch;
-                background: #e2e8f0;
-                margin-bottom: 31px;
-              "
-            ></div>
-            <div class="sector-track">
-              <figure class="sector-card">
-                <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/cb5sdtbz_expires_30_days.png" alt="Établissements de santé" />
-                <figcaption>Établissements de santé</figcaption>
-              </figure>
-              <figure class="sector-card">
-                <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/gapmwfaf_expires_30_days.png" alt="Hôtellerie &amp; Clubs de vacances" />
-                <figcaption>Hôtellerie &amp; Clubs de vacances</figcaption>
-              </figure>
-              <figure class="sector-card">
-                <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/axw1j7fo_expires_30_days.png" alt="Immeubles de bureaux" />
-                <figcaption>Immeubles de bureaux</figcaption>
-              </figure>
-              <figure class="sector-card">
-                <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/cajpm1gc_expires_30_days.png" alt="Grande distribution &amp; GDA" />
-                <figcaption>Grande distribution &amp; GDA</figcaption>
-              </figure>
-              <figure class="sector-card">
-                <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/3cfycsco_expires_30_days.png" alt="Établissements scolaires" />
-                <figcaption>Établissements scolaires</figcaption>
-              </figure>
-              <figure class="sector-card">
-                <img src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/bv6h4kai_expires_30_days.png" alt="Logement collectif" />
-                <figcaption>Logement collectif</figcaption>
-              </figure>
-            </div>
-
-          </div>
           <img
-            src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/ooxpa9yn_expires_30_days.png"
+            class="wasteheat-industries-mark"
+            src="assets/images/wasteheat/secteurs/watermark.png"
+            alt=""
+            aria-hidden="true"
             style="
               position: absolute;
+              z-index: 0;
               top: 22px;
-              left: 0px;
-              width: 703px;
-              height: 656px;
-              object-fit: fill;
+              left: -52px;
+              width: 704px;
+              height: 657px;
+              object-fit: cover;
+              object-position: bottom left;
+              opacity: 0.04;
+              pointer-events: none;
             "
           />
+          <div style="position:relative;z-index:1;width:min(1280px, calc(100% - 64px));margin:0 auto;padding:0 32px;box-sizing:border-box">
+            <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start;margin-bottom:32px">
+              <span style="color:#475569;font-size:24px;font-weight:500;line-height:1.5">Secteurs</span>
+              <span class="reference-section-title" style="color:#1f252e;font-size:48px;font-weight:700;letter-spacing:-2.4px;line-height:1.1;white-space:normal">
+                6 secteurs où ELECTRIS intervient .
+              </span>
+            </div>
+            <div style="height:1px;width:100%;background:#e2e8f0;margin-bottom:32px"></div>
+            <div class="sector-track">
+              <a class="sector-card" href="10-secteurs-grande-distribution.html">
+                <img src="assets/images/wasteheat/secteurs/sector-1.png" alt="Grande Distribution &amp; GDA" />
+                <figcaption>
+                  <span class="sector-card__title">Grande Distribution &amp; GDA</span>
+                  <span class="sector-card__detail">Récupération de chaleur fatale sur groupes froids pour ECS et chauffage des surfaces de vente.</span>
+                </figcaption>
+              </a>
+              <a class="sector-card" href="11-secteurs-hotellerie.html">
+                <img src="assets/images/wasteheat/secteurs/sector-2.png" alt="Hôtellerie &amp; Hôtels-Clubs" />
+                <figcaption>
+                  <span class="sector-card__title">Hôtellerie &amp; Hôtels-Clubs</span>
+                  <span class="sector-card__detail">Couverture ECS, cuisine et spa à partir de la chaleur fatale des installations frigorifiques.</span>
+                </figcaption>
+              </a>
+              <a class="sector-card" href="cold-stoarage-warehouse.html">
+                <img src="assets/images/wasteheat/secteurs/sector-3.png" alt="Entrepôts frigorifiques" />
+                <figcaption>
+                  <span class="sector-card__title">Entrepôts frigorifiques</span>
+                  <span class="sector-card__detail">Valorisation des calories de condensation pour réduire la facture énergétique du site.</span>
+                </figcaption>
+              </a>
+              <a class="sector-card" href="13-secteurs-industrie.html">
+                <img src="assets/images/wasteheat/secteurs/sector-4.png" alt="Industrie agroalimentaire" />
+                <figcaption>
+                  <span class="sector-card__title">Industrie agroalimentaire</span>
+                  <span class="sector-card__detail">Process froid et chaud couplés : économies durables et ROI maîtrisé sur les lignes de production.</span>
+                </figcaption>
+              </a>
+              <a class="sector-card" href="12-secteurs-sante.html">
+                <img src="assets/images/wasteheat/secteurs/sector-5.png" alt="Santé &amp; Hôpitaux" />
+                <figcaption>
+                  <span class="sector-card__title">Santé &amp; Hôpitaux</span>
+                  <span class="sector-card__detail">Sécurisation de l’ECS et du confort thermique via la chaleur récupérée, sans énergie fossile.</span>
+                </figcaption>
+              </a>
+              <a class="sector-card" href="14-secteurs-data-centers.html">
+                <img src="assets/images/wasteheat/secteurs/sector-6.png" alt="Data Centers" />
+                <figcaption>
+                  <span class="sector-card__title">Data Centers</span>
+                  <span class="sector-card__detail">Réinjection de la chaleur fatale IT pour des usages utiles à proximité ou sur le campus.</span>
+                </figcaption>
+              </a>
+            </div>
+          </div>
         </div>
         <div
           class="client-results"
           style="
             align-self: stretch;
-            background-color: #ffffff;
-            background-image: url(&quot;https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/z96kgddt_expires_30_days.png&quot;);
-            background-size: 100% 100%;
-            padding-bottom: 651px;
+            background: #ffffff;
+            padding: 96px 116px;
             margin-bottom: 1px;
             position: relative;
+            overflow: hidden;
           "
         >
-          <div
-            class="client-results__third"
-            style="
-              position: absolute;
-              bottom: 0px;
-              right: 0px;
-              left: 0px;
-              align-self: stretch;
-              padding-top: 197px;
-            "
-          >
-            <div
-              class="client-results__third-row"
-              style="
-                align-self: stretch;
-                display: flex;
-                align-items: center;
-                padding: 48px 116px 95px 116px;
-              "
-            >
-              <div
-                style="
-                  width: 489px;
-                  display: flex;
-                  flex-direction: column;
-                  margin-right: 67px;
-                  gap: 25px;
-                "
-              >
-                <div
-                  style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: column;
-                    background: #f1f5f9;
-                    border-radius: 33px;
-                    padding-top: 42px;
-                    padding-bottom: 18px;
-                    padding-left: 42px;
-                    gap: 27px;
-                  "
-                >
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      margin-right: 29px;
-                      gap: 8px;
-                    "
-                  >
-                    <span
-                      style="color: #272522; font-size: 33px; font-weight: bold"
-                    >
-                      Leader de la restauration aéroportuaire - CDG.
-                    </span>
-                    <span style="color: #272522; font-size: 16px; width: 388px">
-                      Restauration collective en Île-de-France • site
-                      aéroportuaire
-                    </span>
+          <div class="hp-results-inner" style="max-width:1280px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:84px;position:relative;z-index:1">
+            <div style="display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center">
+              <img src="assets/images/wasteheat/results/logo.png" alt="" style="width:58px;height:64px;object-fit:contain" />
+              <span class="reference-section-title" style="color:#000;font-size:48px;font-weight:700;letter-spacing:-2.4px;line-height:1.1">
+                Résultats obtenus pour nos clients.
+              </span>
+            </div>
+
+            <!-- Case 1: GMS Bretagne — copy left / photo right -->
+            <div class="hp-result-row" style="display:flex;align-items:flex-start;justify-content:space-between;gap:48px;width:100%">
+              <div class="hp-result-copy" style="width:490px;display:flex;flex-direction:column;gap:25px;flex-shrink:0">
+                <div style="background:#f1f5f9;border-radius:34px;padding:42px;min-height:333px;box-sizing:border-box;display:flex;flex-direction:column;gap:27px">
+                  <div style="display:flex;flex-direction:column;gap:8px">
+                    <span style="color:#272522;font-size:34px;font-weight:700;line-height:1.2">Leader GMS régional - Bretagne.</span>
+                    <span style="color:#272522;font-size:17px;line-height:1.5">Grande distribution en Bretagne • 3 500 m² de surface de vente</span>
                   </div>
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      gap: 12px;
-                    "
-                  >
-                    <div style="display: flex; align-items: center; gap: 8px">
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/67lbynx8_expires_30_days.png"
-                        style="width: 20px; height: 20px; object-fit: fill"
-                      />
-                      <span style="color: #000000; font-size: 14px">
-                        368 kW · puissance récupérée
-                      </span>
+                  <div style="display:flex;flex-direction:column;gap:12px">
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <img src="assets/images/wasteheat/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px"><strong>−58 %</strong> · économies annuelles</span>
                     </div>
-                    <div style="display: flex; align-items: center; gap: 8px">
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/zweqzdzi_expires_30_days.png"
-                        style="width: 20px; height: 20px; object-fit: fill"
-                      />
-                      <span style="color: #000000; font-size: 14px">
-                        ~42 500 € · économies annuelles
-                      </span>
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <img src="assets/images/wasteheat/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px"><strong>3,2 ans</strong> · ROI</span>
                     </div>
-                    <div
-                      style="
-                        align-self: stretch;
-                        display: flex;
-                        align-items: flex-start;
-                        gap: 8px;
-                      "
-                    >
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/opqzuwmu_expires_30_days.png"
-                        style="width: 20px; height: 20px; object-fit: fill"
-                      />
-                      <span style="color: #000000; font-size: 14px; flex: 1">
-                        6 groupes froids Trane. ECS + process blanchisserie
-                        cuisine collective aéroportuaire.
-                      </span>
+                    <div style="display:flex;align-items:flex-start;gap:8px">
+                      <img src="assets/images/wasteheat/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px">2 groupes froids de 200 kW, 2 échangeurs de 500 kW.</span>
                     </div>
                   </div>
                 </div>
-                <button
-                  style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    background: linear-gradient(180deg, #b2ffda, #88d2af);
-                    border-radius: 77px;
-                    border: 2px solid #f4f4f4;
-                    padding-top: 24px;
-                    padding-bottom: 24px;
-                    text-align: left;
-                  "
-                  onclick="alert('Pressed!')"
-                  }
-                >
-                  <div
-                    style="
-                      display: flex;
-                      align-items: center;
-                      background: #ffffff;
-                      border-radius: 32px;
-                      padding: 8px 41px;
-                      gap: 10px;
-                      box-shadow: 0px 1.3333333730697632px 2px #1018280d;
-                    "
-                  >
-                    <div
-                      style="
-                        flex-shrink: 0;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        padding-left: 2px;
-                        padding-right: 2px;
-                      "
-                    >
-                      <span
-                        style="
-                          color: #000000;
-                          font-size: 16px;
-                          font-weight: bold;
-                        "
-                      >
-                        Demander un audit gratuit
-                      </span>
-                    </div>
-                    <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/1cz8rgbv_expires_30_days.png"
-                      style="
-                        border-radius: 32px;
-                        width: 20px;
-                        height: 20px;
-                        object-fit: fill;
-                      "
-                    />
-                  </div>
-                </button>
+                <a href="mailto:contact@electris.fr" class="hp-result-cta" style="display:flex;align-items:center;justify-content:center;height:97px;border-radius:77px;border:2px solid #f4f4f4;text-decoration:none;background:linear-gradient(169deg,#b2ffda 0%,#89d2af 100%)">
+                  <span style="display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:32px;padding:8px 24px;box-shadow:0 1.3px 2.7px rgba(16,24,40,0.05)">
+                    <span style="color:#000;font-size:16px;font-weight:600;line-height:32px;white-space:nowrap">Demander un audit gratuit</span>
+                    <img src="assets/images/wasteheat/results/arrow.svg" alt="" width="20" height="20" style="transform:rotate(-90deg) scaleX(-1)" />
+                  </span>
+                </a>
               </div>
-              <div
-                style="
-                  flex: 1;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: flex-start;
-	                  background: linear-gradient(180deg, #b2ffda, #88d2af);
-	                  border-radius: 33px;
-	                  border: 8px solid #f1f5f9;
-	                  height: 476px;
-	                  box-sizing: border-box;
-	                  overflow: hidden;
-	                  padding-top: 10px;
-                  padding-bottom: 10px;
-                  position: relative;
-                "
-              >
+              <div class="hp-result-visual hp-result-visual--figma" style="flex:1;min-width:0;max-width:724px;border-radius:34px;overflow:hidden;position:relative;line-height:0">
                 <img
-                  class="client-result-photo"
-                  src="assets/images/solutions-page/client-airport-final.png"
-                  alt="Installation Electris sur un site aéroportuaire"
-                  style="
-	                    border-radius: 33px;
-	                    width: 554px;
-	                    height: 440px;
-	                    position: relative;
-	                    z-index: 0;
-	                    object-fit: fill;
-                  "
+                  class="client-result-photo hp-result-card-shot"
+                  src="assets/images/wasteheat/results/case1-card.png"
+                  alt="−58 % économies, 3,2 ans ROI, 2 groupes froids de 200 kW"
+                  style="display:block;width:100%;height:auto;border-radius:34px;object-fit:contain"
                 />
-                <div
-	                  style="
-	                    position: absolute;
-	                    z-index: 1;
-	                    bottom: 53px;
-                    right: 18px;
-                    width: 368px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                  "
-                >
-                  <div
-                    style="
-                      display: flex;
-                      align-items: center;
-                      background: #16a34a;
-                      border-radius: 999px;
-                      padding: 16px;
-                      margin-bottom: 48px;
-                      margin-left: 29px;
-                      gap: 11px;
-                      box-shadow: 0px 2px 6px #0f172a12;
-                    "
-                  >
-                    <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/l4qr61lj_expires_30_days.png"
-                      style="
-                        border-radius: 999px;
-                        width: 44px;
-                        height: 44px;
-                        object-fit: fill;
-                      "
-                    />
-                    <div
-                      style="
-                        flex-shrink: 0;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 2px;
-                      "
-                    >
-                      <span
-                        style="
-                          color: #ffffff;
-                          font-size: 20px;
-                          margin-right: 61px;
-                        "
-                      >
-                        368 kW
-                      </span>
-                      <span style="color: #ffffff; font-size: 14px">
-                        puissance récupérée
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    style="
-                      display: flex;
-                      align-items: center;
-                      background: #3b82f6;
-                      border-radius: 999px;
-                      padding: 16px;
-                      margin-bottom: 49px;
-                      margin-left: 49px;
-                      gap: 11px;
-                      box-shadow: 0px 2px 6px #0f172a12;
-                    "
-                  >
-                    <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/x8l7i5qn_expires_30_days.png"
-                      style="
-                        border-radius: 999px;
-                        width: 44px;
-                        height: 44px;
-                        object-fit: fill;
-                      "
-                    />
-                    <div
-                      style="
-                        flex-shrink: 0;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 2px;
-                      "
-                    >
-                      <span
-                        style="
-                          color: #ffffff;
-                          font-size: 20px;
-                          margin-right: 36px;
-                        "
-                      >
-                        ~42 500 €
-                      </span>
-                      <span style="color: #ffffff; font-size: 14px">
-                        économies annuelles
-                      </span>
-                    </div>
-                  </div>
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      align-items: center;
-                      background: #f97316;
-                      border-radius: 999px;
-                      padding: 16px;
-                      gap: 11px;
-                      box-shadow: 0px 2px 6px #0f172a12;
-                    "
-                  >
-                    <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/j73zs4u2_expires_30_days.png"
-                      style="
-                        border-radius: 999px;
-                        width: 44px;
-                        height: 44px;
-                        object-fit: fill;
-                      "
-                    />
-                    <div
-                      style="
-                        flex: 1;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 3px;
-                      "
-                    >
-                      <span style="color: #ffffff; font-size: 20px">
-                        6 groupes froids Trane ECS
-                      </span>
-                      <span
-                        style="color: #ffffff; font-size: 14px; width: 248px"
-                      >
-                        + process blanchisserie cuisine collective
-                        aéroportuaire.
-                      </span>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
-          </div>
-          <div
-            class="client-results__content"
-            style="
-              align-self: stretch;
-              display: flex;
-              flex-direction: column;
-              gap: 49px;
-            "
-          >
-            <div
-              style="
-                align-self: stretch;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                padding-top: 96px;
-              "
-            >
-              <div
-                style="
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  padding-left: 57px;
-                  padding-right: 57px;
-                  margin-bottom: 84px;
-                  gap: 12px;
-                "
-              >
+
+            <!-- Case 2: Hôtel — photo left / copy right -->
+            <div class="hp-result-row hp-result-row--reverse" style="display:flex;align-items:flex-start;justify-content:space-between;gap:55px;width:100%">
+              <div class="hp-result-visual hp-result-visual--figma" style="flex:1;min-width:0;max-width:724px;border-radius:34px;overflow:hidden;position:relative;line-height:0">
                 <img
-                  src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/31jw388y_expires_30_days.png"
-                  style="width: 58px; height: 64px; object-fit: fill"
+                  class="client-result-photo hp-result-card-shot"
+                  src="assets/images/wasteheat/results/case2-card.png"
+                  alt="Zone H3 climat tropical, ~600 kW, ECS 216 chambres"
+                  style="display:block;width:100%;height:auto;border-radius:34px;object-fit:contain"
                 />
-                <span
-                  class="reference-section-title"
-                  style="color: #000000; font-size: 48px; font-weight: bold"
-                >
-                  Résultats obtenus pour nos clients.
-                </span>
               </div>
-              <div
-                class="client-results__row"
-                style="
-                  align-self: stretch;
-                  display: flex;
-                  align-items: center;
-                  margin-bottom: 48px;
-                  margin-left: 116px;
-                  margin-right: 116px;
-                "
-              >
-                <div
-                  style="
-                    width: 489px;
-                    display: flex;
-                    flex-direction: column;
-                    margin-right: 67px;
-                    gap: 26px;
-                  "
-                >
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      background: #f1f5f9;
-                      border-radius: 33px;
-                      padding-top: 41px;
-                      padding-bottom: 41px;
-                      padding-left: 42px;
-                      gap: 28px;
-                    "
-                  >
-                    <div
-                      style="
-                        align-self: stretch;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        padding-top: 1px;
-                        gap: 8px;
-                      "
-                    >
-                      <span
-                        style="
-                          color: #272522;
-                          font-size: 33px;
-                          font-weight: bold;
-                          width: 369px;
-                        "
-                      >
-                        Leader GMS régional - Bretagne.
-                      </span>
-                      <span style="color: #272522; font-size: 16px">
-                        Grande distribution en Bretagne • 3 500 m² de surface de
-                        vente
-                      </span>
-                    </div>
-                    <div
-                      style="
-                        align-self: stretch;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 12px;
-                      "
-                    >
-                      <div style="display: flex; align-items: center; gap: 8px">
-                        <img
-                          src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/jl0z1srn_expires_30_days.png"
-                          style="width: 20px; height: 20px; object-fit: fill"
-                        />
-                        <span style="color: #000000; font-size: 14px">
-                          -58 % · économies annuelles
-                        </span>
-                      </div>
-                      <div style="display: flex; align-items: center; gap: 8px">
-                        <img
-                          src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/wmmeuzia_expires_30_days.png"
-                          style="width: 20px; height: 20px; object-fit: fill"
-                        />
-                        <span style="color: #000000; font-size: 14px">
-                          3,2 ans · ROI
-                        </span>
-                      </div>
-                      <div
-                        style="
-                          align-self: stretch;
-                          display: flex;
-                          align-items: center;
-                          gap: 8px;
-                        "
-                      >
-                        <img
-                          src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/xhpfm9z4_expires_30_days.png"
-                          style="width: 20px; height: 19px; object-fit: fill"
-                        />
-                        <span style="color: #000000; font-size: 14px">
-                          2 groupes froids de 200 kW, 2 échangeurs de 500 kW.
-                        </span>
-                      </div>
-                    </div>
+              <div class="hp-result-copy" style="width:489px;display:flex;flex-direction:column;gap:25px;flex-shrink:0">
+                <div style="background:#f1f5f9;border-radius:34px;padding:42px;min-height:333px;box-sizing:border-box;display:flex;flex-direction:column;gap:27px">
+                  <div style="display:flex;flex-direction:column;gap:8px">
+                    <span style="color:#272522;font-size:34px;font-weight:700;line-height:1.2">Hôtel 4 étoiles</span>
+                    <span style="color:#272522;font-size:17px;line-height:1.5">Hôtel 4 étoiles en Guadeloupe • 216 chambres</span>
                   </div>
-                  <button
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: center;
-                      background: linear-gradient(180deg, #b2ffda, #88d2af);
-                      border-radius: 77px;
-                      border: 2px solid #f4f4f4;
-                      padding-top: 24px;
-                      padding-bottom: 24px;
-                      text-align: left;
-                    "
-                    onclick="alert('Pressed!')"
-                    }
-                  >
-                    <div
-                      style="
-                        display: flex;
-                        align-items: center;
-                        background: #ffffff;
-                        border-radius: 32px;
-                        padding: 8px 41px;
-                        gap: 10px;
-                        box-shadow: 0px 1.3333333730697632px 2px #1018280d;
-                      "
-                    >
-                      <div
-                        style="
-                          flex-shrink: 0;
-                          display: flex;
-                          flex-direction: column;
-                          align-items: flex-start;
-                          padding-left: 2px;
-                          padding-right: 2px;
-                        "
-                      >
-                        <span
-                          style="
-                            color: #000000;
-                            font-size: 16px;
-                            font-weight: bold;
-                          "
-                        >
-                          Demander un audit gratuit
-                        </span>
-                      </div>
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/2df12jft_expires_30_days.png"
-                        style="
-                          border-radius: 32px;
-                          width: 20px;
-                          height: 20px;
-                          object-fit: fill;
-                        "
-                      />
+                  <div style="display:flex;flex-direction:column;gap:12px">
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <img src="assets/images/wasteheat/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px"><strong>Zone H3</strong> · climat tropical</span>
                     </div>
-                  </button>
-                </div>
-                <div
-                  style="
-                    flex: 1;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    background: linear-gradient(
-                      180deg,
-                      #fde68a,
-                      #a78bfa,
-                      #34d399
-                    );
-	                    border-radius: 32px;
-	                    border: 8px solid #f1f5f9;
-	                    height: 461px;
-	                    box-sizing: border-box;
-	                    overflow: hidden;
-	                    position: relative;
-                  "
-                >
-                  <img
-                    class="client-result-photo"
-                    src="assets/images/solutions-page/client-leclerc-final.png"
-                    alt="Façade du magasin E.Leclerc"
-                    style="
-	                      border-radius: 32px;
-	                      width: 444px;
-	                      height: 461px;
-	                      position: relative;
-	                      z-index: 0;
-	                      object-fit: fill;
-                    "
-                  />
-                  <div
-	                    style="
-	                      position: absolute;
-	                      z-index: 1;
-	                      bottom: 43px;
-                      right: 38px;
-                      width: 368px;
-                      box-sizing: border-box;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      padding-bottom: 19px;
-                    "
-                  >
-                    <div
-                      style="
-                        display: flex;
-                        align-items: center;
-                        background: #f97316;
-                        border-radius: 999px;
-                        padding: 16px;
-                        margin-bottom: 49px;
-                        margin-left: 28px;
-                        gap: 12px;
-                        box-shadow: 0px 2px 6px #0f172a12;
-                      "
-                    >
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/vvzmttwu_expires_30_days.png"
-                        style="
-                          border-radius: 999px;
-                          width: 44px;
-                          height: 44px;
-                          object-fit: fill;
-                        "
-                      />
-                      <div
-                        style="
-                          flex-shrink: 0;
-                          display: flex;
-                          flex-direction: column;
-                          align-items: flex-start;
-                          gap: 2px;
-                        "
-                      >
-                        <span
-                          style="
-                            color: #ffffff;
-                            font-size: 20px;
-                            margin-right: 83px;
-                          "
-                        >
-                          -58 %
-                        </span>
-                        <span style="color: #ffffff; font-size: 14px">
-                          Economies annuelles
-                        </span>
-                      </div>
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <img src="assets/images/wasteheat/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px"><strong>~600 kW</strong> · demande thermique couverte</span>
                     </div>
-                    <div
-                      style="
-                        align-self: stretch;
-                        display: flex;
-                        align-items: center;
-                        background: #06b6d4;
-                        border-radius: 999px;
-                        padding-top: 16px;
-                        padding-bottom: 16px;
-                        margin-bottom: 48px;
-                        margin-left: 48px;
-                        margin-right: 48px;
-                        box-shadow: 0px 2px 6px #0f172a12;
-                      "
-                    >
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/gq37wbt7_expires_30_days.png"
-                        style="
-                          border-radius: 999px;
-                          width: 44px;
-                          height: 44px;
-                          margin-left: 16px;
-                          margin-right: 12px;
-                          object-fit: fill;
-                        "
-                      />
-                      <div
-                        style="
-                          flex-shrink: 0;
-                          display: flex;
-                          flex-direction: column;
-                          align-items: flex-start;
-                          gap: 2px;
-                        "
-                      >
-                        <span style="color: #ffffff; font-size: 20px">
-                          3,2 ans
-                        </span>
-                        <span
-                          style="
-                            color: #ffffff;
-                            font-size: 14px;
-                            margin-right: 50px;
-                          "
-                        >
-                          ROI
-                        </span>
-                      </div>
-                    </div>
-                    <div
-                      style="
-                        align-self: stretch;
-                        display: flex;
-                        align-items: center;
-                        background: #8b5cf6;
-                        border-radius: 999px;
-                        padding: 16px;
-                        gap: 12px;
-                        box-shadow: 0px 2px 6px #0f172a12;
-                      "
-                    >
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/3ibpwiyf_expires_30_days.png"
-                        style="
-                          border-radius: 999px;
-                          width: 44px;
-                          height: 44px;
-                          object-fit: fill;
-                        "
-                      />
-                      <div
-                        style="
-                          flex: 1;
-                          display: flex;
-                          flex-direction: column;
-                          align-items: flex-start;
-                          gap: 3px;
-                        "
-                      >
-                        <span style="color: #ffffff; font-size: 20px">
-                          2 groupes froids de 200 kW,
-                        </span>
-                        <span style="color: #ffffff; font-size: 14px">
-                          2 échangeurs de 500 kW.
-                        </span>
-                      </div>
+                    <div style="display:flex;align-items:flex-start;gap:8px">
+                      <img src="assets/images/wasteheat/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px">ECS pour 216 chambres, restaurant, spa et blanchisserie entièrement couverte.</span>
                     </div>
                   </div>
                 </div>
+                <a href="mailto:contact@electris.fr" class="hp-result-cta" style="display:flex;align-items:center;justify-content:center;height:97px;border-radius:77px;border:2px solid #f4f4f4;text-decoration:none;background:linear-gradient(180deg,rgba(4,52,124,0.45),rgba(18,18,255,0.45))">
+                  <span style="display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:32px;padding:8px 24px;box-shadow:0 1.3px 2.7px rgba(16,24,40,0.05)">
+                    <span style="color:#000;font-size:16px;font-weight:600;line-height:32px;white-space:nowrap">Demander un audit gratuit</span>
+                    <img src="assets/images/wasteheat/results/arrow.svg" alt="" width="20" height="20" style="transform:rotate(-90deg) scaleX(-1)" />
+                  </span>
+                </a>
               </div>
             </div>
-            <div
-              class="client-results__row"
-              style="
-                align-self: stretch;
-                display: flex;
-                align-items: center;
-                margin-left: 116px;
-                margin-right: 116px;
-                gap: 55px;
-              "
-            >
-              <div
-                style="
-                  flex: 1;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: flex-start;
-                  background: linear-gradient(180deg, #04347b66, #1212ff66);
-	                  border-radius: 33px;
-	                  border: 8px solid #f1f5f9;
-	                  height: 449px;
-	                  box-sizing: border-box;
-	                  overflow: hidden;
-	                  padding-top: 45px;
-                  padding-left: 18px;
-                  position: relative;
-                "
-              >
-	                <img
-	                  class="client-result-photo"
-	                  src="assets/images/solutions-page/client-hotel-final.png"
-	                  alt="Entrée de l'Hôtel Splendid Étoile"
-	                  style="
-	                    position: absolute;
-	                    z-index: 0;
-	                    top: 0px;
-                    right: 0px;
-                    border-radius: 33px;
-                    width: 468px;
-                    height: 449px;
-                    object-fit: fill;
-                  "
-                />
-                <div
-	                  style="
-	                    position: relative;
-	                    z-index: 1;
-	                    width: 368px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    margin-bottom: 66px;
-                  "
-                >
-                  <div
-                    style="
-                      display: flex;
-                      align-items: center;
-                      background: #2e75f5;
-                      border-radius: 999px;
-                      padding: 16px;
-                      margin-bottom: 48px;
-                      margin-left: 28px;
-                      gap: 12px;
-                      box-shadow: 0px 2px 6px #0f172a12;
-                    "
-                  >
-                    <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/l9qye5ws_expires_30_days.png"
-                      style="
-                        border-radius: 999px;
-                        width: 46px;
-                        height: 46px;
-                        object-fit: fill;
-                      "
-                    />
-                    <div
-                      style="
-                        flex-shrink: 0;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 2px;
-                      "
-                    >
-                      <span
-                        style="
-                          color: #ffffff;
-                          font-size: 20px;
-                          margin-right: 11px;
-                        "
-                      >
-                        Zone H3 ·
-                      </span>
-                      <span style="color: #ffffff; font-size: 14px">
-                        Climat tropical
-                      </span>
-                    </div>
+
+            <!-- Case 3: CDG — copy left / photo right -->
+            <div class="hp-result-row" style="display:flex;align-items:flex-start;justify-content:space-between;gap:48px;width:100%">
+              <div class="hp-result-copy" style="width:490px;display:flex;flex-direction:column;gap:25px;flex-shrink:0">
+                <div style="background:#f1f5f9;border-radius:34px;padding:42px;min-height:333px;box-sizing:border-box;display:flex;flex-direction:column;gap:27px">
+                  <div style="display:flex;flex-direction:column;gap:8px">
+                    <span style="color:#272522;font-size:34px;font-weight:700;line-height:1.2">Leader de la restauration aéroportuaire - CDG.</span>
+                    <span style="color:#272522;font-size:17px;line-height:1.5">Restauration collective en Île-de-France • site aéroportuaire</span>
                   </div>
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      align-items: center;
-                      background: #16a34a;
-                      border-radius: 999px;
-                      padding: 16px;
-                      margin-bottom: 47px;
-                      margin-left: 48px;
-                      margin-right: 48px;
-                      gap: 11px;
-                      box-shadow: 0px 2px 6px #0f172a12;
-                    "
-                  >
-                    <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/rtby3zaw_expires_30_days.png"
-                      style="
-                        border-radius: 1044px;
-                        width: 46px;
-                        height: 46px;
-                        object-fit: fill;
-                      "
-                    />
-                    <div
-                      style="
-                        flex: 1;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 2px;
-                      "
-                    >
-                      <span style="color: #ffffff; font-size: 20px">
-                        ~600 kW
-                      </span>
-                      <span style="color: #ffffff; font-size: 14px">
-                        Demande thermique couverte
-                      </span>
+                  <div style="display:flex;flex-direction:column;gap:12px">
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <img src="assets/images/wasteheat/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px">368 kW · puissance récupérée</span>
                     </div>
-                  </div>
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      align-items: center;
-                      background: #9e78dc;
-                      border-radius: 999px;
-                      padding: 16px;
-                      gap: 11px;
-                      box-shadow: 0px 2px 6px #0f172a12;
-                    "
-                  >
-                    <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/ypefgjss_expires_30_days.png"
-                      style="
-                        border-radius: 999px;
-                        width: 49px;
-                        height: 49px;
-                        object-fit: fill;
-                      "
-                    />
-                    <div
-                      style="
-                        flex: 1;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 3px;
-                      "
-                    >
-                      <span style="color: #ffffff; font-size: 20px">
-                        ECS pour 216 chambres,
-                      </span>
-                      <span style="color: #ffffff; font-size: 14px">
-                        Restaurant, spa et blanchisserie entièrement couverte.
-                      </span>
+                    <div style="display:flex;align-items:center;gap:8px">
+                      <img src="assets/images/wasteheat/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px">~42 500 € · économies annuelles</span>
+                    </div>
+                    <div style="display:flex;align-items:flex-start;gap:8px">
+                      <img src="assets/images/wasteheat/results/check.svg" alt="" width="20" height="20" style="flex-shrink:0" />
+                      <span style="color:#000;font-size:14px;line-height:1.2;letter-spacing:-0.28px">6 groupes froids Trane. ECS + process blanchisserie cuisine collective aéroportuaire.</span>
                     </div>
                   </div>
                 </div>
+                <a href="mailto:contact@electris.fr" class="hp-result-cta" style="display:flex;align-items:center;justify-content:center;height:97px;border-radius:77px;border:2px solid #f4f4f4;text-decoration:none;background:linear-gradient(169deg,#b2ffda 0%,#89d2af 100%)">
+                  <span style="display:inline-flex;align-items:center;gap:10px;background:#fff;border-radius:32px;padding:8px 24px;box-shadow:0 1.3px 2.7px rgba(16,24,40,0.05)">
+                    <span style="color:#000;font-size:16px;font-weight:600;line-height:32px;white-space:nowrap">Demander un audit gratuit</span>
+                    <img src="assets/images/wasteheat/results/arrow.svg" alt="" width="20" height="20" style="transform:rotate(-90deg) scaleX(-1)" />
+                  </span>
+                </a>
               </div>
-              <div
-                style="
-                  width: 489px;
-                  display: flex;
-                  flex-direction: column;
-                  gap: 25px;
-                "
-              >
-                <div
-                  style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: column;
-                    background: #f1f5f9;
-                    border-radius: 33px;
-                    padding: 42px 41px;
-                    gap: 27px;
-                  "
-                >
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      gap: 8px;
-                    "
-                  >
-                    <span
-                      style="color: #272522; font-size: 33px; font-weight: bold"
-                    >
-                      Hôtel 4 étoiles - Antilles françaises.
-                    </span>
-                    <span style="color: #272522; font-size: 16px">
-                      Hôtel 4 étoiles en Guadeloupe • 216 chambres
-                    </span>
-                  </div>
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      gap: 12px;
-                    "
-                  >
-                    <div style="display: flex; align-items: center; gap: 8px">
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/pk7yfr34_expires_30_days.png"
-                        style="width: 20px; height: 20px; object-fit: fill"
-                      />
-                      <span style="color: #000000; font-size: 14px">
-                        Zone H3 · climat tropical
-                      </span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 8px">
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/64iyaoef_expires_30_days.png"
-                        style="width: 20px; height: 20px; object-fit: fill"
-                      />
-                      <span style="color: #000000; font-size: 14px">
-                        ~600 kW · demande thermique couverte
-                      </span>
-                    </div>
-                    <div
-                      style="
-                        align-self: stretch;
-                        display: flex;
-                        align-items: flex-start;
-                        gap: 8px;
-                      "
-                    >
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/lmtv8xxh_expires_30_days.png"
-                        style="width: 20px; height: 20px; object-fit: fill"
-                      />
-                      <span style="color: #000000; font-size: 14px; flex: 1">
-                        ECS pour 216 chambres, restaurant, spa et blanchisserie
-                        entièrement couverte.
-                      </span>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  style="
-                    align-self: stretch;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    background: linear-gradient(180deg, #04347b66, #1212ff66);
-                    border-radius: 77px;
-                    border: 2px solid #f4f4f4;
-                    padding-top: 24px;
-                    padding-bottom: 24px;
-                    text-align: left;
-                  "
-                  onclick="alert('Pressed!')"
-                  }
-                >
-                  <div
-                    style="
-                      display: flex;
-                      align-items: center;
-                      background: #ffffff;
-                      border-radius: 32px;
-                      padding: 8px 40px;
-                      gap: 11px;
-                      box-shadow: 0px 1.3333333730697632px 2px #1018280d;
-                    "
-                  >
-                    <div
-                      style="
-                        flex-shrink: 0;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        padding-left: 3px;
-                        padding-right: 3px;
-                      "
-                    >
-                      <span
-                        style="
-                          color: #000000;
-                          font-size: 16px;
-                          font-weight: bold;
-                        "
-                      >
-                        Demander un audit gratuit
-                      </span>
-                    </div>
-                    <img
-                      src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/8w7cl3aq_expires_30_days.png"
-                      style="
-                        border-radius: 32px;
-                        width: 20px;
-                        height: 20px;
-                        object-fit: fill;
-                      "
-                    />
-                  </div>
-                </button>
+              <div class="hp-result-visual hp-result-visual--figma" style="flex:1;min-width:0;max-width:724px;border-radius:34px;overflow:hidden;position:relative;line-height:0">
+                <img
+                  class="client-result-photo hp-result-card-shot"
+                  src="assets/images/wasteheat/results/case3-card.png"
+                  alt="368 kW, ~42 500 €, 6 groupes froids Trane ECS"
+                  style="display:block;width:100%;height:auto;border-radius:34px;object-fit:contain"
+                />
               </div>
             </div>
           </div>

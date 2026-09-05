@@ -60,34 +60,100 @@ body.wasteheat-page .wasteheat-industries .sector-card {
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  isolation: isolate;
 }
 
 body.wasteheat-page .wasteheat-industries .sector-card img {
   position: absolute;
   inset: 0;
+  z-index: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 0;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
 body.wasteheat-page .wasteheat-industries .sector-card::after {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   pointer-events: none;
-  background: linear-gradient(123.26deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.753) 75%);
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.753) 75%);
+  transition: background 0.35s ease;
 }
 
 body.wasteheat-page .wasteheat-industries .sector-card figcaption {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-start;
   padding: 20px;
   color: #fff;
   font-family: Raleway, system-ui, sans-serif;
+}
+
+body.wasteheat-page .wasteheat-industries .sector-card__title {
+  display: block;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.3;
+}
+
+body.wasteheat-page .wasteheat-industries .sector-card__detail {
+  display: block;
+  max-width: 100%;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.45;
+  opacity: 0;
+  transform: translateY(12px);
+  max-height: 0;
+  overflow: hidden;
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1),
+    max-height 0.35s ease;
+}
+
+body.wasteheat-page .wasteheat-industries .sector-card:hover img,
+body.wasteheat-page .wasteheat-industries .sector-card:focus-visible img {
+  transform: scale(1.06);
+}
+
+body.wasteheat-page .wasteheat-industries .sector-card:hover::after,
+body.wasteheat-page .wasteheat-industries .sector-card:focus-visible::after {
+  background: linear-gradient(160deg, rgba(0, 0, 0, 0.15) 20%, rgba(0, 0, 0, 0.82) 78%);
+}
+
+body.wasteheat-page .wasteheat-industries .sector-card:hover .sector-card__detail,
+body.wasteheat-page .wasteheat-industries .sector-card:focus-visible .sector-card__detail {
+  opacity: 1;
+  transform: translateY(0);
+  max-height: 120px;
+}
+
+body.wasteheat-page .wasteheat-industries .sector-card:focus-visible {
+  outline: 2px solid #1212ff;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.wasteheat-page .wasteheat-industries .sector-card img,
+  body.wasteheat-page .wasteheat-industries .sector-card::after,
+  body.wasteheat-page .wasteheat-industries .sector-card__detail {
+    transition: none;
+  }
+
+  body.wasteheat-page .wasteheat-industries .sector-card:hover img,
+  body.wasteheat-page .wasteheat-industries .sector-card:focus-visible img {
+    transform: none;
+  }
 }
 
 /* ============================================================
@@ -169,7 +235,14 @@ body.wasteheat-page .wasteheat-industries .sector-card figcaption {
   body.wasteheat-page .wasteheat-industries .sector-card {
     width: 100% !important;
     max-width: none !important;
-    aspect-ratio: 334 / 510;
+    aspect-ratio: 1 / 1;
+  }
+
+  body.wasteheat-page .wasteheat-industries-mark,
+  body.wasteheat-page .wasteheat-industries > img[style*="position: absolute"] {
+    width: 60% !important;
+    height: auto !important;
+    opacity: 0.04 !important;
   }
 
   /* Staggered timeline: Figma 68px teardrop cards, stacked. */
@@ -191,12 +264,6 @@ body.wasteheat-page .wasteheat-industries .sector-card figcaption {
     border: 1px solid #e2e8f0 !important;
     border-radius: 68px !important;
     background: #ffffff !important;
-  }
-
-  body.wasteheat-page .wasteheat-industries > img[style*="position: absolute"] {
-    width: 60% !important;
-    height: auto !important;
-    opacity: 0.28;
   }
 
   /* Staggered timeline collapses to a single column. */
@@ -747,9 +814,16 @@ body.wasteheat-page .wasteheat-industries .sector-card figcaption {
 
   body.wasteheat-page .wasteheat-industries .sector-card figcaption {
     padding: 24px 20px !important;
-    font-size: clamp(20px, 5.5vw, 24px) !important;
+  }
+
+  body.wasteheat-page .wasteheat-industries .sector-card__title {
+    font-size: clamp(18px, 5vw, 22px) !important;
     font-weight: 700 !important;
     line-height: 1.2 !important;
+  }
+
+  body.wasteheat-page .wasteheat-industries .sector-card__detail {
+    font-size: 13px !important;
   }
 
   /* Kill page-local scale() hacks that fight the Figma chip sizes. */
