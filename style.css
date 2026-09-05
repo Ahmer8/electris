@@ -1046,8 +1046,9 @@ header {
 }
 
 .why {
-  height: 1591px;
-  padding: 104px 0 0;
+  height: auto;
+  min-height: 0;
+  padding: 104px 0 96px;
   background: #fff;
 }
 
@@ -1068,7 +1069,7 @@ header {
   z-index: 1;
   width: 1210px;
   max-width: calc(100vw - 302px);
-  height: 100%;
+  height: auto;
   padding-right: 0;
   padding-left: 0;
 }
@@ -1147,67 +1148,93 @@ header {
 }
 
 .reason-row {
-  position: absolute;
-  left: 15px;
-  width: 1195px;
-  display: block !important;
-  margin: 0 !important;
+  position: relative;
+  left: auto;
+  top: auto;
+  width: 100%;
+  max-width: 1216px;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) 510px;
+  align-items: center;
+  gap: 48px;
+  margin: 0 0 48px !important;
   padding: 0;
 }
 
-.reason-row:nth-of-type(2) {
-  top: 155px;
-  height: 484px;
+.reason-row:last-of-type {
+  margin-bottom: 0 !important;
 }
 
-.reason-row:nth-of-type(3) {
-  top: 661px;
-}
-
+.reason-row:nth-of-type(2),
+.reason-row:nth-of-type(3),
 .reason-row:nth-of-type(4) {
-  top: 1080px;
+  top: auto;
+  height: auto;
 }
 
 .reason-row > :first-child {
-  width: 560px !important;
+  width: auto !important;
   max-width: 560px !important;
 }
 
 .reason-row:nth-of-type(2) > :first-child {
-  padding-top: 54px !important;
+  padding-top: 0 !important;
 }
 
 .reason-row > :last-child {
-  width: auto !important;
-  max-width: none !important;
+  position: static;
+  width: 510px !important;
+  max-width: 510px !important;
+  display: block !important;
 }
 
-.reason-row:nth-of-type(2) > :last-child {
-  position: absolute;
-  /* Keep the first visual at the Figma size and centred in the right half. */
-  left: 611px;
-  top: 0;
-}
-
+.reason-row:nth-of-type(2) > :last-child,
 .reason-row:nth-of-type(3) > :last-child,
 .reason-row:nth-of-type(4) > :last-child {
-  display: none;
+  position: static;
+  left: auto;
+  top: auto;
+  display: block !important;
+}
+
+/* Keep image on the right for every row (Figma desktop 1440). */
+.reason-row.flex-lg-row-reverse {
+  grid-template-columns: minmax(0, 1fr) 510px;
+}
+
+.reason-row.flex-lg-row-reverse > :first-child {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.reason-row.flex-lg-row-reverse > :last-child {
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .reason-row > * {
   padding: 0 !important;
 }
 
+.reason-row picture {
+  display: block;
+  width: 510px;
+  max-width: 100%;
+  height: 380px;
+  line-height: 0;
+}
+
 .reason-row em {
   display: block;
   margin-bottom: 37px;
   color: transparent;
-  -webkit-text-stroke: 1.4px #4ea647;
+  -webkit-text-stroke: 1.4px #1212ff;
   font-family: Raleway, Manrope, Arial, sans-serif;
-  font-size: 64px;
+  font-size: 56px;
   font-style: normal;
   font-weight: 800;
-  line-height: 0.72;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
 }
 
 .reason-row h3 {
@@ -1247,13 +1274,15 @@ header {
 }
 
 .reason-img {
-  width: 592px;
+  width: 510px;
   max-width: 100%;
-  height: 349px;
+  height: 380px;
   display: block;
   object-fit: cover;
   border-radius: 0;
   transition: filter 0.28s ease;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 510 380' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M439.2 40.819C439.2 60.372 455.05 76.222 474.6 76.222C494.15 76.222 510 92.072 510 111.624V337C510 360.748 490.748 380 467 380H167.17C143.417 380 124.165 360.748 124.165 337V314.499C124.165 290.751 104.913 271.499 81.165 271.499H43C19.252 271.499 0 252.247 0 228.499V43C0 19.252 19.252 0 43 0H401.08C422.13 0 439.2 17.063 439.2 38.111V40.819Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 510 380' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M439.2 40.819C439.2 60.372 455.05 76.222 474.6 76.222C494.15 76.222 510 92.072 510 111.624V337C510 360.748 490.748 380 467 380H167.17C143.417 380 124.165 360.748 124.165 337V314.499C124.165 290.751 104.913 271.499 81.165 271.499H43C19.252 271.499 0 252.247 0 228.499V43C0 19.252 19.252 0 43 0H401.08C422.13 0 439.2 17.063 439.2 38.111V40.819Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
 }
 
 .reason-row:hover .reason-img {
@@ -1263,13 +1292,13 @@ header {
 .reason-row:nth-of-type(2) .reason-img,
 .reason-row:nth-of-type(3) .reason-img,
 .reason-row:nth-of-type(4) .reason-img {
-  width: 584px;
-  height: 435px;
-  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='854 259 510 380' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1293.2 299.819C1293.2 319.372 1309.05 335.222 1328.6 335.222C1348.15 335.222 1364 351.072 1364 370.624V596C1364 619.748 1344.75 639 1321 639H1021.17C997.417 639 978.165 619.748 978.165 596V573.499C978.165 549.751 958.913 530.499 935.165 530.499H897C873.252 530.499 854 511.247 854 487.499V302C854 278.252 873.252 259 897 259H1255.08C1276.13 259 1293.2 276.063 1293.2 297.111V299.819Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
-  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='854 259 510 380' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M1293.2 299.819C1293.2 319.372 1309.05 335.222 1328.6 335.222C1348.15 335.222 1364 351.072 1364 370.624V596C1364 619.748 1344.75 639 1321 639H1021.17C997.417 639 978.165 619.748 978.165 596V573.499C978.165 549.751 958.913 530.499 935.165 530.499H897C873.252 530.499 854 511.247 854 487.499V302C854 278.252 873.252 259 897 259H1255.08C1276.13 259 1293.2 276.063 1293.2 297.111V299.819Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  width: 510px;
+  height: 380px;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 510 380' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M439.2 40.819C439.2 60.372 455.05 76.222 474.6 76.222C494.15 76.222 510 92.072 510 111.624V337C510 360.748 490.748 380 467 380H167.17C143.417 380 124.165 360.748 124.165 337V314.499C124.165 290.751 104.913 271.499 81.165 271.499H43C19.252 271.499 0 252.247 0 228.499V43C0 19.252 19.252 0 43 0H401.08C422.13 0 439.2 17.063 439.2 38.111V40.819Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 510 380' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M439.2 40.819C439.2 60.372 455.05 76.222 474.6 76.222C494.15 76.222 510 92.072 510 111.624V337C510 360.748 490.748 380 467 380H167.17C143.417 380 124.165 360.748 124.165 337V314.499C124.165 290.751 104.913 271.499 81.165 271.499H43C19.252 271.499 0 252.247 0 228.499V43C0 19.252 19.252 0 43 0H401.08C422.13 0 439.2 17.063 439.2 38.111V40.819Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat;
 }
 
-/* Match the lighter, softer colour grading of the Figma cafÃ© visual. */
+/* Match the lighter, softer colour grading of the Figma café visual. */
 .reason-row:nth-of-type(2) .reason-img {
   filter: brightness(1.08) contrast(0.88) saturate(0.88);
 }
@@ -8744,6 +8773,101 @@ h3 {
     padding-inline: clamp(22px, 1.984vw, 30px) !important;
     font-size: clamp(18px, 1.455vw, 22px) !important;
     white-space: nowrap !important;
+  }
+
+  /* Pourquoi électrifier: show all three Figma images on desktop (not only row 01). */
+  .why {
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 104px 0 96px !important;
+  }
+
+  .why .container {
+    height: auto !important;
+  }
+
+  .why .heading {
+    margin-bottom: 48px !important;
+  }
+
+  .why .reason-row,
+  .why .reason-row:nth-of-type(2),
+  .why .reason-row:nth-of-type(3),
+  .why .reason-row:nth-of-type(4) {
+    position: relative !important;
+    left: auto !important;
+    top: auto !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) min(510px, 42%) !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 1216px !important;
+    height: auto !important;
+    gap: clamp(32px, 4vw, 96px) !important;
+    margin: 0 0 48px !important;
+    padding: 0 !important;
+  }
+
+  .why .reason-row:last-of-type {
+    margin-bottom: 0 !important;
+  }
+
+  .why .reason-row > :first-child,
+  .why .reason-row > :last-child,
+  .why .reason-row:nth-of-type(2) > :first-child,
+  .why .reason-row:nth-of-type(2) > :last-child,
+  .why .reason-row:nth-of-type(3) > :last-child,
+  .why .reason-row:nth-of-type(4) > :last-child {
+    position: static !important;
+    display: block !important;
+    left: auto !important;
+    top: auto !important;
+  }
+
+  .why .reason-row > :first-child {
+    width: auto !important;
+    max-width: 560px !important;
+  }
+
+  .why .reason-row > :last-child {
+    width: min(510px, 100%) !important;
+    max-width: min(510px, 100%) !important;
+  }
+
+  .why .reason-row.flex-lg-row-reverse {
+    grid-template-columns: minmax(0, 1fr) min(510px, 42%) !important;
+  }
+
+  .why .reason-row.flex-lg-row-reverse > :first-child {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+  }
+
+  .why .reason-row.flex-lg-row-reverse > :last-child {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+  }
+
+  .why .reason-row picture {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 510 / 380;
+    line-height: 0;
+  }
+
+  .why .reason-img,
+  .why .reason-row:nth-of-type(2) .reason-img,
+  .why .reason-row:nth-of-type(3) .reason-img,
+  .why .reason-row:nth-of-type(4) .reason-img {
+    width: 100% !important;
+    max-width: 510px !important;
+    height: auto !important;
+    aspect-ratio: 510 / 380;
+    object-fit: cover !important;
+    border-radius: 0 !important;
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 510 380' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M439.2 40.819C439.2 60.372 455.05 76.222 474.6 76.222C494.15 76.222 510 92.072 510 111.624V337C510 360.748 490.748 380 467 380H167.17C143.417 380 124.165 360.748 124.165 337V314.499C124.165 290.751 104.913 271.499 81.165 271.499H43C19.252 271.499 0 252.247 0 228.499V43C0 19.252 19.252 0 43 0H401.08C422.13 0 439.2 17.063 439.2 38.111V40.819Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 510 380' preserveAspectRatio='none'%3E%3Cpath fill='white' d='M439.2 40.819C439.2 60.372 455.05 76.222 474.6 76.222C494.15 76.222 510 92.072 510 111.624V337C510 360.748 490.748 380 467 380H167.17C143.417 380 124.165 360.748 124.165 337V314.499C124.165 290.751 104.913 271.499 81.165 271.499H43C19.252 271.499 0 252.247 0 228.499V43C0 19.252 19.252 0 43 0H401.08C422.13 0 439.2 17.063 439.2 38.111V40.819Z'/%3E%3C/svg%3E") center / 100% 100% no-repeat !important;
   }
 }
 
