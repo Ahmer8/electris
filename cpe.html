@@ -31,7 +31,7 @@
         min-height: 0;
         padding: 64px 64px 96px 64px !important;
         gap: 36px !important;
-        overflow: hidden;
+        overflow: visible;
       }
       .wasteheat-hero > div:first-child {
         max-width: 690px;
@@ -54,9 +54,17 @@
         display: flex;
         align-items: center;
       }
-      .wasteheat-hero-visual > div:first-child {
+      .wasteheat-hero-visual--composite {
         width: 100%;
-        padding-top: 0 !important;
+        max-width: 737px;
+        margin-left: auto;
+        line-height: 0;
+      }
+      .wasteheat-hero-visual--composite img {
+        display: block;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
       }
       .wasteheat-hero-art {
         position: relative;
@@ -816,6 +824,62 @@
       }
 </style>
   <link rel="stylesheet" href="solution-detail.css?v=secteurs-hover-all" />
+  <style>
+    /* CPE hero: Figma composite (art + metric cards) */
+    body.wasteheat-page.cpe-page .wasteheat-hero {
+      overflow: visible !important;
+    }
+    body.wasteheat-page.cpe-page .wasteheat-hero-visual.wasteheat-hero-visual--composite {
+      position: relative !important;
+      display: block !important;
+      width: 100% !important;
+      max-width: 737px !important;
+      margin-left: auto !important;
+      margin-right: 0 !important;
+      aspect-ratio: auto !important;
+      height: auto !important;
+      padding: 0 !important;
+      overflow: visible !important;
+      line-height: 0 !important;
+    }
+    body.wasteheat-page.cpe-page .wasteheat-hero-visual--composite > div:first-child {
+      position: static !important;
+      left: auto !important;
+      top: auto !important;
+      width: 100% !important;
+      height: auto !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    body.wasteheat-page.cpe-page .wasteheat-hero-visual--composite img.cpe-hero-composite {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      border-radius: 0 !important;
+    }
+    .hp-contact-card--figma {
+      align-self: stretch;
+      display: block;
+    }
+    .hp-contact-hotspot {
+      position: absolute;
+      display: block;
+      z-index: 2;
+    }
+    .hp-contact-hotspot--mail {
+      left: 9.8%;
+      top: 22%;
+      width: 62%;
+      height: 9%;
+    }
+    .hp-contact-hotspot--cta {
+      left: 9.8%;
+      top: 52%;
+      width: 58%;
+      height: 14%;
+    }
+  </style>
   </head>
   <body class="wasteheat-page cpe-page">
     <main class="gtb-export-shell export-png-crop" aria-label="Contrat de performance energetique">
@@ -1306,161 +1370,14 @@
               </span>
             </div>
           </div>
-          <div class="wasteheat-hero-visual" style="flex: 1; align-items: flex-start; position: relative">
-            <div
-              style="
-                align-self: stretch;
-                align-items: flex-start;
-                padding-top: 31px;
-              "
-            >
-              <div
-                class="wasteheat-hero-art"
-                style="
-                  width: 629px;
-                  box-sizing: border-box;
-                  align-items: flex-start;
-                  padding-top: 37px;
-                  background-image: url(&quot;assets/images/cpe/hero.png&quot;);
-                  background-size: 100% 100%;
-                "
-              ></div>
-            </div>
-            <div
-              class="wasteheat-metric wasteheat-metric-savings"
-              style="
-                position: absolute;
-                top: 26%;
-                left: -8%;
-                width: 257px;
-                box-sizing: border-box;
-                display: flex;
-                flex-direction: column;
-                background: #ffffff57;
-                border-radius: 13px;
-                padding: 13px 15px;
-              "
-            >
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      align-items: center;
-                      margin-bottom: 8px;
-                      gap: 9px;
-                    "
-                  >
-                    <img
-                      src="assets/images/cpe/icon-leaf.svg"
-                      style="width: 21px; height: 21px; object-fit: fill"
-                    />
-                    <span style="color: #475466; font-size: 15px">
-                      Partage des gains
-                    </span>
-                  </div>
-                  <div
-                    style="
-                      height: 1px;
-                      align-self: stretch;
-                      background: #e2e8f0;
-                      margin-bottom: 6px;
-                    "
-                  ></div>
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      align-items: flex-start;
-                      gap: 9px;
-                    "
-                  >
-                    <span
-                      style="color: #0f1728; font-size: 28px; font-weight: bold"
-                    >
-                      50 / 50
-                    </span>
-                  </div>
-                </div>
-            <div
-              class="wasteheat-metric wasteheat-metric-roi"
-              style="
-                position: absolute;
-                top: 32px;
-                right: -30px;
-                width: 252px;
-                box-sizing: border-box;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                background: #ffffff57;
-                border-radius: 13px;
-                padding: 13px 15px;
-                gap: 7px;
-              "
-            >
-              <div
-                style="
-                  align-self: stretch;
-                  display: flex;
-                  align-items: center;
-                  gap: 8px;
-                "
-              >
-                <img
-                  src="assets/images/cpe/icon-limitation.svg"
-                  style="width: 21px; height: 21px; object-fit: fill"
-                />
-                <span style="color: #475466; font-size: 15px">
-                  Niveau d&#39;&eacute;conomies contractuel
-                </span>
-              </div>
-              <div
-                style="height: 1px; align-self: stretch; background: #e2e8f0"
-              ></div>
-              <span style="color: #0f1728; font-size: 28px; font-weight: bold">
-                Garanti
-              </span>
-            </div>
-            <div
-              class="wasteheat-metric wasteheat-metric-capex"
-              style="
-                position: absolute;
-                bottom: -15px;
-                left: 152px;
-                width: 257px;
-                box-sizing: border-box;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                background: #ffffff57;
-                border-radius: 13px;
-                padding: 13px 15px;
-                gap: 7px;
-              "
-            >
-              <div
-                style="
-                  align-self: stretch;
-                  display: flex;
-                  align-items: center;
-                  gap: 8px;
-                "
-              >
-                <img
-                  src="assets/images/cpe/icon-wallet.svg"
-                  style="width: 21px; height: 21px; object-fit: fill"
-                />
-                <span style="color: #475466; font-size: 15px">
-                  Investissement client
-                </span>
-              </div>
-              <div
-                style="height: 1px; align-self: stretch; background: #e2e8f0"
-              ></div>
-              <span style="color: #0f1728; font-size: 28px; font-weight: bold">
-                0 €
-              </span>
-            </div>
+          <div class="wasteheat-hero-visual wasteheat-hero-visual--composite" style="flex: 1; position: relative">
+            <img
+              class="cpe-hero-composite"
+              src="assets/images/cpe/hero-visual.png?v=figma-2331-8030"
+              alt="CPE — Partage des gains 50/50, économies garanties, investissement client 0 €"
+              width="737"
+              height="652"
+            />
           </div>
         </div>
         <div
@@ -2614,23 +2531,6 @@
           >
             <div
               style="
-                position: absolute;
-                bottom: 0px;
-                right: 0px;
-                left: 0px;
-                align-self: stretch;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-              "
-            >
-              <img
-                src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/5fdwrl80_expires_30_days.png"
-                style="width: 1084px; height: 670px; object-fit: fill"
-              />
-            </div>
-            <div
-              style="
                 align-self: stretch;
                 display: flex;
                 align-items: center;
@@ -2639,172 +2539,32 @@
                 gap: 32px;
               "
             >
-              <div
-                style="
-                  flex: 1;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  border-radius: 43px;
-                  padding-top: 30px;
-                  padding-bottom: 30px;
-                  background-image: url(&quot;https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/3zutafau_expires_30_days.png&quot;);
-                  background-size: 100% 100%;
-                  position: relative;
-                "
-              >
+              <div class="hp-contact-card hp-contact-card--figma" style="flex:1;min-width:0;max-width:592px;position:relative;line-height:0">
                 <img
-                  src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/ax6by2j3_expires_30_days.png"
-                  style="
-                    position: absolute;
-                    top: 0px;
-                    right: 0px;
-                    border-radius: 43px;
-                    width: 296px;
-                    height: 315px;
-                    object-fit: fill;
-                  "
+                  src="assets/images/cpe/contact/contact-card.png"
+                  alt="Contactez-nous — Electris"
+                  style="display:block;width:100%;height:auto"
                 />
-                <div
-                  style="
-                    width: 480px;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 26px;
-                  "
-                >
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      gap: 15px;
-                    "
-                  >
-                    <span
-                      style="color: #ffffff; font-size: 48px; font-weight: bold"
-                    >
-                      Contactez-nous.
-                    </span>
-                    <div style="align-self: stretch">
-                      <div
-                        style="
-                          align-self: stretch;
-                          display: flex;
-                          align-items: center;
-                          margin-bottom: 12px;
-                          gap: 10px;
-                        "
-                      >
-                        <img
-                          src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/ostbqt43_expires_30_days.png"
-                          style="width: 32px; height: 28px; object-fit: fill"
-                        />
-                        <span style="color: #ffffff; font-size: 24px">
-                          contact@electris.fr
-                        </span>
-                      </div>
-                      <div
-                        style="
-                          height: 1px;
-                          align-self: stretch;
-                          background: #00000000;
-                          margin-bottom: 11px;
-                        "
-                      ></div>
-                      <div
-                        style="
-                          align-self: stretch;
-                          display: flex;
-                          align-items: center;
-                          gap: 10px;
-                        "
-                      >
-                        <img
-                          src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/kljo2cmo_expires_30_days.png"
-                          style="width: 32px; height: 28px; object-fit: fill"
-                        />
-                        <span style="color: #ffffff; font-size: 24px">
-                          +33 (0)1 XX XX XX XX
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      gap: 20px;
-                    "
-                  >
-                    <button
-                      style="
-                        display: flex;
-                        align-items: center;
-                        background: #ffffff;
-                        border-radius: 32px;
-                        border: none;
-                        padding: 16px 26px;
-                        gap: 15px;
-                        box-shadow: 0px 1.3333333730697632px 2px #1018280d;
-                        text-align: left;
-                      "
-                      onclick="alert('Pressed!')"
-                      }
-                    >
-                      <span
-                        style="
-                          color: #000000;
-                          font-size: 21px;
-                          font-weight: bold;
-                        "
-                      >
-                        Demander un audit gratuit
-                      </span>
-                      <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/n9opuz7r_expires_30_days.png"
-                        style="
-                          border-radius: 32px;
-                          width: 24px;
-                          height: 24px;
-                          object-fit: fill;
-                        "
-                      />
-                    </button>
-                    <div
-                      style="
-                        align-self: stretch;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 8px;
-                      "
-                    >
-                      <span
-                        style="color: #ffffff; font-size: 22px; width: 404px"
-                      >
-                        L&#39;ingénierie qui rend vos bâtiments plus
-                        performants.
-                      </span>
-                      <span
-                        style="color: #ffffff; font-size: 22px; width: 454px"
-                      >
-                        Paris · France · 100 % électrique · 0 % énergie fossile
-                      </span>
-                    </div>
-                  </div>
-                </div>
+                <a
+                  href="mailto:contact@electris.fr"
+                  class="hp-contact-hotspot hp-contact-hotspot--mail"
+                  aria-label="Envoyer un email à contact@electris.fr"
+                ></a>
+                <a
+                  href="mailto:contact@electris.fr"
+                  class="hp-contact-hotspot hp-contact-hotspot--cta"
+                  aria-label="Demander un audit gratuit"
+                ></a>
               </div>
               <img
-                src="assets/images/cascade/image2_2153_18060_1344x768.png"
+                src="assets/images/cpe/contact/photo-curved.png"
+                alt="Immeuble parisien avec panneaux solaires"
                 style="
-                  border-radius: 43px;
-                  height: 482px;
                   flex: 1;
-                  object-fit: fill;
+                  min-width: 0;
+                  max-width: 592px;
+                  height: auto;
+                  object-fit: contain;
                 "
               />
             </div>
@@ -3345,21 +3105,7 @@
                     </li>
                     <li>
                       <span class="chevron">&#8250;</span
-                      ><a href="F-gas-compliance-solutions.html">Conformit&eacute; F-Gas</a>
-                    </li>
-                    <li>
-                      <span class="chevron">&#8250;</span
-                      ><a href="destratification-air.html">D&eacute;stratification d&#39;air</a>
-                    </li>
-                    <li>
-                      <span class="chevron">&#8250;</span
-                      ><a href="solutions-regulation-haute-pression-flottante.html"
-                        >R&eacute;gulation haute pression flottante</a
-                      >
-                    </li>
-                    <li>
-                      <span class="chevron">&#8250;</span
-                      ><a href="cpe.html">Contrat de performance (CPE)</a>
+                      ><a href="cpe.html">Contrat de performance (CP)</a>
                     </li>
                   </ul>
                 </section>
