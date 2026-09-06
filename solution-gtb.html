@@ -74,10 +74,10 @@
         min-height: 0;
         aspect-ratio: 1.34 / 1;
         padding: 0 !important;
-        background-image: url("assets/images/cascade/image1_2153_18060_1254x1254.png") !important;
+        background-image: none !important;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 104% auto !important;
+        background-size: contain !important;
       }
       .wasteheat-hero-art .wasteheat-metric-savings {
         position: absolute;
@@ -787,8 +787,38 @@
 
     </style>
   <link rel="stylesheet" href="solution-detail.css?v=figma-sector-hover-cta" />
-  </head>
-  <body class="wasteheat-page">
+  <style>
+    /* GTB hero: Figma 2331:5064 composite (art + metric cards) */
+    body.wasteheat-page.gtb-page .wasteheat-hero {
+      overflow: visible !important;
+    }
+    body.wasteheat-page.gtb-page .wasteheat-hero-visual.wasteheat-hero-visual--composite {
+      position: relative !important;
+      display: block !important;
+      width: 100% !important;
+      max-width: 756px !important;
+      margin-left: auto !important;
+      margin-right: 0 !important;
+      aspect-ratio: auto !important;
+      height: auto !important;
+      padding: 0 !important;
+      overflow: visible !important;
+      line-height: 0 !important;
+    }
+    body.wasteheat-page.gtb-page .wasteheat-hero-visual--composite img.gtb-hero-composite {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      height: auto !important;
+      border-radius: 0 !important;
+      object-fit: contain !important;
+    }
+    body.wasteheat-page.gtb-page .wasteheat-hero-art {
+      display: none !important;
+    }
+  </style>
+</head>
+  <body class="wasteheat-page gtb-page">
     <main class="gtb-export-shell export-png-crop" aria-label="Solution GTB intelligente classe A">
       <img
         src="assets/images/full-page/solutions-gtb-classe-a.png"
@@ -1227,15 +1257,11 @@
                   line-height: 1.25;
                 "
               >
-                Votre chaudi&egrave;re gaz vit ses <br />derni&egrave;res ann&eacute;es.
-                <span style="color: #1212ff"
-                  >Remplacez-la par des kWh, <br />pas du combustible.</span
-                >
+                Votre b&acirc;timent consomme de l'&eacute;nergie &agrave; l'aveugle.
+                <span style="color: #1212ff">Donnez-lui un cerveau.</span>
               </span>
-              <span style="color: #000000; font-size: 20px">
-                Une cascade de pompes &agrave; chaleur produit chauffage et eau chaude
-                sanitaire &agrave; partir d&#39;&eacute;lectricit&eacute;, jusqu&#39;&agrave; 78-85 &deg;C selon les besoins.
-                C&#39;est de la chaleur d&eacute;carbon&eacute;e, sans combustion.
+              <span style="color: #000000; font-size: 20px; line-height: 1.6">
+                Une GTB Classe A pilote chauffage, climatisation, ventilation et &eacute;clairage en temps r&eacute;el, zone par zone &mdash; et vous met en conformit&eacute; avec le d&eacute;cret BACS. Vous r&eacute;duisez la facture sans gros travaux. Et vous savez enfin o&ugrave; va chaque kWh.
               </span>
             </div>
             <div style="display: flex; align-items: center; gap: 24px">
@@ -1282,165 +1308,14 @@
               </span>
             </div>
           </div>
-          <div class="wasteheat-hero-visual" style="flex: 1; align-items: flex-start; position: relative">
-            <div
-              style="
-                align-self: stretch;
-                align-items: flex-start;
-                padding-top: 31px;
-              "
-            >
-              <div
-                class="wasteheat-hero-art"
-                style="
-                  width: 629px;
-                  box-sizing: border-box;
-                  align-items: flex-start;
-                  padding-top: 37px;
-                  background-image: url(&quot;assets/images/cascade/image1_2153_18060_1254x1254.png&quot;);
-                  background-size: 100% 100%;
-                "
-              >
-                <div
-                  class="wasteheat-metric wasteheat-metric-savings"
-                  style="
-                    width: 257px;
-                    box-sizing: border-box;
-                    display: flex;
-                    flex-direction: column;
-                    background: #ffffff57;
-                    border-radius: 13px;
-                    padding: 13px 15px;
-                    margin-bottom: 301px;
-                  "
-                >
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      align-items: center;
-                      margin-bottom: 8px;
-                      gap: 9px;
-                    "
-                  >
-                    <img
-                      src="assets/images/solutions-page/waste-heat-figma-savings.png"
-                      style="width: 21px; height: 21px; object-fit: fill"
-                    />
-                    <span style="color: #475466; font-size: 15px">
-                      &Eacute;missions CO2
-                    </span>
-                  </div>
-                  <div
-                    style="
-                      height: 1px;
-                      align-self: stretch;
-                      background: #e2e8f0;
-                      margin-bottom: 6px;
-                    "
-                  ></div>
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      align-items: flex-start;
-                      gap: 9px;
-                    "
-                  >
-                    <span
-                      style="color: #0f1728; font-size: 28px; font-weight: bold"
-                    >
-                      -60 &agrave; -90 %
-                    </span>
-                    <span
-                      style="color: #475569; font-size: 14px; margin-top: 23px"
-                    >
-                      R&eacute;duction
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="wasteheat-metric wasteheat-metric-roi"
-              style="
-                position: absolute;
-                top: 32px;
-                right: -30px;
-                width: 252px;
-                box-sizing: border-box;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                background: #ffffff57;
-                border-radius: 13px;
-                padding: 13px 15px;
-                gap: 7px;
-              "
-            >
-              <div
-                style="
-                  align-self: stretch;
-                  display: flex;
-                  align-items: center;
-                  gap: 8px;
-                "
-              >
-                <img
-                  src="assets/images/solutions-page/waste-heat-figma-roi.png"
-                  style="width: 21px; height: 21px; object-fit: fill"
-                />
-                <span style="color: #475466; font-size: 15px">
-                  ROI moyen constaté
-                </span>
-              </div>
-              <div
-                style="height: 1px; align-self: stretch; background: #e2e8f0"
-              ></div>
-              <span style="color: #0f1728; font-size: 28px; font-weight: bold">
-                3-5 ans
-              </span>
-            </div>
-            <div
-              class="wasteheat-metric wasteheat-metric-capex"
-              style="
-                position: absolute;
-                bottom: -15px;
-                left: 152px;
-                width: 257px;
-                box-sizing: border-box;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                background: #ffffff57;
-                border-radius: 13px;
-                padding: 13px 15px;
-                gap: 7px;
-              "
-            >
-              <div
-                style="
-                  align-self: stretch;
-                  display: flex;
-                  align-items: center;
-                  gap: 8px;
-                "
-              >
-                <img
-                  src="assets/images/solutions-page/waste-heat-figma-capex.png"
-                  style="width: 21px; height: 21px; object-fit: fill"
-                />
-                <span style="color: #475466; font-size: 15px">
-                  Capex sous CPE
-                </span>
-              </div>
-              <div
-                style="height: 1px; align-self: stretch; background: #e2e8f0"
-              ></div>
-              <span style="color: #0f1728; font-size: 28px; font-weight: bold">
-                0 €
-              </span>
-            </div>
+          <div class="wasteheat-hero-visual wasteheat-hero-visual--composite" style="flex: 1; position: relative">
+            <img
+              class="gtb-hero-composite"
+              src="assets/images/gtb/hero-visual.png?v=figma-2331-5064"
+              alt="GTB Classe A — ROI 2–4 ans, Capex 0 €, émissions CO₂ −10 à −30 %"
+              width="756"
+              height="614"
+            />
           </div>
         </div>
         <div
