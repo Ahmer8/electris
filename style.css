@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap");
+﻿@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700;800&display=swap");
 
 :root {
   --blue: #1212ff;
@@ -1660,8 +1660,7 @@ header {
   height: 24px;
   flex: 0 0 24px;
   object-fit: contain;
-  /* Figma arrow-right-02 export points down */
-  transform: rotate(-90deg) scaleX(-1);
+  transform: none;
 }
 
 .tech-actions .btn:first-child,

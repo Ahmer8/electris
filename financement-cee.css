@@ -1,4 +1,4 @@
-/* 31-financement-cee — CEE detail page */
+﻿/* 31-financement-cee — CEE detail page */
 
 :root {
   --cee-page: #f1f5f9;
@@ -71,7 +71,7 @@
 .cee-page .btn--hero img,
 .cee-page .orc-case__cta .btn img,
 .cee-page .audit-button img {
-  transform: rotate(-90deg) scaleX(-1);
+  transform: none;
 }
 
 .cee-page {

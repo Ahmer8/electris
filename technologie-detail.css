@@ -1,4 +1,4 @@
-/* Machine ORC + Cascade Booster detail pages (navbar from 24-technologie.css) */
+﻿/* Machine ORC + Cascade Booster detail pages (navbar from 24-technologie.css) */
 
 .page--orc .hero--detail,
 .page--pac .hero--detail {
@@ -800,7 +800,7 @@
 }
 
 .btn--hero img {
-  transform: rotate(-90deg) scaleX(-1);
+  transform: none;
 }
 
 .orc-case__visual {
