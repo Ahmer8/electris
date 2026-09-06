@@ -766,8 +766,25 @@
 
       .warehouse-visual {
         position: relative;
-        min-height: 476px;
-        padding-top: 28px;
+        min-height: 0;
+        padding-top: 0;
+        width: 100%;
+        max-width: 756px;
+        margin-left: auto;
+        line-height: 0;
+      }
+
+      .warehouse-visual--composite > img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        clip-path: none;
+        border-radius: 0;
+      }
+
+      .warehouse-visual--composite .warehouse-metric {
+        display: none;
       }
 
       .warehouse-visual > img {
@@ -776,8 +793,21 @@
         height: 476px;
         object-fit: cover;
         object-position: center;
-        clip-path: path("M661.82 434.32C661.82 457.09 643.36 475.56 620.59 475.56H364.58C353.16 475.56 343.9 466.3 343.9 454.88C343.9 441.11 332.74 429.95 318.97 429.95H41.23C18.46 429.95 0 411.49 0 388.71V41.23C0 18.46 18.46 0 41.23 0H620.59C643.36 0 661.82 18.46 661.82 41.23V434.32Z");
+        clip-path: none;
         border-radius: 0;
+      }
+
+      /* Figma 2497:5437 — keep composite hero intact across breakpoints */
+      .warehouse-visual.warehouse-visual--composite,
+      .warehouse-visual.warehouse-visual--composite > img {
+        width: 100% !important;
+        max-width: 756px !important;
+        min-height: 0 !important;
+        height: auto !important;
+        padding-top: 0 !important;
+        clip-path: none !important;
+        aspect-ratio: auto !important;
+        object-fit: contain !important;
       }
 
       .warehouse-metric {
@@ -1405,39 +1435,57 @@
 
       .warehouse-contact {
         display: grid;
-        grid-template-columns: 624px 624px;
+        grid-template-columns: minmax(0, 592px) minmax(0, 592px);
         gap: 32px;
         align-items: start;
         justify-content: center;
-        min-height: 1052px;
-        padding: 96px 116px;
+        min-height: 0;
+        padding: 96px clamp(24px, 6.6vw, 100px);
         background: #f1f5f9;
       }
 
       .warehouse-form {
-        width: 624px;
+        width: 100%;
+        max-width: 592px;
         min-height: 860px;
         box-sizing: border-box;
-        padding: 54px 48px 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        padding: 48px;
         border: 1px solid #e2e8f0;
         border-radius: 43px;
         background: #fff;
+      }
+
+      .warehouse-form > div:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
       }
 
       .warehouse-form h2 {
         margin: 0;
         color: #161616;
         font-size: 32px;
-        font-weight: 800;
+        font-weight: 700;
         line-height: 1.18;
       }
 
-      .warehouse-form p {
-        max-width: 472px;
-        margin: 0 0 34px;
+      .warehouse-form > div:first-child > p {
+        max-width: none;
+        margin: 0;
         color: #64748b;
         font-size: 16px;
         line-height: 1.25;
+        font-weight: 400;
+      }
+
+      .warehouse-form-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        flex: 1;
       }
 
       .warehouse-form label {
@@ -1445,7 +1493,7 @@
         margin: 0 0 8px;
         color: #161616;
         font-size: 14px;
-        font-weight: 700;
+        font-weight: 600;
       }
 
       .warehouse-form input,
@@ -1459,6 +1507,7 @@
         color: #0f172a;
         font: inherit;
         font-size: 16px;
+        background: #fff;
       }
 
       .warehouse-form input::placeholder,
@@ -1470,17 +1519,18 @@
         height: 120px;
         min-height: 120px;
         resize: vertical;
+        padding-top: 16px;
       }
 
       .warehouse-form-row {
         display: grid;
-        grid-template-columns: repeat(2, 252px);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 24px;
-        margin-bottom: 21px;
+        margin-bottom: 0;
       }
 
       .warehouse-field {
-        margin-bottom: 21px;
+        margin-bottom: 0;
       }
 
       .warehouse-field:last-of-type {
@@ -1488,36 +1538,67 @@
       }
 
       .warehouse-submit {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         width: 100%;
         height: 56px;
         min-height: 56px;
-        margin-top: 22px;
-        padding-top: 0;
-        padding-bottom: 0;
+        margin-top: 0;
+        padding: 16px 24px 16px 32px;
         border: 0;
         border-radius: 32px;
-        background: #2faa72;
+        background: #2e9d68;
+        color: #fff;
         font-size: 18px;
+        font-weight: 600;
+        gap: 12px;
+      }
+
+      .warehouse-submit img {
+        width: 24px;
+        height: 24px;
+        display: block;
+        transform: none;
+      }
+
+      .warehouse-submit:hover {
+        filter: brightness(0.97);
       }
 
       .warehouse-contact-photo {
         position: relative;
-        width: 624px;
-        height: 860px;
-        overflow: hidden;
+        width: 100%;
+        max-width: 592px;
+        height: auto;
+        overflow: visible;
         border-radius: 0;
-        clip-path: path("M624 817C624 840.748 604.748 860 581 860H381.917C358.169 860 338.917 840.748 338.917 817V798C338.917 783.641 327.276 772 312.917 772H43C19.2518 772 0 752.748 0 729V43C0 19.2517 19.2518 0 43 0H581C604.748 0 624 19.2518 624 43V817Z");
+        clip-path: none;
+        line-height: 0;
       }
 
       .warehouse-contact-photo img {
+        display: block;
         width: 100%;
-        height: 860px;
-        object-fit: cover;
-        object-position: 70% center;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
       }
 
       .warehouse-contact-photo::after {
-        display: none;
+        display: none !important;
+        content: none !important;
+      }
+
+      /* Figma 2497:5813 — curved contact photo baked into PNG */
+      .warehouse-contact .warehouse-contact-photo,
+      .warehouse-contact .warehouse-contact-photo img {
+        width: 100% !important;
+        max-width: 592px !important;
+        height: auto !important;
+        clip-path: none !important;
+        border-radius: 0 !important;
+        object-fit: contain !important;
       }
 
       @media (max-width: 1100px) {
@@ -2184,8 +2265,8 @@
           font-size: 28px;
         }
 
-        .warehouse-form p {
-          margin-bottom: 28px;
+        .warehouse-form > div:first-child > p {
+          margin: 0;
           font-size: 15px;
         }
 
@@ -2194,28 +2275,20 @@
           gap: 24px;
         }
 
-        .warehouse-contact-photo {
+        /* Figma 2497:5813 — keep baked curved PNG (no CSS notch / fixed height) */
+        .warehouse-contact .warehouse-contact-photo,
+        .warehouse-contact .warehouse-contact-photo img {
           width: 100%;
-          height: 520px;
-          border-radius: 28px;
+          max-width: 592px;
+          height: auto;
+          border-radius: 0;
           clip-path: none;
+          object-fit: contain;
         }
 
-        .warehouse-contact-photo img {
-          height: 520px;
-          border-radius: 28px;
-        }
-
-        .warehouse-contact-photo::after {
-          display: block;
-          content: "";
-          position: absolute;
-          left: 0;
-          bottom: 0;
-          width: 54%;
-          height: 72px;
-          border-top-right-radius: 28px;
-          background: #f1f5f9;
+        .warehouse-contact .warehouse-contact-photo::after {
+          display: none !important;
+          content: none !important;
         }
       }
 
@@ -2412,9 +2485,10 @@
           padding: 30px 22px !important;
         }
 
-        .warehouse-contact-photo,
-        .warehouse-contact-photo img {
-          height: clamp(360px, 110vw, 520px) !important;
+        .warehouse-contact .warehouse-contact-photo,
+        .warehouse-contact .warehouse-contact-photo img {
+          height: auto !important;
+          max-width: 100% !important;
         }
       }
 
@@ -2687,22 +2761,14 @@
             <a class="warehouse-btn warehouse-btn--dark" href="#results">Voir un cas r&eacute;el <span>&rarr;</span></a>
           </div>
         </div>
-        <div class="warehouse-visual">
-          <img src="assets/images/non-refrigerated-warehouse/figma-extract/02_image1_2497_5363_1536x672.png" alt="Entrepot logistique Electris" />
-          <div class="warehouse-metric warehouse-metric--top">
-            <small>Consommation gaz chauffage plage typique</small>
-            <strong>-15 &agrave; -30%</strong>
-          </div>
-          <div class="warehouse-metric warehouse-metric--right">
-            <small>ROI moyen sur nos installations</small>
-            <strong>18-30 mois</strong>
-          </div>
-          <div class="warehouse-metric warehouse-metric--bottom">
-            <small>Investissement client (CPE)</small>
-            <strong>0 &euro;</strong>
-          </div>
-        </div>
-      </section>
+        <div class="warehouse-visual warehouse-visual--composite">
+<img
+  alt="Entrep&ocirc;t logistique Electris"
+  src="assets/images/non-refrigerated-warehouse/hero-visual.png?v=figma-2497-5437"
+  width="756"
+  height="618"
+/>
+</div></section>
 
       <section class="warehouse-section warehouse-ops">
         <span class="warehouse-kicker">Op&eacute;rations disponibles</span>
@@ -2820,47 +2886,94 @@
       </section>
 
       <section class="warehouse-section warehouse-contact">
-        <form class="warehouse-form" action="mailto:contact@electris.fr" method="post" enctype="text/plain">
-          <h2>Formulaire de contact</h2>
-          <p>Remplissez les informations ci-dessous pour nous envoyer votre demande.</p>
-          <div class="warehouse-field">
-            <label for="structure">Nom de la structure</label>
-            <input id="structure" name="structure" placeholder="Ex: Soci&eacute;t&eacute; Immobili&egrave;re du Nord" />
-          </div>
-          <div class="warehouse-form-row">
-            <div>
-              <label for="name">Nom</label>
-              <input id="name" name="nom" placeholder="Ex: Dupont" />
-            </div>
-            <div>
-              <label for="first-name">Pr&eacute;nom</label>
-              <input id="first-name" name="prenom" placeholder="Ex: Jean" />
-            </div>
-          </div>
-          <div class="warehouse-field">
-            <label for="role">Poste au sein de la structure</label>
-            <input id="role" name="poste" placeholder="Ex: Directeur G&eacute;n&eacute;ral" />
-          </div>
-          <div class="warehouse-form-row">
-            <div>
-              <label for="email">Mail</label>
-              <input id="email" name="email" type="email" placeholder="Ex: jean.dupont@entreprise.fr" />
-            </div>
-            <div>
-              <label for="phone">Num&eacute;ro de t&eacute;l&eacute;phone professionnel</label>
-              <input id="phone" name="telephone" placeholder="Ex: +33 1 23 45 67 89" />
-            </div>
-          </div>
-          <div class="warehouse-field">
-            <label for="address">Adresse des travaux envisag&eacute;es</label>
-            <textarea id="address" name="adresse" placeholder="Ex: 12 Rue de la R&eacute;publique, 75011 Paris"></textarea>
-          </div>
-          <button class="warehouse-btn warehouse-submit" type="submit">Envoyer ma demande <span>&rarr;</span></button>
-        </form>
-        <div class="warehouse-contact-photo">
-          <img src="assets/images/non-refrigerated-warehouse/figma-extract/10_image9_2497_5363_1024x1024.png" alt="Allees de stockage logistique" />
-        </div>
-      </section>
+<form
+  class="warehouse-form"
+  action="mailto:contact@electris.fr"
+  method="post"
+  enctype="text/plain"
+>
+  <div>
+    <h2>Formulaire de contact</h2>
+    <p>
+      Remplissez les informations ci-dessous pour nous envoyer votre
+      demande.
+    </p>
+  </div>
+  <div class="warehouse-form-fields">
+    <div class="warehouse-field">
+      <label for="structure">Nom de la structure</label>
+      <input
+        id="structure"
+        name="structure"
+        placeholder="Ex: Soci&eacute;t&eacute; Immobili&egrave;re du Nord"
+      />
+    </div>
+    <div class="warehouse-form-row">
+      <div>
+        <label for="name">Nom</label>
+        <input id="name" name="nom" placeholder="Ex: Dupont" />
+      </div>
+      <div>
+        <label for="first-name">Pr&eacute;nom</label>
+        <input id="first-name" name="prenom" placeholder="Ex: Jean" />
+      </div>
+    </div>
+    <div class="warehouse-field">
+      <label for="role">Poste au sein de la structure</label>
+      <input
+        id="role"
+        name="poste"
+        placeholder="Ex: Directeur G&eacute;n&eacute;ral"
+      />
+    </div>
+    <div class="warehouse-form-row">
+      <div>
+        <label for="email">Mail</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Ex: jean.dupont@entreprise.fr"
+        />
+      </div>
+      <div>
+        <label for="phone">Num&eacute;ro de t&eacute;l&eacute;phone professionnel</label>
+        <input
+          id="phone"
+          name="telephone"
+          placeholder="Ex: +33 1 23 45 67 89"
+        />
+      </div>
+    </div>
+    <div class="warehouse-field">
+      <label for="address">Adresse des travaux envisag&eacute;es</label>
+      <textarea
+        id="address"
+        name="adresse"
+        placeholder="Ex: 12 Rue de la R&eacute;publique, 75011 Paris"
+      ></textarea>
+    </div>
+  </div>
+  <button class="warehouse-btn warehouse-submit" type="submit">
+    Envoyer ma demande
+    <img
+      alt=""
+      aria-hidden="true"
+      src="assets/images/non-refrigerated-warehouse/contact/arrow.svg"
+      width="24"
+      height="24"
+    />
+  </button>
+</form>
+<div class="warehouse-contact-photo">
+  <img
+    src="assets/images/non-refrigerated-warehouse/contact/photo-curved.png?v=figma-2497-5813"
+    alt="All&eacute;es de stockage logistique"
+    width="592"
+    height="860"
+  />
+</div>
+</section>
     </main>
     <footer id="contact" class="footer-panel">
       <div class="footer-inner d-flex flex-column">
