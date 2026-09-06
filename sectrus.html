@@ -235,24 +235,45 @@
 
       .sector-link {
         position: absolute;
-        left: 30px;
-        bottom: 32px;
+        left: 28px;
+        bottom: 24px;
         z-index: 2;
-        color: #198551;
-        font-size: 14px;
-        font-weight: 800;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        height: 24px;
+        color: #2a7a5a;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 19.5px;
+        letter-spacing: -0.076px;
         text-decoration: underline;
         text-underline-offset: 2px;
+        text-decoration-skip-ink: none;
         transition:
           color 240ms ease,
           transform 240ms ease;
       }
 
       .sector-link::before {
-        content: "\2197";
-        margin-right: 6px;
-        text-decoration: none;
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        background-color: currentColor;
+        -webkit-mask: url("assets/images/secteurs/links/link-external.svg") center / contain no-repeat;
+        mask: url("assets/images/secteurs/links/link-external.svg") center / contain no-repeat;
       }
+
+      .sector-card--green .sector-link { color: #2a7a5a; }
+      .sector-card--cyan .sector-link { color: #1a6080; }
+      .sector-card--blue .sector-link { color: #2a4f8a; }
+      .sector-card--sage .sector-link,
+      .sector-card--lime .sector-link { color: #4a7a2a; }
+      .sector-card--sand .sector-link { color: #8a6a00; }
+      .sector-card--lavender .sector-link { color: #5a2a8a; }
+      .sector-card--white .sector-link { color: #2a4f8a; }
 
       .sector-icon {
         position: absolute;
@@ -326,7 +347,6 @@
 
       .sector-row:hover .sector-link,
       .sector-card:focus-visible .sector-link {
-        color: var(--sectrus-blue);
         transform: translateX(3px);
       }
 
@@ -469,7 +489,7 @@
         .sector-link {
           left: 24px;
           bottom: 24px;
-          font-size: 12px;
+          font-size: 15px;
         }
 
         .sector-icon {
@@ -605,7 +625,7 @@
         .sector-link {
           left: 24px;
           bottom: 24px;
-          font-size: 12px;
+          font-size: 15px;
         }
 
         .sector-icon {
@@ -689,7 +709,7 @@
         .sector-link {
           left: 22px;
           bottom: 22px;
-          font-size: 11px;
+          font-size: 14px;
         }
 
         .sector-icon {
