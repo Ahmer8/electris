@@ -1403,14 +1403,49 @@ header {
 }
 
 .brands {
-  height: 104px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   overflow: hidden;
   background: #000;
+  padding: 24px 0;
+  min-height: 120px;
+  height: auto;
 }
 
+.brand-track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  justify-content: flex-start;
+  animation: brand-marquee 32s linear infinite;
+  will-change: transform;
+}
+
+.brand-row {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+.brand-row img {
+  display: block;
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  max-height: 72px;
+  object-fit: contain;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-track {
+    animation: none;
+  }
+}
+
+/* Legacy single-strip image (kept for pages not yet migrated) */
 .brand-strip {
   display: block;
   flex: 0 0 1512px;
@@ -1418,16 +1453,6 @@ header {
   height: 104px;
   max-width: none;
   object-fit: cover;
-}
-
-.brand-track {
-  display: flex;
-  width: max-content;
-  min-width: 3024px;
-  align-items: center;
-  justify-content: flex-start;
-  animation: brand-marquee 14s linear infinite;
-  will-change: transform;
 }
 
 .brands:hover .brand-track {
@@ -1498,7 +1523,7 @@ header {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-1512px);
+    transform: translateX(-50%);
   }
 }
 
@@ -5162,7 +5187,18 @@ h3 {
   }
 
   .brands {
-    height: 76px !important;
+    min-height: 88px !important;
+    height: auto !important;
+    padding: 16px 0 !important;
+  }
+
+  .brand-row {
+    gap: 12px !important;
+    padding-right: 12px !important;
+  }
+
+  .brand-row img {
+    max-height: 48px !important;
   }
 
   .brand-strip {
@@ -5172,8 +5208,8 @@ h3 {
   }
 
   .brand-track {
-    min-width: 2216px !important;
-    animation: brand-marquee-mobile 16s linear infinite !important;
+    min-width: 0 !important;
+    animation: brand-marquee 24s linear infinite !important;
   }
 
   .tech,
