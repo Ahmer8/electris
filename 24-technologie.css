@@ -260,49 +260,64 @@ button {
   object-position: center;
 }
 
-/* ── Partners ── */
-.partners {
-  display: flex;
-  justify-content: center;
-  background: var(--black);
-  padding: 24px 0;
-  overflow: hidden;
-}
-
-.partners__row {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  width: max-content;
-  transform: scale(min(1, calc((100vw - 32px) / 1717)));
-  transform-origin: center center;
-}
-
-.partners__logo {
-  position: relative;
-  flex-shrink: 0;
-}
-
-.partners__logo img {
-  display: block;
+/* ── Partners / brand marquee (same as landing page) ── */
+.partners,
+.brands {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  background: #000;
+  padding: 0;
 }
 
-.partners__logo--01 { width: 116.573px; height: 68.588px; }
-.partners__logo--02 { width: 102.901px; height: 66.441px; }
-.partners__logo--03 { width: 119.714px; height: 66.441px; }
-.partners__logo--04 { width: 145.984px; height: 30.881px; }
-.partners__logo--05 { width: 82.339px; height: 68.588px; }
-.partners__logo--06 { width: 100.754px; height: 56px; }
-.partners__logo--07 { width: 208.891px; height: 49.102px; }
-.partners__logo--08 { width: 101.906px; height: 56px; }
-.partners__logo--09 { width: 175.316px; height: 55.809px; }
-.partners__logo--10 { width: 175.316px; height: 55.809px; }
-.partners__logo--11 { width: 228.306px; height: 49.364px; }
+.brand-strip {
+  display: block;
+  flex: 0 0 1512px;
+  width: 1512px;
+  height: 104px;
+  max-width: none;
+  object-fit: cover;
+}
+
+.partners__row,
+.brand-track {
+  display: flex;
+  width: max-content;
+  min-width: 3024px;
+  align-items: center;
+  justify-content: flex-start;
+  animation: brand-marquee 14s linear infinite;
+  will-change: transform;
+}
+
+@keyframes brand-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1512px);
+  }
+}
+
+@keyframes brand-marquee-mobile {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-1108px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .partners__row,
+  .brand-track {
+    animation: none;
+    transform: none;
+  }
+}
 
 /* ── Technologies ── */
 .tech {
@@ -954,8 +969,22 @@ button {
     text-align: center;
   }
 
-  .partners {
-    padding: 20px 16px;
+  .partners,
+  .brands {
+    height: 76px;
+    padding: 0;
+  }
+
+  .brand-strip {
+    flex-basis: 1108px;
+    width: 1108px;
+    height: 76px;
+  }
+
+  .partners__row,
+  .brand-track {
+    min-width: 2216px;
+    animation: brand-marquee-mobile 16s linear infinite;
   }
 
   .tech {

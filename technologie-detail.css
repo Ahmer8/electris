@@ -1617,9 +1617,11 @@
     height: auto;
   }
 
-  .partners {
-    padding: 16px;
-    overflow-x: auto;
+  .partners,
+  .brands {
+    height: 76px;
+    padding: 0;
+    overflow: hidden;
   }
 
   .page--orc .detail-inner,
