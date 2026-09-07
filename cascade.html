@@ -759,7 +759,7 @@
       }
 
     </style>
-  <link rel="stylesheet" href="solution-detail.css?v=sector-caption-center" />
+  <link rel="stylesheet" href="solution-detail.css?v=secteurs-figma-hover-v2" />
   </head>
   <body class="wasteheat-page">
     <main class="gtb-export-shell export-png-crop" aria-label="Pompes a chaleur en cascade">
@@ -1821,94 +1821,85 @@
             align-self: stretch;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
+            justify-content: center;
             background: #f1f5f9;
-            padding: 96px 148px;
+            padding: 96px 0;
             position: relative;
+            overflow: hidden;
           "
         >
-          <div style="align-self: stretch">
-            <div
-              style="
-                align-self: stretch;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                padding-top: 44px;
-                margin-bottom: 32px;
-                gap: 12px;
-              "
-            >
-              <span style="color: #475569; font-size: 24px">Secteurs</span>
-              <span class="reference-section-title" style="color: #1f252e; font-size: 48px; font-weight: bold">
-                6 secteurs où ELECTRIS intervient.
+          <img
+            class="wasteheat-industries-mark"
+            src="assets/images/cascade/secteurs/watermark.png"
+            alt=""
+            aria-hidden="true"
+            style="
+              position: absolute;
+              z-index: 0;
+              top: 22px;
+              left: -52px;
+              width: 704px;
+              height: 657px;
+              object-fit: cover;
+              object-position: bottom left;
+              opacity: 0.04;
+              pointer-events: none;
+            "
+          />
+          <div style="position:relative;z-index:1;width:min(1280px, calc(100% - 64px));margin:0 auto;padding:0 32px;box-sizing:border-box">
+            <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start;margin-bottom:32px">
+              <span style="color:#475569;font-size:24px;font-weight:500;line-height:1.5">Secteurs</span>
+              <span class="reference-section-title" style="color:#1f252e;font-size:48px;font-weight:700;letter-spacing:-2.4px;line-height:1.1;white-space:normal">
+                6 secteurs où ELECTRIS intervient .
               </span>
             </div>
-            <div
-              style="
-                height: 1px;
-                align-self: stretch;
-                background: #e2e8f0;
-                margin-bottom: 31px;
-              "
-            ></div>
-            <div class="sector-track">
+            <div style="height:1px;width:100%;background:#e2e8f0;margin-bottom:32px"></div>
+                        <div class="sector-track">
               <a class="sector-card" href="12-secteurs-sante.html">
-                <img src="assets/images/cascade/image6_2153_18060_1024x1024.png" alt="Établissements de santé" />
+                <img src="assets/images/cascade/secteurs/sector-1.png" alt="Établissements de santé" />
                 <figcaption>
                   <span class="sector-card__title">Établissements de santé</span>
-                  <span class="sector-card__detail">Cascade PAC pour ECS et chauffage hospitalier, sans chaudière gaz.</span>
+                  <span class="sector-card__detail">Chauffage et ECS continus, multi-zones. Décarbonation sans rupture de service.<strong>Chaufferie reléguée en secours strict.</strong></span>
                 </figcaption>
               </a>
               <a class="sector-card" href="11-secteurs-hotellerie.html">
-                <img src="assets/images/cascade/image7_2153_18060_1024x1024.png" alt="Hôtellerie &amp; Hôtels-Clubs" />
+                <img src="assets/images/cascade/secteurs/sector-2.png" alt="Hôtellerie &amp; Hôtels-Clubs" />
                 <figcaption>
                   <span class="sector-card__title">Hôtellerie &amp; Hôtels-Clubs</span>
-                  <span class="sector-card__detail">Eau chaude et chauffage hôteliers via cascade PAC haute température.</span>
+                  <span class="sector-card__detail">Chauffage, ECS, piscine. Besoins haute température couverts par la cascade.<strong>ECS et chauffage décarbonés.</strong></span>
                 </figcaption>
               </a>
               <a class="sector-card" href="15-secteurs-bureaux.html">
-                <img src="assets/images/cascade/image8_2153_18060_1024x1024.png" alt="Immeubles de bureaux" />
+                <img src="assets/images/cascade/secteurs/sector-3.png" alt="Immeubles de bureaux" />
                 <figcaption>
                   <span class="sector-card__title">Immeubles de bureaux</span>
-                  <span class="sector-card__detail">Décarbonation thermique des immeubles tertiaires avec cascade PAC.</span>
-                </figcaption>
-              </a>
-              <a class="sector-card" href="10-secteurs-grande-distribution.html">
-                <img src="assets/images/cascade/image9_2153_18060_1024x1024.png" alt="Grande Distribution &amp; GDA" />
-                <figcaption>
-                  <span class="sector-card__title">Grande Distribution &amp; GDA</span>
-                  <span class="sector-card__detail">Remplacement chaudière et renforcement thermique sur sites de distribution.</span>
-                </figcaption>
-              </a>
-              <a class="sector-card" href="secteurs-scolaire.html">
-                <img src="assets/images/cascade/image10_2153_18060_1024x1024.png" alt="Établissements scolaires" />
-                <figcaption>
-                  <span class="sector-card__title">Établissements scolaires</span>
-                  <span class="sector-card__detail">Confort thermique des écoles avec cascade PAC et ROI maîtrisé.</span>
+                  <span class="sector-card__detail">Chauffage tertiaire. Conformité décret tertiaire et trajectoire bas-carbone.<strong>Décarbonation + pilotage.</strong></span>
                 </figcaption>
               </a>
               <a class="sector-card" href="secteurs-residentiel.html">
-                <img src="assets/images/cascade/image11_2153_18060_1024x1024.png" alt="Habitat collectif" />
+                <img src="assets/images/cascade/secteurs/sector-4.png" alt="Habitat collectif" />
                 <figcaption>
                   <span class="sector-card__title">Habitat collectif</span>
-                  <span class="sector-card__detail">Chauffage collectif décarboné pour copropriétés et résidences.</span>
+                  <span class="sector-card__detail">Chaufferies collectives gaz ou fioul. Travaux financés par les aides.<strong>Reste à charge minimal par logement.</strong></span>
+                </figcaption>
+              </a>
+              <a class="sector-card" href="secteurs-scolaire.html">
+                <img src="assets/images/cascade/secteurs/sector-5.png" alt="Établissements scolaires" />
+                <figcaption>
+                  <span class="sector-card__title">Établissements scolaires</span>
+                  <span class="sector-card__detail">Chaudières vieillissantes. Électrification sans gros travaux.<strong>Cumulable Fonds Vert.</strong></span>
+                </figcaption>
+              </a>
+              <a class="sector-card" href="10-secteurs-grande-distribution.html">
+                <img src="assets/images/cascade/secteurs/sector-6.png" alt="Grande Distribution &amp; GDA" />
+                <figcaption>
+                  <span class="sector-card__title">Grande Distribution &amp; GDA</span>
+                  <span class="sector-card__detail">Chauffage des surfaces de vente, souvent couplé à la récupération.<strong>Gaz supprimé.</strong></span>
                 </figcaption>
               </a>
             </div>
-
-          </div>
-          <img
-            src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/ooxpa9yn_expires_30_days.png"
-            style="
-              position: absolute;
-              top: 22px;
-              left: 0px;
-              width: 703px;
-              height: 656px;
-              object-fit: fill;
-            "
-          />
+</div>
         </div>
         <div
           class="client-results"

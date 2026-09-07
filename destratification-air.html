@@ -793,7 +793,7 @@
         height: auto;
       }
     </style>
-  <link rel="stylesheet" href="solution-detail.css?v=sector-caption-center" />
+  <link rel="stylesheet" href="solution-detail.css?v=secteurs-figma-hover-v2" />
   <style>
       .hp-contact-card--figma {
         align-self: stretch;
@@ -1816,100 +1816,91 @@
             style="height: auto; width: 100%; align-self: stretch; object-fit: contain"
           />
         </div>
-        <div
+                <div
           class="wasteheat-industries"
           style="
             align-self: stretch;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
+            justify-content: center;
             background: #f1f5f9;
-            padding: 96px 148px;
+            padding: 96px 0;
             position: relative;
+            overflow: hidden;
           "
         >
-          <div style="align-self: stretch">
-            <div
-              style="
-                align-self: stretch;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                padding-top: 44px;
-                margin-bottom: 32px;
-                gap: 12px;
-              "
-            >
-              <span style="color: #475569; font-size: 24px">Secteurs</span>
-              <span class="reference-section-title" style="color: #1f252e; font-size: 48px; font-weight: bold">
-                6 secteurs où ELECTRIS intervient.
+          <img
+            class="wasteheat-industries-mark"
+            src="assets/images/cascade/secteurs/watermark.png"
+            alt=""
+            aria-hidden="true"
+            style="
+              position: absolute;
+              z-index: 0;
+              top: 22px;
+              left: -52px;
+              width: 704px;
+              height: 657px;
+              object-fit: cover;
+              object-position: bottom left;
+              opacity: 0.04;
+              pointer-events: none;
+            "
+          />
+          <div style="position:relative;z-index:1;width:min(1280px, calc(100% - 64px));margin:0 auto;padding:0 32px;box-sizing:border-box">
+            <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start;margin-bottom:32px">
+              <span style="color:#475569;font-size:24px;font-weight:500;line-height:1.5">Secteurs</span>
+              <span class="reference-section-title" style="color:#1f252e;font-size:48px;font-weight:700;letter-spacing:-2.4px;line-height:1.1;white-space:normal">
+                6 secteurs où ELECTRIS intervient .
               </span>
             </div>
-            <div
-              style="
-                height: 1px;
-                align-self: stretch;
-                background: #e2e8f0;
-                margin-bottom: 31px;
-              "
-            ></div>
-                        <div class="sector-track">
+            <div style="height:1px;width:100%;background:#e2e8f0;margin-bottom:32px"></div>
+            <div class="sector-track">
               <a class="sector-card" href="non-refrigerated-warehouse.html">
                 <img src="assets/images/destrat/sectors/sector-1.png" alt="Entrepôts non réfrigérés" />
                 <figcaption>
                   <span class="sector-card__title">Entrepôts non réfrigérés</span>
-                  <span class="sector-card__detail">Brassage d’air pour récupérer la chaleur sous toiture et chauffer moins.</span>
+                  <span class="sector-card__detail">Grands volumes chauffés. Chaleur stratifiée sous toiture.<strong>Chaleur ramenée au sol.</strong></span>
                 </figcaption>
               </a>
               <a class="sector-card" href="13-secteurs-industrie.html">
                 <img src="assets/images/destrat/sectors/sector-2.png" alt="Industrie" />
                 <figcaption>
                   <span class="sector-card__title">Industrie</span>
-                  <span class="sector-card__detail">Homogénéisation thermique des halls de production et ateliers.</span>
+                  <span class="sector-card__detail">Ateliers de grande hauteur. Confort des postes de travail.<strong>−15 à −25 % chauffage.</strong></span>
                 </figcaption>
               </a>
               <a class="sector-card" href="10-secteurs-grande-distribution.html">
                 <img src="assets/images/destrat/sectors/sector-3.png" alt="Grande Distribution &amp; GDA" />
                 <figcaption>
                   <span class="sector-card__title">Grande Distribution &amp; GDA</span>
-                  <span class="sector-card__detail">Confort clients et équipes en grandes surfaces, sans surchauffe plafond.</span>
+                  <span class="sector-card__detail">Surfaces de vente et réserves de grande hauteur.<strong>Confort au sol amélioré.</strong></span>
                 </figcaption>
               </a>
               <a class="sector-card" href="16-secteurs-centre-commercial.html">
                 <img src="assets/images/destrat/sectors/sector-4.png" alt="Centres commerciaux" />
                 <figcaption>
                   <span class="sector-card__title">Centres commerciaux</span>
-                  <span class="sector-card__detail">Réduction du gradient thermique sur volumes hauts et atriums.</span>
+                  <span class="sector-card__detail">Galeries et halls hauts. Air chaud sous plafond récupéré.<strong>Confort homogène.</strong></span>
                 </figcaption>
               </a>
               <a class="sector-card" href="secteurs-scolaire.html">
                 <img src="assets/images/destrat/sectors/sector-5.png" alt="Établissements scolaires" />
                 <figcaption>
                   <span class="sector-card__title">Établissements scolaires</span>
-                  <span class="sector-card__detail">Gymnases et salles de sport : confort sol sans surconsommer.</span>
+                  <span class="sector-card__detail">Gymnases et préaux. Chaleur ramenée vers les occupants.<strong>Confort sportif amélioré.</strong></span>
                 </figcaption>
               </a>
               <a class="sector-card" href="cold-stoarage-warehouse.html">
                 <img src="assets/images/destrat/sectors/sector-6.png" alt="Entrepôts frigorifiques" />
                 <figcaption>
                   <span class="sector-card__title">Entrepôts frigorifiques</span>
-                  <span class="sector-card__detail">Zones tampons et quais : moins de stratification, moins de pertes.</span>
+                  <span class="sector-card__detail">Zones tampons et quais chauffés. Volumes hauts.<strong>Chauffage optimisé.</strong></span>
                 </figcaption>
               </a>
             </div>
-
           </div>
-          <img
-            src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/ooxpa9yn_expires_30_days.png"
-            style="
-              position: absolute;
-              top: 22px;
-              left: 0px;
-              width: 703px;
-              height: 656px;
-              object-fit: fill;
-            "
-          />
         </div>
         <div
           class="client-results"

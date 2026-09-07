@@ -845,7 +845,7 @@
         height: auto;
       }
     </style>
-  <link rel="stylesheet" href="solution-detail.css?v=sector-caption-center" />
+  <link rel="stylesheet" href="solution-detail.css?v=secteurs-figma-hover-v2" />
   <style>
     /* Floating HP hero: Figma composite (art + metric cards) */
     body.wasteheat-page .wasteheat-hero {
@@ -1799,100 +1799,91 @@
             style="height: auto; width: 100%; align-self: stretch; object-fit: contain"
           />
         </div>
-        <div
+                <div
           class="wasteheat-industries"
           style="
             align-self: stretch;
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
+            justify-content: center;
             background: #f1f5f9;
-            padding: 96px 148px;
+            padding: 96px 0;
             position: relative;
+            overflow: hidden;
           "
         >
-          <div style="align-self: stretch">
-            <div
-              style="
-                align-self: stretch;
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                padding-top: 44px;
-                margin-bottom: 32px;
-                gap: 12px;
-              "
-            >
-              <span style="color: #475569; font-size: 24px">Secteurs</span>
-              <span class="reference-section-title" style="color: #1f252e; font-size: 48px; font-weight: bold">
-                6 secteurs où ELECTRIS intervient.
+          <img
+            class="wasteheat-industries-mark"
+            src="assets/images/cascade/secteurs/watermark.png"
+            alt=""
+            aria-hidden="true"
+            style="
+              position: absolute;
+              z-index: 0;
+              top: 22px;
+              left: -52px;
+              width: 704px;
+              height: 657px;
+              object-fit: cover;
+              object-position: bottom left;
+              opacity: 0.04;
+              pointer-events: none;
+            "
+          />
+          <div style="position:relative;z-index:1;width:min(1280px, calc(100% - 64px));margin:0 auto;padding:0 32px;box-sizing:border-box">
+            <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start;margin-bottom:32px">
+              <span style="color:#475569;font-size:24px;font-weight:500;line-height:1.5">Secteurs</span>
+              <span class="reference-section-title" style="color:#1f252e;font-size:48px;font-weight:700;letter-spacing:-2.4px;line-height:1.1;white-space:normal">
+                6 secteurs où ELECTRIS intervient .
               </span>
             </div>
-            <div
-              style="
-                height: 1px;
-                align-self: stretch;
-                background: #e2e8f0;
-                margin-bottom: 31px;
-              "
-            ></div>
+            <div style="height:1px;width:100%;background:#e2e8f0;margin-bottom:32px"></div>
             <div class="sector-track">
               <a class="sector-card" href="10-secteurs-grande-distribution.html">
                 <img src="assets/images/floating-hp/sector-1.png" alt="Grande Distribution &amp; GDA" />
                 <figcaption>
                   <span class="sector-card__title">Grande Distribution &amp; GDA</span>
-                  <span class="sector-card__detail">HP flottante sur groupes froids magasin : −15 à −25 % d’électricité compresseurs.</span>
+                  <span class="sector-card__detail">Centrales froid de magasin. Gain immédiat sans travaux lourds.<strong>−10 à −15 % sur le froid.</strong></span>
                 </figcaption>
               </a>
               <a class="sector-card" href="cold-stoarage-warehouse.html">
                 <img src="assets/images/floating-hp/sector-2.png" alt="Entrepôts frigorifiques" />
                 <figcaption>
                   <span class="sector-card__title">Entrepôts frigorifiques</span>
-                  <span class="sector-card__detail">Régulation pression flottante pour charge froide continue, ROI rapide.</span>
+                  <span class="sector-card__detail">Froid permanent. Forte sensibilité à la pression de condensation.<strong>Économies sur un poste majeur.</strong></span>
                 </figcaption>
               </a>
               <a class="sector-card" href="14-secteurs-data-centers.html">
                 <img src="assets/images/floating-hp/sector-3.png" alt="Datacenters" />
                 <figcaption>
                   <span class="sector-card__title">Datacenters</span>
-                  <span class="sector-card__detail">Optimisation condensateurs / HP selon conditions extérieures, 24h/24.</span>
+                  <span class="sector-card__detail">Refroidissement continu. Consigne adaptée aux conditions réelles.<strong>Optimisation du froid.</strong></span>
                 </figcaption>
               </a>
               <a class="sector-card" href="11-secteurs-hotellerie.html">
                 <img src="assets/images/floating-hp/sector-4.png" alt="Hôtellerie &amp; Hôtels-Clubs" />
                 <figcaption>
                   <span class="sector-card__title">Hôtellerie &amp; Hôtels-Clubs</span>
-                  <span class="sector-card__detail">Froid cuisine et clim : pression adaptée au besoin réel, économies continues.</span>
+                  <span class="sector-card__detail">Groupes froids cuisine et climatisation.<strong>Régulation optimisée.</strong></span>
                 </figcaption>
               </a>
               <a class="sector-card" href="agricultural-sectors-and-sites.html">
                 <img src="assets/images/floating-hp/sector-5.png" alt="Sites agricoles" />
                 <figcaption>
                   <span class="sector-card__title">Sites agricoles</span>
-                  <span class="sector-card__detail">Installations froides agricoles sécurisées avec régulation HP flottante.</span>
+                  <span class="sector-card__detail">Froid de conservation et de process.<strong>Consommation réduite.</strong></span>
                 </figcaption>
               </a>
               <a class="sector-card" href="12-secteurs-sante.html">
                 <img src="assets/images/floating-hp/sector-6.png" alt="Établissements de santé" />
                 <figcaption>
                   <span class="sector-card__title">Établissements de santé</span>
-                  <span class="sector-card__detail">Groupes froids hospitaliers : efficacité accrue sans compromettre la sécurité.</span>
+                  <span class="sector-card__detail">Groupes froids centraux. Sécurité et économies.<strong>Sans impact sur la continuité.</strong></span>
                 </figcaption>
               </a>
             </div>
-
           </div>
-                    <img
-            src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/ooxpa9yn_expires_30_days.png"
-            style="
-              position: absolute;
-              top: 22px;
-              left: 0px;
-              width: 703px;
-              height: 656px;
-              object-fit: fill;
-            "
-          />
         </div>
         <div
           class="client-results"
