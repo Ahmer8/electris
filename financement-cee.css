@@ -71,7 +71,8 @@
 .cee-page .btn--hero img,
 .cee-page .orc-case__cta .btn img,
 .cee-page .audit-button img {
-  transform: none;
+  object-fit: contain;
+  transform: rotate(-90deg) scaleX(-1);
 }
 
 .cee-page {

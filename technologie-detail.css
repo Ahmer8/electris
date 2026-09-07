@@ -660,8 +660,16 @@
 }
 
 .orc-gallery__cta .btn {
-  box-shadow: 0 8px 12px rgba(18, 18, 255, 0.25);
+  padding: 16px 32px;
   font-size: 20px;
+  box-shadow: 0 8px 12px rgba(18, 18, 255, 0.25);
+}
+
+.orc-gallery__cta .btn img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  transform: rotate(-90deg) scaleX(-1);
 }
 
 .orc-gallery__note {
@@ -787,20 +795,27 @@
 }
 
 .orc-case__cta .btn {
+  width: 316px;
+  max-width: calc(100% - 24px);
+  padding: 8px 24px;
+  border-radius: 32px;
   background: #fff;
   color: #000;
-  padding: 8px 24px;
   font-size: 16px;
+  line-height: 32px;
   box-shadow: 0 1.333px 2.667px rgba(16, 24, 40, 0.05);
 }
 
 .orc-case__cta .btn img {
   width: 20px;
   height: 20px;
+  object-fit: contain;
+  transform: rotate(-90deg) scaleX(-1);
 }
 
 .btn--hero img {
-  transform: none;
+  object-fit: contain;
+  transform: rotate(-90deg) scaleX(-1);
 }
 
 .orc-case__visual {
