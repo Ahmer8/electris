@@ -129,7 +129,7 @@
   }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 767px) {
   .pac-hero-metric {
     position: relative;
     width: 100%;
@@ -1157,167 +1157,32 @@
   gap: 32px;
 }
 
+/* ═══════════════════════════════════════════
+   Technology pages responsive
+   Figma: 1512 desktop · 1200 hamburger · 900 stacked hero · 390 phone
+   ═══════════════════════════════════════════ */
+
 @media (max-width: 1200px) {
   .page--orc .hero--detail,
   .page--pac .hero--detail,
+  .page--gtb .hero--detail,
+  .page--mcp .hero--detail,
+  .page--freecooling .hero--detail,
   .orc-reasons,
-  .orc-results {
+  .orc-results,
+  .page--pac .orc-reasons,
+  .page--pac .orc-results {
     padding-left: 32px;
     padding-right: 32px;
   }
 
-  .orc-metrics__grid,
-  .orc-reasons__grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .orc-gallery__row {
-    flex-wrap: wrap;
-    justify-content: center;
-    min-height: 0;
-    padding: 0 24px;
-  }
-
-  .orc-tile,
-  .orc-tile--1,
-  .orc-tile--2,
-  .orc-tile--3,
-  .orc-tile--4,
-  .orc-tile--5,
-  .orc-tile--6 {
-    transform: none;
-    align-self: auto;
-    margin: 0;
-  }
-
-  .orc-case,
-  .orc-case--alt {
-    flex-direction: column;
-  }
-
-  .orc-case__copy,
-  .orc-elig__media,
-  .orc-problem .detail-split__image {
-    width: 100%;
-  }
-
-  .page--gtb .orc-elig__media,
-  .page--gtb .orc-elig__media > img:first-child {
-    width: 100%;
-    height: auto;
-  }
-
-  .page--gtb .orc-elig .orc-list {
-    width: 100%;
-  }
-
-  .page--pac .orc-problem .detail-split__image,
-  .page--pac .orc-problem .detail-split__image img {
-    width: 100%;
-    height: auto;
-  }
-
-  .page--pac .orc-case,
-  .page--pac .orc-case--alt {
-    gap: 24px;
-  }
-
-  .page--pac .orc-case__copy,
-  .page--pac .orc-case__visual,
-  .page--pac .orc-case--alt .orc-case__visual {
-    width: 100%;
-    max-width: 100%;
-    flex: none;
-    height: auto;
-    min-height: 0;
-  }
-
-  .page--pac .orc-case--alt .orc-case__visual > img {
-    width: 100%;
-    height: auto;
-    right: auto;
-    top: auto;
-    position: static;
-  }
-
-  .page--pac .orc-bubbles {
-    width: 100%;
-    gap: 16px;
-  }
-
-  .page--pac .orc-bubbles--right,
-  .page--pac .orc-bubbles--left {
-    right: auto;
-    left: auto;
-    top: auto;
-  }
-
-  .page--pac .orc-bubbles--right .orc-bubble--orange,
-  .page--pac .orc-bubbles--right .orc-bubble--cyan,
-  .page--pac .orc-bubbles--right .orc-bubble--violet,
-  .page--pac .orc-bubbles--left .orc-bubble--blue,
-  .page--pac .orc-bubbles--left .orc-bubble--green,
-  .page--pac .orc-bubbles--left .orc-bubble--purple {
-    width: 100%;
-    max-width: 368px;
-    margin-left: 0;
-  }
-
-  .orc-elig__header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .orc-case__visual > img,
-  .orc-case--alt .orc-case__visual > img {
-    width: 100%;
-    position: static;
-  }
-
-  .orc-bubbles {
-    position: relative;
-    right: auto;
-    left: auto;
-    top: auto;
-    width: 100%;
-    padding: 16px;
-  }
-}
-
-@media (max-width: 640px) {
-  .orc-metrics__grid,
-  .orc-reasons__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .orc-gallery__title,
-  .orc-reasons__title,
-  .orc-results__title,
-  .orc-problem .detail-title {
-    font-size: 32px;
-  }
-
-  .orc-elig__float {
-    left: 8px;
-    width: 160px;
-    height: 110px;
-  }
-
-  .orc-list li {
-    font-size: 18px;
-  }
-}
-
-/* ═══════════════════════════════════════════
-   Technology pages responsive
-   Desktop 1512 · Tablet ≤1200/900 · Mobile 390 (Figma)
-   ═══════════════════════════════════════════ */
-
-@media (max-width: 1200px) {
   .page--orc .detail-inner,
   .page--pac .detail-inner,
   .page--gtb .detail-inner,
-  .page--freecooling .detail-inner {
+  .page--mcp .detail-inner,
+  .page--freecooling .detail-inner,
+  .page--pac .orc-problem .detail-inner,
+  .page--gtb .orc-elig .detail-inner {
     padding-left: 32px;
     padding-right: 32px;
   }
@@ -1337,8 +1202,21 @@
   }
 
   .orc-metrics__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     padding: 0 32px;
-    gap: 20px;
+    gap: 16px;
+  }
+
+  .orc-metric {
+    padding: 0 8px;
+  }
+
+  .orc-metric__value {
+    font-size: clamp(28px, 3.2vw, 42px);
+  }
+
+  .orc-reasons__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .orc-case__cta .btn {
@@ -1350,38 +1228,262 @@
   .pac-hero__visual {
     min-height: 360px;
   }
+
+  .orc-case,
+  .orc-case--alt,
+  .page--pac .orc-case,
+  .page--pac .orc-case--alt {
+    gap: 24px;
+  }
+
+  .orc-case__copy,
+  .orc-case__visual,
+  .page--pac .orc-case__copy,
+  .page--pac .orc-case__visual,
+  .page--pac .orc-case--alt .orc-case__visual {
+    width: auto;
+    max-width: 100%;
+    flex: 1 1 0;
+    min-width: 0;
+    height: auto;
+  }
+
+  .orc-problem .detail-split__image,
+  .orc-problem .detail-split__image img,
+  .page--pac .orc-problem .detail-split__image,
+  .page--pac .orc-problem .detail-split__image img {
+    width: min(510px, 40%);
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+  }
+
+  .orc-elig__media,
+  .orc-elig__media > img:first-child,
+  .page--gtb .orc-elig__media,
+  .page--gtb .orc-elig__media > img:first-child {
+    width: min(471px, 42%);
+    max-width: 100%;
+    height: auto;
+  }
+
+  .page--gtb .orc-elig .orc-list {
+    width: auto;
+    flex: 1;
+    min-width: 0;
+  }
 }
 
 @media (max-width: 900px) {
   .page--orc .hero--detail,
   .page--pac .hero--detail,
   .page--gtb .hero--detail,
+  .page--mcp .hero--detail,
   .page--freecooling .hero--detail {
     flex-direction: column;
-    padding: 48px 32px 64px;
-    gap: 40px;
+    align-items: stretch;
+    padding: 64px clamp(32px, 7vw, 64px) 96px;
+    gap: 48px;
   }
 
   .page--orc .hero--detail .hero__content,
   .page--pac .hero--detail .hero__content,
   .page--gtb .hero--detail .hero__content,
+  .page--mcp .hero--detail .hero__content,
   .page--freecooling .hero--detail .hero__content {
     width: 100%;
     max-width: 100%;
+    gap: 32px;
   }
 
   .page--orc .hero--detail .hero__title,
   .page--pac .hero--detail .hero__title,
   .page--gtb .hero--detail .hero__title,
+  .page--mcp .hero--detail .hero__title,
   .page--freecooling .hero--detail .hero__title {
-    font-size: 36px;
-    line-height: 1.15;
+    font-size: 48px;
+    line-height: 1.1;
     letter-spacing: -1px;
   }
 
   .page--orc .hero--detail .hero__desc,
   .page--pac .hero--detail .hero__desc,
   .page--gtb .hero--detail .hero__desc,
+  .page--mcp .hero--detail .hero__desc,
+  .page--freecooling .hero--detail .hero__desc {
+    font-size: 20px;
+  }
+
+  .page--orc .hero--detail .hero__buttons,
+  .page--pac .hero--detail .hero__buttons,
+  .page--gtb .hero--detail .hero__buttons,
+  .page--mcp .hero--detail .hero__buttons,
+  .page--freecooling .hero--detail .hero__buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .page--orc .hero--detail .hero__visual,
+  .page--pac .hero--detail .hero__visual,
+  .page--gtb .hero--detail .hero__visual,
+  .page--mcp .hero--detail .hero__visual,
+  .page--freecooling .hero--detail .hero__visual {
+    width: 100%;
+    max-width: 469px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .pac-hero__visual {
+    width: 100%;
+    height: auto;
+    min-height: 360px;
+    max-width: none;
+  }
+
+  .pac-hero-metric {
+    transform: none;
+  }
+
+  .orc-problem .detail-split,
+  .orc-elig .detail-split {
+    flex-direction: row;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .orc-problem .detail-split__image,
+  .page--pac .orc-problem .detail-split__image {
+    width: min(310px, 38%);
+    min-width: 180px;
+    min-height: 0;
+    flex-shrink: 0;
+  }
+
+  .orc-problem .detail-split__image img,
+  .page--pac .orc-problem .detail-split__image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .orc-elig__media,
+  .orc-elig__media > img:first-child,
+  .page--gtb .orc-elig__media,
+  .page--gtb .orc-elig__media > img:first-child {
+    width: min(307px, 40%);
+    max-width: 307px;
+    height: auto;
+    flex-shrink: 0;
+  }
+
+  .orc-elig__media {
+    min-height: 0;
+    align-self: center;
+  }
+
+  .page--pac .orc-problem .detail-split__content,
+  .page--gtb .orc-elig .orc-list {
+    max-width: none;
+    width: auto;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .orc-elig__header {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .detail-title,
+  .orc-reasons__title,
+  .orc-results__title,
+  .orc-gallery__title {
+    font-size: 48px;
+    letter-spacing: -2.39px;
+  }
+
+  .detail-eyebrow,
+  .orc-problem .detail-desc,
+  .orc-elig__header .detail-desc,
+  .orc-list li {
+    font-size: 24px;
+  }
+
+  .orc-metrics__grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding: 0 32px;
+  }
+
+  .orc-reasons {
+    padding: 96px 32px 120px;
+  }
+
+  .orc-reasons__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .orc-results {
+    padding: 96px 32px;
+  }
+
+  .page--pac .orc-reasons {
+    padding: 96px 32px 120px;
+  }
+
+  .orc-reason {
+    min-height: 0;
+  }
+
+  .orc-gallery {
+    padding: 96px 0;
+  }
+
+  .orc-gallery__row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 8px;
+    padding: 0 32px;
+    min-height: 347px;
+    overflow-x: auto;
+  }
+
+  .orc-gallery__cta {
+    padding: 0 32px;
+  }
+
+  .orc-gallery__cta .btn {
+    width: auto;
+  }
+}
+
+@media (max-width: 767px) {
+  .page--orc .hero--detail,
+  .page--pac .hero--detail,
+  .page--gtb .hero--detail,
+  .page--mcp .hero--detail,
+  .page--freecooling .hero--detail {
+    padding: 36px 20px;
+    gap: 32px;
+  }
+
+  .page--orc .hero--detail .hero__title,
+  .page--pac .hero--detail .hero__title,
+  .page--gtb .hero--detail .hero__title,
+  .page--mcp .hero--detail .hero__title,
+  .page--freecooling .hero--detail .hero__title {
+    font-size: 42px;
+    line-height: 1.15;
+  }
+
+  .page--orc .hero--detail .hero__desc,
+  .page--pac .hero--detail .hero__desc,
+  .page--gtb .hero--detail .hero__desc,
+  .page--mcp .hero--detail .hero__desc,
   .page--freecooling .hero--detail .hero__desc {
     font-size: 18px;
   }
@@ -1389,19 +1491,33 @@
   .page--orc .hero--detail .hero__buttons,
   .page--pac .hero--detail .hero__buttons,
   .page--gtb .hero--detail .hero__buttons,
+  .page--mcp .hero--detail .hero__buttons,
   .page--freecooling .hero--detail .hero__buttons {
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
   }
 
-  .pac-hero__visual {
+  .page--orc .hero--detail .hero__buttons .btn,
+  .page--pac .hero--detail .hero__buttons .btn,
+  .page--gtb .hero--detail .hero__buttons .btn,
+  .page--mcp .hero--detail .hero__buttons .btn,
+  .page--freecooling .hero--detail .hero__buttons .btn {
     width: 100%;
-    height: auto;
-    min-height: 280px;
+    justify-content: center;
   }
 
-  .pac-hero-metric {
-    transform: scale(0.9);
-    transform-origin: center;
+  .hero__note {
+    width: 100%;
+    text-align: center;
+  }
+
+  .page--orc .hero--detail .hero__visual,
+  .page--pac .hero--detail .hero__visual,
+  .page--gtb .hero--detail .hero__visual,
+  .page--mcp .hero--detail .hero__visual,
+  .page--freecooling .hero--detail .hero__visual {
+    max-width: 100%;
   }
 
   .orc-problem .detail-split,
@@ -1419,134 +1535,61 @@
   .page--gtb .orc-elig__media,
   .page--gtb .orc-elig__media > img:first-child {
     width: 100%;
-    max-width: 510px;
+    max-width: 100%;
+    min-width: 0;
     height: auto;
-  }
-
-  .orc-elig__media {
-    height: auto;
-    min-height: 280px;
-    align-self: flex-start;
   }
 
   .page--pac .orc-problem .detail-split__content,
   .page--gtb .orc-elig .orc-list {
+    width: 100%;
     max-width: 100%;
-    width: 100%;
   }
 
-  .detail-title,
-  .orc-reasons__title,
-  .orc-results__title,
-  .orc-gallery__title {
-    font-size: 36px;
-    letter-spacing: -1.5px;
-  }
-
-  .detail-eyebrow,
-  .orc-problem .detail-desc,
-  .orc-elig__header .detail-desc,
-  .orc-list li {
-    font-size: 20px;
-  }
-
-  .orc-reasons {
-    padding: 72px 32px 80px;
-  }
-
-  .orc-results {
-    padding: 72px 32px;
-  }
-
-  .page--pac .orc-reasons {
-    padding: 72px 32px 80px;
-  }
-
-  .orc-reason {
-    min-height: 0;
-  }
-
-  .orc-gallery {
-    padding: 72px 0;
-  }
-
-  .orc-gallery__row {
+  .orc-elig__header {
     flex-direction: column;
-    align-items: stretch;
-    gap: 16px;
-    padding: 0 32px;
-    min-height: 0;
+    align-items: flex-start;
   }
 
-  .orc-tile,
-  .orc-tile--1,
-  .orc-tile--2,
-  .orc-tile--3,
-  .orc-tile--4,
-  .orc-tile--5,
-  .orc-tile--6 {
+  .orc-case,
+  .orc-case--alt {
+    flex-direction: column;
+  }
+
+  .orc-case__copy,
+  .orc-elig__media,
+  .orc-problem .detail-split__image {
     width: 100%;
-    align-items: stretch;
-    text-align: left;
   }
 
-  .orc-tile__photo,
-  .orc-tile--1 .orc-tile__photo,
-  .orc-tile--2 .orc-tile__photo,
-  .orc-tile--3 .orc-tile__photo,
-  .orc-tile--4 .orc-tile__photo,
-  .orc-tile--5 .orc-tile__photo,
-  .orc-tile--6 .orc-tile__photo {
-    width: 100% !important;
-    height: 200px !important;
-    border-radius: 20px;
-  }
-
-  .orc-gallery__cta {
-    padding: 0 32px;
-  }
-
-  .orc-gallery__cta .btn {
+  .orc-case__visual > img,
+  .orc-case--alt .orc-case__visual > img {
     width: 100%;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 640px) {
-  .page--orc .hero--detail,
-  .page--pac .hero--detail,
-  .page--gtb .hero--detail,
-  .page--freecooling .hero--detail {
-    padding: 32px 16px 48px;
-    gap: 28px;
+    position: static;
   }
 
-  .page--orc .hero--detail .hero__title,
-  .page--pac .hero--detail .hero__title,
-  .page--gtb .hero--detail .hero__title,
-  .page--freecooling .hero--detail .hero__title {
-    font-size: 28px;
-    line-height: 1.2;
-  }
-
-  .page--orc .hero--detail .hero__desc,
-  .page--pac .hero--detail .hero__desc,
-  .page--gtb .hero--detail .hero__desc,
-  .page--freecooling .hero--detail .hero__desc {
-    font-size: 16px;
-  }
-
-  .page--orc .hero--detail .hero__buttons .btn,
-  .page--pac .hero--detail .hero__buttons .btn,
-  .page--gtb .hero--detail .hero__buttons .btn,
-  .page--freecooling .hero--detail .hero__buttons .btn {
+  .orc-bubbles {
+    position: relative;
+    right: auto;
+    left: auto;
+    top: auto;
     width: 100%;
-    justify-content: center;
+    padding: 16px;
   }
 
-  .hero__note {
+  .page--pac .orc-bubbles--right,
+  .page--pac .orc-bubbles--left {
+    right: auto;
+    left: auto;
+    top: auto;
+  }
+
+  .page--pac .orc-case--alt .orc-case__visual > img {
     width: 100%;
-    text-align: center;
+    height: auto;
+    right: auto;
+    top: auto;
+    position: static;
   }
 
   .pac-hero__visual {
@@ -1582,7 +1625,10 @@
   .page--orc .detail-inner,
   .page--pac .detail-inner,
   .page--gtb .detail-inner,
+  .page--mcp .detail-inner,
   .page--freecooling .detail-inner,
+  .page--pac .orc-problem .detail-inner,
+  .page--gtb .orc-elig .detail-inner,
   .page--orc .hero--detail,
   .page--pac .orc-reasons,
   .page--pac .orc-results,
@@ -1605,8 +1651,9 @@
   .orc-results__title,
   .orc-gallery__title,
   .orc-problem .detail-title,
-  .orc-elig__header .detail-title {
-    font-size: 28px;
+  .orc-elig__header .detail-title,
+  .page--pac .orc-problem .detail-title {
+    font-size: 32px;
     letter-spacing: -1px;
     line-height: 1.15;
   }
@@ -1615,7 +1662,9 @@
   .orc-problem .detail-desc,
   .orc-elig__header .detail-desc,
   .orc-metrics .detail-desc,
-  .orc-process .detail-desc {
+  .orc-process .detail-desc,
+  .page--pac .orc-problem .detail-eyebrow,
+  .page--pac .orc-problem .detail-desc {
     font-size: 16px;
     line-height: 1.5;
   }
@@ -1624,8 +1673,9 @@
     gap: 14px;
   }
 
-  .orc-list li {
-    font-size: 16px;
+  .orc-list li,
+  .page--pac .orc-problem .orc-list li {
+    font-size: 18px;
     line-height: 1.4;
   }
 
@@ -1666,6 +1716,12 @@
 
   .page--gtb .orc-elig .orc-list {
     gap: 18px;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .page--pac .orc-reason {
+    min-height: 0;
   }
 
   .orc-reasons {
@@ -1677,6 +1733,7 @@
   }
 
   .orc-reasons__grid {
+    grid-template-columns: 1fr;
     gap: 16px;
   }
 
@@ -1702,9 +1759,18 @@
     padding: 56px 0;
   }
 
+  .orc-gallery__deco {
+    display: none;
+  }
+
   .orc-gallery__header {
     margin-bottom: 40px;
     padding: 0 16px;
+  }
+
+  .orc-gallery__title {
+    font-size: 36px;
+    letter-spacing: -1px;
   }
 
   .orc-gallery__desc {
@@ -1713,25 +1779,53 @@
   }
 
   .orc-gallery__row {
+    flex-direction: column;
+    align-items: stretch;
     padding: 0 16px;
     gap: 16px;
+    min-height: 0;
+    overflow: visible;
   }
 
-  /* Figma technologies-mobile: stacked photo cards */
-  .orc-tile {
+  .orc-tile,
+  .orc-tile--1,
+  .orc-tile--2,
+  .orc-tile--3,
+  .orc-tile--4,
+  .orc-tile--5,
+  .orc-tile--6 {
     position: relative;
+    display: block;
+    transform: none;
+    align-self: auto;
+    margin: 0;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 20px;
+    text-align: left;
     gap: 0;
   }
 
-  .orc-tile__photo {
-    height: 200px !important;
+  .orc-tile__photo,
+  .orc-tile--1 .orc-tile__photo,
+  .orc-tile--2 .orc-tile__photo,
+  .orc-tile--3 .orc-tile__photo,
+  .orc-tile--4 .orc-tile__photo,
+  .orc-tile--5 .orc-tile__photo,
+  .orc-tile--6 .orc-tile__photo {
+    position: absolute;
+    inset: 0;
+    width: 100% !important;
+    height: 100% !important;
+    border-radius: 20px;
   }
 
   .orc-tile__photo::after {
     background: linear-gradient(
       180deg,
-      rgba(0, 0, 0, 0) 0%,
-      rgba(0, 0, 0, 0.8) 100%
+      rgba(0, 0, 0, 0) 40%,
+      rgba(0, 0, 0, 0.78) 100%
     );
     opacity: 1;
   }
@@ -1740,6 +1834,14 @@
     top: 16px;
     right: 16px;
     left: auto;
+    bottom: auto;
+    z-index: 2;
+    width: auto;
+    height: auto;
+    padding: 4px 10px;
+    font-size: 13px;
+    line-height: 15px;
+    border-radius: 100px;
   }
 
   .orc-tile__name,
@@ -1748,20 +1850,24 @@
     left: 16px;
     right: 16px;
     z-index: 2;
+    max-width: none;
     text-align: left;
     color: #fff;
     margin: 0;
   }
 
   .orc-tile__name {
-    bottom: 36px;
+    bottom: 37px;
     font-size: 18px;
+    font-weight: 700;
+    line-height: 1.15;
   }
 
   .orc-tile__meta {
     bottom: 16px;
     font-size: 13px;
-    color: rgba(255, 255, 255, 0.85);
+    line-height: 17px;
+    color: #fff;
   }
 
   .orc-gallery__cta {
@@ -1882,9 +1988,5 @@
 
   .contact {
     padding: 48px 16px;
-  }
-
-  .footer__shell {
-    padding: 0 16px;
   }
 }
