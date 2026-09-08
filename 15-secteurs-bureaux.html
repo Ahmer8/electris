@@ -1152,29 +1152,32 @@
 
       .warehouse-result-grid {
         display: grid;
-        grid-template-columns: 489px 724px;
-        gap: 67px;
+        grid-template-columns: 489px 1fr;
+        gap: 24px;
         max-width: 1280px;
-        margin: 83px auto 0;
+        margin: 84px auto 0;
         align-items: center;
       }
 
       .warehouse-result-grid + .warehouse-result-grid {
-        grid-template-columns: 736px 489px;
-        gap: 55px;
-        margin-top: 101px;
+        grid-template-columns: 1fr 489px;
+        gap: 24px;
+        margin-top: 84px;
+        align-items: start;
       }
 
       .warehouse-result-copy {
         display: grid;
-        gap: 23px;
+        gap: 25.218px;
       }
 
       .warehouse-result-card {
-        min-height: 326px;
+        width: 490px;
+        max-width: 100%;
+        min-height: 325px;
         box-sizing: border-box;
-        padding: 46px 40px;
-        border-radius: 33px;
+        padding: 42px 40px;
+        border-radius: 33.623px;
         background: #f1f5f9;
       }
 
@@ -1207,6 +1210,12 @@
         font-weight: 400;
         line-height: 16.8px;
         letter-spacing: -0.28px;
+        color: #000;
+      }
+
+      .warehouse-checks b,
+      .warehouse-checks strong {
+        font-weight: 700;
       }
 
       .warehouse-checks li::before {
@@ -1233,22 +1242,25 @@
 
       .warehouse-result-photo--split {
         display: grid;
-        grid-template-columns: 444px 280px;
-        min-height: 462px;
+        grid-template-columns: 444px 1fr;
+        min-height: 461px;
+        border: 8.406px solid #fff;
+        border-radius: 33.623px;
+        background: linear-gradient(146.68deg, #b2ffda 0%, #89d2af 100%);
+        overflow: hidden;
       }
 
       .warehouse-result-photo--split img {
         grid-column: 1 / -1;
         grid-row: 1;
-        height: 462px;
+        height: 461px;
+        width: 444px;
+        object-fit: cover;
+        border-radius: 0;
       }
 
       .warehouse-result-photo--split::after {
-        content: "";
-        grid-column: 2;
-        grid-row: 1;
-        z-index: 1;
-        background: #9ee7c3;
+        content: none;
       }
 
       .warehouse-badge {
@@ -1385,29 +1397,28 @@
 
       .warehouse-label--blue {
         min-width: 330px;
-      }
-
-      .warehouse-label--blue {
-        background: #3b82f6;
+        background: #2e75f5;
       }
 
       .warehouse-label--green {
         min-width: 352px;
-        background: #22c55e;
+        background: #16a34a;
       }
 
       .warehouse-label--violet {
-        min-width: 289px;
-        background: #8b5cf6;
+        min-width: 306px;
+        background: #9e78dc;
       }
 
       .warehouse-result-cta {
         display: flex;
         align-items: center;
         justify-content: center;
-        min-height: 95px;
-        border: 2px solid #f4f4f4;
-        border-radius: 999px;
+        width: 489.64px;
+        max-width: 100%;
+        min-height: 96.667px;
+        border: 2.101px solid #f4f4f4;
+        border-radius: 77px;
         text-decoration: none;
       }
 
@@ -1426,10 +1437,11 @@
         font-weight: 600;
         line-height: 32px;
         gap: 10px;
+        box-shadow: 0 1.333px 2.667px rgba(16, 24, 40, 0.05);
       }
 
       .warehouse-result-cta--green {
-        background: linear-gradient(180deg, #b2ffda 0%, #88d2af 100%);
+        background: linear-gradient(168.83deg, #b2ffda 0%, #89d2af 100%);
       }
 
       .warehouse-result-cta--violet {
@@ -1437,47 +1449,129 @@
       }
 
       .warehouse-result-photo--inside {
-        width: 736px;
-        min-height: 460px;
-        border: 8px solid #fff;
-        border-radius: 33px;
+        position: relative;
+        width: 100%;
+        height: 459.169px;
+        min-height: 459.169px;
+        overflow: visible;
+        border: 8.406px solid #fff;
+        border-radius: 33.623px;
         background: linear-gradient(180deg, #9badd0 0%, #a0a1fc 100%);
       }
 
-      .warehouse-result-photo--inside img {
+      .warehouse-result-photo--inside > img {
         position: absolute;
-        top: 4px;
-        right: 5px;
-        width: 444px;
-        height: 450px;
-        border-radius: 33px;
+        top: 0;
+        right: 0;
+        width: 63.16%;
+        height: 100%;
+        max-width: none;
+        border-radius: 0;
+        object-fit: cover;
+        z-index: 1;
+        pointer-events: none;
       }
 
+      /* Figma 2750:104757 — badge stack absolute, not CSS grid */
       .warehouse-result-photo--inside .warehouse-labels {
-        left: 38px;
-        top: 38px;
-        gap: 47px;
+        position: absolute;
+        left: 0;
+        top: 37.69px;
+        z-index: 5;
+        display: block;
+        width: 420px;
+        height: 348.227px;
+        margin: 0;
+        gap: 0;
+        overflow: visible;
+        pointer-events: none;
       }
 
       .warehouse-result-photo--inside .warehouse-label {
-        min-height: 78px;
-        height: 78px;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        width: max-content;
+        min-height: 0;
+        height: auto;
+        margin: 0;
+        padding: 16px;
+        border-radius: 999px;
+        box-shadow:
+          0 2px 3px rgba(15, 23, 42, 0.08),
+          0 12px 12px rgba(15, 23, 42, 0.1);
+        grid-template-columns: unset;
+        column-gap: 12px;
+        pointer-events: auto;
+      }
+
+      .warehouse-result-photo--inside .warehouse-label > span:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 2.88px;
+        align-items: flex-start;
+      }
+
+      .warehouse-result-photo--inside .warehouse-label small {
+        margin-top: 0;
+        color: rgba(255, 255, 255, 0.8);
+      }
+
+      .warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon {
+        position: relative;
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+        width: 46px;
+        height: 46px;
+        border: none;
+        background: transparent;
+        border-radius: 999px;
+      }
+
+      .warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon > img {
+        width: 32px !important;
+        height: 32px !important;
+        max-width: none;
       }
 
       .warehouse-result-photo--inside .warehouse-label--blue {
-        min-width: 330px;
+        left: 16px;
+        top: 0;
+        min-width: 0;
+        background: #2e75f5;
       }
 
       .warehouse-result-photo--inside .warehouse-label--green {
-        min-width: 352px;
-        margin-left: 20px;
+        left: 16px;
+        top: 125.53px;
+        min-width: 0;
+        margin-left: 0;
+        background: #16a34a;
+      }
+
+      .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon {
+        background: rgba(255, 255, 255, 0.15);
+      }
+
+      .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img {
+        transform: rotate(-6deg);
       }
 
       .warehouse-result-photo--inside .warehouse-label--violet {
-        min-width: 289px;
-        min-height: 81px;
-        height: 81px;
-        margin-left: -28px;
+        left: 0;
+        top: 251.52px;
+        width: max-content;
+        min-width: 306px;
+        min-height: 0;
+        height: auto;
+        margin-left: 0;
+        background: #9e78dc;
+      }
+
+      .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img {
+        transform: rotate(4deg);
       }
 
       .warehouse-contact {
@@ -2605,17 +2699,23 @@
   background: rgba(255, 255, 255, 0.15);
 }
 .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon {
-  width: 49px;
-  height: 49px;
+  width: 46px;
+  height: 46px;
   background: transparent;
 }
 .warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon > img {
   width: 32px !important;
   height: 32px !important;
 }
+.warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img {
+  width: 32px !important;
+  height: 32px !important;
+  transform: rotate(-6deg);
+}
 .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img {
-  width: 30px !important;
-  height: 30px !important;
+  width: 32px !important;
+  height: 32px !important;
+  transform: rotate(4deg);
 }
 .warehouse-result-photo .warehouse-badge-icon > img[src$="/thermometer.svg"] {
   width: 42px !important;
@@ -2630,19 +2730,10 @@
   height: 30px !important;
 }
 @media (min-width: 1200px) {
-  .warehouse-results--large .warehouse-result-photo--inside .warehouse-label--blue .warehouse-badge-icon > img { width: 46px !important; height: 46px !important; }
-  .warehouse-results--large .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img,
-  .warehouse-results--large .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img { width: 49px !important; height: 49px !important; }
-  .warehouse-results--standard .warehouse-result-photo--inside .warehouse-label--blue .warehouse-badge-icon > img { width: 32px !important; height: 32px !important; }
-  .warehouse-results--standard .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img { width: 35px !important; height: 35px !important; }
-  .warehouse-results--standard .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img { width: 34px !important; height: 34px !important; }
-  .warehouse-results--compact .warehouse-result-photo--inside .warehouse-label--blue .warehouse-badge-icon > img { width: 28px !important; height: 28px !important; }
-  .warehouse-results--compact .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img { width: 31px !important; height: 31px !important; }
-  .warehouse-results--compact .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img { width: 30px !important; height: 30px !important; }
-  .warehouse-results--residential .warehouse-result-photo--inside .warehouse-label--blue .warehouse-badge-icon > img { width: 46px !important; height: 46px !important; }
-  .warehouse-results--residential .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img { width: 24px !important; height: 24px !important; }
-  .warehouse-results--residential .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon > img { width: 49px !important; height: 49px !important; }
-  .warehouse-results--top-compact .warehouse-result-photo--split .warehouse-badge-icon > img { width: 24px !important; height: 24px !important; }
+  .warehouse-results--standard .warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon > img {
+    width: 32px !important;
+    height: 32px !important;
+  }
 }
 @media (max-width: 1199px) {
   .warehouse-result-photo .warehouse-label .warehouse-badge-icon {
@@ -2659,9 +2750,9 @@
   }
 }
 </style>
-    <link rel="stylesheet" href="secteur-detail-responsive.css?v=figma-bureaux-v2" />
-    <!-- Bureaux Figma: secondary CTA stays black pill (shared CSS turns it into text) -->
+    <link rel="stylesheet" href="secteur-detail-responsive.css?v=figma-bureaux-pack-v7" />
     <style>
+      /* Hero secondary CTA: black pill (shared CSS turns it into text) */
       .warehouse-btn--dark,
       .warehouse-hero .warehouse-btn--dark {
         min-height: 64px !important;
@@ -2682,6 +2773,252 @@
         color: inherit !important;
       }
 
+      /* ========== Figma 2750:104754 — Pack ELECTRIS row (exact) ========== */
+      #results .bureaux-pack-row {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 24px !important;
+        width: 100% !important;
+        max-width: 1280px !important;
+        margin: 84px auto 0 !important;
+        box-sizing: border-box !important;
+      }
+
+      #results .bureaux-pack-visual {
+        position: relative !important;
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        height: 459.169px !important;
+        overflow: hidden !important;
+        border: 8.406px solid #fff !important;
+        border-radius: 33.623px !important;
+        background: linear-gradient(180deg, #9badd0 0%, #a0a1fc 100%) !important;
+        box-sizing: border-box !important;
+      }
+
+      #results .bureaux-pack-photo {
+        position: absolute !important;
+        right: -2.41px !important;
+        top: -4.73px !important;
+        width: 444px !important;
+        height: 450px !important;
+        max-width: none !important;
+        object-fit: cover !important;
+        display: block !important;
+        pointer-events: none !important;
+        z-index: 1 !important;
+      }
+
+      #results .bureaux-pack-badges {
+        position: absolute !important;
+        left: 9.59px !important;
+        top: 37.69px !important;
+        width: 368px !important;
+        height: 348.227px !important;
+        z-index: 2 !important;
+        pointer-events: none !important;
+      }
+
+      #results .bureaux-pack-badge {
+        position: absolute !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 12px !important;
+        padding: 16px !important;
+        border-radius: 999px !important;
+        color: #fff !important;
+        box-shadow:
+          0 2px 3px rgba(15, 23, 42, 0.08),
+          0 12px 12px rgba(15, 23, 42, 0.1) !important;
+        box-sizing: border-box !important;
+        pointer-events: auto !important;
+        width: max-content !important;
+        max-width: none !important;
+      }
+
+      #results .bureaux-pack-badge--blue {
+        left: 28px !important;
+        top: 0 !important;
+        background: #2e75f5 !important;
+      }
+
+      #results .bureaux-pack-badge--green {
+        left: 48.22px !important;
+        top: 125.53px !important;
+        background: #16a34a !important;
+      }
+
+      #results .bureaux-pack-badge--violet {
+        left: -0.43px !important;
+        top: 251.52px !important;
+        width: 306px !important;
+        background: #9e78dc !important;
+      }
+
+      #results .bureaux-pack-icon {
+        position: relative !important;
+        flex: 0 0 46px !important;
+        width: 46px !important;
+        height: 46px !important;
+        display: grid !important;
+        place-items: center !important;
+        border-radius: 999px !important;
+        background: transparent !important;
+      }
+
+      #results .bureaux-pack-icon--soft {
+        background: rgba(255, 255, 255, 0.15) !important;
+      }
+
+      #results .bureaux-pack-icon--tilt {
+        width: 49.097px !important;
+        height: 49.097px !important;
+        flex-basis: 49.097px !important;
+        transform: rotate(4deg) !important;
+      }
+
+      #results .bureaux-pack-icon > img {
+        display: block !important;
+        width: 32px !important;
+        height: 32px !important;
+        max-width: none !important;
+      }
+
+      #results .bureaux-pack-badge--green .bureaux-pack-icon > img {
+        transform: rotate(-6deg) !important;
+      }
+
+      #results .bureaux-pack-text {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 2.883px !important;
+        min-width: 0 !important;
+      }
+
+      #results .bureaux-pack-badge--violet .bureaux-pack-text {
+        gap: 3.172px !important;
+      }
+
+      #results .bureaux-pack-title {
+        display: block !important;
+        color: #fff !important;
+        font-family: "Raleway", system-ui, sans-serif !important;
+        font-size: 20.184px !important;
+        font-weight: 400 !important;
+        line-height: normal !important;
+        letter-spacing: -0.3604px !important;
+        white-space: nowrap !important;
+      }
+
+      #results .bureaux-pack-sub {
+        display: block !important;
+        color: rgba(255, 255, 255, 0.8) !important;
+        font-family: "Raleway", system-ui, sans-serif !important;
+        font-size: 14.417px !important;
+        font-weight: 400 !important;
+        line-height: 1.3 !important;
+        white-space: nowrap !important;
+      }
+
+      #results .bureaux-pack-copy {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 25.218px !important;
+        flex: 0 0 489px !important;
+        width: 489px !important;
+        max-width: 100% !important;
+      }
+
+      #results .bureaux-pack-card {
+        width: 100% !important;
+        min-height: 333.081px !important;
+        box-sizing: border-box !important;
+        padding: 42.67px 42px 42px !important;
+        border-radius: 33.623px !important;
+        background: #f1f5f9 !important;
+      }
+
+      #results .bureaux-pack-card h3 {
+        margin: 0 0 27px !important;
+        color: #272522 !important;
+        font-family: "Raleway", system-ui, sans-serif !important;
+        font-size: 32px !important;
+        font-weight: 600 !important;
+        line-height: 40.348px !important;
+        text-transform: none !important;
+      }
+
+      #results .bureaux-pack-checks {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        list-style: none !important;
+      }
+
+      #results .bureaux-pack-checks li {
+        display: flex !important;
+        align-items: flex-start !important;
+        gap: 8px !important;
+        color: #000 !important;
+        font-family: "Raleway", system-ui, sans-serif !important;
+        font-size: 14px !important;
+        font-weight: 400 !important;
+        line-height: 16.8px !important;
+        letter-spacing: -0.28px !important;
+      }
+
+      #results .bureaux-pack-checks li::before {
+        content: none !important;
+        display: none !important;
+      }
+
+      #results .bureaux-pack-checks img {
+        flex: 0 0 20px !important;
+        width: 20px !important;
+        height: 20px !important;
+        margin-top: 0 !important;
+      }
+
+      #results .bureaux-pack-checks b {
+        font-weight: 700 !important;
+      }
+
+      #results .bureaux-pack-cta {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 489.64px !important;
+        max-width: 100% !important;
+        height: 96.667px !important;
+        border: 2.101px solid #f4f4f4 !important;
+        border-radius: 77px !important;
+        background: linear-gradient(180deg, #9badd0 0%, #a0a1fc 100%) !important;
+        text-decoration: none !important;
+        box-sizing: border-box !important;
+      }
+
+      #results .bureaux-pack-cta span {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        min-width: 316px !important;
+        padding: 8px 24px !important;
+        border-radius: 32px !important;
+        background: #fff !important;
+        color: #000 !important;
+        font-family: "Raleway", system-ui, sans-serif !important;
+        font-size: 16px !important;
+        font-weight: 600 !important;
+        line-height: 32px !important;
+        box-shadow: 0 1.333px 2.667px rgba(16, 24, 40, 0.05) !important;
+        white-space: nowrap !important;
+      }
+
       @media (max-width: 1199.98px) {
         .warehouse-hero .warehouse-btn--dark {
           width: auto !important;
@@ -2698,6 +3035,59 @@
 
         .warehouse-hero .warehouse-btn--dark span {
           display: inline !important;
+        }
+
+        #results .bureaux-pack-row {
+          flex-direction: column !important;
+          gap: 24px !important;
+          margin-top: 48px !important;
+        }
+
+        #results .bureaux-pack-visual {
+          width: 100% !important;
+          height: 380px !important;
+        }
+
+        #results .bureaux-pack-photo {
+          width: 70% !important;
+          height: 100% !important;
+          top: 0 !important;
+          right: 0 !important;
+        }
+
+        #results .bureaux-pack-badges {
+          left: 8px !important;
+          top: 24px !important;
+          width: calc(100% - 16px) !important;
+          height: auto !important;
+        }
+
+        #results .bureaux-pack-badge {
+          position: relative !important;
+          left: auto !important;
+          top: auto !important;
+          margin: 0 0 16px !important;
+          max-width: 100% !important;
+        }
+
+        #results .bureaux-pack-badge--violet {
+          width: max-content !important;
+          max-width: 100% !important;
+        }
+
+        #results .bureaux-pack-title,
+        #results .bureaux-pack-sub {
+          white-space: normal !important;
+        }
+
+        #results .bureaux-pack-copy,
+        #results .bureaux-pack-cta {
+          width: 100% !important;
+          flex-basis: auto !important;
+        }
+
+        #results .bureaux-pack-card {
+          min-height: 0 !important;
         }
       }
     </style>
@@ -2895,57 +3285,72 @@
 </div>
 </section>
 <section class="warehouse-section warehouse-results warehouse-results--standard" id="results">
-<img alt="" class="warehouse-mark" src="assets/images/secteurs-bureaux/figma-extract/01_image0_2497_3804_639x134.png"/>
+<img alt="" class="warehouse-mark" src="assets/images/secteurs-bureaux/results/result-mark.png?v=figma-2665-41390"/>
 <h2 class="warehouse-section-title">Résultats obtenus pour nos clients.</h2>
 <div class="warehouse-result-grid">
 <div class="warehouse-result-copy">
 <article class="warehouse-result-card">
-<h3>BÂTIMENT DE BUREAUX - multi-étages</h3>
-<p>−20 à −40% · facture énergétique (plage typique)</p>
-<ul class="warehouse-checks"><li>18–30 mois · ROI</li><li>Conformité : décret tertiaire + BACS</li></ul>
+<h3>IMMEUBLE DE BUREAUX — multi-étages</h3>
+<p>−20 à −40 % · facture énergétique [fourchette type]</p>
+<ul class="warehouse-checks">
+<li><b>18-30 mois · </b>ROI</li>
+<li><b>Conformité · </b>décret tertiaire + BACS</li>
+</ul>
 </article>
-<a class="warehouse-result-cta warehouse-result-cta--green" href="mailto:contact@electris.fr"><span>Je veux ce résultat pour mon site →</span></a>
+<a class="warehouse-result-cta warehouse-result-cta--green" href="https://parcours.electris.io/" target="_blank" rel="noopener noreferrer"><span>Je veux le même résultat →</span></a>
 </div>
 <div class="warehouse-result-photo warehouse-result-photo--split">
-<img alt="Bâtiment de bureaux client" src="assets/images/secteurs-bureaux/figma-extract/08_image7_2497_3804_1024x1024.png"/>
+<img alt="Immeuble de bureaux client" src="assets/images/secteurs-bureaux/results/result-photo-1.png?v=figma-2665-41390"/>
 <span class="warehouse-badge warehouse-badge--orange">
 <span aria-hidden="true" class="warehouse-badge-icon"><img src="assets/images/secteurs/result-icons/trending-down.svg" alt="" /></span>
-<span><strong>−20 à −40% ·</strong><small>Facture énergétique (plage typique)</small></span>
+<span><strong>−20 à −40 % · </strong><small>Facture énergétique [fourchette type]</small></span>
 </span>
 <span class="warehouse-badge warehouse-badge--cyan">
 <span aria-hidden="true" class="warehouse-badge-icon"><img src="assets/images/secteurs/result-icons/trending-up.svg" alt="" /></span>
-<span><strong>18–30 mois ·</strong><small>ROI</small></span>
+<span><strong>18-30 mois · </strong><small>ROI</small></span>
 </span>
 <span class="warehouse-badge warehouse-badge--violet">
 <span aria-hidden="true" class="warehouse-badge-icon"><img src="assets/images/secteurs/result-icons/shield-check.svg" alt="" /></span>
-<span><strong>Conformité ·</strong><small>Décret tertiaire + BACS</small></span>
+<span><strong>Conformité · </strong><small>Décret tertiaire + BACS</small></span>
 </span>
 </div>
 </div>
-<div class="warehouse-result-grid">
-<div class="warehouse-result-photo warehouse-result-photo--inside">
-<img alt="Installation technique Pack ELECTRIS pour bureaux" src="assets/images/secteurs-bureaux/figma-extract/09_image8_2497_3804_1024x1024.png"/>
-<div class="warehouse-labels">
-<span class="warehouse-label warehouse-label--blue">
-<span aria-hidden="true" class="warehouse-badge-icon"><img src="assets/images/secteurs/result-icons/building.svg" alt="" /></span>
-<span>BÂTIMENT DE BUREAUX<small>Pack ELECTRIS</small></span>
+<div class="bureaux-pack-row">
+<div class="bureaux-pack-visual">
+<img class="bureaux-pack-photo" alt="Pack ELECTRIS — salle de pilotage GTB" src="assets/images/secteurs-bureaux/results/result-photo-2.png?v=figma-2750-104754"/>
+<div class="bureaux-pack-badges">
+<div class="bureaux-pack-badge bureaux-pack-badge--blue">
+<span class="bureaux-pack-icon" aria-hidden="true"><img src="assets/images/secteurs-bureaux/results/icon-building.svg?v=figma-2750-104754" alt="" width="32" height="32"/></span>
+<span class="bureaux-pack-text">
+<span class="bureaux-pack-title">IMMEUBLE DE BUREAUX —</span>
+<span class="bureaux-pack-sub">Pack ELECTRIS</span>
 </span>
-<span class="warehouse-label warehouse-label--green">
-<span aria-hidden="true" class="warehouse-badge-icon"><img src="assets/images/secteurs/result-icons/layers.svg" alt="" /></span>
-<span>Pack ELECTRIS<small>BMS + décarbonisation</small></span>
+</div>
+<div class="bureaux-pack-badge bureaux-pack-badge--green">
+<span class="bureaux-pack-icon bureaux-pack-icon--soft" aria-hidden="true"><img src="assets/images/secteurs-bureaux/results/icon-layers.svg?v=figma-2750-104754" alt="" width="32" height="32"/></span>
+<span class="bureaux-pack-text">
+<span class="bureaux-pack-title">Pack ELECTRIS ·</span>
+<span class="bureaux-pack-sub">GTB IA + décarbonation</span>
 </span>
-<span class="warehouse-label warehouse-label--violet">
-<span aria-hidden="true" class="warehouse-badge-icon"><img src="assets/images/secteurs/result-icons/banknote.svg" alt="" /></span>
-<span>Investissement<small>Financé par ELECTRIS CPE</small></span>
+</div>
+<div class="bureaux-pack-badge bureaux-pack-badge--violet">
+<span class="bureaux-pack-icon bureaux-pack-icon--tilt" aria-hidden="true"><img src="assets/images/secteurs-bureaux/results/icon-banknote.svg?v=figma-2750-104754" alt="" width="32" height="32"/></span>
+<span class="bureaux-pack-text">
+<span class="bureaux-pack-title">Investissement ·</span>
+<span class="bureaux-pack-sub">financé par ELECTRIS (CPE)</span>
 </span>
 </div>
 </div>
-<div class="warehouse-result-copy">
-<article class="warehouse-result-card">
-<h3>BÂTIMENT DE BUREAUX - Pack ELECTRIS</h3>
-<ul class="warehouse-checks"><li>Pack ELECTRIS : BMS + décarbonisation</li><li>Investissement : financé par ELECTRIS CPE</li></ul>
+</div>
+<div class="bureaux-pack-copy">
+<article class="bureaux-pack-card">
+<h3>IMMEUBLE DE BUREAUX — Pack ELECTRIS</h3>
+<ul class="bureaux-pack-checks">
+<li><img src="assets/images/secteurs-bureaux/results/check-icon.svg?v=figma-2750-104754" alt="" width="20" height="20"/><span><b>Pack ELECTRIS · </b>GTB IA + décarbonation</span></li>
+<li><img src="assets/images/secteurs-bureaux/results/check-icon.svg?v=figma-2750-104754" alt="" width="20" height="20"/><span><b>Investissement</b> · financé par ELECTRIS (CPE)</span></li>
+</ul>
 </article>
-<a class="warehouse-result-cta warehouse-result-cta--violet" href="mailto:contact@electris.fr"><span>Je veux ce résultat pour mon site →</span></a>
+<a class="bureaux-pack-cta" href="https://parcours.electris.io/" target="_blank" rel="noopener noreferrer"><span>Je veux le même résultat →</span></a>
 </div>
 </div>
 </section>
