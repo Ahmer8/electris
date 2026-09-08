@@ -20,7 +20,7 @@
   height: auto;
 }
 
-/* ---------- Desktop 1200–1511: keep 2-col hero, tighten ---------- */
+/* ---------- Desktop 1200–1511: keep 2-col hero; keep Figma type scale ---------- */
 @media (max-width: 1511.98px) and (min-width: 1200px) {
   .warehouse-hero {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
@@ -29,8 +29,36 @@
   }
 
   .warehouse-hero h1 {
-    font-size: clamp(34px, 3vw, 44px) !important;
-    line-height: 1.2 !important;
+    font-size: clamp(40px, 3.2vw, 48px) !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    letter-spacing: -1px !important;
+  }
+
+  .warehouse-hero p {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
+  }
+
+  .warehouse-btn {
+    font-size: 21.333px !important;
+    font-weight: 600 !important;
+  }
+
+  .warehouse-btn--dark {
+    font-size: 16px !important;
+    font-weight: 600 !important;
+  }
+
+  .warehouse-section-title,
+  .warehouse-ops .warehouse-section-title,
+  .warehouse-tech .warehouse-section-title,
+  .warehouse-results .warehouse-section-title {
+    font-size: clamp(40px, 3.2vw, 48px) !important;
+    font-weight: 700 !important;
+    letter-spacing: -2.3942px !important;
+    line-height: 1.1 !important;
   }
 
   .warehouse-hero h1 .warehouse-title-line {
