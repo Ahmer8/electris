@@ -157,7 +157,9 @@ button {
 .btn--hero {
   padding: 16px 24px;
   border-radius: 32px;
+  font-family: var(--font);
   font-size: 21.333px;
+  font-weight: 600;
   line-height: 32px;
   box-shadow: var(--shadow-btn-lg);
 }
@@ -217,8 +219,10 @@ button {
   min-width: 0;
 }
 
+/* Figma 2596:24173 — Raleway Bold 48 / 64 / -1px */
 .hero__title {
   margin: 0;
+  font-family: var(--font);
   font-size: 48px;
   font-weight: 700;
   line-height: 64px;
@@ -230,8 +234,10 @@ button {
   color: var(--blue);
 }
 
+/* Figma 2596:24174 — Raleway Medium 20 / 1.6 */
 .hero__desc {
   margin: 13px 0 0;
+  font-family: var(--font);
   font-size: 20px;
   font-weight: 500;
   line-height: 1.6;
@@ -244,6 +250,7 @@ button {
   gap: 24px;
 }
 
+/* Figma 2596:24188 — visual frame ~630×473, image crop */
 .hero__visual {
   flex: 1;
   min-width: 0;
@@ -253,66 +260,81 @@ button {
 }
 
 .hero__visual img {
-  width: 100%;
-  height: 100%;
-  max-width: 685px;
-  object-fit: contain;
+  position: absolute;
+  left: -7.67%;
+  top: -6.25%;
+  width: 115.26%;
+  height: 119.25%;
+  max-width: none;
+  object-fit: cover;
   object-position: center;
 }
 
-/* ── Partners / brand marquee (same as landing page) ── */
+/* ── Partners / brand marquee — Figma 2596:24191 Social proof ── */
 .partners,
 .brands {
   width: 100%;
-  height: 104px;
+  min-height: 116.588px;
+  height: auto;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   overflow: hidden;
   background: #000;
-  padding: 0;
+  padding: 24px 0;
 }
 
 .brand-strip {
-  display: block;
-  flex: 0 0 1512px;
-  width: 1512px;
-  height: 104px;
-  max-width: none;
-  object-fit: cover;
+  display: none;
 }
 
-.partners__row,
 .brand-track {
   display: flex;
   width: max-content;
-  min-width: 3024px;
   align-items: center;
   justify-content: flex-start;
-  animation: brand-marquee 14s linear infinite;
+  animation: brand-marquee 32s linear infinite;
   will-change: transform;
 }
+
+.brand-row {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 16px;
+  padding-right: 16px;
+}
+
+.brand-row img {
+  display: block;
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  max-width: none;
+  object-fit: contain;
+}
+
+.brand-row img:nth-child(1) { width: 116.573px; height: 68.588px; }
+.brand-row img:nth-child(2) { width: 102.901px; height: 66.441px; }
+.brand-row img:nth-child(3) { width: 119.714px; height: 66.441px; }
+.brand-row img:nth-child(4) { width: 145.984px; height: 30.881px; }
+.brand-row img:nth-child(5) { width: 82.339px; height: 68.588px; }
+.brand-row img:nth-child(6) { width: 100.754px; height: 56px; }
+.brand-row img:nth-child(7) { width: 208.891px; height: 49.102px; }
+.brand-row img:nth-child(8) { width: 101.906px; height: 56px; }
+.brand-row img:nth-child(9) { width: 175.316px; height: 55.809px; }
+.brand-row img:nth-child(10) { width: 228.306px; height: 49.364px; }
 
 @keyframes brand-marquee {
   from {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-1512px);
-  }
-}
-
-@keyframes brand-marquee-mobile {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-1108px);
+    transform: translateX(-50%);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .partners__row,
   .brand-track {
     animation: none;
     transform: none;
@@ -335,16 +357,20 @@ button {
   margin-bottom: 24px;
 }
 
+/* Figma 2596:24221 — Raleway Medium 24 / 1.5 */
 .tech__eyebrow {
   margin: 0 0 8px;
+  font-family: var(--font);
   font-size: 24px;
   font-weight: 500;
   line-height: 1.5;
   color: var(--muted);
 }
 
+/* Figma 2596:24223 — Raleway Bold 48 / 1.1 / -2.3942px */
 .tech__title {
   margin: 0;
+  font-family: var(--font);
   font-size: 48px;
   font-weight: 700;
   line-height: 1.1;
@@ -385,36 +411,47 @@ button {
   overflow: hidden;
 }
 
+/* Figma 2596:24229 — Bold 56 / transparent fill + Primary stroke */
 .tech-card__number {
   margin: 0;
+  font-family: var(--font);
   font-size: 56px;
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -1.715px;
+  color: transparent;
+  -webkit-text-stroke: 1.75px var(--blue, #1212ff);
+  paint-order: stroke fill;
 }
 
+/* Figma 2596:24231 — Raleway SemiBold 30 / 1.4 */
 .tech-card__title {
   margin: 0;
+  font-family: var(--font);
   font-size: 30px;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.4;
   color: var(--black);
 }
 
+/* Figma 2596:24233 — Raleway Regular 22 / 1.4 */
 .tech-card__desc {
   flex: 1;
   margin: 0;
-  font-size: 24px;
+  font-family: var(--font);
+  font-size: 22px;
   font-weight: 400;
   line-height: 1.4;
   color: var(--body);
 }
 
+/* Figma 2596:24236 — Raleway SemiBold 16 / 19.5 / -0.0762 */
 .tech-card__link {
   display: inline-flex;
   align-items: center;
   gap: 5px;
   padding-top: 4px;
+  font-family: var(--font);
   font-size: 16px;
   font-weight: 600;
   line-height: 19.5px;
@@ -442,36 +479,40 @@ button {
 }
 
 .tech-card--01 { background: #e5eeea; }
-.tech-card--01 .tech-card__number { color: rgba(42, 122, 90, 0.14); }
 .tech-card--01 .tech-card__link { color: #2a7a5a; }
 
 .tech-card--02 { background: #e8eef7; }
-.tech-card--02 .tech-card__number { color: rgba(42, 79, 138, 0.14); }
 .tech-card--02 .tech-card__link { color: #2a4f8a; }
 
 .tech-card--03 { background: #e5f0f7; }
-.tech-card--03 .tech-card__number { color: rgba(26, 96, 128, 0.14); }
 .tech-card--03 .tech-card__link { color: #1a6080; }
+.tech-card--03 .tech-card__desc { font-size: 24px; }
+.tech-card--03 .tech-card__chip { right: -16.5px; bottom: -0.5px; }
 
 .tech-card--04 { background: var(--white); }
-.tech-card--04 .tech-card__number { color: rgba(0, 0, 0, 0.08); }
+.tech-card--04 .tech-card__title { font-weight: 800; }
+.tech-card--04 .tech-card__desc { font-weight: 600; }
 .tech-card--04 .tech-card__link { color: var(--black); }
 
 .tech-card--05 { background: #eaf0e5; }
-.tech-card--05 .tech-card__number { color: rgba(74, 122, 42, 0.14); }
 .tech-card--05 .tech-card__link { color: #4a7a2a; }
 
+/* Figma Subtract boolean masks (PNG with transparency) */
 .tech-row__image {
   flex-shrink: 0;
   width: 564px;
   height: 385px;
   opacity: 0.9;
+  position: relative;
+  overflow: visible;
+  background: transparent;
 }
 
 .tech-row__image img {
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 /* ── Contact ── */
@@ -544,8 +585,10 @@ button {
   color: var(--white);
 }
 
+/* Figma 2656:39902 — Raleway Bold 48 / 1.2 / -2.3942px */
 .contact-card__title {
   margin: 0;
+  font-family: var(--font);
   font-size: 48px;
   font-weight: 700;
   line-height: 1.2;
@@ -558,10 +601,12 @@ button {
   gap: 12px;
 }
 
+/* Figma 2656:39907 — Raleway Medium 24 / 1.5 */
 .contact-card__row {
   display: flex;
   align-items: center;
   gap: 10px;
+  font-family: var(--font);
   font-size: 24px;
   font-weight: 500;
   line-height: 1.5;
@@ -584,8 +629,10 @@ button {
   gap: 8px;
 }
 
+/* Figma 2656:39921 — Raleway Medium 22 / 1.5 */
 .contact-card__footer p {
   margin: 0;
+  font-family: var(--font);
   font-size: 22px;
   font-weight: 500;
   line-height: 1.5;
@@ -803,14 +850,20 @@ button {
   .hero__visual {
     width: 100%;
     height: auto;
+    aspect-ratio: 630 / 473;
     min-height: 0;
     max-width: 469px;
     margin: 0 auto;
   }
 
   .hero__visual img {
-    height: auto;
-    max-width: 100%;
+    position: absolute;
+    left: -7.67%;
+    top: -6.25%;
+    width: 115.26%;
+    height: 119.25%;
+    max-width: none;
+    object-fit: cover;
   }
 
   .hero__title {
@@ -834,8 +887,13 @@ button {
     font-size: 48px;
   }
 
+  .tech-card__title {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
   .tech-card__desc {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .tech__inner {
@@ -850,13 +908,15 @@ button {
   .tech-row__image {
     width: 100%;
     max-width: 100%;
-    height: 280px;
+    height: auto;
+    aspect-ratio: 564 / 385;
     order: -1;
   }
 
   .tech-row__image img {
+    width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
   }
 
   .contact {
@@ -971,20 +1031,29 @@ button {
 
   .partners,
   .brands {
-    height: 76px;
-    padding: 0;
+    min-height: 0;
+    height: auto;
+    padding: 16px 0;
   }
 
-  .brand-strip {
-    flex-basis: 1108px;
-    width: 1108px;
-    height: 76px;
+  .brand-row {
+    gap: 12px;
+    padding-right: 12px;
   }
 
-  .partners__row,
+  .brand-row img:nth-child(1) { width: 82px; height: 48px; }
+  .brand-row img:nth-child(2) { width: 72px; height: 47px; }
+  .brand-row img:nth-child(3) { width: 84px; height: 47px; }
+  .brand-row img:nth-child(4) { width: 102px; height: 22px; }
+  .brand-row img:nth-child(5) { width: 58px; height: 48px; }
+  .brand-row img:nth-child(6) { width: 71px; height: 39px; }
+  .brand-row img:nth-child(7) { width: 146px; height: 34px; }
+  .brand-row img:nth-child(8) { width: 71px; height: 39px; }
+  .brand-row img:nth-child(9) { width: 123px; height: 39px; }
+  .brand-row img:nth-child(10) { width: 160px; height: 35px; }
+
   .brand-track {
-    min-width: 2216px;
-    animation: brand-marquee-mobile 16s linear infinite;
+    animation: brand-marquee 22s linear infinite;
   }
 
   .tech {
@@ -1178,20 +1247,26 @@ button {
 
   .tech-card__number {
     font-size: 48px;
+    font-weight: 700;
+    color: transparent;
+    -webkit-text-stroke: 1.5px var(--blue, #1212ff);
   }
 
   .tech-card__title {
     font-size: 22px;
+    font-weight: 600;
   }
 
   .tech-card__desc {
     font-size: 16px;
+    font-weight: 400;
   }
 
   .tech-row__image {
-    height: 220px;
-    border-radius: 24px;
-    overflow: hidden;
+    height: auto;
+    aspect-ratio: 564 / 385;
+    border-radius: 0;
+    overflow: visible;
   }
 
   .contact {
