@@ -1072,6 +1072,7 @@ header {
   height: 24px;
   flex: 0 0 24px;
   object-fit: contain;
+  transform: none !important;
 }
 
 .hero-actions .hero-btn-light {
@@ -1080,9 +1081,11 @@ header {
   color: #1212ff !important;
 }
 
-.hero-actions .hero-btn-light:hover {
+.hero-actions .hero-btn-light:hover,
+.hero-actions .hero-btn-light:focus-visible {
   background: #1212ff !important;
   color: #fff !important;
+  border-color: #1212ff !important;
   box-shadow: 0 8px 24px rgba(18, 18, 255, 0.28);
   transform: translateY(-1px);
 }
@@ -1091,7 +1094,18 @@ header {
   filter: brightness(0) invert(1);
 }
 
-.tech-actions .tech-action-btn--light:hover {
+.tech-actions .tech-action-btn--light {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.tech-actions .tech-action-btn--light:hover,
+.tech-actions .tech-action-btn--light:focus-visible,
+.tech-actions .btn-light:hover {
   background: #1212ff !important;
   color: #fff !important;
   border-color: #1212ff !important;
@@ -1194,9 +1208,9 @@ header {
   top: 22px;
   width: 704px;
   height: 657px;
-  background: url("assets/images/why/why-watermark.svg") bottom center / contain
+  background: url("assets/images/why/why-watermark.png") bottom center / contain
     no-repeat;
-  opacity: 0.04;
+  opacity: 1;
   pointer-events: none;
   z-index: 0;
 }
@@ -1258,17 +1272,20 @@ header {
   color: #1f252e;
   font-family: Raleway, "DM Sans", Arial, sans-serif;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.1;
-  letter-spacing: -2.394px;
+  letter-spacing: -1px;
   white-space: nowrap;
 }
 
 .why .heading {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto;
   height: auto;
   align-items: center;
-  gap: 24px 60px;
-  /* Figma 2349:3219 — 29px above + below the header divider */
+  column-gap: 60px;
+  row-gap: 0;
+  /* Figma 2349:3219 — 29px above and below the header divider */
   padding: 0 0 29px !important;
   margin: 0 0 29px !important;
   border-bottom: 1px solid #e2e8f0;
@@ -1500,6 +1517,8 @@ header {
   height: 56px;
   max-height: 56px;
   object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1563,6 +1582,18 @@ header {
 
 .tech {
   padding: 96px 0;
+}
+
+#tech.pale {
+  position: relative;
+  background-color: #f1f5f9;
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(148, 163, 184, 0.22) 0,
+    rgba(148, 163, 184, 0.22) 1px,
+    transparent 1px,
+    transparent 72px
+  );
 }
 
 .machine {
@@ -1748,7 +1779,7 @@ header {
   height: 24px;
   flex: 0 0 24px;
   object-fit: contain;
-  transform: none;
+  transform: none !important;
 }
 
 .tech-actions .btn:first-child,
@@ -2517,10 +2548,10 @@ figcaption small {
 
 .footer-col .chevron img {
   display: block;
-  width: 16px;
-  height: 16px;
+  width: 24px;
+  height: 24px;
   object-fit: contain;
-  opacity: 0.9;
+  opacity: 1;
 }
 
 .footer-col a {
@@ -4763,6 +4794,7 @@ h3 {
   font-weight: 700;
   line-height: 1;
   white-space: nowrap;
+  text-transform: none;
   text-decoration: none;
   box-shadow: 0 1.333px 2.667px rgba(16, 24, 40, 0.05);
   transition:
@@ -4897,6 +4929,7 @@ h3 {
     color: #111;
     font-size: 16px;
     font-weight: 700;
+    text-transform: none;
   }
   .mobile-audit-copy a span { font-size: 24px; }
   .mobile-audit-plant {
