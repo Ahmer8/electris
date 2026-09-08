@@ -20,6 +20,210 @@
   height: auto;
 }
 
+/* ========== Figma type scale (09/10-secteurs family) — desktop base ========== */
+body.wasteheat-page,
+body.solutions-page,
+.warehouse-main {
+  font-family: "Raleway", system-ui, sans-serif !important;
+}
+
+body.wasteheat-page > header .nav-link {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+body.wasteheat-page > header .btn-primary {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+/* Hero title — Figma 48 Bold / 64 / -1px */
+.warehouse-hero h1 {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 48px !important;
+  font-weight: 700 !important;
+  line-height: 64px !important;
+  letter-spacing: -1px !important;
+  color: #000 !important;
+}
+
+.warehouse-hero h1 .warehouse-blue,
+.warehouse-hero h1 span.warehouse-blue {
+  color: #1212ff !important;
+}
+
+/* Hero body — 20 Medium / 1.6 */
+.warehouse-hero p {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+  color: #000 !important;
+}
+
+/* Primary CTA — 21.333 SemiBold / 32 */
+.warehouse-btn {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 21.333px !important;
+  font-weight: 600 !important;
+  line-height: 32px !important;
+}
+
+/* Secondary note / dark action — 16 SemiBold (Figma text, not pill) */
+.warehouse-btn--dark {
+  min-height: 0 !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  color: #0f172a !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1.6 !important;
+}
+
+.warehouse-btn--dark span {
+  display: none !important;
+}
+
+/* Metric cards */
+.warehouse-metric small {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 15.258px !important;
+  font-weight: 500 !important;
+  line-height: 21.797px !important;
+  color: #475467 !important;
+}
+
+.warehouse-metric strong {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 28.336px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  color: #101828 !important;
+}
+
+/* Section titles — 48 Bold / 1.1 / -2.39 */
+.warehouse-section-title,
+.warehouse-ops .warehouse-section-title,
+.warehouse-tech .warehouse-section-title,
+.warehouse-results .warehouse-section-title {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 48px !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  letter-spacing: -2.3942px !important;
+}
+
+.warehouse-ops .warehouse-kicker:empty {
+  display: none !important;
+}
+
+/* Tech cards */
+.warehouse-tech-card h3 {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 600 !important;
+  line-height: normal !important;
+  color: #0f172a !important;
+}
+
+.warehouse-tech-card p {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 400 !important;
+  line-height: 1.5 !important;
+  color: #475569 !important;
+}
+
+.warehouse-pill {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: #059669 !important;
+}
+
+.warehouse-tech-actions .warehouse-btn {
+  font-size: 21.333px !important;
+  font-weight: 600 !important;
+  line-height: 32px !important;
+}
+
+.warehouse-tech-actions small {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 1.6 !important;
+  color: #0f172a !important;
+}
+
+/* Results */
+.warehouse-result-card h3 {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 600 !important;
+  line-height: 40.348px !important;
+  color: #272522 !important;
+}
+
+.warehouse-result-card p {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 16.812px !important;
+  font-weight: 400 !important;
+  line-height: 25.218px !important;
+  color: #272522 !important;
+}
+
+.warehouse-checks {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  line-height: 16.8px !important;
+  letter-spacing: -0.28px !important;
+}
+
+.warehouse-result-cta span {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 32px !important;
+  color: #000 !important;
+}
+
+.warehouse-badge strong,
+.warehouse-label span {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 20.184px !important;
+  font-weight: 400 !important;
+  line-height: normal !important;
+  letter-spacing: -0.3604px !important;
+}
+
+.warehouse-badge small,
+.warehouse-label small {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 14.417px !important;
+  font-weight: 400 !important;
+  line-height: 1.3 !important;
+}
+
+/* Contact form */
+.warehouse-form h2 {
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 32px !important;
+  font-weight: 700 !important;
+}
+
+.warehouse-form > div:first-child > p,
+.warehouse-form label,
+.warehouse-form input,
+.warehouse-form textarea,
+.warehouse-submit {
+  font-family: "Raleway", system-ui, sans-serif !important;
+}
+
 /* ---------- Desktop 1200–1511: keep 2-col hero; keep Figma type scale ---------- */
 @media (max-width: 1511.98px) and (min-width: 1200px) {
   .warehouse-hero {
