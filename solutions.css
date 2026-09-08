@@ -5,6 +5,10 @@
   font-family: "Raleway", sans-serif;
 }
 
+.solutions-page .brands {
+  display: none !important;
+}
+
 .solutions-page header {
   position: sticky;
   top: 0;
@@ -135,7 +139,7 @@
   color: #000;
   font-family: Raleway, sans-serif;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.4;
 }
 
@@ -295,51 +299,68 @@
 
 .contact-card-mark {
   position: absolute;
-  z-index: 0;
-  /* Figma image 19 — 338×315 at x:296 y:-61 on 592×483 (global img max-width must not clip) */
-  top: -12.655%;
-  left: 50%;
-  width: 57.0946%;
-  height: 65.236%;
+  z-index: 1;
+  top: -61px;
+  left: 296px;
+  width: 338px;
+  height: 315px;
   max-width: none;
   max-height: none;
   margin: 0;
-  object-fit: fill;
-  object-position: bottom center;
-  opacity: 0.13;
+  transform: none;
+  opacity: 0.18;
+  filter: brightness(0) invert(1);
+  mix-blend-mode: normal;
+  object-fit: contain;
+  object-position: bottom;
   pointer-events: none;
   user-select: none;
 }
 
 .solutions-contact-content {
   position: absolute;
-  z-index: 1;
-  /* Figma content frame — x:58 y:31 (not vertically centered) */
+  z-index: 2;
   top: 31px;
   left: 58px;
   display: flex;
   width: min(480px, calc(100% - 92px));
-  height: auto;
+  height: 420px;
   max-height: calc(100% - 62px);
   flex-direction: column;
+  justify-content: space-between;
   align-items: flex-start;
+  gap: 26px;
   transform: none;
 }
 
+.solutions-contact-content > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.solutions-contact-cta {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .solutions-contact-content h2 {
-  margin: 0 0 16px;
+  margin: 0;
   color: #fff;
   font-size: 48px;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -2.394px;
+  letter-spacing: -2.3942px;
 }
 
 .solutions-contact-content address {
   display: flex;
   width: 100%;
   flex-direction: column;
-  margin: 0 0 26px;
+  margin: 0;
   font-style: normal;
 }
 
@@ -387,7 +408,11 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 20px;
+  width: 354.333px;
+  max-width: 100%;
+  min-height: 64px;
+  height: 64px;
+  margin: 0;
   padding: 16px 24px;
   border-radius: 32px;
   background: #fff;
@@ -410,16 +435,21 @@
 
 .audit-button:hover { color: #000; }
 
+.solutions-contact-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.solutions-contact-footer p,
 .solutions-contact-content p {
   width: 100%;
-  margin: 0 0 8px;
+  margin: 0;
   color: #fff;
   font-size: 22px;
   font-weight: 500;
   line-height: 1.5;
 }
-
-.solutions-contact-content p:last-child { margin-bottom: 0; }
 
 .solutions-contact-photo {
   display: block;

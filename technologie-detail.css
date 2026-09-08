@@ -112,12 +112,10 @@
   color: #000;
 }
 
-/* Prevent icon squeeze across technology detail feature rows */
-.page--orc img[width][height],
-.page--pac img[width][height],
-.page--gtb img[width][height],
-.page--mcp img[width][height],
-.page--freecooling img[width][height] {
+/* Keep metric / reason icons from stretching; do not uncap all images */
+.orc-metric__icon img,
+.orc-reason__illu img,
+.pac-process__flow img {
   max-width: none;
   object-fit: contain;
   flex-shrink: 0;
@@ -125,12 +123,23 @@
 
 .page--mcp .hero--detail,
 .page--mcp .hero__visual {
-  overflow: visible;
+  overflow: hidden;
 }
 
-@media (min-width: 1200px) {
+.page--mcp .hero__visual.pac-hero__visual {
+  overflow: visible;
+  padding: 8px 36px 48px 0;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1280px) {
   .page--orc .orc-process .detail-title,
-  .page--orc .orc-elig__header .detail-title {
+  .page--orc .orc-metrics .detail-title,
+  .page--orc .orc-elig__header .detail-title,
+  .page--pac .orc-metrics .detail-title,
+  .page--gtb .orc-metrics .detail-title,
+  .page--mcp .orc-metrics .detail-title,
+  .page--freecooling .orc-metrics .detail-title {
     white-space: nowrap;
   }
 }
@@ -514,16 +523,27 @@
 .orc-metric__icon {
   width: 90px;
   height: 90px;
+  min-width: 90px;
+  min-height: 90px;
+  aspect-ratio: 1;
+  flex-shrink: 0;
   border-radius: 49px;
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
   box-shadow: 0 12px 27px rgba(0, 0, 0, 0.1);
 }
 
 .orc-metric__icon img {
   width: 48px;
   height: 48px;
+  max-width: 48px;
+  max-height: 48px;
+  aspect-ratio: 1;
+  object-fit: contain;
+  object-position: center;
+  flex-shrink: 0;
 }
 
 .orc-metric__icon--dark {
@@ -908,10 +928,31 @@
   color: #000;
 }
 
-/* Results — Figma 2591:8308 bg white */
-.page--orc .orc-results {
+/* Results — Figma 2591:8308: white + grid pattern, copy in round #f1f5f9 cards */
+.page--orc .orc-results,
+.page--pac .orc-results,
+.page--gtb .orc-results,
+.page--mcp .orc-results,
+.page--freecooling .orc-results {
+  position: relative;
   background: #fff;
   padding: 96px 116px;
+  overflow: hidden;
+}
+
+.page--orc .orc-results::before,
+.page--pac .orc-results::before,
+.page--gtb .orc-results::before,
+.page--mcp .orc-results::before,
+.page--freecooling .orc-results::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.28;
+  background-image:
+    repeating-linear-gradient(90deg, #e2e8f0 0 1px, transparent 1px 73px),
+    repeating-linear-gradient(0deg, #e2e8f0 0 1px, transparent 1px 71px);
 }
 
 .orc-results {
@@ -920,6 +961,8 @@
 }
 
 .orc-results__header {
+  position: relative;
+  z-index: 1;
   text-align: center;
   margin-bottom: 84px;
 }
@@ -942,6 +985,8 @@
 }
 
 .orc-case {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -968,7 +1013,7 @@
 
 .page--orc .orc-case:first-of-type .orc-case__card {
   min-height: 350px;
-  height: 350px;
+  height: auto;
   box-sizing: border-box;
 }
 
@@ -1061,7 +1106,7 @@
 
 .btn--hero img {
   object-fit: contain;
-  transform: rotate(-90deg) scaleX(-1);
+  transform: none;
 }
 
 .orc-case__visual {
@@ -1683,7 +1728,7 @@
 /* MCP + Free Cooling pages — Figma 2591:10139 / 2591:10886 */
 .page--mcp .hero__visual,
 .page--freecooling .hero__visual {
-  overflow: visible;
+  overflow: hidden;
 }
 
 .page--mcp .hero__visual .pac-hero__art,
@@ -1723,7 +1768,7 @@
 .page--mcp .pac-hero-metric--eff,
 .page--freecooling .pac-hero-metric--eff {
   top: 32px;
-  right: -28px;
+  right: 0;
   width: 253px;
   max-width: 253px;
 }

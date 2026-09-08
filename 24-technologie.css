@@ -169,8 +169,7 @@ button {
   height: 24px;
   flex-shrink: 0;
   object-fit: contain;
-  /* Figma arrow-right-02 exports as a down chevron; rotate to point right */
-  transform: rotate(-90deg) scaleX(-1);
+  transform: none;
 }
 
 .btn--blue {
@@ -186,9 +185,16 @@ button {
 .btn--white {
   background: var(--white);
   color: var(--black);
+  width: 354.333px;
+  max-width: 100%;
   min-height: 64px;
+  height: 64px;
   padding: 16px 24px;
   gap: 10px;
+  font-size: 21.333px;
+  font-weight: 600;
+  line-height: 32px;
+  text-transform: none;
 }
 
 .nav__toggle {
@@ -274,15 +280,15 @@ button {
   object-position: center;
 }
 
-/* ── Partners / brand marquee — Figma 2596:24191 Social proof ── */
+/* ── Partners / brand marquee — same logos as index.html ── */
 .partners,
 .brands {
   width: 100%;
-  min-height: 116.588px;
+  min-height: 120px;
   height: auto;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
   background: #000;
   padding: 24px 0;
@@ -313,21 +319,13 @@ button {
   display: block;
   flex: 0 0 auto;
   width: auto;
-  height: auto;
+  height: 56px;
+  max-height: 56px;
   max-width: none;
   object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
 }
-
-.brand-row img:nth-child(1) { width: 116.573px; height: 68.588px; }
-.brand-row img:nth-child(2) { width: 102.901px; height: 66.441px; }
-.brand-row img:nth-child(3) { width: 119.714px; height: 66.441px; }
-.brand-row img:nth-child(4) { width: 145.984px; height: 30.881px; }
-.brand-row img:nth-child(5) { width: 82.339px; height: 68.588px; }
-.brand-row img:nth-child(6) { width: 100.754px; height: 56px; }
-.brand-row img:nth-child(7) { width: 208.891px; height: 49.102px; }
-.brand-row img:nth-child(8) { width: 101.906px; height: 56px; }
-.brand-row img:nth-child(9) { width: 175.316px; height: 55.809px; }
-.brand-row img:nth-child(10) { width: 228.306px; height: 49.364px; }
 
 @keyframes brand-marquee {
   from {
@@ -415,7 +413,7 @@ button {
   overflow: hidden;
 }
 
-/* Figma 2596:24229 — Bold 56 / transparent fill + Primary stroke */
+/* Figma 2596:24229 — Raleway Bold 56, outlined Primary */
 .tech-card__number {
   margin: 0;
   font-family: var(--font);
@@ -423,8 +421,9 @@ button {
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -1.715px;
-  color: transparent;
-  -webkit-text-stroke: 1.75px var(--blue, #1212ff);
+  color: #1212ff;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1.75px #1212ff;
   paint-order: stroke fill;
 }
 
@@ -568,23 +567,30 @@ button {
 .contact-card__deco {
   position: absolute;
   top: -61px;
-  left: calc(50% + 169px - 338px / 2);
+  left: 296px;
   width: 338px;
   height: 315px;
-  opacity: 0.13;
-  object-fit: cover;
+  margin-left: 0;
+  transform: none;
+  opacity: 0.18;
+  filter: brightness(0) invert(1);
+  mix-blend-mode: normal;
+  object-fit: contain;
   object-position: bottom;
   pointer-events: none;
+  z-index: 1;
 }
 
 .contact-card__content {
   position: absolute;
-  top: 50%;
+  top: 31px;
   left: 58px;
-  transform: translateY(-50%);
+  z-index: 2;
   width: 480px;
+  height: 420px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 26px;
   color: var(--white);
 }
@@ -599,10 +605,19 @@ button {
   letter-spacing: -2.3942px;
 }
 
+/* Figma 2656:39901 — 16px between title and contact details */
+.contact-card__content > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
 .contact-card__details {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 100%;
 }
 
 /* Figma 2656:39907 — Raleway Medium 24 / 1.5 */
@@ -1045,19 +1060,13 @@ button {
     padding-right: 12px;
   }
 
-  .brand-row img:nth-child(1) { width: 82px; height: 48px; }
-  .brand-row img:nth-child(2) { width: 72px; height: 47px; }
-  .brand-row img:nth-child(3) { width: 84px; height: 47px; }
-  .brand-row img:nth-child(4) { width: 102px; height: 22px; }
-  .brand-row img:nth-child(5) { width: 58px; height: 48px; }
-  .brand-row img:nth-child(6) { width: 71px; height: 39px; }
-  .brand-row img:nth-child(7) { width: 146px; height: 34px; }
-  .brand-row img:nth-child(8) { width: 71px; height: 39px; }
-  .brand-row img:nth-child(9) { width: 123px; height: 39px; }
-  .brand-row img:nth-child(10) { width: 160px; height: 35px; }
+  .brand-row img {
+    height: 48px;
+    max-height: 48px;
+  }
 
   .brand-track {
-    animation: brand-marquee 22s linear infinite;
+    animation: brand-marquee 24s linear infinite;
   }
 
   .tech {
@@ -1252,8 +1261,9 @@ button {
   .tech-card__number {
     font-size: 48px;
     font-weight: 700;
-    color: transparent;
-    -webkit-text-stroke: 1.5px var(--blue, #1212ff);
+    color: #1212ff;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1.5px #1212ff;
   }
 
   .tech-card__title {
@@ -1282,6 +1292,11 @@ button {
   }
 
   .contact-card__content {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
     padding: 32px 20px;
   }
 
