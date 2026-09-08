@@ -169,6 +169,7 @@ button {
   height: 24px;
   flex-shrink: 0;
   object-fit: contain;
+  /* Figma arrow-right-02 exports as a down chevron; rotate to point right */
   transform: rotate(-90deg) scaleX(-1);
 }
 
@@ -185,6 +186,9 @@ button {
 .btn--white {
   background: var(--white);
   color: var(--black);
+  min-height: 64px;
+  padding: 16px 24px;
+  gap: 10px;
 }
 
 .nav__toggle {

@@ -112,6 +112,29 @@
   color: #000;
 }
 
+/* Prevent icon squeeze across technology detail feature rows */
+.page--orc img[width][height],
+.page--pac img[width][height],
+.page--gtb img[width][height],
+.page--mcp img[width][height],
+.page--freecooling img[width][height] {
+  max-width: none;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.page--mcp .hero--detail,
+.page--mcp .hero__visual {
+  overflow: visible;
+}
+
+@media (min-width: 1200px) {
+  .page--orc .orc-process .detail-title,
+  .page--orc .orc-elig__header .detail-title {
+    white-space: nowrap;
+  }
+}
+
 .page--orc .detail-desc,
 .page--pac .detail-desc,
 .page--gtb .detail-desc,

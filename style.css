@@ -1048,22 +1048,59 @@ header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 24px;
-  padding: 0 38px;
+  gap: 10px;
+  padding: 0 24px;
   font-family: Raleway, "DM Sans", Arial, sans-serif;
   font-size: 21.333px;
   font-weight: 600;
   line-height: 32px;
   white-space: nowrap;
   box-shadow: 0 0 25px rgba(16, 24, 40, 0.09);
+  transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .hero-actions .btn:first-child {
   flex-basis: 386px;
   width: 386px;
   min-width: 386px;
-  padding: 0 56px;
+  padding: 0 24px;
   box-shadow: 0 1.333px 2.667px rgba(16, 24, 40, 0.05);
+}
+
+.hero-btn-arrow {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  object-fit: contain;
+}
+
+.hero-actions .hero-btn-light {
+  background: #fff !important;
+  border: 0 !important;
+  color: #1212ff !important;
+}
+
+.hero-actions .hero-btn-light:hover {
+  background: #1212ff !important;
+  color: #fff !important;
+  box-shadow: 0 8px 24px rgba(18, 18, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.hero-actions .hero-btn-light:hover .hero-btn-arrow {
+  filter: brightness(0) invert(1);
+}
+
+.tech-actions .tech-action-btn--light:hover {
+  background: #1212ff !important;
+  color: #fff !important;
+  border-color: #1212ff !important;
+  box-shadow: 0 8px 24px rgba(18, 18, 255, 0.28);
+  transform: translateY(-1px);
+}
+
+.tech-actions .tech-action-btn--light:hover .tech-action-btn__arrow {
+  filter: brightness(0) invert(1);
 }
 
 .stats {
@@ -1146,7 +1183,7 @@ header {
 .why {
   height: auto;
   min-height: 0;
-  padding: 104px 0 96px;
+  padding: 96px 0;
   background: #fff;
 }
 
@@ -1157,9 +1194,11 @@ header {
   top: 22px;
   width: 704px;
   height: 657px;
-  background: url("assets/images/logo/electris-mark.png") center / contain no-repeat;
+  background: url("assets/images/why/why-watermark.svg") bottom center / contain
+    no-repeat;
   opacity: 0.04;
   pointer-events: none;
+  z-index: 0;
 }
 
 .why .container {
@@ -1225,9 +1264,19 @@ header {
   white-space: nowrap;
 }
 
+.why .heading {
+  height: auto;
+  align-items: center;
+  gap: 24px 60px;
+  /* Figma 2349:3219 — 29px above + below the header divider */
+  padding: 0 0 29px !important;
+  margin: 0 0 29px !important;
+  border-bottom: 1px solid #e2e8f0;
+}
+
 .why .heading p {
-  margin: 18px 0 0;
-  color: #506077;
+  margin: 16px 0 0;
+  color: #475569;
   font-family: Raleway, "DM Sans", Arial, sans-serif;
   font-size: 24px;
   font-weight: 500;
@@ -1364,9 +1413,10 @@ header {
 .reason-row hr {
   width: 560px;
   max-width: 100%;
-  margin: 20px 0;
+  /* Figma 2349:3236 — gap 15px above/below content divider */
+  margin: 15px 0;
   border: 0;
-  border-top: 1px solid #d9e1eb;
+  border-top: 1px solid #e2e8f0;
   opacity: 1;
 }
 
@@ -1447,8 +1497,8 @@ header {
   display: block;
   flex: 0 0 auto;
   width: auto;
-  height: auto;
-  max-height: 72px;
+  height: 56px;
+  max-height: 56px;
   object-fit: contain;
 }
 
@@ -2463,6 +2513,14 @@ figcaption small {
   color: rgba(255, 255, 255, 0.39);
   font-size: 16px;
   line-height: 1;
+}
+
+.footer-col .chevron img {
+  display: block;
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+  opacity: 0.9;
 }
 
 .footer-col a {

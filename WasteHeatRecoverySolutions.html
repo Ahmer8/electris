@@ -22,7 +22,13 @@
       }
       .wasteheat-hero {
         display: grid !important;
-        grid-template-columns: minmax(0, 1fr) minmax(520px, 1fr);
+        grid-template-columns: minmax(0, 1fr) minmax(480px, 1fr);
+        gap: 36px !important;
+        padding: 64px 64px 72px !important;
+        align-items: center !important;
+      }
+      .wasteheat-hero > div:first-child {
+        gap: 40px !important;
       }
       .wasteheat-hero-visual {
         min-width: 0;
@@ -1285,12 +1291,15 @@
                   </span>
                 </div>
                 <img
-                  src="assets/images/solutions-page/waste-heat-figma-arrow.png"
+                  src="assets/images/tech/btn-arrow-white.svg"
+                  alt=""
+                  width="24"
+                  height="24"
                   style="
-                    border-radius: 32px;
                     width: 24px;
                     height: 24px;
-                    object-fit: fill;
+                    flex-shrink: 0;
+                    object-fit: contain;
                   "
                 />
               </div>
@@ -2608,6 +2617,7 @@
                     "
                   >
                     <button
+                      type="button"
                       style="
                         display: flex;
                         align-items: center;
@@ -2618,9 +2628,9 @@
                         gap: 15px;
                         box-shadow: 0px 1.3333333730697632px 2px #1018280d;
                         text-align: left;
+                        cursor: pointer;
                       "
-                      onclick="alert('Pressed!')"
-                      }
+                      onclick="window.location.href='mailto:contact@electris.fr'"
                     >
                       <span
                         style="
@@ -2632,12 +2642,15 @@
                         Demander un audit gratuit
                       </span>
                       <img
-                        src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/n9opuz7r_expires_30_days.png"
+                        src="assets/images/tech/btn-arrow-blue.svg"
+                        alt=""
+                        width="24"
+                        height="24"
                         style="
-                          border-radius: 32px;
                           width: 24px;
                           height: 24px;
-                          object-fit: fill;
+                          flex-shrink: 0;
+                          object-fit: contain;
                         "
                       />
                     </button>
@@ -2666,12 +2679,13 @@
                 </div>
               </div>
               <img
-                src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/sn7vnc0v_expires_30_days.png"
+                src="assets/images/solutions-page/figma/contact-photo.png"
+                alt="Site industriel"
                 style="
                   border-radius: 43px;
                   height: 482px;
                   flex: 1;
-                  object-fit: fill;
+                  object-fit: cover;
                 "
               />
             </div>
