@@ -3,7 +3,8 @@
 .page--orc .hero--detail,
 .page--pac .hero--detail,
 .page--gtb .hero--detail,
-.page--mcp .hero--detail {
+.page--mcp .hero--detail,
+.page--freecooling .hero--detail {
   background: var(--pale);
   padding: 64px 64px 96px;
 }
@@ -12,7 +13,8 @@
 .page--orc .hero--detail .hero__title,
 .page--pac .hero--detail .hero__title,
 .page--gtb .hero--detail .hero__title,
-.page--mcp .hero--detail .hero__title {
+.page--mcp .hero--detail .hero__title,
+.page--freecooling .hero--detail .hero__title {
   font-family: var(--font);
   font-size: 48px;
   font-weight: 700;
@@ -24,7 +26,8 @@
 .page--orc .hero--detail .hero__title span,
 .page--pac .hero--detail .hero__title span,
 .page--gtb .hero--detail .hero__title span,
-.page--mcp .hero--detail .hero__title span {
+.page--mcp .hero--detail .hero__title span,
+.page--freecooling .hero--detail .hero__title span {
   color: #1212ff;
 }
 
@@ -32,7 +35,8 @@
 .page--orc .hero--detail .hero__desc,
 .page--pac .hero--detail .hero__desc,
 .page--gtb .hero--detail .hero__desc,
-.page--mcp .hero--detail .hero__desc {
+.page--mcp .hero--detail .hero__desc,
+.page--freecooling .hero--detail .hero__desc {
   margin: 13px 0 0;
   font-size: 20px;
   font-weight: 500;
@@ -43,7 +47,8 @@
 .page--orc .hero__note,
 .page--pac .hero__note,
 .page--gtb .hero__note,
-.page--mcp .hero__note {
+.page--mcp .hero__note,
+.page--freecooling .hero__note {
   font-size: 16px;
   font-weight: 600;
   line-height: 1.6;
@@ -63,7 +68,9 @@
 .page--pac .hero__visual > img,
 .page--pac .hero__visual .pac-hero__art,
 .page--mcp .hero__visual > img,
-.page--mcp .hero__visual .pac-hero__art {
+.page--mcp .hero__visual .pac-hero__art,
+.page--freecooling .hero__visual > img,
+.page--freecooling .hero__visual .pac-hero__art {
   position: absolute;
   left: 0;
   top: 31.61px;
@@ -79,11 +86,12 @@
   object-position: center;
 }
 
-/* Shared section type — Figma 2591 ORC / PAC / GTB / MCP pages */
+/* Shared section type — Figma 2591 ORC / PAC / GTB / MCP / Free Cooling pages */
 .page--orc .detail-eyebrow,
 .page--pac .detail-eyebrow,
 .page--gtb .detail-eyebrow,
-.page--mcp .detail-eyebrow {
+.page--mcp .detail-eyebrow,
+.page--freecooling .detail-eyebrow {
   font-family: var(--font);
   font-size: 24px;
   font-weight: 500;
@@ -94,7 +102,8 @@
 .page--orc .detail-title,
 .page--pac .detail-title,
 .page--gtb .detail-title,
-.page--mcp .detail-title {
+.page--mcp .detail-title,
+.page--freecooling .detail-title {
   font-family: var(--font);
   font-size: 48px;
   font-weight: 700;
@@ -106,7 +115,8 @@
 .page--orc .detail-desc,
 .page--pac .detail-desc,
 .page--gtb .detail-desc,
-.page--mcp .detail-desc {
+.page--mcp .detail-desc,
+.page--freecooling .detail-desc {
   font-family: var(--font);
   font-size: 24px;
   font-weight: 500;
@@ -117,7 +127,8 @@
 .page--orc .detail-inner,
 .page--pac .detail-inner,
 .page--gtb .detail-inner,
-.page--mcp .detail-inner {
+.page--mcp .detail-inner,
+.page--freecooling .detail-inner {
   padding-left: 32px;
   padding-right: 32px;
 }
@@ -1646,12 +1657,14 @@
   gap: 32px;
 }
 
-/* MCP page — Figma 2591:10139 */
-.page--mcp .hero__visual {
+/* MCP + Free Cooling pages — Figma 2591:10139 / 2591:10886 */
+.page--mcp .hero__visual,
+.page--freecooling .hero__visual {
   overflow: visible;
 }
 
-.page--mcp .hero__visual .pac-hero__art {
+.page--mcp .hero__visual .pac-hero__art,
+.page--freecooling .hero__visual .pac-hero__art {
   left: 0;
   top: 31.61px;
   width: 630px;
@@ -1660,35 +1673,40 @@
   object-position: 42% 48%;
 }
 
-.page--mcp .pac-hero-metric__label {
+.page--mcp .pac-hero-metric__label,
+.page--freecooling .pac-hero-metric__label {
   font-size: 15.258px;
   font-weight: 500;
   line-height: 21.797px;
   color: #475467;
 }
 
-.page--mcp .pac-hero-metric__value {
+.page--mcp .pac-hero-metric__value,
+.page--freecooling .pac-hero-metric__value {
   font-size: 28.336px;
   font-weight: 600;
   line-height: 1.3;
   color: #101828;
 }
 
-.page--mcp .pac-hero-metric--temp {
+.page--mcp .pac-hero-metric--temp,
+.page--freecooling .pac-hero-metric--temp {
   top: 15px;
   left: 0;
   width: 257px;
   max-width: 257px;
 }
 
-.page--mcp .pac-hero-metric--eff {
+.page--mcp .pac-hero-metric--eff,
+.page--freecooling .pac-hero-metric--eff {
   top: 32px;
   right: -28px;
   width: 253px;
   max-width: 253px;
 }
 
-.page--mcp .pac-hero-metric--cpe {
+.page--mcp .pac-hero-metric--cpe,
+.page--freecooling .pac-hero-metric--cpe {
   top: auto;
   bottom: -18px;
   left: 152px;
@@ -1696,7 +1714,8 @@
   max-width: 277px;
 }
 
-.page--mcp .pac-process__flow img {
+.page--mcp .pac-process__flow img,
+.page--freecooling .pac-process__flow img {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
@@ -1705,78 +1724,94 @@
   filter: none;
 }
 
-.page--mcp .orc-results {
+.page--mcp .orc-results,
+.page--freecooling .orc-results {
   background: #fff;
 }
 
-.page--mcp .orc-reasons .detail-eyebrow {
+.page--mcp .orc-reasons .detail-eyebrow,
+.page--freecooling .orc-reasons .detail-eyebrow {
   color: #898888;
 }
 
-.page--mcp .orc-tile--1 .orc-tile__meta {
+.page--mcp .orc-tile--1 .orc-tile__meta,
+.page--freecooling .orc-tile--1 .orc-tile__meta {
   max-width: 220px;
 }
 
-.page--mcp .orc-tile--6 .orc-tile__meta {
+.page--mcp .orc-tile--6 .orc-tile__meta,
+.page--freecooling .orc-tile--6 .orc-tile__meta {
   max-width: 190px;
 }
 
-.page--mcp .footer__col:nth-child(3) ul {
+.page--mcp .footer__col:nth-child(3) ul,
+.page--freecooling .footer__col:nth-child(3) ul {
   gap: 16px;
 }
 
-.page--mcp .orc-problem {
+.page--mcp .orc-problem,
+.page--freecooling .orc-problem {
   padding: 96px 0;
 }
 
-.page--mcp .orc-problem .detail-inner {
+.page--mcp .orc-problem .detail-inner,
+.page--freecooling .orc-problem .detail-inner {
   max-width: 1280px;
 }
 
-.page--mcp .orc-problem .detail-split {
+.page--mcp .orc-problem .detail-split,
+.page--freecooling .orc-problem .detail-split {
   align-items: center;
   gap: 48px;
 }
 
-.page--mcp .orc-problem .orc-list {
+.page--mcp .orc-problem .orc-list,
+.page--freecooling .orc-problem .orc-list {
   gap: 18px;
 }
 
-.page--mcp .orc-problem .orc-list li {
+.page--mcp .orc-problem .orc-list li,
+.page--freecooling .orc-problem .orc-list li {
   font-size: 24px;
   font-weight: 800;
   line-height: 1.5;
   color: #0f172a;
 }
 
-.page--mcp .orc-case {
+.page--mcp .orc-case,
+.page--freecooling .orc-case {
   max-width: 1216px;
   width: 100%;
   gap: 0;
 }
 
-.page--mcp .orc-case--alt {
+.page--mcp .orc-case--alt,
+.page--freecooling .orc-case--alt {
   gap: 55px;
 }
 
-.page--mcp .orc-case__copy {
+.page--mcp .orc-case__copy,
+.page--freecooling .orc-case__copy {
   width: 490px;
   max-width: 490px;
   flex: 0 0 490px;
 }
 
-.page--mcp .orc-case:first-of-type .orc-case__card {
+.page--mcp .orc-case:first-of-type .orc-case__card,
+.page--freecooling .orc-case:first-of-type .orc-case__card {
   min-height: 325px;
 }
 
-.page--mcp .orc-case__visual {
+.page--mcp .orc-case__visual,
+.page--freecooling .orc-case__visual {
   flex: 0 0 724px;
   width: 724px;
   max-width: 724px;
   min-height: 461px;
 }
 
-.page--mcp .orc-case--alt .orc-case__visual {
+.page--mcp .orc-case--alt .orc-case__visual,
+.page--freecooling .orc-case--alt .orc-case__visual {
   flex: 0 0 672px;
   width: 672px;
   max-width: 672px;
@@ -1784,65 +1819,78 @@
   height: 459px;
 }
 
-.page--mcp .orc-bubbles {
+.page--mcp .orc-bubbles,
+.page--freecooling .orc-bubbles {
   width: 368px;
   gap: 0;
 }
 
-.page--mcp .orc-bubbles--right {
+.page--mcp .orc-bubbles--right,
+.page--freecooling .orc-bubbles--right {
   right: 0;
   top: 62px;
 }
 
-.page--mcp .orc-bubbles--left {
+.page--mcp .orc-bubbles--left,
+.page--freecooling .orc-bubbles--left {
   left: 18px;
   top: 46px;
 }
 
-.page--mcp .orc-bubbles--right .orc-bubble--orange {
+.page--mcp .orc-bubbles--right .orc-bubble--orange,
+.page--freecooling .orc-bubbles--right .orc-bubble--orange {
   width: 302px;
   margin-left: 28px;
   margin-bottom: 22px;
 }
 
-.page--mcp .orc-bubbles--right .orc-bubble--cyan {
+.page--mcp .orc-bubbles--right .orc-bubble--cyan,
+.page--freecooling .orc-bubbles--right .orc-bubble--cyan {
   width: 256px;
   margin-left: 48px;
   margin-bottom: 22px;
 }
 
-.page--mcp .orc-bubbles--right .orc-bubble--violet {
+.page--mcp .orc-bubbles--right .orc-bubble--violet,
+.page--freecooling .orc-bubbles--right .orc-bubble--violet {
   width: 368px;
   margin-left: 0;
 }
 
-.page--mcp .orc-bubbles--left .orc-bubble--blue {
+.page--mcp .orc-bubbles--left .orc-bubble--blue,
+.page--freecooling .orc-bubbles--left .orc-bubble--blue {
   width: auto;
   margin-left: 28px;
   margin-bottom: 22px;
 }
 
-.page--mcp .orc-bubbles--left .orc-bubble--green {
+.page--mcp .orc-bubbles--left .orc-bubble--green,
+.page--freecooling .orc-bubbles--left .orc-bubble--green {
   width: auto;
   margin-left: 48px;
   margin-bottom: 22px;
 }
 
-.page--mcp .orc-bubbles--left .orc-bubble--purple {
+.page--mcp .orc-bubbles--left .orc-bubble--purple,
+.page--freecooling .orc-bubbles--left .orc-bubble--purple {
   width: 370px;
   margin-left: 0;
 }
 
 .page--mcp .orc-bubble--violet p,
-.page--mcp .orc-bubble--purple p {
+.page--mcp .orc-bubble--purple p,
+.page--freecooling .orc-bubble--violet p,
+.page--freecooling .orc-bubble--purple p {
   max-width: 280px;
 }
 
-.page--mcp .orc-reasons {
+.page--mcp .orc-reasons,
+.page--freecooling .orc-reasons {
   padding: 96px 116px 120px;
 }
 
-.page--mcp .pac-hero-metric__label img {
+.page--mcp .pac-hero-metric__label img,
+.page--freecooling .pac-hero-metric__label img {
   position: static;
   left: auto;
   top: auto;
@@ -1852,30 +1900,36 @@
   object-fit: contain;
 }
 
-.page--mcp .orc-elig .detail-inner {
+.page--mcp .orc-elig .detail-inner,
+.page--freecooling .orc-elig .detail-inner {
   max-width: 1280px;
   padding-left: 32px;
   padding-right: 32px;
 }
 
-.page--mcp .orc-elig__header .detail-eyebrow {
+.page--mcp .orc-elig__header .detail-eyebrow,
+.page--freecooling .orc-elig__header .detail-eyebrow {
   color: #475569;
   font-weight: 500;
 }
 
 .page--mcp .orc-elig__media,
-.page--mcp .orc-elig__media > img:first-child {
+.page--mcp .orc-elig__media > img:first-child,
+.page--freecooling .orc-elig__media,
+.page--freecooling .orc-elig__media > img:first-child {
   width: 471px;
   height: 428px;
 }
 
-.page--mcp .orc-elig .detail-split {
+.page--mcp .orc-elig .detail-split,
+.page--freecooling .orc-elig .detail-split {
   gap: 48px;
   max-width: 1216px;
   margin: 0 auto;
 }
 
-.page--mcp .orc-elig .orc-list {
+.page--mcp .orc-elig .orc-list,
+.page--freecooling .orc-elig .orc-list {
   width: 658px;
   max-width: 100%;
   gap: 32px;
@@ -1907,7 +1961,8 @@
   .page--freecooling .detail-inner,
   .page--pac .orc-problem .detail-inner,
   .page--gtb .orc-elig .detail-inner,
-  .page--mcp .orc-elig .detail-inner {
+  .page--mcp .orc-elig .detail-inner,
+  .page--freecooling .orc-elig .detail-inner {
     padding-left: 32px;
     padding-right: 32px;
   }
@@ -1988,14 +2043,17 @@
   .page--gtb .orc-elig__media,
   .page--gtb .orc-elig__media > img:first-child,
   .page--mcp .orc-elig__media,
-  .page--mcp .orc-elig__media > img:first-child {
+  .page--mcp .orc-elig__media > img:first-child,
+  .page--freecooling .orc-elig__media,
+  .page--freecooling .orc-elig__media > img:first-child {
     width: min(471px, 42%);
     max-width: 100%;
     height: auto;
   }
 
   .page--gtb .orc-elig .orc-list,
-  .page--mcp .orc-elig .orc-list {
+  .page--mcp .orc-elig .orc-list,
+  .page--freecooling .orc-elig .orc-list {
     width: auto;
     flex: 1;
     min-width: 0;
@@ -2100,7 +2158,9 @@
   .page--gtb .orc-elig__media,
   .page--gtb .orc-elig__media > img:first-child,
   .page--mcp .orc-elig__media,
-  .page--mcp .orc-elig__media > img:first-child {
+  .page--mcp .orc-elig__media > img:first-child,
+  .page--freecooling .orc-elig__media,
+  .page--freecooling .orc-elig__media > img:first-child {
     width: min(307px, 40%);
     max-width: 307px;
     height: auto;
@@ -2114,7 +2174,8 @@
 
   .page--pac .orc-problem .detail-split__content,
   .page--gtb .orc-elig .orc-list,
-  .page--mcp .orc-elig .orc-list {
+  .page--mcp .orc-elig .orc-list,
+  .page--freecooling .orc-elig .orc-list {
     max-width: none;
     width: auto;
     flex: 1;
@@ -2266,7 +2327,9 @@
   .page--gtb .orc-elig__media,
   .page--gtb .orc-elig__media > img:first-child,
   .page--mcp .orc-elig__media,
-  .page--mcp .orc-elig__media > img:first-child {
+  .page--mcp .orc-elig__media > img:first-child,
+  .page--freecooling .orc-elig__media,
+  .page--freecooling .orc-elig__media > img:first-child {
     width: 100%;
     max-width: 100%;
     min-width: 0;
@@ -2275,7 +2338,8 @@
 
   .page--pac .orc-problem .detail-split__content,
   .page--gtb .orc-elig .orc-list,
-  .page--mcp .orc-elig .orc-list {
+  .page--mcp .orc-elig .orc-list,
+  .page--freecooling .orc-elig .orc-list {
     width: 100%;
     max-width: 100%;
   }
@@ -2452,7 +2516,8 @@
   }
 
   .page--gtb .orc-elig .orc-list,
-  .page--mcp .orc-elig .orc-list {
+  .page--mcp .orc-elig .orc-list,
+  .page--freecooling .orc-elig .orc-list {
     gap: 18px;
     width: 100%;
     max-width: 100%;
