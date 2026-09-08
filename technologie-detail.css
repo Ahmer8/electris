@@ -6,22 +6,164 @@
   padding: 64px 64px 96px;
 }
 
+/* Figma 2591:7995 — Bold 48 / 64 / -1px */
+.page--orc .hero--detail .hero__title,
+.page--pac .hero--detail .hero__title {
+  font-family: var(--font);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 64px;
+  letter-spacing: -1px;
+  color: #000;
+}
+
 .page--orc .hero--detail .hero__title span,
 .page--pac .hero--detail .hero__title span {
   color: #1212ff;
+}
+
+/* Figma 2591:7996 / 2591:8707 — Medium 20 / 1.6 */
+.page--orc .hero--detail .hero__desc,
+.page--pac .hero--detail .hero__desc {
+  margin: 13px 0 0;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.6;
+  color: #000;
 }
 
 .page--orc .hero__note,
 .page--pac .hero__note {
   font-size: 16px;
   font-weight: 600;
+  line-height: 1.6;
   color: #0f172a;
   align-self: center;
 }
 
-.page--orc .hero__visual img,
-.page--pac .hero__visual img {
+.page--orc .hero__visual {
+  position: relative;
+  overflow: hidden;
+  height: 473px;
+}
+
+/* Figma 2591:8005–8007 — hero art only (not metric card icons) */
+.page--orc .hero__visual > img,
+.page--orc .hero__visual .pac-hero__art,
+.page--pac .hero__visual > img,
+.page--pac .hero__visual .pac-hero__art {
+  position: absolute;
+  left: 0;
+  top: 31.61px;
+  width: min(100%, 630px);
+  height: 441px;
+  max-width: none;
+  object-fit: cover;
+  object-position: 42% 48%;
+}
+
+.page--pac .hero__visual .pac-hero__art {
   object-fit: contain;
+  object-position: center;
+}
+
+/* Shared section type — Figma 2591 ORC / PAC pages */
+.page--orc .detail-eyebrow,
+.page--pac .detail-eyebrow {
+  font-family: var(--font);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.page--orc .detail-title,
+.page--pac .detail-title {
+  font-family: var(--font);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -2.3942px;
+  color: #000;
+}
+
+.page--orc .detail-desc,
+.page--pac .detail-desc {
+  font-family: var(--font);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #475569;
+}
+
+.page--orc .detail-inner,
+.page--pac .detail-inner {
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+/* PAC process flow — Figma 2591:8809 */
+.pac-process__flow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin: 16px 0 0;
+}
+
+.pac-process__flow span {
+  font-family: var(--font);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #475569;
+  white-space: nowrap;
+}
+
+.pac-process__flow img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  object-fit: contain;
+  /* Figma arrow-right-02: vertical chevron rotated to point right */
+  transform: rotate(-90deg) scaleX(-1);
+  filter: none;
+}
+
+/* PAC hero metric cards — Figma 2591:8719 */
+.page--pac .pac-hero-metric__label {
+  font-size: 15.258px;
+  font-weight: 500;
+  line-height: 21.797px;
+  color: #475467;
+}
+
+.page--pac .pac-hero-metric__value {
+  font-size: 28.336px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #101828;
+}
+
+.page--pac .orc-results {
+  background: #fff;
+}
+
+.page--pac .orc-tile--1 .orc-tile__meta {
+  max-width: 220px;
+}
+
+.page--pac .orc-tile--6 .orc-tile__meta {
+  max-width: 190px;
+}
+
+.page--pac .orc-reasons .detail-eyebrow {
+  color: #898888;
+}
+
+.page--pac .footer__col:nth-child(3) ul {
+  gap: 16px;
 }
 
 /* PAC hero — isometric illustration + floating metric cards */
@@ -61,10 +203,18 @@
   color: #475466;
 }
 
-.pac-hero-metric__label img {
+.page--pac .pac-hero-metric__label img,
+.page--orc .pac-hero-metric__label img {
+  position: static;
+  left: auto;
+  top: auto;
   flex-shrink: 0;
   width: 21px;
   height: 21px;
+  max-width: 21px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
 }
 
 .pac-hero-metric__divider {
@@ -166,6 +316,8 @@
 
 .orc-problem .detail-inner {
   max-width: 1280px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .orc-problem .detail-split {
@@ -235,7 +387,7 @@
 /* Process diagram */
 .orc-process {
   background: #fff;
-  padding: 48px 0 96px;
+  padding: 48px 0;
   text-align: center;
 }
 
@@ -250,6 +402,7 @@
   margin-right: auto;
   font-size: 20px;
   font-weight: 500;
+  line-height: 1.5;
   color: #475569;
 }
 
@@ -261,11 +414,17 @@
   margin: 48px auto 0;
 }
 
-/* Metrics / PPA */
+/* Metrics / PPA — Figma 2591:8075 (32 outer + 64 inner ≈ 96) */
 .orc-metrics {
   background: #fff;
   padding: 96px 0;
   text-align: center;
+}
+
+.page--orc .orc-metrics .detail-title,
+.page--orc .orc-process .detail-title,
+.page--orc .orc-elig__header .detail-title {
+  line-height: 1.1;
 }
 
 .orc-metrics .detail-title {
@@ -287,7 +446,7 @@
   gap: 24px;
   max-width: 1280px;
   margin: 48px auto 0;
-  padding: 0 64px;
+  padding: 0 32px;
 }
 
 .orc-metric {
@@ -415,10 +574,14 @@
   gap: 48px;
 }
 
-/* Reasons — white illustrated cards */
+.orc-elig .orc-list {
+  gap: 32px;
+}
+
+/* Reasons — Figma 2591:8182 pt 96 / pb 120 / px 32 */
 .orc-reasons {
   background: #fff;
-  padding: 96px 80px 120px;
+  padding: 96px 32px 120px;
 }
 
 .orc-reasons__header {
@@ -513,16 +676,19 @@
   overflow: hidden;
 }
 
+/* Figma 2591:8307 — left background logo watermark */
 .orc-gallery__deco {
   position: absolute;
+  z-index: 0;
   left: -52px;
   top: 22px;
   width: 704px;
   height: 657px;
-  object-fit: contain;
-  object-position: bottom;
-  opacity: 0.04;
+  object-fit: cover;
+  object-position: bottom left;
+  opacity: 1;
   pointer-events: none;
+  user-select: none;
 }
 
 .orc-gallery__header {
@@ -549,7 +715,9 @@
 
 .orc-gallery__desc {
   margin: 16px 0 0;
+  font-family: var(--font);
   font-size: 20px;
+  font-weight: 400;
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -563,7 +731,7 @@
   gap: 12px;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 56px;
+  padding: 0 32px;
   min-height: 520px;
 }
 
@@ -593,8 +761,12 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.22);
+  background: rgba(0, 0, 0, 0.2);
   pointer-events: none;
+}
+
+.orc-tile--1 .orc-tile__photo::after {
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .orc-tile__badge {
@@ -625,7 +797,10 @@
 
 .orc-tile__meta {
   margin: 4px 0 0;
+  font-family: var(--font);
   font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
   color: rgba(0, 0, 0, 0.5);
   max-width: 180px;
 }
@@ -679,7 +854,12 @@
   color: #000;
 }
 
-/* Results */
+/* Results — Figma 2591:8308 bg white */
+.page--orc .orc-results {
+  background: #fff;
+  padding: 96px 116px;
+}
+
 .orc-results {
   background: var(--pale);
   padding: 96px 116px;
@@ -732,17 +912,28 @@
   min-height: 333px;
 }
 
+.page--orc .orc-case:first-of-type .orc-case__card {
+  min-height: 350px;
+  height: 350px;
+  box-sizing: border-box;
+}
+
 .orc-case__card h3 {
   margin: 0;
+  font-family: var(--font);
   font-size: 32px;
-  font-weight: 700;
-  line-height: 40px;
+  font-weight: 600;
+  line-height: 40.348px;
+  text-transform: capitalize;
   color: #272522;
 }
 
 .orc-case__card .meta {
   margin: 8px 0 24px;
-  font-size: 17px;
+  font-family: var(--font);
+  font-size: 16.812px;
+  font-weight: 400;
+  line-height: 25.218px;
   color: #272522;
 }
 
@@ -759,10 +950,11 @@
   display: flex;
   gap: 8px;
   align-items: flex-start;
+  font-family: var(--font);
   font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.28px;
-  line-height: 1.2;
+  line-height: 16.8px;
   color: #000;
 }
 
@@ -896,16 +1088,19 @@
 
 .orc-bubble p {
   margin: 0;
-  font-size: 20px;
+  font-family: var(--font);
+  font-size: 20.184px;
   font-weight: 400;
-  letter-spacing: -0.36px;
-  line-height: 1.2;
+  letter-spacing: -0.3604px;
+  line-height: normal;
+  color: #fff;
 }
 
 .orc-bubble small {
   display: block;
-  margin-top: 3px;
-  font-size: 14px;
+  margin-top: 2.88px;
+  font-size: 14.417px;
+  line-height: 1.3;
   color: rgba(255, 255, 255, 0.8);
 }
 
@@ -915,6 +1110,70 @@
 .orc-bubble--blue { background: #2e75f5; }
 .orc-bubble--green { background: #16a34a; }
 .orc-bubble--purple { background: #9e78dc; }
+
+/* ORC results pills — Figma 2591:8569 / 2591:859x */
+.page--orc .orc-case__visual {
+  width: 724px;
+  max-width: 724px;
+  flex: 0 0 auto;
+}
+
+.page--orc .orc-case--alt .orc-case__visual {
+  width: 672px;
+  max-width: 672px;
+}
+
+.page--orc .orc-bubbles--right {
+  right: 0;
+  top: 62px;
+  width: 368px;
+  gap: 0;
+}
+
+.page--orc .orc-bubbles--right .orc-bubble--orange {
+  width: 302px;
+  margin-left: 28px;
+  margin-bottom: 22px;
+}
+
+.page--orc .orc-bubbles--right .orc-bubble--cyan {
+  width: 256px;
+  margin-left: 48px;
+  margin-bottom: 22px;
+}
+
+.page--orc .orc-bubbles--right .orc-bubble--violet {
+  width: 368px;
+  margin-left: 0;
+}
+
+.page--orc .orc-bubbles--left {
+  left: 0;
+  top: 46px;
+  width: 370px;
+  gap: 0;
+}
+
+.page--orc .orc-bubbles--left .orc-bubble--blue {
+  width: 254px;
+  margin-left: 28px;
+  margin-bottom: 22px;
+}
+
+.page--orc .orc-bubbles--left .orc-bubble--green {
+  width: 229px;
+  margin-left: 48px;
+  margin-bottom: 22px;
+}
+
+.page--orc .orc-bubbles--left .orc-bubble--purple {
+  width: 370px;
+  margin-left: 0;
+}
+
+.page--orc .footer__col:nth-child(3) ul {
+  gap: 16px;
+}
 
 /* PAC results — Figma 2591:9049 */
 .page--pac .orc-case {
@@ -971,12 +1230,12 @@
 /* Stat pills — Figma 2591:9310 / 2591:9337 */
 .page--pac .orc-bubbles {
   width: 368px;
-  gap: 48px;
+  gap: 0;
 }
 
 .page--pac .orc-bubbles--right {
-  right: 38px;
-  top: 70px;
+  right: 0;
+  top: 62px;
 }
 
 .page--pac .orc-bubbles--left {
@@ -992,11 +1251,13 @@
 .page--pac .orc-bubbles--right .orc-bubble--orange {
   width: 302px;
   margin-left: 28px;
+  margin-bottom: 22px;
 }
 
 .page--pac .orc-bubbles--right .orc-bubble--cyan {
   width: 256px;
   margin-left: 48px;
+  margin-bottom: 22px;
 }
 
 .page--pac .orc-bubbles--right .orc-bubble--violet {
@@ -1007,11 +1268,13 @@
 .page--pac .orc-bubbles--left .orc-bubble--blue {
   width: 254px;
   margin-left: 28px;
+  margin-bottom: 22px;
 }
 
 .page--pac .orc-bubbles--left .orc-bubble--green {
   width: 229px;
   margin-left: 48px;
+  margin-bottom: 22px;
 }
 
 .page--pac .orc-bubbles--left .orc-bubble--purple {

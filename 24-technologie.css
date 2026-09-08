@@ -259,7 +259,7 @@ button {
   overflow: hidden;
 }
 
-.hero__visual img {
+.hero__visual > img {
   position: absolute;
   left: -7.67%;
   top: -6.25%;
@@ -856,7 +856,7 @@ button {
     margin: 0 auto;
   }
 
-  .hero__visual img {
+  .hero__visual > img {
     position: absolute;
     left: -7.67%;
     top: -6.25%;
