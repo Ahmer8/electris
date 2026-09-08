@@ -1461,6 +1461,75 @@ body.wasteheat-page .wasteheat-industries .sector-card:focus-visible {
   body.wasteheat-page .wasteheat-hero {
     overflow: hidden;
   }
+
+  /* ---------- Figma desktop type (solution frames 2331:*) ---------- */
+  /* Hero H1 — 48 Bold, lh 64px, ls -1 */
+  body.wasteheat-page .wasteheat-hero > div:first-child > div:first-child > span[style*="font-size: 48px"] {
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    line-height: 64px !important;
+    letter-spacing: -1px !important;
+  }
+
+  /* Hero lead — 20 Medium, lh 160% */
+  body.wasteheat-page .wasteheat-hero > div:first-child > div:first-child > span[style*="font-size: 20px"] {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    line-height: 1.6 !important;
+  }
+
+  /* Section titles — 48 Bold, lh 1.1, ls -2.394 (exclude hero) */
+  body.wasteheat-page .reference-section-title,
+  body.wasteheat-page .wasteheat-content span[style*="font-size: 48px"],
+  body.wasteheat-page .wasteheat-how span[style*="font-size: 48px"],
+  body.wasteheat-page .wasteheat-industries span[style*="font-size: 48px"],
+  body.wasteheat-page .wasteheat-service span[style*="font-size: 48px"],
+  body.wasteheat-page .client-results .reference-section-title,
+  body.wasteheat-page .wasteheat-contact-cta span[style*="font-size: 48px"] {
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -2.394px !important;
+  }
+
+  /* Eyebrows / body Medium 24 — exclude ExtraBold list leads */
+  body.wasteheat-page .wasteheat-content span[style*="font-size: 24px"]:not([style*="font-weight: bold"]):not([style*="font-weight: 800"]),
+  body.wasteheat-page .wasteheat-how span[style*="font-size: 24px"]:not([style*="font-weight: bold"]):not([style*="font-weight: 800"]),
+  body.wasteheat-page .wasteheat-industries span[style*="font-size: 24px"]:not([style*="font-weight: bold"]):not([style*="font-weight: 800"]),
+  body.wasteheat-page .wasteheat-service span[style*="font-size: 24px"]:not([style*="font-weight: bold"]):not([style*="font-weight: 800"]) {
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+  }
+
+  /* ExtraBold 24 list leads keep 800 / lh 1.5 */
+  body.wasteheat-page .wasteheat-how span[style*="font-size: 24px"][style*="font-weight: bold"],
+  body.wasteheat-page .wasteheat-content span[style*="font-size: 24px"][style*="font-weight: bold"],
+  body.wasteheat-page .wasteheat-service span[style*="font-size: 24px"][style*="font-weight: bold"] {
+    font-weight: 800 !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Hero metric values — 28.336 SemiBold */
+  body.wasteheat-page .wasteheat-metric span[style*="font-size: 28px"] {
+    font-size: 28.336px !important;
+    font-weight: 600 !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Hero metric labels — 15.258 Medium */
+  body.wasteheat-page .wasteheat-metric span[style*="font-size: 15px"] {
+    font-size: 15.258px !important;
+    font-weight: 500 !important;
+    line-height: 21.797px !important;
+  }
+
+  /* Primary audit CTAs — 21.333 SemiBold / lh 32 */
+  body.wasteheat-page .wasteheat-hero span[style*="font-size: 21px"],
+  body.wasteheat-page .wasteheat-contact-cta span[style*="font-size: 21px"] {
+    font-size: 21.333px !important;
+    font-weight: 600 !important;
+    line-height: 32px !important;
+  }
 }
 
 /* ============================================================
