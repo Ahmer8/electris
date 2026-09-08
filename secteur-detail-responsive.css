@@ -209,6 +209,170 @@ body.wasteheat-page > header .btn-primary {
   line-height: 1.3 !important;
 }
 
+/* ============================================================
+   Pack ELECTRIS visual card — Figma secteurs results row 2
+   (Frame 2147224744 pattern: inset photo + staggered pills)
+   ============================================================ */
+@media (min-width: 1200px) {
+  .warehouse-results .warehouse-result-grid + .warehouse-result-grid {
+    display: grid !important;
+    grid-template-columns: minmax(0, 703px) minmax(0, 489px) !important;
+    gap: 24px !important;
+    max-width: 1280px !important;
+    width: 100% !important;
+    margin: 84px auto 0 !important;
+    align-items: flex-start !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 703px !important;
+    height: 459px !important;
+    min-height: 459px !important;
+    overflow: hidden !important;
+    border: 8.4px solid #fff !important;
+    border-radius: 33.6px !important;
+    background: linear-gradient(180deg, #9badd0 0%, #a0a1fc 100%) !important;
+    box-sizing: border-box !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside > img {
+    position: absolute !important;
+    top: 4px !important;
+    right: 6px !important;
+    left: auto !important;
+    bottom: auto !important;
+    width: 444px !important;
+    height: 450px !important;
+    max-width: none !important;
+    min-height: 0 !important;
+    border-radius: 33.6px !important;
+    object-fit: cover !important;
+    aspect-ratio: auto !important;
+    z-index: 1 !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-labels {
+    position: absolute !important;
+    left: 18px !important;
+    top: 46px !important;
+    width: 368px !important;
+    height: 348px !important;
+    display: block !important;
+    gap: 0 !important;
+    margin: 0 !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label {
+    position: absolute !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+    grid-template-columns: unset !important;
+    width: max-content !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    height: auto !important;
+    min-height: 78px !important;
+    margin: 0 !important;
+    padding: 16px !important;
+    border-radius: 999px !important;
+    color: #fff !important;
+    box-shadow:
+      0 2px 3px rgba(15, 23, 42, 0.08),
+      0 12px 12px rgba(15, 23, 42, 0.1) !important;
+    box-sizing: border-box !important;
+    pointer-events: auto !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label--blue {
+    left: 28px !important;
+    top: 0 !important;
+    background: #2e75f5 !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label--green {
+    left: 48px !important;
+    top: 126px !important;
+    background: #16a34a !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label--violet {
+    left: 0 !important;
+    top: 252px !important;
+    background: #9e78dc !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon {
+    position: relative !important;
+    flex: 0 0 46px !important;
+    width: 46px !important;
+    height: 46px !important;
+    display: grid !important;
+    place-items: center !important;
+    border: 0 !important;
+    border-radius: 999px !important;
+    background: transparent !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon {
+    background: rgba(255, 255, 255, 0.15) !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label .warehouse-badge-icon > img {
+    position: static !important;
+    inset: auto !important;
+    width: 32px !important;
+    height: 32px !important;
+    max-width: none !important;
+    transform: none !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label--green .warehouse-badge-icon > img {
+    transform: rotate(-6deg) !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label--violet .warehouse-badge-icon {
+    width: 49px !important;
+    height: 49px !important;
+    flex-basis: 49px !important;
+    transform: rotate(4deg) !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label > span:last-child {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    gap: 0 !important;
+    min-width: 0 !important;
+    color: #fff !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label > span:last-child small {
+    display: block !important;
+    margin-top: 2.8px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    white-space: normal !important;
+  }
+
+  .warehouse-results .warehouse-result-photo--inside .warehouse-label > span:last-child small .figma-line {
+    display: block !important;
+    white-space: nowrap !important;
+  }
+
+  .warehouse-results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-copy {
+    width: 100% !important;
+    max-width: 489px !important;
+  }
+
+  .warehouse-results .warehouse-result-grid + .warehouse-result-grid .warehouse-result-cta {
+    background: linear-gradient(90deg, #9badd0 0%, #a0a1fc 100%) !important;
+  }
+}
+
 /* Contact form */
 .warehouse-form h2 {
   font-family: "Raleway", system-ui, sans-serif !important;
@@ -389,10 +553,40 @@ body.wasteheat-page > header .btn-primary {
     margin-right: auto !important;
   }
 
-  .warehouse-result-photo,
-  .warehouse-result-photo img {
+  .warehouse-result-photo:not(.warehouse-result-photo--inside),
+  .warehouse-result-photo:not(.warehouse-result-photo--inside) > img {
     width: 100% !important;
     max-width: 100% !important;
+  }
+
+  .warehouse-result-photo--inside {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 703px !important;
+    min-height: 420px !important;
+    margin-inline: auto !important;
+    overflow: hidden !important;
+    border: 8px solid #fff !important;
+    border-radius: 28px !important;
+    background: linear-gradient(180deg, #9badd0 0%, #a0a1fc 100%) !important;
+  }
+
+  .warehouse-result-photo--inside > img {
+    position: absolute !important;
+    top: 4px !important;
+    right: 4px !important;
+    left: auto !important;
+    width: min(58%, 360px) !important;
+    height: calc(100% - 8px) !important;
+    max-width: none !important;
+    border-radius: 24px !important;
+    object-fit: cover !important;
+  }
+
+  .warehouse-result-photo--inside .warehouse-labels {
+    left: 12px !important;
+    top: 20px !important;
+    width: min(360px, 55%) !important;
   }
 
   .warehouse-contact {
@@ -451,12 +645,23 @@ body.wasteheat-page > header .btn-primary {
     padding-bottom: 64px !important;
   }
 
-  .warehouse-result-photo,
-  .warehouse-result-photo img {
+  .warehouse-result-photo:not(.warehouse-result-photo--inside),
+  .warehouse-result-photo:not(.warehouse-result-photo--inside) > img {
     height: auto !important;
     min-height: 360px !important;
     aspect-ratio: 4 / 3;
     object-fit: cover !important;
+  }
+
+  .warehouse-result-photo--inside {
+    min-height: 380px !important;
+    aspect-ratio: auto !important;
+  }
+
+  .warehouse-result-photo--inside > img {
+    height: calc(100% - 8px) !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
   }
 
   .warehouse-result-photo--split {
