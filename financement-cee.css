@@ -159,6 +159,7 @@
   color: var(--cee-ink);
   font-size: 16px;
   font-weight: 600;
+  line-height: 1.6;
 }
 
 .cee-hero__visual {
@@ -190,9 +191,9 @@
   align-items: center;
   gap: 9px;
   margin: 0;
-  font-size: 15px;
+  font-size: 15.258px;
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 21.797px;
   color: #475467;
 }
 
@@ -211,7 +212,7 @@
 
 .cee-metric__value {
   margin: 0;
-  font-size: 28px;
+  font-size: 28.336px;
   font-weight: 600;
   line-height: 1.3;
   color: #101828;
@@ -743,6 +744,7 @@
   max-width: 540px;
   margin: 10px 0 0;
   font-size: 24px;
+  font-weight: 400;
   line-height: 1.4;
   color: #334155;
 }
@@ -788,7 +790,12 @@
 }
 
 /* Bootstrap + technologie-detail typography — lock to Figma px values */
-.cee-page .orc-problem .detail-title,
+.cee-page .orc-problem .detail-title {
+  font-size: 42px;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+}
+
 .cee-page .orc-metrics .detail-title,
 .cee-page .orc-elig__header .detail-title,
 .cee-page .orc-results__title {
@@ -845,7 +852,9 @@
 
 .cee-page .orc-metric__value {
   font-size: 32px;
+  font-weight: 700;
   line-height: normal;
+  letter-spacing: -0.8px;
 }
 
 .cee-page .orc-elig__media,
