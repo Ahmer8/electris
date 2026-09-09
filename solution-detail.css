@@ -1588,31 +1588,58 @@ body.wasteheat-page .wasteheat-industries .sector-card:focus-visible {
   }
 }
 
-/* Independance watermark — identical to cascade.html (no position overrides) */
-body.wasteheat-page .wasteheat-content {
-  display: flex !important;
-  flex-direction: column !important;
-  position: relative !important;
-  overflow: visible !important;
+/* Figma 2331:3628 — indépendance typography lock (all solution card pages) */
+/* Desktop + tablet landscape: match Figma exactly */
+@media (min-width: 901px) {
+  body.wasteheat-page .wasteheat-content,
+  body.wasteheat-page .wasteheat-content span,
+  body.wasteheat-page .wasteheat-content .reference-section-title {
+    font-family: Raleway, system-ui, sans-serif !important;
+  }
+
+  body.wasteheat-page .wasteheat-content .reference-section-title,
+  body.wasteheat-page .wasteheat-content span[style*="font-size: 48px"],
+  body.wasteheat-page .wasteheat-content span[style*="font-size: 40px"] {
+    font-family: Raleway, system-ui, sans-serif !important;
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -2.394px !important;
+    color: #1f252e !important;
+    white-space: normal !important;
+  }
+
+  body.wasteheat-page .wasteheat-content span[style*="font-size: 24px"]:not([style*="font-weight: bold"]):not([style*="font-weight: 800"]) {
+    font-family: Raleway, system-ui, sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    color: #475569 !important;
+  }
+
+  body.wasteheat-page .wasteheat-content span[style*="font-size: 24px"][style*="font-weight: bold"],
+  body.wasteheat-page .wasteheat-content span[style*="font-size: 24px"][style*="font-weight: 800"] {
+    font-family: Raleway, system-ui, sans-serif !important;
+    font-size: 24px !important;
+    font-weight: 800 !important;
+    line-height: 1.5 !important;
+    color: #0f172a !important;
+  }
 }
-body.wasteheat-page .wasteheat-content > div:first-child > section:first-child {
-  background: #f1f5f9 !important;
-}
-body.wasteheat-page .wasteheat-content > div:first-child > section:last-child {
-  background: #ffffff !important;
-}
-/* Do NOT override top/left/width/height — match cascade exactly */
-body.wasteheat-page .wasteheat-content > img[src*="indep-watermark"] {
-  position: absolute !important;
-  top: 83px !important;
-  left: 0px !important;
-  width: 703px !important;
-  height: 656px !important;
-  object-fit: fill !important;
-  opacity: 1 !important;
-  mix-blend-mode: normal !important;
-  filter: none !important;
-  pointer-events: none !important;
-  z-index: auto !important;
-  max-width: none !important;
+
+/* Override page-inline tablet rule that shrunk 24→18 inside content */
+@media (min-width: 901px) and (max-width: 1199px) {
+  body.wasteheat-page .wasteheat-content span[style*="font-size: 24px"]:not([style*="font-weight: bold"]):not([style*="font-weight: 800"]) {
+    font-size: 24px !important;
+  }
+  body.wasteheat-page .wasteheat-content span[style*="font-size: 24px"][style*="font-weight: bold"],
+  body.wasteheat-page .wasteheat-content span[style*="font-size: 24px"][style*="font-weight: 800"] {
+    font-size: 24px !important;
+  }
+  body.wasteheat-page .wasteheat-content .reference-section-title,
+  body.wasteheat-page .wasteheat-content span[style*="font-size: 48px"],
+  body.wasteheat-page .wasteheat-content span[style*="font-size: 40px"] {
+    font-size: 40px !important;
+    letter-spacing: -1.8px !important;
+  }
 }
