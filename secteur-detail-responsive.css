@@ -1071,9 +1071,17 @@ body.wasteheat-page > header .btn-primary {
 
 /* Figma 2710:60957 @ 1920 — keep Mise en service + results in a 1280 column */
 @media (min-width: 1200px) {
-  body.wasteheat-page .wasteheat-hero {
-    padding-left: max(32px, calc((100% - 1600px) / 2)) !important;
-    padding-right: max(32px, calc((100% - 1600px) / 2)) !important;
+  body.wasteheat-page {
+    --sol-col: 1280px;
+    --sol-hero: 1600px;
+    --sol-gutter: max(32px, calc((100% - var(--sol-col)) / 2));
+    --sol-hero-gutter: max(32px, calc((100% - var(--sol-hero)) / 2));
+  }
+
+  body.wasteheat-page .wasteheat-hero,
+  body.wasteheat-page .warehouse-hero {
+    padding-left: var(--sol-hero-gutter) !important;
+    padding-right: var(--sol-hero-gutter) !important;
     box-sizing: border-box !important;
   }
 
@@ -1083,19 +1091,31 @@ body.wasteheat-page > header .btn-primary {
   body.wasteheat-page .client-results,
   body.wasteheat-page .wasteheat-service,
   body.wasteheat-page .fgas-compare,
-  body.wasteheat-page .warehouse-hero,
+  body.wasteheat-page .hp-contact-live,
+  body.wasteheat-page .hp-audit-cta,
   body.wasteheat-page .warehouse-section,
   body.wasteheat-page .warehouse-ops,
   body.wasteheat-page .warehouse-tech,
   body.wasteheat-page .warehouse-results,
   body.wasteheat-page .warehouse-contact {
-    padding-left: max(32px, calc((100% - 1280px) / 2)) !important;
-    padding-right: max(32px, calc((100% - 1280px) / 2)) !important;
+    padding-left: var(--sol-gutter) !important;
+    padding-right: var(--sol-gutter) !important;
     box-sizing: border-box !important;
   }
 
   body.wasteheat-page .hp-contact-live {
-    padding: 96px 0 !important;
+    padding-top: 96px !important;
+    padding-bottom: 96px !important;
+  }
+
+  body.wasteheat-page .wasteheat-contact-cta:not(.hp-contact-live):not(.hp-audit-cta) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  body.wasteheat-page .wasteheat-contact-cta > img[src*="tagjs-prod"],
+  body.wasteheat-page .wasteheat-contact-cta > img[style*="564px"] {
+    display: none !important;
   }
 
   body.wasteheat-page .hp-contact-live__inner {

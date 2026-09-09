@@ -1477,12 +1477,15 @@ body.wasteheat-page .wasteheat-industries .sector-card:focus-visible {
 @media (min-width: 1200px) {
   body.wasteheat-page {
     overflow-x: hidden;
+    --sol-col: 1280px;
+    --sol-hero: 1600px;
+    --sol-gutter: max(32px, calc((100% - var(--sol-col)) / 2));
+    --sol-hero-gutter: max(32px, calc((100% - var(--sol-hero)) / 2));
   }
 
-  /* Figma 2710:60957 @ 1920 — hero column 1600 (inset 160), other sections 1280 (inset 320). */
   body.wasteheat-page .wasteheat-hero {
-    padding-left: max(32px, calc((100% - 1600px) / 2)) !important;
-    padding-right: max(32px, calc((100% - 1600px) / 2)) !important;
+    padding-left: var(--sol-hero-gutter) !important;
+    padding-right: var(--sol-hero-gutter) !important;
     box-sizing: border-box !important;
   }
 
@@ -1491,26 +1494,52 @@ body.wasteheat-page .wasteheat-industries .sector-card:focus-visible {
   body.wasteheat-page .wasteheat-industries,
   body.wasteheat-page .client-results,
   body.wasteheat-page .wasteheat-service,
-  body.wasteheat-page .fgas-compare {
-    padding-left: max(32px, calc((100% - 1280px) / 2)) !important;
-    padding-right: max(32px, calc((100% - 1280px) / 2)) !important;
+  body.wasteheat-page .fgas-compare,
+  body.wasteheat-page .hp-contact-live,
+  body.wasteheat-page .hp-audit-cta {
+    padding-left: var(--sol-gutter) !important;
+    padding-right: var(--sol-gutter) !important;
     box-sizing: border-box !important;
   }
 
-  /* Figma CTA 2710:61663 — 1280 column, 32px inset, two 592×483 cards, 32px gap */
   body.wasteheat-page .hp-contact-live {
-    padding: 96px 0 !important;
+    padding-top: 96px !important;
+    padding-bottom: 96px !important;
   }
 
-  body.wasteheat-page .hp-contact-live__inner {
+  body.wasteheat-page .wasteheat-contact-cta:not(.hp-contact-live):not(.hp-audit-cta) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  body.wasteheat-page .wasteheat-contact-cta > img[src*="tagjs-prod"],
+  body.wasteheat-page .wasteheat-contact-cta > img[style*="564px"] {
+    display: none !important;
+  }
+
+  body.wasteheat-page .hp-contact-live__inner,
+  body.wasteheat-page .hp-results-inner,
+  body.wasteheat-page .cpe-results-inner,
+  body.wasteheat-page .fgas-compare-inner,
+  body.wasteheat-page .hp-audit-cta__panel,
+  body.wasteheat-page .wasteheat-how > div,
+  body.wasteheat-page .wasteheat-how-diagram,
+  body.wasteheat-page .wasteheat-industries > div:not(.wasteheat-industries-mark) {
     width: 100% !important;
     max-width: 1280px !important;
     margin-inline: auto !important;
-    padding-inline: 32px !important;
+    box-sizing: border-box !important;
+  }
+
+  body.wasteheat-page .hp-contact-live__inner {
     display: flex !important;
     align-items: stretch !important;
     gap: 32px !important;
-    box-sizing: border-box !important;
+    padding-inline: 32px !important;
+  }
+
+  body.wasteheat-page .wasteheat-industries > div:not(.wasteheat-industries-mark) {
+    padding-inline: 0 !important;
   }
 
   body.wasteheat-page .hp-contact-live__card,
