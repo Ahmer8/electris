@@ -407,7 +407,7 @@
         .wasteheat-how,
         .wasteheat-industries,
         .wasteheat-service,
-        .wasteheat-contact-cta > div {
+        .wasteheat-contact-cta:not(.hp-contact-live) > div {
           padding-inline: 48px !important;
         }
 
@@ -615,27 +615,27 @@
           padding-inline: 18px !important;
         }
 
-        .wasteheat-contact-cta > img {
+        .wasteheat-contact-cta:not(.hp-contact-live) > img {
           height: clamp(260px, 48vw, 420px) !important;
           object-fit: cover !important;
         }
 
-        .wasteheat-contact-cta > div {
+        .wasteheat-contact-cta:not(.hp-contact-live) > div {
           padding: 64px 24px !important;
         }
 
-        .wasteheat-contact-cta > div > div:last-child {
+        .wasteheat-contact-cta:not(.hp-contact-live) > div > div:last-child {
           flex-direction: column !important;
           padding-inline: 0 !important;
         }
 
-        .wasteheat-contact-cta > div > div:last-child > div,
-        .wasteheat-contact-cta > div > div:last-child > img {
+        .wasteheat-contact-cta:not(.hp-contact-live) > div > div:last-child > div,
+        .wasteheat-contact-cta:not(.hp-contact-live) > div > div:last-child > img {
           width: 100% !important;
           flex: none !important;
         }
 
-        .wasteheat-contact-cta > div > div:last-child > div > div {
+        .wasteheat-contact-cta:not(.hp-contact-live) > div > div:last-child > div > div {
           width: 100% !important;
           padding: 32px 28px !important;
         }
@@ -649,7 +649,7 @@
           justify-content: center;
         }
 
-        .wasteheat-contact-cta > div > div:last-child > img {
+        .wasteheat-contact-cta:not(.hp-contact-live) > div > div:last-child > img {
           height: auto !important;
           aspect-ratio: 1.25 / 1;
           object-fit: cover !important;
@@ -725,11 +725,11 @@
           font-size: 25px !important;
         }
 
-        .wasteheat-contact-cta > div > div:last-child > div {
+        .wasteheat-contact-cta:not(.hp-contact-live) > div > div:last-child > div {
           border-radius: 30px !important;
         }
 
-        .wasteheat-contact-cta > div > div:last-child > div > img {
+        .wasteheat-contact-cta:not(.hp-contact-live) > div > div:last-child > div > img {
           width: 45% !important;
           height: auto !important;
           opacity: 0.65;
@@ -763,7 +763,7 @@
         .wasteheat-how,
         .wasteheat-industries,
         .wasteheat-service,
-        .wasteheat-contact-cta > div {
+        .wasteheat-contact-cta:not(.hp-contact-live) > div {
           padding-inline: 16px !important;
         }
       }
@@ -796,6 +796,38 @@
   <style>
 
       /* Contact CTA — HTML text + bg grid lines + card logo watermark */
+      .hp-contact-live.wasteheat-contact-cta > .hp-contact-live__inner {
+        padding: 0 32px !important;
+      }
+      .hp-contact-live.wasteheat-contact-cta > .hp-contact-live__bg {
+        height: auto !important;
+        object-fit: contain !important;
+      }
+      @media (max-width: 1100px) {
+        .hp-contact-live.wasteheat-contact-cta > .hp-contact-live__inner {
+          padding: 0 !important;
+        }
+        .hp-contact-live__deco {
+        position: absolute !important;
+        top: -61px !important;
+        left: 296px !important;
+        width: 338px !important;
+        height: 315px !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+        -webkit-filter: none !important;
+        mix-blend-mode: normal !important;
+        object-fit: fill !important;
+        object-position: bottom !important;
+        pointer-events: none !important;
+        z-index: 1 !important;
+        display: block !important;
+      }
+      }
       .hp-contact-live {
         align-self: stretch;
         background: #f1f5f9;
@@ -841,18 +873,24 @@
         display: block;
       }
             .hp-contact-live__deco {
-        position: absolute;
-        top: -61px;
-        left: calc(50% + 169px);
-        width: 338px;
-        height: 315px;
-        margin: 0;
-        object-fit: contain;
-        object-position: bottom;
-        opacity: 0.13;
-        pointer-events: none;
-        z-index: 1;
-        transform: translateX(-50%);
+        position: absolute !important;
+        top: -61px !important;
+        left: 296px !important;
+        width: 338px !important;
+        height: 315px !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+        -webkit-filter: none !important;
+        mix-blend-mode: normal !important;
+        object-fit: fill !important;
+        object-position: bottom !important;
+        pointer-events: none !important;
+        z-index: 1 !important;
+        display: block !important;
       }
       .hp-contact-live__body > div:first-child {
         display: flex;
@@ -991,18 +1029,24 @@
           width: calc(100% - 56px);
         }
               .hp-contact-live__deco {
-        position: absolute;
-        top: -61px;
-        left: calc(50% + 169px);
-        width: 338px;
-        height: 315px;
-        margin: 0;
-        object-fit: contain;
-        object-position: bottom;
-        opacity: 0.13;
-        pointer-events: none;
-        z-index: 1;
-        transform: translateX(-50%);
+        position: absolute !important;
+        top: -61px !important;
+        left: 296px !important;
+        width: 338px !important;
+        height: 315px !important;
+        max-width: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        transform: none !important;
+        opacity: 1 !important;
+        filter: none !important;
+        -webkit-filter: none !important;
+        mix-blend-mode: normal !important;
+        object-fit: fill !important;
+        object-position: bottom !important;
+        pointer-events: none !important;
+        z-index: 1 !important;
+        display: block !important;
       }
         .hp-contact-live__title { font-size: 36px; }
         .hp-contact-live__row,
@@ -3024,7 +3068,7 @@
               <img class="hp-contact-live__shape" src="assets/images/shared/contact/card-shape.svg" alt="" aria-hidden="true" />
               <img
                 class="hp-contact-live__deco"
-                src="assets/images/shared/contact/card-logo-deco.svg"
+                src="assets/images/shared/contact/card-logo-deco.svg?v=figma10"
                 alt=""
                 aria-hidden="true"
               />
