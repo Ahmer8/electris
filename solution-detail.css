@@ -1672,3 +1672,17 @@ body.wasteheat-page .wasteheat-content > img[src*="indep-watermark"] {
   mix-blend-mode: normal !important;
   opacity: 1 !important;
 }
+/* Results CTA arrow — always visible on white pill */
+body.wasteheat-page .hp-result-cta img[src*="arrow"],
+body.wasteheat-page .cpe-result-cta img[src*="arrow"],
+body.wasteheat-page .client-results img[src*="results-cta-arrow"],
+body.wasteheat-page .client-results img[src*="results/arrow"],
+body.wasteheat-page .client-results img[src*="btn-arrow"] {
+  width: 20px !important;
+  height: 20px !important;
+  flex-shrink: 0 !important;
+  display: inline-block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  object-fit: contain !important;
+}
