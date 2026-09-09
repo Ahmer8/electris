@@ -53,10 +53,12 @@
   margin: 0 auto;
 }
 
+/* Figma 2331:3233 — hero 64 / Bold / 1.1 / -2.394 */
 .solutions-showcase h1 {
   width: 100%;
   margin: 0 0 48px;
   color: #1f252e;
+  font-family: Raleway, sans-serif;
   font-size: 64px;
   font-weight: 700;
   line-height: 1.1;
@@ -122,9 +124,11 @@
 .solution-copy--sand { background: #f2e7da; }
 .solution-copy--lilac { background: #ede8f5; }
 
+/* Figma — index 56 / Bold / 1.2 / -1.715 */
 .solution-index {
   margin: 0 0 12px;
   color: transparent;
+  font-family: Raleway, sans-serif;
   font-size: 56px;
   font-weight: 700;
   line-height: 1.2;
@@ -133,16 +137,19 @@
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
+/* Figma — title 30 / SemiBold / 1.4 */
 .solution-copy h2 {
   width: 100%;
   margin: 0 0 12px;
   color: #000;
   font-family: Raleway, sans-serif;
   font-size: 30px;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.4;
+  letter-spacing: 0;
 }
 
+/* Figma — body 22 / Regular / 1.4 / #334155 */
 .solution-copy p {
   width: 100%;
   margin: 0;
@@ -151,8 +158,10 @@
   font-size: 22px;
   font-weight: 400;
   line-height: 1.4;
+  letter-spacing: 0;
 }
 
+/* Figma — link 16 / SemiBold / 19.5 / -0.076 */
 .solution-link {
   position: relative;
   z-index: 2;
@@ -347,9 +356,11 @@
   gap: 20px;
 }
 
+/* Figma — contact title 48 / Bold / 1.2 / -2.394 */
 .solutions-contact-content h2 {
   margin: 0;
   color: #fff;
+  font-family: Raleway, sans-serif;
   font-size: 48px;
   font-weight: 700;
   line-height: 1.2;
@@ -364,6 +375,7 @@
   font-style: normal;
 }
 
+/* Figma — email/phone 24 / Medium / 1.5 */
 .solutions-contact-content address a {
   display: flex;
   align-items: center;
@@ -372,9 +384,10 @@
   padding: 0;
   border: 0;
   color: #fff;
+  font-family: Raleway, sans-serif;
   font-size: 24px;
   font-weight: 500;
-  line-height: 36px;
+  line-height: 1.5;
   text-decoration: none;
 }
 
@@ -446,9 +459,11 @@
   width: 100%;
   margin: 0;
   color: #fff;
+  font-family: Raleway, sans-serif;
   font-size: 22px;
   font-weight: 500;
   line-height: 1.5;
+  letter-spacing: 0;
 }
 
 .solutions-contact-photo {
