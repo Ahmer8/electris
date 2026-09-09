@@ -845,6 +845,368 @@
         height: auto;
       }
     </style>
+  <style>
+      /* Figma 2331:7900 — audit CTA (HTML text + page-specific bg) */
+      .hp-audit-cta {
+        align-self: stretch;
+        padding: 32px;
+        box-sizing: border-box;
+      }
+      .hp-audit-cta__panel {
+        position: relative;
+        overflow: hidden;
+        border-radius: 64px;
+        padding: 96px 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 500px;
+        box-sizing: border-box;
+      }
+      .hp-audit-cta__bg {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 64px;
+        z-index: 0;
+      }
+      .hp-audit-cta__overlay {
+        position: absolute;
+        inset: 0;
+        border-radius: 64px;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+      }
+      .hp-audit-cta__content {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        max-width: 1280px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 36px;
+      }
+      .hp-audit-cta__copy {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 14px;
+      }
+      .hp-audit-cta__title {
+        margin: 0;
+        color: #fff;
+        font-family: Raleway, system-ui, sans-serif;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 1.1;
+        letter-spacing: -2.394px;
+      }
+      .hp-audit-cta__subtitle {
+        margin: 0;
+        color: #fff;
+        font-family: Raleway, system-ui, sans-serif;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 1.1;
+        letter-spacing: -2.394px;
+      }
+      .hp-audit-cta__text {
+        margin: 12px 0 0;
+        color: #f1f5f9;
+        font-family: Raleway, system-ui, sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.6;
+        max-width: 980px;
+      }
+      .hp-audit-cta__btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #fff;
+        color: #000;
+        text-decoration: none;
+        border-radius: 32px;
+        padding: 16px 24px;
+        box-shadow: 0 1.3px 2.7px rgba(16, 24, 40, 0.05);
+        font-family: Raleway, system-ui, sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 32px;
+        white-space: nowrap;
+      }
+      .hp-audit-cta__btn img {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        object-fit: contain;
+      }
+
+      /* Contact CTA — HTML text + bg grid lines + card logo watermark */
+      .hp-contact-live {
+        align-self: stretch;
+        background: #f1f5f9;
+        padding: 96px 116px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hp-contact-live__bg {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: min(1084px, 92%);
+        height: auto;
+        max-height: 100%;
+        pointer-events: none;
+        z-index: 0;
+      }
+      .hp-contact-live__inner {
+        position: relative;
+        z-index: 1;
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: stretch;
+        gap: 32px;
+        padding: 0 32px;
+        box-sizing: border-box;
+      }
+      .hp-contact-live__card {
+        position: relative;
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: 592px;
+        height: 483px;
+        overflow: hidden;
+      }
+      .hp-contact-live__shape {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+            .hp-contact-live__deco {
+        position: absolute;
+        top: -61px;
+        left: calc(50% + 169px);
+        width: 338px;
+        height: 315px;
+        margin: 0;
+        object-fit: contain;
+        object-position: bottom;
+        opacity: 0.13;
+        pointer-events: none;
+        z-index: 1;
+        transform: translateX(-50%);
+      }
+      .hp-contact-live__body > div:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+      }
+      .hp-contact-live__body {
+        position: absolute;
+        left: 58px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        width: min(480px, calc(100% - 80px));
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        color: #fff;
+      }
+      .hp-contact-live__title {
+        margin: 0;
+        color: #fff;
+        font-family: Raleway, system-ui, sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -2.394px;
+      }
+      .hp-contact-live__details {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+      .hp-contact-live__row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #fff;
+        font-family: Raleway, system-ui, sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-decoration: none;
+      }
+      .hp-contact-live__row img {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        object-fit: contain;
+      }
+      .hp-contact-live__line {
+        display: block;
+        width: 100%;
+        max-width: 480px;
+        height: 1px;
+        margin: 0;
+        border: 0;
+        padding: 0;
+        object-fit: fill;
+        flex-shrink: 0;
+        opacity: 1;
+      }
+      .hp-contact-live__btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #fff;
+        color: #000;
+        text-decoration: none;
+        border-radius: 32px;
+        padding: 16px 24px;
+        box-shadow: 0 1.3px 2.7px rgba(16, 24, 40, 0.05);
+        font-family: Raleway, system-ui, sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 32px;
+        white-space: nowrap;
+        width: fit-content;
+      }
+      .hp-contact-live__btn img {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        object-fit: contain;
+      }
+      .hp-contact-live__footer {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 0;
+      }
+      .hp-contact-live__footer p {
+        margin: 0;
+        color: #fff;
+        font-family: Raleway, system-ui, sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+      .hp-contact-live__photo {
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: 592px;
+        height: 483px;
+        display: block;
+        object-fit: contain;
+        object-position: center;
+      }
+      @media (max-width: 1100px) {
+        .hp-contact-live { padding: 64px 24px; }
+        .hp-contact-live__inner {
+          flex-direction: column;
+          padding: 0;
+          align-items: stretch;
+        }
+        .hp-contact-live__card,
+        .hp-contact-live__photo {
+          max-width: 100%;
+          width: 100%;
+          height: auto;
+          min-height: 420px;
+        }
+        .hp-contact-live__photo {
+          min-height: 0;
+          height: auto;
+        }
+        .hp-contact-live__body > div:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+      }
+      .hp-contact-live__body {
+          left: 32px;
+          width: calc(100% - 56px);
+        }
+              .hp-contact-live__deco {
+        position: absolute;
+        top: -61px;
+        left: calc(50% + 169px);
+        width: 338px;
+        height: 315px;
+        margin: 0;
+        object-fit: contain;
+        object-position: bottom;
+        opacity: 0.13;
+        pointer-events: none;
+        z-index: 1;
+        transform: translateX(-50%);
+      }
+        .hp-contact-live__title { font-size: 36px; }
+        .hp-contact-live__row,
+        .hp-contact-live__footer p { font-size: 18px; }
+        .hp-contact-live__btn { white-space: normal; }
+        .hp-audit-cta { padding: 24px 16px; }
+        .hp-audit-cta__panel { padding: 64px 24px; min-height: 0; border-radius: 40px; }
+        .hp-audit-cta__bg,
+        .hp-audit-cta__overlay { border-radius: 40px; }
+        .hp-audit-cta__title { font-size: clamp(32px, 7vw, 48px); }
+        .hp-audit-cta__subtitle { font-size: clamp(22px, 5vw, 30px); }
+        .hp-audit-cta__text { font-size: 18px; }
+        .hp-audit-cta__btn { white-space: normal; text-align: left; }
+      }
+      @media (max-width: 900px) {
+        body.wasteheat-page .hp-contact-live {
+          padding: 48px 16px !important;
+        }
+        body.wasteheat-page .hp-contact-live__inner {
+          flex-direction: column !important;
+          gap: 24px !important;
+          padding: 0 !important;
+        }
+        body.wasteheat-page .hp-contact-live__card {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          min-height: 420px !important;
+        }
+        body.wasteheat-page .hp-contact-live__shape {
+          position: absolute !important;
+          inset: 0 !important;
+          width: 100% !important;
+          height: 100% !important;
+        }
+        body.wasteheat-page .hp-contact-live__photo {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+        }
+        body.wasteheat-page .hp-contact-live__title {
+          font-size: 32px !important;
+        }
+        body.wasteheat-page .hp-contact-live__row,
+        body.wasteheat-page .hp-contact-live__footer p {
+          font-size: 18px !important;
+          width: auto !important;
+        }
+      }
+
+  </style>
   <link rel="stylesheet" href="solution-detail.css?v=fgas-results-align-v1" />
   <style>
     /* Floating HP hero: Figma composite (art + metric cards) */
@@ -2395,78 +2757,78 @@
             </div>
           </div>
         </div>
-        <div
-          class="wasteheat-contact-cta"
-          aria-label="Audit gratuit"
-          style="
-            align-self: stretch;
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 1px;
-          "
-        >
-          <img
-            src="assets/images/floating-hp/audit-cta.png"
-            alt="Commencez par l'audit gratuit — Vos systèmes frigorifiques consomment-ils trop ?"
-            style="height: 564px; align-self: stretch; object-fit: fill"
-          />
-        </div>
-        <div
-          class="wasteheat-contact-cta"
-          style="
-            align-self: stretch;
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 1px;
-          "
-        >
-          <div
-            style="
-              align-self: stretch;
-              background: #f1f5f9;
-              padding: 96px 116px;
-              position: relative;
-            "
-          >
-            <div
-              style="
-                align-self: stretch;
-                display: flex;
-                align-items: center;
-                padding-left: 32px;
-                padding-right: 32px;
-                gap: 32px;
-              "
-            >
-              <div class="hp-contact-card hp-contact-card--figma" style="flex:1;min-width:0;max-width:592px;position:relative;line-height:0">
-                <img
-                  src="assets/images/floating-hp/contact/contact-card.png"
-                  alt="Contactez-nous — Electris"
-                  style="display:block;width:100%;height:auto"
-                />
-                <a
-                  href="mailto:contact@electris.fr"
-                  class="hp-contact-hotspot hp-contact-hotspot--mail"
-                  aria-label="Envoyer un email à contact@electris.fr"
-                ></a>
-                <a
-                  href="mailto:contact@electris.fr"
-                  class="hp-contact-hotspot hp-contact-hotspot--cta"
-                  aria-label="Demander un audit gratuit"
-                ></a>
+        <div class="wasteheat-contact-cta hp-audit-cta" aria-label="Audit gratuit">
+          <div class="hp-audit-cta__panel">
+            <img
+              class="hp-audit-cta__bg"
+              src="assets/images/floating-hp/audit/bg.png"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="hp-audit-cta__overlay" aria-hidden="true"></div>
+            <div class="hp-audit-cta__content">
+              <div class="hp-audit-cta__copy">
+                <h2 class="hp-audit-cta__title">Commencez par l&#39;audit gratuit .</h2>
+                <h3 class="hp-audit-cta__subtitle">Vos systèmes frigorifiques consomment-ils trop&nbsp;?</h3>
+                <p class="hp-audit-cta__text">
+                  Sous 48 heures, nos ingénieurs analysent votre système de régulation et vous fournissent un plan d&#39;affaires clair avec un retour sur investissement garanti.
+                </p>
               </div>
-              <img
-                src="assets/images/floating-hp/contact/photo-curved.png"
-                alt="Salle machine frigorifique — chambres froides"
-                style="
-                  flex: 1;
-                  min-width: 0;
-                  max-width: 592px;
-                  height: auto;
-                  object-fit: contain;
-                "
-              />
+              <a class="hp-audit-cta__btn" href="mailto:contact@electris.fr">
+                Demander un audit gratuit
+                <img src="assets/images/shared/results-cta-arrow.svg" alt="" width="24" height="24" />
+              </a>
             </div>
+          </div>
+        </div>
+        <div class="wasteheat-contact-cta hp-contact-live" aria-label="Contact">
+          <img
+            class="hp-contact-live__bg"
+            src="assets/images/shared/contact/grid-bg.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="hp-contact-live__inner">
+            <div class="hp-contact-live__card">
+              <img class="hp-contact-live__shape" src="assets/images/shared/contact/card-shape.svg" alt="" aria-hidden="true" />
+              <img
+                class="hp-contact-live__deco"
+                src="assets/images/shared/contact/card-logo-deco.svg"
+                alt=""
+                aria-hidden="true"
+              />
+              <div class="hp-contact-live__body">
+                <div>
+                  <h2 class="hp-contact-live__title">Contactez-nous .</h2>
+                  <div class="hp-contact-live__details">
+                    <a class="hp-contact-live__row" href="mailto:contact@electris.fr">
+                      <img src="assets/images/shared/contact/icon-mail.svg" alt="" width="28" height="28" />
+                      <span>contact@electris.fr</span>
+                    </a>
+                    <img class="hp-contact-live__line" src="assets/images/shared/contact/line.svg" alt="" aria-hidden="true" />
+                    <div class="hp-contact-live__row">
+                      <img src="assets/images/shared/contact/icon-phone.svg" alt="" width="28" height="28" />
+                      <span>+33 (0)1 XX XX XX XX</span>
+                    </div>
+                  </div>
+                </div>
+                <div style="display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+                  <a class="hp-contact-live__btn" href="mailto:contact@electris.fr">
+                    Demander un audit gratuit
+                    <img src="assets/images/shared/results-cta-arrow.svg" alt="" width="24" height="24" />
+                  </a>
+                  <div class="hp-contact-live__footer">
+                    <p>L&#39;ingénierie qui rend vos bâtiments plus performants.</p>
+                    <p>Paris · France · 100 % électrique · 0 % énergie fossile</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              class="hp-contact-live__photo"
+              src="assets/images/floating-hp/contact/photo-curved.png"
+              alt="Régulation haute pression flottante — Electris"
+            />
           </div>
         </div>
         <div

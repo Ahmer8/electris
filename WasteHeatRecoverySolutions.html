@@ -715,6 +715,259 @@
         height: auto;
       }
     </style>
+  <style>
+
+      /* Contact CTA — HTML text + bg grid lines + card logo watermark */
+      .hp-contact-live {
+        align-self: stretch;
+        background: #f1f5f9;
+        padding: 96px 116px;
+        position: relative;
+        overflow: hidden;
+      }
+      .hp-contact-live__bg {
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        width: min(1084px, 92%);
+        height: auto;
+        max-height: 100%;
+        pointer-events: none;
+        z-index: 0;
+      }
+      .hp-contact-live__inner {
+        position: relative;
+        z-index: 1;
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: stretch;
+        gap: 32px;
+        padding: 0 32px;
+        box-sizing: border-box;
+      }
+      .hp-contact-live__card {
+        position: relative;
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: 592px;
+        height: 483px;
+        overflow: hidden;
+      }
+      .hp-contact-live__shape {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+            .hp-contact-live__deco {
+        position: absolute;
+        top: -61px;
+        left: calc(50% + 169px);
+        width: 338px;
+        height: 315px;
+        margin: 0;
+        object-fit: contain;
+        object-position: bottom;
+        opacity: 0.13;
+        pointer-events: none;
+        z-index: 1;
+        transform: translateX(-50%);
+      }
+      .hp-contact-live__body > div:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+      }
+      .hp-contact-live__body {
+        position: absolute;
+        left: 58px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        width: min(480px, calc(100% - 80px));
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+        color: #fff;
+      }
+      .hp-contact-live__title {
+        margin: 0;
+        color: #fff;
+        font-family: Raleway, system-ui, sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: -2.394px;
+      }
+      .hp-contact-live__details {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+      }
+      .hp-contact-live__row {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #fff;
+        font-family: Raleway, system-ui, sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 1.5;
+        text-decoration: none;
+      }
+      .hp-contact-live__row img {
+        width: 28px;
+        height: 28px;
+        flex-shrink: 0;
+        object-fit: contain;
+      }
+      .hp-contact-live__line {
+        display: block;
+        width: 100%;
+        max-width: 480px;
+        height: 1px;
+        margin: 0;
+        border: 0;
+        padding: 0;
+        object-fit: fill;
+        flex-shrink: 0;
+        opacity: 1;
+      }
+      .hp-contact-live__btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: #fff;
+        color: #000;
+        text-decoration: none;
+        border-radius: 32px;
+        padding: 16px 24px;
+        box-shadow: 0 1.3px 2.7px rgba(16, 24, 40, 0.05);
+        font-family: Raleway, system-ui, sans-serif;
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 32px;
+        white-space: nowrap;
+        width: fit-content;
+      }
+      .hp-contact-live__btn img {
+        width: 24px;
+        height: 24px;
+        flex-shrink: 0;
+        object-fit: contain;
+      }
+      .hp-contact-live__footer {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 0;
+      }
+      .hp-contact-live__footer p {
+        margin: 0;
+        color: #fff;
+        font-family: Raleway, system-ui, sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.5;
+      }
+      .hp-contact-live__photo {
+        flex: 1 1 0;
+        min-width: 0;
+        max-width: 592px;
+        height: 483px;
+        display: block;
+        object-fit: contain;
+        object-position: center;
+      }
+      @media (max-width: 1100px) {
+        .hp-contact-live { padding: 64px 24px; }
+        .hp-contact-live__inner {
+          flex-direction: column;
+          padding: 0;
+          align-items: stretch;
+        }
+        .hp-contact-live__card,
+        .hp-contact-live__photo {
+          max-width: 100%;
+          width: 100%;
+          height: auto;
+          min-height: 420px;
+        }
+        .hp-contact-live__photo {
+          min-height: 0;
+          height: auto;
+        }
+        .hp-contact-live__body > div:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+      }
+      .hp-contact-live__body {
+          left: 32px;
+          width: calc(100% - 56px);
+        }
+              .hp-contact-live__deco {
+        position: absolute;
+        top: -61px;
+        left: calc(50% + 169px);
+        width: 338px;
+        height: 315px;
+        margin: 0;
+        object-fit: contain;
+        object-position: bottom;
+        opacity: 0.13;
+        pointer-events: none;
+        z-index: 1;
+        transform: translateX(-50%);
+      }
+        .hp-contact-live__title { font-size: 36px; }
+        .hp-contact-live__row,
+        .hp-contact-live__footer p { font-size: 18px; }
+        .hp-contact-live__btn { white-space: normal; }
+      }
+      @media (max-width: 900px) {
+        body.wasteheat-page .hp-contact-live {
+          padding: 48px 16px !important;
+        }
+        body.wasteheat-page .hp-contact-live__inner {
+          flex-direction: column !important;
+          gap: 24px !important;
+          padding: 0 !important;
+        }
+        body.wasteheat-page .hp-contact-live__card {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+          min-height: 420px !important;
+        }
+        body.wasteheat-page .hp-contact-live__shape {
+          position: absolute !important;
+          inset: 0 !important;
+          width: 100% !important;
+          height: 100% !important;
+        }
+        body.wasteheat-page .hp-contact-live__photo {
+          width: 100% !important;
+          max-width: 100% !important;
+          height: auto !important;
+        }
+        body.wasteheat-page .hp-contact-live__title {
+          font-size: 32px !important;
+        }
+        body.wasteheat-page .hp-contact-live__row,
+        body.wasteheat-page .hp-contact-live__footer p {
+          font-size: 18px !important;
+          width: auto !important;
+        }
+      }
+
+  </style>
   <link rel="stylesheet" href="solution-detail.css?v=fgas-results-align-v1" />
   </head>
   <body class="wasteheat-page">
@@ -2485,216 +2738,56 @@
             src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/fv8s18dj_expires_30_days.png"
             style="height: 564px; align-self: stretch; object-fit: fill"
           />
-          <div
-            style="
-              align-self: stretch;
-              background: #f1f5f9;
-              padding: 96px 116px;
-              position: relative;
-            "
-          >
-            <div
-              style="
-                position: absolute;
-                bottom: 0px;
-                right: 0px;
-                left: 0px;
-                align-self: stretch;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-              "
-            >
+          <div class="wasteheat-contact-cta hp-contact-live" aria-label="Contact">
+          <img
+            class="hp-contact-live__bg"
+            src="assets/images/shared/contact/grid-bg.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <div class="hp-contact-live__inner">
+            <div class="hp-contact-live__card">
+              <img class="hp-contact-live__shape" src="assets/images/shared/contact/card-shape.svg" alt="" aria-hidden="true" />
               <img
-                src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/5fdwrl80_expires_30_days.png"
-                style="width: 1084px; height: 670px; object-fit: fill"
+                class="hp-contact-live__deco"
+                src="assets/images/shared/contact/card-logo-deco.svg"
+                alt=""
+                aria-hidden="true"
               />
-            </div>
-            <div
-              style="
-                align-self: stretch;
-                display: flex;
-                align-items: center;
-                padding-left: 32px;
-                padding-right: 32px;
-                gap: 32px;
-              "
-            >
-              <div
-                style="
-                  flex: 1;
-                  display: flex;
-                  flex-direction: column;
-                  align-items: center;
-                  border-radius: 43px;
-                  padding-top: 30px;
-                  padding-bottom: 30px;
-                  background-image: url(&quot;https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/3zutafau_expires_30_days.png&quot;);
-                  background-size: 100% 100%;
-                  position: relative;
-                "
-              >
-                <img
-                  src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/ax6by2j3_expires_30_days.png"
-                  style="
-                    position: absolute;
-                    top: 0px;
-                    right: 0px;
-                    border-radius: 43px;
-                    width: 296px;
-                    height: 315px;
-                    object-fit: fill;
-                  "
-                />
-                <div
-                  style="
-                    width: 480px;
-                    display: flex;
-                    flex-direction: column;
-                    gap: 26px;
-                  "
-                >
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      gap: 15px;
-                    "
-                  >
-                    <span
-                      style="color: #ffffff; font-size: 48px; font-weight: bold"
-                    >
-                      Contactez-nous.
-                    </span>
-                    <div style="align-self: stretch">
-                      <div
-                        style="
-                          align-self: stretch;
-                          display: flex;
-                          align-items: center;
-                          margin-bottom: 12px;
-                          gap: 10px;
-                        "
-                      >
-                        <img
-                          src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/ostbqt43_expires_30_days.png"
-                          style="width: 32px; height: 28px; object-fit: fill"
-                        />
-                        <span style="color: #ffffff; font-size: 24px">
-                          contact@electris.fr
-                        </span>
-                      </div>
-                      <div
-                        style="
-                          height: 1px;
-                          align-self: stretch;
-                          background: #00000000;
-                          margin-bottom: 11px;
-                        "
-                      ></div>
-                      <div
-                        style="
-                          align-self: stretch;
-                          display: flex;
-                          align-items: center;
-                          gap: 10px;
-                        "
-                      >
-                        <img
-                          src="https://storage.googleapis.com/tagjs-prod.appspot.com/v1/BmeX3726Fy/kljo2cmo_expires_30_days.png"
-                          style="width: 32px; height: 28px; object-fit: fill"
-                        />
-                        <span style="color: #ffffff; font-size: 24px">
-                          +33 (0)1 XX XX XX XX
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    style="
-                      align-self: stretch;
-                      display: flex;
-                      flex-direction: column;
-                      align-items: flex-start;
-                      gap: 20px;
-                    "
-                  >
-                    <button
-                      type="button"
-                      style="
-                        display: flex;
-                        align-items: center;
-                        background: #ffffff;
-                        border-radius: 32px;
-                        border: none;
-                        padding: 16px 26px;
-                        gap: 15px;
-                        box-shadow: 0px 1.3333333730697632px 2px #1018280d;
-                        text-align: left;
-                        cursor: pointer;
-                      "
-                      onclick="window.location.href='mailto:contact@electris.fr'"
-                    >
-                      <span
-                        style="
-                          color: #000000;
-                          font-size: 21px;
-                          font-weight: bold;
-                        "
-                      >
-                        Demander un audit gratuit
-                      </span>
-                      <img
-                        src="assets/images/shared/results-cta-arrow.svg"
-                        alt=""
-                        width="24"
-                        height="24"
-                        style="
-                          width: 24px;
-                          height: 24px;
-                          flex-shrink: 0;
-                          object-fit: contain;
-                        "
-                      />
-                    </button>
-                    <div
-                      style="
-                        align-self: stretch;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 8px;
-                      "
-                    >
-                      <span
-                        style="color: #ffffff; font-size: 22px; width: 404px"
-                      >
-                        L&#39;ingénierie qui rend vos bâtiments plus
-                        performants.
-                      </span>
-                      <span
-                        style="color: #ffffff; font-size: 22px; width: 454px"
-                      >
-                        Paris · France · 100 % électrique · 0 % énergie fossile
-                      </span>
+              <div class="hp-contact-live__body">
+                <div>
+                  <h2 class="hp-contact-live__title">Contactez-nous .</h2>
+                  <div class="hp-contact-live__details">
+                    <a class="hp-contact-live__row" href="mailto:contact@electris.fr">
+                      <img src="assets/images/shared/contact/icon-mail.svg" alt="" width="28" height="28" />
+                      <span>contact@electris.fr</span>
+                    </a>
+                    <img class="hp-contact-live__line" src="assets/images/shared/contact/line.svg" alt="" aria-hidden="true" />
+                    <div class="hp-contact-live__row">
+                      <img src="assets/images/shared/contact/icon-phone.svg" alt="" width="28" height="28" />
+                      <span>+33 (0)1 XX XX XX XX</span>
                     </div>
                   </div>
                 </div>
+                <div style="display:flex;flex-direction:column;gap:20px;align-items:flex-start">
+                  <a class="hp-contact-live__btn" href="mailto:contact@electris.fr">
+                    Demander un audit gratuit
+                    <img src="assets/images/shared/results-cta-arrow.svg" alt="" width="24" height="24" />
+                  </a>
+                  <div class="hp-contact-live__footer">
+                    <p>L&#39;ingénierie qui rend vos bâtiments plus performants.</p>
+                    <p>Paris · France · 100 % électrique · 0 % énergie fossile</p>
+                  </div>
+                </div>
               </div>
-              <img
-                src="assets/images/solutions-page/heat-recovery-rooftop.png"
-                alt="Installation de récupération de chaleur"
-                style="
-                  border-radius: 43px;
-                  height: 482px;
-                  flex: 1;
-                  object-fit: cover;
-                "
-              />
             </div>
+            <img
+              class="hp-contact-live__photo"
+              src="assets/images/solutions-page/heat-recovery-rooftop.png"
+              alt="Installation de récupération de chaleur"
+            />
           </div>
+        </div>
         </div>
         <div
           class="legacy-ok2-footer"
