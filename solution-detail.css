@@ -1643,3 +1643,14 @@ body.wasteheat-page .wasteheat-industries .sector-card:focus-visible {
     letter-spacing: -1.8px !important;
   }
 }
+/* Results header logo — blue circle icon above title */
+body.wasteheat-page .client-results img[src*="results/logo-icon.png"],
+body.wasteheat-page .client-results img[src*="results/logo.png"],
+body.wasteheat-page .hp-results-inner > div:first-child > img[src*="logo"] {
+  width: 58px !important;
+  height: 58px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center !important;
+  display: block !important;
+}
