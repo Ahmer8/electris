@@ -13,6 +13,50 @@
      phones   ≤480      tighter type / padding
 
    Figma mobile tokens
+============================================================ */
+
+/* Figma 2331:3615 — solid black social-proof stripe, gray logos (no invert seam). */
+body.wasteheat-page .brands {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  background: #000 !important;
+  padding: 24px 0 !important;
+  min-height: 120px !important;
+  height: auto !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.wasteheat-page .brand-track {
+  display: flex !important;
+  width: max-content !important;
+  align-items: center !important;
+}
+
+body.wasteheat-page .brand-row {
+  display: flex !important;
+  flex: 0 0 auto !important;
+  align-items: center !important;
+  gap: 16px !important;
+  padding-right: 16px !important;
+}
+
+body.wasteheat-page .brand-row img {
+  display: block !important;
+  flex: 0 0 auto !important;
+  width: auto !important;
+  height: 56px !important;
+  max-height: 72px !important;
+  object-fit: contain !important;
+  filter: none !important;
+  opacity: 1 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
      h-padding      16px  (hero 20px)
      eyebrow        16px  Medium   #475569
      section title  32px  ExtraBold  line-height 1.15
@@ -348,7 +392,7 @@ body.wasteheat-page .wasteheat-industries .sector-card:focus-visible {
   body.wasteheat-page .wasteheat-industries > img[style*="position: absolute"] {
     width: 60% !important;
     height: auto !important;
-    opacity: 0.04 !important;
+    opacity: 1 !important;
   }
 
   /* Staggered timeline: Figma 68px teardrop cards, stacked. */
@@ -1542,4 +1586,33 @@ body.wasteheat-page .wasteheat-industries .sector-card:focus-visible {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Independance watermark — identical to cascade.html (no position overrides) */
+body.wasteheat-page .wasteheat-content {
+  display: flex !important;
+  flex-direction: column !important;
+  position: relative !important;
+  overflow: visible !important;
+}
+body.wasteheat-page .wasteheat-content > div:first-child > section:first-child {
+  background: #f1f5f9 !important;
+}
+body.wasteheat-page .wasteheat-content > div:first-child > section:last-child {
+  background: #ffffff !important;
+}
+/* Do NOT override top/left/width/height — match cascade exactly */
+body.wasteheat-page .wasteheat-content > img[src*="indep-watermark"] {
+  position: absolute !important;
+  top: 83px !important;
+  left: 0px !important;
+  width: 703px !important;
+  height: 656px !important;
+  object-fit: fill !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  filter: none !important;
+  pointer-events: none !important;
+  z-index: auto !important;
+  max-width: none !important;
 }
