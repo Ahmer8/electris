@@ -1068,3 +1068,159 @@ body.wasteheat-page > header .btn-primary {
     transition: none !important;
   }
 }
+
+/* Figma 2710:60957 @ 1920 — keep Mise en service + results in a 1280 column */
+@media (min-width: 1200px) {
+  body.wasteheat-page .wasteheat-hero {
+    padding-left: max(32px, calc((100% - 1600px) / 2)) !important;
+    padding-right: max(32px, calc((100% - 1600px) / 2)) !important;
+    box-sizing: border-box !important;
+  }
+
+  body.wasteheat-page .wasteheat-content,
+  body.wasteheat-page .wasteheat-how,
+  body.wasteheat-page .wasteheat-industries,
+  body.wasteheat-page .client-results,
+  body.wasteheat-page .wasteheat-service,
+  body.wasteheat-page .fgas-compare,
+  body.wasteheat-page .warehouse-hero,
+  body.wasteheat-page .warehouse-section,
+  body.wasteheat-page .warehouse-ops,
+  body.wasteheat-page .warehouse-tech,
+  body.wasteheat-page .warehouse-results,
+  body.wasteheat-page .warehouse-contact {
+    padding-left: max(32px, calc((100% - 1280px) / 2)) !important;
+    padding-right: max(32px, calc((100% - 1280px) / 2)) !important;
+    box-sizing: border-box !important;
+  }
+
+  body.wasteheat-page .hp-contact-live {
+    padding: 96px 0 !important;
+  }
+
+  body.wasteheat-page .hp-contact-live__inner {
+    width: 100% !important;
+    max-width: 1280px !important;
+    margin-inline: auto !important;
+    padding-inline: 32px !important;
+    display: flex !important;
+    align-items: stretch !important;
+    gap: 32px !important;
+    box-sizing: border-box !important;
+  }
+
+  body.wasteheat-page .hp-contact-live__card,
+  body.wasteheat-page .hp-contact-live__photo {
+    flex: 1 1 0 !important;
+    width: auto !important;
+    max-width: none !important;
+    height: 483px !important;
+    min-height: 483px !important;
+  }
+
+  body.wasteheat-page .wasteheat-service {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  body.wasteheat-page .wasteheat-service > div {
+    max-width: 1280px !important;
+    width: 100% !important;
+    margin-inline: auto !important;
+    align-self: center !important;
+  }
+
+  body.wasteheat-page .service-timeline,
+  body.wasteheat-page .hp-results-inner,
+  body.wasteheat-page .cpe-results-inner {
+    max-width: 1280px !important;
+    width: 100% !important;
+    margin-inline: auto !important;
+    align-self: stretch !important;
+    box-sizing: border-box !important;
+  }
+
+  body.wasteheat-page .client-results {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-bottom: 96px !important;
+    overflow: hidden;
+  }
+
+  body.wasteheat-page .client-results__content {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 1280px !important;
+    margin-inline: auto !important;
+    align-self: stretch !important;
+  }
+
+  body.wasteheat-page .client-results__third {
+    position: static !important;
+    inset: auto !important;
+    order: 2 !important;
+    width: 100% !important;
+    max-width: 1280px !important;
+    margin-inline: auto !important;
+    padding-top: 48px !important;
+    align-self: stretch !important;
+  }
+
+  body.wasteheat-page .client-results__row,
+  body.wasteheat-page .client-results__third-row {
+    width: 100% !important;
+    max-width: 1280px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  body.wasteheat-page .warehouse-results {
+    padding-left: max(32px, calc((100% - 1280px) / 2)) !important;
+    padding-right: max(32px, calc((100% - 1280px) / 2)) !important;
+    box-sizing: border-box !important;
+  }
+}
+
+/* Figma CTA — mirrored subtract notches (card tab-left, photo tab-right) */
+body.wasteheat-page .hp-contact-live__card {
+  overflow: visible !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  -webkit-mask-image: url("assets/images/shared/contact/card-mask.svg");
+  mask-image: url("assets/images/shared/contact/card-mask.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+body.wasteheat-page .hp-contact-live__shape {
+  object-fit: fill !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+body.wasteheat-page .hp-contact-live__photo {
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+  -webkit-mask-image: url("assets/images/shared/contact/photo-shape.svg");
+  mask-image: url("assets/images/shared/contact/photo-shape.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}

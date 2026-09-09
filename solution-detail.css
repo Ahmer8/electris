@@ -1479,10 +1479,133 @@ body.wasteheat-page .wasteheat-industries .sector-card:focus-visible {
     overflow-x: hidden;
   }
 
+  /* Figma 2710:60957 @ 1920 — hero column 1600 (inset 160), other sections 1280 (inset 320). */
+  body.wasteheat-page .wasteheat-hero {
+    padding-left: max(32px, calc((100% - 1600px) / 2)) !important;
+    padding-right: max(32px, calc((100% - 1600px) / 2)) !important;
+    box-sizing: border-box !important;
+  }
+
+  body.wasteheat-page .wasteheat-content,
+  body.wasteheat-page .wasteheat-how,
+  body.wasteheat-page .wasteheat-industries,
+  body.wasteheat-page .client-results,
+  body.wasteheat-page .wasteheat-service,
+  body.wasteheat-page .fgas-compare {
+    padding-left: max(32px, calc((100% - 1280px) / 2)) !important;
+    padding-right: max(32px, calc((100% - 1280px) / 2)) !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Figma CTA 2710:61663 — 1280 column, 32px inset, two 592×483 cards, 32px gap */
+  body.wasteheat-page .hp-contact-live {
+    padding: 96px 0 !important;
+  }
+
+  body.wasteheat-page .hp-contact-live__inner {
+    width: 100% !important;
+    max-width: 1280px !important;
+    margin-inline: auto !important;
+    padding-inline: 32px !important;
+    display: flex !important;
+    align-items: stretch !important;
+    gap: 32px !important;
+    box-sizing: border-box !important;
+  }
+
+  body.wasteheat-page .hp-contact-live__card,
+  body.wasteheat-page .hp-contact-live__photo {
+    flex: 1 1 0 !important;
+    width: auto !important;
+    max-width: none !important;
+    height: 483px !important;
+    min-height: 483px !important;
+  }
+
+  /* Mise en service: title + 5-step stagger stay in the 1280 column */
+  body.wasteheat-page .wasteheat-service {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+
+  body.wasteheat-page .wasteheat-service > div {
+    max-width: 1280px !important;
+    width: 100% !important;
+    margin-inline: auto !important;
+    align-self: center !important;
+  }
+
+  body.wasteheat-page .service-timeline {
+    max-width: 1280px !important;
+    width: 100% !important;
+    align-self: stretch !important;
+    margin-inline: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  body.wasteheat-page .hp-results-inner,
+  body.wasteheat-page .cpe-results-inner,
+  body.wasteheat-page .service-timeline,
+  body.wasteheat-page .fgas-compare-inner,
+  body.wasteheat-page .hp-contact-live__inner {
+    max-width: 1280px !important;
+    width: 100% !important;
+    margin-inline: auto !important;
+    align-self: center !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Legacy Figma export: 3rd case is position:absolute + 116px inset, so it hugs the viewport. */
+  body.wasteheat-page .client-results {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-bottom: 96px !important;
+    overflow: hidden;
+  }
+
+  body.wasteheat-page .client-results__content {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 1280px !important;
+    margin-inline: auto !important;
+    align-self: stretch !important;
+  }
+
+  body.wasteheat-page .client-results__third {
+    position: static !important;
+    inset: auto !important;
+    order: 2 !important;
+    width: 100% !important;
+    max-width: 1280px !important;
+    margin-inline: auto !important;
+    padding-top: 48px !important;
+    align-self: stretch !important;
+  }
+
+  body.wasteheat-page .client-results__row,
+  body.wasteheat-page .client-results__third-row {
+    width: 100% !important;
+    max-width: 1280px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
   body.wasteheat-page .wasteheat-industries .sector-track {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
+    max-width: 1280px;
+    width: 100%;
+    margin-inline: auto;
   }
 
   body.wasteheat-page .hp-results-inner,
@@ -1672,6 +1795,41 @@ body.wasteheat-page .wasteheat-content > img[src*="indep-watermark"] {
   mix-blend-mode: normal !important;
   opacity: 1 !important;
 }
+/* Figma CTA 2710:61689 — mirrored subtract notches (card tab-left, photo tab-right) */
+body.wasteheat-page .hp-contact-live__card {
+  overflow: visible !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  -webkit-mask-image: url("assets/images/shared/contact/card-mask.svg");
+  mask-image: url("assets/images/shared/contact/card-mask.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
+body.wasteheat-page .hp-contact-live__shape {
+  object-fit: fill !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+body.wasteheat-page .hp-contact-live__photo {
+  object-fit: cover !important;
+  object-position: center !important;
+  border-radius: 0 !important;
+  -webkit-mask-image: url("assets/images/shared/contact/photo-shape.svg");
+  mask-image: url("assets/images/shared/contact/photo-shape.svg");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+}
+
 /* Results CTA arrow — always visible on white pill */
 body.wasteheat-page .hp-result-cta img[src*="arrow"],
 body.wasteheat-page .cpe-result-cta img[src*="arrow"],
