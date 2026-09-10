@@ -1,0 +1,92 @@
+[
+  {
+    "file": "assets/images/solutions-page/figma/solution-05.png",
+    "id": "6aa304aaea1d8e877733197c",
+    "uploadUrl": "https://webflow-prod-assets.s3.amazonaws.com/",
+    "details": {
+      "acl": "public-read",
+      "bucket": "webflow-prod-assets",
+      "xAmzAlgorithm": "AWS4-HMAC-SHA256",
+      "xAmzCredential": "AKIAQLLHWD6MEJGETLST/20260910/us-east-1/s3/aws4_request",
+      "xAmzDate": "20260910T192738Z",
+      "key": "6aa2cd2d07caddb69b738a75/6aa304aaea1d8e877733197c_sol-photo-05.png",
+      "Policy": "eyJleHBpcmF0aW9uIjoiMjAyNi0wOS0xMFQyMDoyNzozOFoiLCJjb25kaXRpb25zIjpbWyJzdGFydHMtd2l0aCIsIiRrZXkiLCI2YWEyY2QyZDA3Y2FkZGI2OWI3MzhhNzUvIl0seyJjYWNoZS1jb250cm9sIjoibWF4LWFnZT0zMTUzNjAwMCJ9LHsiQ29udGVudC1UeXBlIjoiaW1hZ2UvcG5nIn0seyJzdWNjZXNzX2FjdGlvbl9zdGF0dXMiOiIyMDEifSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsImltYWdlL3BuZyJdLFsiY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMzE0NTcyODBdLHsiYWNsIjoicHVibGljLXJlYWQifSx7ImJ1Y2tldCI6IndlYmZsb3ctcHJvZC1hc3NldHMifSx7IlgtQW16LUFsZ29yaXRobSI6IkFXUzQtSE1BQy1TSEEyNTYifSx7IlgtQW16LUNyZWRlbnRpYWwiOiJBS0lBUUxMSFdENk1FSkdFVExTVC8yMDI2MDkxMC91cy1lYXN0LTEvczMvYXdzNF9yZXF1ZXN0In0seyJYLUFtei1EYXRlIjoiMjAyNjA5MTBUMTkyNzM4WiJ9LHsia2V5IjoiNmFhMmNkMmQwN2NhZGRiNjliNzM4YTc1LzZhYTMwNGFhZWExZDhlODc3NzMzMTk3Y19zb2wtcGhvdG8tMDUucG5nIn1dfQ==",
+      "xAmzSignature": "ef6a9a1fdeab3fe60dfddb1b2184b87502506b3b454bd729b246278d6bb21a45",
+      "successActionStatus": "201",
+      "Content-Type": "image/png",
+      "Cache-Control": "max-age=31536000"
+    }
+  },
+  {
+    "file": "assets/images/solutions-page/figma/icon-06.png",
+    "id": "6aa304ab81e4fde8e1fdfe83",
+    "uploadUrl": "https://webflow-prod-assets.s3.amazonaws.com/",
+    "details": {
+      "acl": "public-read",
+      "bucket": "webflow-prod-assets",
+      "xAmzAlgorithm": "AWS4-HMAC-SHA256",
+      "xAmzCredential": "AKIAQLLHWD6MEJGETLST/20260910/us-east-1/s3/aws4_request",
+      "xAmzDate": "20260910T192739Z",
+      "key": "6aa2cd2d07caddb69b738a75/6aa304ab81e4fde8e1fdfe83_sol-icon-06.png",
+      "Policy": "eyJleHBpcmF0aW9uIjoiMjAyNi0wOS0xMFQyMDoyNzozOVoiLCJjb25kaXRpb25zIjpbWyJzdGFydHMtd2l0aCIsIiRrZXkiLCI2YWEyY2QyZDA3Y2FkZGI2OWI3MzhhNzUvIl0seyJjYWNoZS1jb250cm9sIjoibWF4LWFnZT0zMTUzNjAwMCJ9LHsiQ29udGVudC1UeXBlIjoiaW1hZ2UvcG5nIn0seyJzdWNjZXNzX2FjdGlvbl9zdGF0dXMiOiIyMDEifSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsImltYWdlL3BuZyJdLFsiY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMzE0NTcyODBdLHsiYWNsIjoicHVibGljLXJlYWQifSx7ImJ1Y2tldCI6IndlYmZsb3ctcHJvZC1hc3NldHMifSx7IlgtQW16LUFsZ29yaXRobSI6IkFXUzQtSE1BQy1TSEEyNTYifSx7IlgtQW16LUNyZWRlbnRpYWwiOiJBS0lBUUxMSFdENk1FSkdFVExTVC8yMDI2MDkxMC91cy1lYXN0LTEvczMvYXdzNF9yZXF1ZXN0In0seyJYLUFtei1EYXRlIjoiMjAyNjA5MTBUMTkyNzM5WiJ9LHsia2V5IjoiNmFhMmNkMmQwN2NhZGRiNjliNzM4YTc1LzZhYTMwNGFiODFlNGZkZThlMWZkZmU4M19zb2wtaWNvbi0wNi5wbmcifV19",
+      "xAmzSignature": "f349a26832ec148a2dc6f924c6b5c240637a98f4f599530531fd741b5ec25bcd",
+      "successActionStatus": "201",
+      "Content-Type": "image/png",
+      "Cache-Control": "max-age=31536000"
+    }
+  },
+  {
+    "file": "assets/images/solutions-page/figma/solution-06.png",
+    "id": "6aa304ab1d2a1d7d82b6fd9c",
+    "uploadUrl": "https://webflow-prod-assets.s3.amazonaws.com/",
+    "details": {
+      "acl": "public-read",
+      "bucket": "webflow-prod-assets",
+      "xAmzAlgorithm": "AWS4-HMAC-SHA256",
+      "xAmzCredential": "AKIAQLLHWD6MEJGETLST/20260910/us-east-1/s3/aws4_request",
+      "xAmzDate": "20260910T192739Z",
+      "key": "6aa2cd2d07caddb69b738a75/6aa304ab1d2a1d7d82b6fd9c_sol-photo-06.png",
+      "Policy": "eyJleHBpcmF0aW9uIjoiMjAyNi0wOS0xMFQyMDoyNzozOVoiLCJjb25kaXRpb25zIjpbWyJzdGFydHMtd2l0aCIsIiRrZXkiLCI2YWEyY2QyZDA3Y2FkZGI2OWI3MzhhNzUvIl0seyJjYWNoZS1jb250cm9sIjoibWF4LWFnZT0zMTUzNjAwMCJ9LHsiQ29udGVudC1UeXBlIjoiaW1hZ2UvcG5nIn0seyJzdWNjZXNzX2FjdGlvbl9zdGF0dXMiOiIyMDEifSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsImltYWdlL3BuZyJdLFsiY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMzE0NTcyODBdLHsiYWNsIjoicHVibGljLXJlYWQifSx7ImJ1Y2tldCI6IndlYmZsb3ctcHJvZC1hc3NldHMifSx7IlgtQW16LUFsZ29yaXRobSI6IkFXUzQtSE1BQy1TSEEyNTYifSx7IlgtQW16LUNyZWRlbnRpYWwiOiJBS0lBUUxMSFdENk1FSkdFVExTVC8yMDI2MDkxMC91cy1lYXN0LTEvczMvYXdzNF9yZXF1ZXN0In0seyJYLUFtei1EYXRlIjoiMjAyNjA5MTBUMTkyNzM5WiJ9LHsia2V5IjoiNmFhMmNkMmQwN2NhZGRiNjliNzM4YTc1LzZhYTMwNGFiMWQyYTFkN2Q4MmI2ZmQ5Y19zb2wtcGhvdG8tMDYucG5nIn1dfQ==",
+      "xAmzSignature": "8d80da46124c8f63f6e45713494dd4b08652bd7b9346dd7f8d242294e2240332",
+      "successActionStatus": "201",
+      "Content-Type": "image/png",
+      "Cache-Control": "max-age=31536000"
+    }
+  },
+  {
+    "file": "assets/images/solutions-page/figma/icon-07.png",
+    "id": "6aa304abb118f600f61f9394",
+    "uploadUrl": "https://webflow-prod-assets.s3.amazonaws.com/",
+    "details": {
+      "acl": "public-read",
+      "bucket": "webflow-prod-assets",
+      "xAmzAlgorithm": "AWS4-HMAC-SHA256",
+      "xAmzCredential": "AKIAQLLHWD6MEJGETLST/20260910/us-east-1/s3/aws4_request",
+      "xAmzDate": "20260910T192739Z",
+      "key": "6aa2cd2d07caddb69b738a75/6aa304abb118f600f61f9394_sol-icon-07.png",
+      "Policy": "eyJleHBpcmF0aW9uIjoiMjAyNi0wOS0xMFQyMDoyNzozOVoiLCJjb25kaXRpb25zIjpbWyJzdGFydHMtd2l0aCIsIiRrZXkiLCI2YWEyY2QyZDA3Y2FkZGI2OWI3MzhhNzUvIl0seyJjYWNoZS1jb250cm9sIjoibWF4LWFnZT0zMTUzNjAwMCJ9LHsiQ29udGVudC1UeXBlIjoiaW1hZ2UvcG5nIn0seyJzdWNjZXNzX2FjdGlvbl9zdGF0dXMiOiIyMDEifSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsImltYWdlL3BuZyJdLFsiY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMzE0NTcyODBdLHsiYWNsIjoicHVibGljLXJlYWQifSx7ImJ1Y2tldCI6IndlYmZsb3ctcHJvZC1hc3NldHMifSx7IlgtQW16LUFsZ29yaXRobSI6IkFXUzQtSE1BQy1TSEEyNTYifSx7IlgtQW16LUNyZWRlbnRpYWwiOiJBS0lBUUxMSFdENk1FSkdFVExTVC8yMDI2MDkxMC91cy1lYXN0LTEvczMvYXdzNF9yZXF1ZXN0In0seyJYLUFtei1EYXRlIjoiMjAyNjA5MTBUMTkyNzM5WiJ9LHsia2V5IjoiNmFhMmNkMmQwN2NhZGRiNjliNzM4YTc1LzZhYTMwNGFiYjExOGY2MDBmNjFmOTM5NF9zb2wtaWNvbi0wNy5wbmcifV19",
+      "xAmzSignature": "8df4b06ca021ce109e7dd5d0014fdb69853828e73759c6f67f7e1d31f7fb4e23",
+      "successActionStatus": "201",
+      "Content-Type": "image/png",
+      "Cache-Control": "max-age=31536000"
+    }
+  },
+  {
+    "file": "assets/images/solutions-page/figma/solution-07.png",
+    "id": "6aa304aca64148bba122779e",
+    "uploadUrl": "https://webflow-prod-assets.s3.amazonaws.com/",
+    "details": {
+      "acl": "public-read",
+      "bucket": "webflow-prod-assets",
+      "xAmzAlgorithm": "AWS4-HMAC-SHA256",
+      "xAmzCredential": "AKIAQLLHWD6MEJGETLST/20260910/us-east-1/s3/aws4_request",
+      "xAmzDate": "20260910T192740Z",
+      "key": "6aa2cd2d07caddb69b738a75/6aa304aca64148bba122779e_sol-photo-07.png",
+      "Policy": "eyJleHBpcmF0aW9uIjoiMjAyNi0wOS0xMFQyMDoyNzo0MFoiLCJjb25kaXRpb25zIjpbWyJzdGFydHMtd2l0aCIsIiRrZXkiLCI2YWEyY2QyZDA3Y2FkZGI2OWI3MzhhNzUvIl0seyJjYWNoZS1jb250cm9sIjoibWF4LWFnZT0zMTUzNjAwMCJ9LHsiQ29udGVudC1UeXBlIjoiaW1hZ2UvcG5nIn0seyJzdWNjZXNzX2FjdGlvbl9zdGF0dXMiOiIyMDEifSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsImltYWdlL3BuZyJdLFsiY29udGVudC1sZW5ndGgtcmFuZ2UiLDAsMzE0NTcyODBdLHsiYWNsIjoicHVibGljLXJlYWQifSx7ImJ1Y2tldCI6IndlYmZsb3ctcHJvZC1hc3NldHMifSx7IlgtQW16LUFsZ29yaXRobSI6IkFXUzQtSE1BQy1TSEEyNTYifSx7IlgtQW16LUNyZWRlbnRpYWwiOiJBS0lBUUxMSFdENk1FSkdFVExTVC8yMDI2MDkxMC91cy1lYXN0LTEvczMvYXdzNF9yZXF1ZXN0In0seyJYLUFtei1EYXRlIjoiMjAyNjA5MTBUMTkyNzQwWiJ9LHsia2V5IjoiNmFhMmNkMmQwN2NhZGRiNjliNzM4YTc1LzZhYTMwNGFjYTY0MTQ4YmJhMTIyNzc5ZV9zb2wtcGhvdG8tMDcucG5nIn1dfQ==",
+      "xAmzSignature": "e59317f8f45844b1274ab9c2476e90de8c49840480de4af499c729a42e13623d",
+      "successActionStatus": "201",
+      "Content-Type": "image/png",
+      "Cache-Control": "max-age=31536000"
+    }
+  }
+]
