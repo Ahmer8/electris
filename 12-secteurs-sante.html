@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <link href="style.css?v=op-hover-v1" rel="stylesheet"/>
 <style>
+      .client-results { display: none !important; } /* P1: hide Brittany template residue */
+
       body { font-family: "Raleway", system-ui, sans-serif; }
       .legacy-ok2-footer,
       .legacy-ok2-footer-space {
@@ -760,7 +762,15 @@
       }
 
       .warehouse-btn--dark {
-        background: #050505;
+        display: none;
+      }
+
+      .warehouse-diagnostic {
+        color: #0f172a;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.6;
+        white-space: nowrap;
       }
 
       .warehouse-visual {
@@ -2562,6 +2572,8 @@
     </style>
 
 <style>
+      .client-results { display: none !important; } /* P1: hide Brittany template residue */
+
 /* Match the Figma badge geometry and keep every exported icon aligned. */
 .warehouse-result-photo .warehouse-badge-icon {
   flex: 0 0 auto;
@@ -2842,7 +2854,7 @@
 <p>H&ocirc;pitaux, cliniques et EHPAD chauffent, climatisent, st&eacute;rilisent et produisent de l&rsquo;eau chaude en continu &mdash; pendant que leurs groupes froids &eacute;vacuent de la chaleur. On la r&eacute;cup&egrave;re, on d&eacute;carbone la chaufferie qui passe en secours strict et on pilote chaque zone. Sans jamais toucher &agrave; la continuit&eacute; de service.</p>
 <div class="warehouse-actions">
 <a class="warehouse-btn warehouse-btn--blue" href="mailto:contact@electris.fr">Demander un audit gratuit <span>&rarr;</span></a>
-<a class="warehouse-btn warehouse-btn--dark" href="#results">Diagnostic en 48 heures <span>&rarr;</span></a>
+<span class="warehouse-diagnostic">Diagnostic en 48 heures</span>
 </div>
 </div>
 <div class="warehouse-visual warehouse-visual--composite">

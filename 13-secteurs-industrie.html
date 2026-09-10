@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 <link href="style.css?v=op-hover-v1" rel="stylesheet"/>
 <style>
+      .client-results { display: none !important; } /* P1: hide Brittany template residue */
+
       body { font-family: "Raleway", system-ui, sans-serif; }
       .legacy-ok2-footer,
       .legacy-ok2-footer-space {
@@ -774,19 +776,15 @@
       }
 
       /* Note text 16 SemiBold — not a dark pill */
-      .warehouse-btn--dark {
-        min-height: 0;
-        padding: 0;
-        border-radius: 0;
-        background: transparent;
-        box-shadow: none;
+      .warehouse-diagnostic {
         color: #0f172a;
         font-size: 16px;
         font-weight: 600;
         line-height: 1.6;
+        white-space: nowrap;
       }
 
-      .warehouse-btn--dark span {
+      .warehouse-btn--dark {
         display: none;
       }
 
@@ -2625,6 +2623,8 @@
     </style>
 
 <style>
+      .client-results { display: none !important; } /* P1: hide Brittany template residue */
+
 /* Match the Figma badge geometry and keep every exported icon aligned. */
 .warehouse-result-photo .warehouse-badge-icon {
   flex: 0 0 auto;
@@ -2963,7 +2963,7 @@
 <p>Compresseurs, groupes froids, fours : votre site évacue en continu une énergie que vous avez payée. Selon sa température, on la récupère, on la rehausse à 90–200 °C pour le process, ou on la convertit en électricité. La part fossile recule. Durablement.</p>
 <div class="warehouse-actions">
 <a class="warehouse-btn warehouse-btn--blue" href="mailto:contact@electris.fr">Demander un audit gratuit <span>→</span></a>
-<a class="warehouse-btn warehouse-btn--dark" href="#results">Diagnostic en 48 heures <span>→</span></a>
+<span class="warehouse-diagnostic">Diagnostic en 48 heures</span>
 </div>
 </div>
 <div class="warehouse-visual warehouse-visual--composite">
