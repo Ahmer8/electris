@@ -1244,3 +1244,65 @@ body.wasteheat-page .hp-contact-live__photo {
   -webkit-mask-position: center;
   mask-position: center;
 }
+
+
+/* ---------- Contact form + photo: Figma 2497:7885 (592×860, gap 32) ---------- */
+@media (min-width: 1200px) {
+  body.wasteheat-page section.warehouse-contact {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 32px !important;
+    grid-template-columns: none !important;
+    padding-top: 96px !important;
+    padding-bottom: 96px !important;
+  }
+
+  body.wasteheat-page section.warehouse-contact > .warehouse-form {
+    flex: 0 0 592px !important;
+    width: 592px !important;
+    max-width: 592px !important;
+    height: 860px !important;
+    min-height: 860px !important;
+    max-height: 860px !important;
+    box-sizing: border-box !important;
+    padding: 48px !important;
+    gap: 32px !important;
+    border-radius: 43px !important;
+  }
+
+  body.wasteheat-page section.warehouse-contact > .warehouse-form .warehouse-form-fields {
+    flex: 1 1 auto !important;
+    gap: 24px !important;
+    min-height: 0 !important;
+  }
+
+  body.wasteheat-page section.warehouse-contact > .warehouse-contact-photo {
+    flex: 0 0 592px !important;
+    width: 592px !important;
+    max-width: 592px !important;
+    height: 860px !important;
+    min-height: 860px !important;
+    max-height: 860px !important;
+    display: block !important;
+    position: relative !important;
+    overflow: visible !important;
+    border-radius: 0 !important;
+    clip-path: none !important;
+  }
+
+  body.wasteheat-page section.warehouse-contact > .warehouse-contact-photo > img {
+    position: static !important;
+    inset: auto !important;
+    display: block !important;
+    width: 592px !important;
+    max-width: 100% !important;
+    height: 860px !important;
+    min-height: 860px !important;
+    object-fit: fill !important;
+    object-position: center center !important;
+    border-radius: 0 !important;
+  }
+}

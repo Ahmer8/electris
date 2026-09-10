@@ -1513,7 +1513,7 @@
         display: grid;
         grid-template-columns: minmax(0, 592px) minmax(0, 592px);
         gap: 32px;
-        align-items: start;
+        align-items: stretch;
         justify-content: center;
         min-height: 0;
         padding: 96px clamp(24px, 6.6vw, 100px);
@@ -1646,19 +1646,22 @@
         position: relative;
         width: 100%;
         max-width: 592px;
-        height: auto;
-        overflow: visible;
+        min-height: 860px;
+        align-self: stretch;
+        overflow: hidden;
         border-radius: 0;
         clip-path: none;
         line-height: 0;
       }
 
       .warehouse-contact-photo img {
+        position: absolute;
+        inset: 0;
         display: block;
         width: 100%;
-        height: auto;
-        object-fit: contain;
-        object-position: center;
+        height: 100%;
+        object-fit: cover;
+        object-position: center bottom;
       }
 
       .warehouse-contact-photo::after {
@@ -1666,15 +1669,23 @@
         content: none !important;
       }
 
-      /* Figma 2497:7885 — curved supermarket photo baked into PNG */
-      .warehouse-contact .warehouse-contact-photo,
-      .warehouse-contact .warehouse-contact-photo img {
-        width: 100% !important;
-        max-width: 592px !important;
+      /* Match form + photo heights on desktop */
+      .warehouse-contact .warehouse-contact-photo {
         height: auto !important;
+        min-height: 860px !important;
+        align-self: stretch !important;
+        overflow: hidden !important;
+      }
+      .warehouse-contact .warehouse-contact-photo img {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        max-width: none !important;
+        height: 100% !important;
         clip-path: none !important;
         border-radius: 0 !important;
-        object-fit: contain !important;
+        object-fit: cover !important;
+        object-position: center bottom !important;
       }
 
       @media (max-width: 1100px) {
@@ -2368,6 +2379,26 @@
         }
       }
 
+      
+      /* warehouse-contact-equal-height-stack */
+      @media (max-width: 1100px) {
+        .warehouse-contact {
+          align-items: start;
+        }
+        .warehouse-contact .warehouse-contact-photo {
+          min-height: 0 !important;
+          height: auto !important;
+          overflow: visible !important;
+        }
+        .warehouse-contact .warehouse-contact-photo img {
+          position: static !important;
+          inset: auto !important;
+          width: 100% !important;
+          height: auto !important;
+          object-fit: contain !important;
+          object-position: center !important;
+        }
+      }
       /* Responsive hardening for sector detail pages. */
       .warehouse-main,
       .warehouse-main * {
@@ -2777,7 +2808,7 @@
   }
 
   .warehouse-results .warehouse-result-grid + .warehouse-result-grid {
-    align-items: start;
+    align-items: stretch;
     margin-top: 84.058px;
   }
 
@@ -2986,7 +3017,7 @@
   }
 }
 </style>
-    <link rel="stylesheet" href="secteur-detail-responsive.css?v=desktop-center-1280-v6" />
+    <link rel="stylesheet" href="secteur-detail-responsive.css?v=figma-2497-7885-v10" />
 </head>
   <body class="wasteheat-page">
     <main
