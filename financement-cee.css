@@ -870,20 +870,112 @@
   gap: 32px;
 }
 
-.cee-results {
+/* Figma 2591:12279 — white section, gray cards, mint/lavender CTA pills */
+.cee-results.orc-results,
+.cee-page .cee-results.orc-results {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 96px clamp(24px, 7.6vw, 116px) 120px;
+  box-sizing: border-box;
+}
+
+.cee-results .orc-results__header {
   max-width: 1280px;
-  margin: 0 auto;
-  padding: 96px 32px 120px;
+  margin-left: auto;
+  margin-right: auto;
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 .cee-results .orc-results__title {
   text-transform: none;
+  background: transparent !important;
+  color: #000000 !important;
 }
 
 .cee-results .orc-case {
   max-width: 1216px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.cee-results .orc-case__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 25.218px;
+  width: 490px;
+  flex-shrink: 0;
+}
+
+.cee-results .orc-case__card {
+  background: #f1f5f9 !important;
+  border-radius: 33.623px !important;
+  min-height: 325px;
+  box-sizing: border-box;
+}
+
+.cee-results .orc-case--alt .orc-case__card {
+  min-height: 333px;
+}
+
+/* CTA pills — same pattern as 10-secteurs warehouse-result-cta */
+.cee-results .orc-case__cta {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  max-width: 490px !important;
+  min-height: 95px !important;
+  height: auto !important;
+  margin-top: 0 !important;
+  padding: 0 !important;
+  border: 2px solid #f4f4f4 !important;
+  border-radius: 999px !important;
+  box-sizing: border-box !important;
+  text-decoration: none !important;
+  position: relative !important;
+}
+
+.cee-results .orc-case__cta--green {
+  background: linear-gradient(180deg, #b2ffda 0%, #88d2af 100%) !important;
+  background-image: linear-gradient(180deg, #b2ffda 0%, #88d2af 100%) !important;
+}
+
+.cee-results .orc-case__cta--violet {
+  background: linear-gradient(180deg, #9badd0 0%, #a0a1fc 100%) !important;
+  background-image: linear-gradient(180deg, #9badd0 0%, #a0a1fc 100%) !important;
+}
+
+.cee-results .orc-case__cta > span {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  min-width: 316px !important;
+  min-height: 48px !important;
+  padding: 8px 24px !important;
+  border: 0 !important;
+  border-radius: 32px !important;
+  background: #ffffff !important;
+  color: #000000 !important;
+  font-family: "Raleway", system-ui, sans-serif !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 32px !important;
+  box-shadow: 0 1.333px 2.667px rgba(16, 24, 40, 0.05);
+  box-sizing: border-box !important;
+}
+
+.cee-results .orc-case__visual--green {
+  background: linear-gradient(147.49deg, #b2ffda 0%, #89d2af 100%) !important;
+}
+
+.cee-results .orc-case__visual--blue {
+  background: linear-gradient(180deg, #9badd0 0%, #a0a1fc 100%) !important;
 }
 
 /* Stat pills — Figma 2591:12538 / 2591:12565 */
