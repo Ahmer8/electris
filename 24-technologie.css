@@ -570,15 +570,19 @@ button {
   left: 296px;
   width: 338px;
   height: 315px;
-  margin-left: 0;
+  max-width: none;
+  margin: 0;
+  padding: 0;
   transform: none;
-  opacity: 0.18;
-  filter: brightness(0) invert(1);
+  opacity: 1;
+  filter: none;
+  -webkit-filter: none;
   mix-blend-mode: normal;
-  object-fit: contain;
+  object-fit: fill;
   object-position: bottom;
   pointer-events: none;
   z-index: 1;
+  display: block;
 }
 
 .contact-card__content {
