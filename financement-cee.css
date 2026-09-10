@@ -510,7 +510,8 @@
   line-height: 1.4;
 }
 
-.cee-timeline__num.is-active {
+.cee-timeline__item:hover .cee-timeline__num,
+.cee-timeline__item:focus-within .cee-timeline__num {
   border-color: #d5dbe2;
   background: var(--cee-green);
   color: #fff;
